@@ -16,8 +16,8 @@ module Format.DateTime exposing
 
 -}
 
-import DateFormat
 import Cldr.Format.Length exposing (Length(..))
+import DateFormat
 import Internal.Length
 import Internal.Locale exposing (Locale(..))
 import Time exposing (Posix)

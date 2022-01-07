@@ -1,4 +1,4 @@
-module Format.Length exposing (Length(..))
+module Cldr.Format.Length exposing (Length(..))
 
 {-|
 

@@ -9,8 +9,8 @@ module Format.Date exposing (format)
 
 -}
 
-import Date exposing (Date)
 import Cldr.Format.Length exposing (Length(..))
+import Date exposing (Date)
 import Internal.Locale exposing (Locale(..))
 
 

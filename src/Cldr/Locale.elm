@@ -17,8 +17,8 @@ module Locale exposing
 -}
 
 import DateFormat exposing (..)
-import Internal.Locale
 import Internal.Generated
+import Internal.Locale
 
 
 {-| Represents the locale to use for formatting.

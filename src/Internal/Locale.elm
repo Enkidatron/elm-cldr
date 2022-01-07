@@ -14,10 +14,11 @@ module Internal.Locale exposing
     , toUnicode
     )
 
+import Cldr.Format.Length exposing (Length(..))
 import Date
 import DateFormat exposing (..)
 import DateFormat.Language
-import Format.Length exposing (Length(..))
+import Internal.Structures exposing (..)
 import Parser exposing ((|.), (|=), Parser)
 import String.Extra
 import Tagged exposing (Tagged(..))
@@ -39,63 +40,6 @@ type alias Internal =
     , amPmNames : AmPmNames
     , dateTimeTokens : Patterns (List DateTimeToken)
     , languageId : LanguageId
-    }
-
-
-type alias Patterns a =
-    { short : a
-    , medium : a
-    , long : a
-    , full : a
-    }
-
-
-getPattern : Patterns a -> Length -> a
-getPattern patterns length =
-    case length of
-        Short ->
-            patterns.short
-
-        Medium ->
-            patterns.medium
-
-        Long ->
-            patterns.long
-
-        Full ->
-            patterns.full
-
-
-type alias MonthNames =
-    { jan : String
-    , feb : String
-    , mar : String
-    , apr : String
-    , may : String
-    , jun : String
-    , jul : String
-    , aug : String
-    , sep : String
-    , oct : String
-    , nov : String
-    , dec : String
-    }
-
-
-type alias WeekdayNames =
-    { sun : String
-    , mon : String
-    , tue : String
-    , wed : String
-    , thu : String
-    , fri : String
-    , sat : String
-    }
-
-
-type alias AmPmNames =
-    { am : String
-    , pm : String
     }
 
 
