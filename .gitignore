@@ -2,3 +2,5 @@
 elm-stuff
 # elm-repl generated files
 repl-temp-*
+# example generated file
+example/build/dynamic.js
