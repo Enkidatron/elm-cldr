@@ -1,4 +1,4 @@
-module Format.Date exposing (format)
+module Cldr.Format.Date exposing (format)
 
 {-|
 
@@ -29,17 +29,17 @@ format : Length -> Locale -> Date -> String
 format length (Locale internal) =
     case length of
         Short ->
-            Date.formatWithLanguage (Locale.Internal.toDateLanguage internal)
+            Date.formatWithLanguage (Internal.Locale.toDateLanguage internal)
                 internal.datePatterns.short
 
         Medium ->
-            Date.formatWithLanguage (Locale.Internal.toDateLanguage internal)
+            Date.formatWithLanguage (Internal.Locale.toDateLanguage internal)
                 internal.datePatterns.medium
 
         Long ->
-            Date.formatWithLanguage (Locale.Internal.toDateLanguage internal)
+            Date.formatWithLanguage (Internal.Locale.toDateLanguage internal)
                 internal.datePatterns.long
 
         Full ->
-            Date.formatWithLanguage (Locale.Internal.toDateLanguage internal)
+            Date.formatWithLanguage (Internal.Locale.toDateLanguage internal)
                 internal.datePatterns.full

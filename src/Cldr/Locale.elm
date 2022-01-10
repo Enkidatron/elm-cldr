@@ -1,4 +1,4 @@
-module Locale exposing
+module Cldr.Locale exposing
     ( Locale
     , fromString
     , toUnicode
@@ -37,8 +37,8 @@ type alias Locale =
 
 -}
 toUnicode : Locale -> String
-toUnicode (Locale.Internal.Locale internal) =
-    Locale.Internal.toUnicode internal
+toUnicode (Internal.Locale.Locale internal) =
+    Internal.Locale.toUnicode internal
 
 
 {-| Parse a `Locale` from a Unicode or BCP47 identifier.
@@ -52,5 +52,5 @@ toUnicode (Locale.Internal.Locale internal) =
 fromString : String -> Maybe Locale
 fromString =
     Internal.Locale.languageIdFromString
-        >> Maybe.andThen Internal.Generated.matchNearestLocale
+        >> Maybe.andThen (Internal.Locale.matchNearestLocale Internal.Generated.allLocales)
         >> Maybe.map Internal.Locale.Locale

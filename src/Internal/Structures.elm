@@ -1,6 +1,14 @@
-module Internal.Structures exposing (AmPmNames, MonthNames, Patterns, WeekdayNames, getPattern)
+module Internal.Structures exposing
+    ( AmPmNames
+    , EraNames
+    , MonthNames
+    , Patterns
+    , WeekdayNames
+    , getPattern
+    )
 
 import Cldr.Format.Length exposing (Length(..))
+
 
 type alias Patterns a =
     { short : a
@@ -56,4 +64,10 @@ type alias WeekdayNames =
 type alias AmPmNames =
     { am : String
     , pm : String
+    }
+
+
+type alias EraNames =
+    { bc : String
+    , ad : String
     }

@@ -6,8 +6,9 @@ module Internal.Locale exposing
     , TimeToken(..)
     , convertDateTimeToken
     , convertToken
-    , getPattern
     , languageIdFromString
+    , languageIdSimilarity
+    , matchNearestLocale
     , normalize
     , toDateLanguage
     , toDateTimeLanguage
@@ -35,9 +36,10 @@ type alias Internal =
     , monthNamesShort : MonthNames
     , weekdayNames : WeekdayNames
     , weekdayNamesShort : WeekdayNames
-    , dateTokens : Patterns (List DateFormat.Token)
+    , dateTokens : Patterns (List TimeToken)
     , timeTokens : Patterns (List TimeToken)
     , amPmNames : AmPmNames
+    , eraNames : EraNames
     , dateTimeTokens : Patterns (List DateTimeToken)
     , languageId : LanguageId
     }
@@ -47,10 +49,11 @@ type TimeToken
     = DF DateFormat.Token
     | TimeZoneShort
     | TimeZoneFull
+    | EraAbbr
 
 
-convertToken : Time.Zone -> TimeToken -> DateFormat.Token
-convertToken zone token =
+convertToken : EraNames -> Time.Zone -> TimeToken -> DateFormat.Token
+convertToken { ad } zone token =
     case token of
         DF dfToken ->
             dfToken
@@ -60,6 +63,9 @@ convertToken zone token =
 
         TimeZoneFull ->
             getOffsets zone |> fullGmtFormat |> DateFormat.text
+
+        EraAbbr ->
+            DateFormat.text ad
 
 
 type DateTimeToken
@@ -81,10 +87,11 @@ convertDateTimeToken { internal, zone, date, time } token =
     case token of
         DateGoesHere ->
             getPattern internal.dateTokens date
+                |> List.map (convertToken internal.eraNames zone)
 
         TimeGoesHere ->
             getPattern internal.timeTokens time
-                |> List.map (convertToken zone)
+                |> List.map (convertToken internal.eraNames zone)
 
         Text words ->
             [ DateFormat.text words ]
@@ -265,7 +272,7 @@ amPmFun names hour =
 
 type LanguageId
     = Root
-    | Lang LangSubtag (Maybe ScriptSubtag) (Maybe RegionSubtag)
+    | Lang LangSubtag (Maybe ScriptSubtag) (Maybe RegionSubtag) (Maybe VariantSubtag)
 
 
 type alias LangSubtag =
@@ -292,6 +299,14 @@ type RegionSubtagFlag
     = RegionSubtagFlag
 
 
+type alias VariantSubtag =
+    Tagged VariantSubtagFlag String
+
+
+type VariantSubtagFlag
+    = VariantSubtagFlag
+
+
 toUnicode : Internal -> String
 toUnicode internal =
     languageIdToUnicode internal.languageId
@@ -303,10 +318,11 @@ languageIdToUnicode lang =
         Root ->
             "root"
 
-        Lang langTag maybeScript maybeRegion ->
+        Lang langTag maybeScript maybeRegion maybeVariant ->
             [ Just (Tagged.untag langTag |> String.toLower)
             , Maybe.map Tagged.untag maybeScript
             , Maybe.map (Tagged.untag >> String.toUpper) maybeRegion
+            , Maybe.map (Tagged.untag >> String.toLower) maybeVariant
             ]
                 |> List.filterMap identity
                 |> String.join "-"
@@ -336,6 +352,7 @@ langParser =
         |= langSubtagParser
         |= maybeParse scriptSubtagParser
         |= maybeParse regionSubtagParser
+        |= maybeParse variantSubtagParser
 
 
 langSubtagParser : Parser LangSubtag
@@ -398,7 +415,10 @@ regionSubtagParser =
                             len =
                                 String.length words
                         in
-                        if len >= 2 && len <= 3 then
+                        if len == 2 && List.all Char.isAlpha (String.toList words) then
+                            Parser.succeed words
+
+                        else if len == 3 && List.all Char.isDigit (String.toList words) then
                             Parser.succeed words
 
                         else
@@ -408,13 +428,117 @@ regionSubtagParser =
         |> Parser.backtrackable
 
 
+variantSubtagParser : Parser VariantSubtag
+variantSubtagParser =
+    Parser.succeed Tagged.tag
+        |. sepParser
+        |= (Parser.getChompedString (Parser.chompWhile Char.isAlpha)
+                |> Parser.andThen
+                    (\words ->
+                        if isValidVariant words then
+                            Parser.succeed words
+
+                        else
+                            Parser.problem ("'" ++ words ++ "' is not a valid variantn subtag")
+                    )
+           )
+
+
+isValidVariant : String -> Bool
+isValidVariant words =
+    case String.toList words of
+        first :: second :: third :: fourth :: [] ->
+            Char.isDigit first && List.all Char.isAlphaNum [ second, third, fourth ]
+
+        _ ->
+            let
+                length =
+                    String.length words
+            in
+            (length >= 5) && (length <= 8) && List.all Char.isAlphaNum (String.toList words)
+
+
 normalize : LanguageId -> LanguageId
 normalize langId =
     case langId of
         Root ->
             Root
 
-        Lang langTag maybeScript maybeRegion ->
+        Lang langTag maybeScript maybeRegion maybeVariant ->
             Lang (Tagged.map String.toLower langTag)
                 (Maybe.map (Tagged.map String.Extra.toTitleCase) maybeScript)
                 (Maybe.map (Tagged.map String.toUpper) maybeRegion)
+                (Maybe.map (Tagged.map String.toUpper) maybeVariant)
+
+
+matchNearestLocale : List Internal -> LanguageId -> Maybe Internal
+matchNearestLocale allLocales langId =
+    List.filter (.languageId >> languageIdNoConflicts langId) allLocales
+        |> List.sortBy (.languageId >> languageIdSimilarity langId)
+        |> List.head
+
+
+languageIdNoConflicts : LanguageId -> LanguageId -> Bool
+languageIdNoConflicts langA langB =
+    case ( langA, langB ) of
+        ( Root, Root ) ->
+            True
+
+        ( Lang tagA scriptTagA regionTagA variantTagA, Lang tagB scriptTagB regionTagB variantTagB ) ->
+            (tagA == tagB)
+                && (Maybe.map2 (==) scriptTagA scriptTagB |> Maybe.withDefault True)
+                && (Maybe.map2 (==) regionTagA regionTagB |> Maybe.withDefault True)
+                && (Maybe.map2 (==) variantTagA variantTagB |> Maybe.withDefault True)
+
+        _ ->
+            False
+
+
+languageIdSimilarity : LanguageId -> LanguageId -> Int
+languageIdSimilarity requested checked =
+    case ( requested, checked ) of
+        ( Root, Root ) ->
+            -1 * 10 ^ 4
+
+        ( Lang langTagA scriptTagA regionTagA variantTagA, Lang langTagB scriptTagB regionTagB variantTagB ) ->
+            let
+                langPoints =
+                    if langTagA == langTagB then
+                        10 ^ 4
+
+                    else
+                        0
+
+                scriptPoints =
+                    similarityHelper (10 ^ 3) scriptTagA scriptTagB
+
+                regionPoints =
+                    similarityHelper (10 ^ 2) regionTagA regionTagB
+
+                variantPoints =
+                    similarityHelper (10 ^ 1) variantTagA variantTagB
+            in
+            (langPoints + scriptPoints + regionPoints + variantPoints) * -1
+
+        _ ->
+            0
+
+
+similarityHelper : Int -> Maybe a -> Maybe a -> Int
+similarityHelper points requested checked =
+    case ( requested, checked ) of
+        ( Nothing, Nothing ) ->
+            2 * points
+
+        ( Just req, Just chck ) ->
+            if req == chck then
+                2 * points
+
+            else
+                0
+
+        ( Just _, Nothing ) ->
+            points
+
+        ( Nothing, Just _ ) ->
+            points

@@ -1,4 +1,4 @@
-module Format.DateTime exposing
+module Cldr.Format.DateTime exposing
     ( FormatType(..)
     , short, medium, long, full
     , format
@@ -20,6 +20,7 @@ import Cldr.Format.Length exposing (Length(..))
 import DateFormat
 import Internal.Length
 import Internal.Locale exposing (Locale(..))
+import Internal.Structures
 import Time exposing (Posix)
 
 
@@ -70,25 +71,26 @@ full =
 -}
 format : FormatType -> Locale -> Time.Zone -> Posix -> String
 format formatType (Locale internal) zone =
-    DateFormat.formatWithLanguage (Locale.Internal.toDateTimeLanguage internal)
+    DateFormat.formatWithLanguage (Internal.Locale.toDateTimeLanguage internal)
         (tokensForFormatType formatType internal zone)
         zone
 
 
-tokensForFormatType : FormatType -> Locale.Internal.Internal -> Time.Zone -> List DateFormat.Token
+tokensForFormatType : FormatType -> Internal.Locale.Internal -> Time.Zone -> List DateFormat.Token
 tokensForFormatType formatType internal zone =
     case formatType of
         DateOnly length ->
-            Locale.Internal.getPattern internal.dateTokens length
+            Internal.Structures.getPattern internal.dateTokens length
+                |> List.map (Internal.Locale.convertToken internal.eraNames zone)
 
         TimeOnly length ->
-            Locale.Internal.getPattern internal.timeTokens length
-                |> List.map (Locale.Internal.convertToken zone)
+            Internal.Structures.getPattern internal.timeTokens length
+                |> List.map (Internal.Locale.convertToken internal.eraNames zone)
 
         DateAndTime { date, time } ->
-            Locale.Internal.getPattern internal.dateTimeTokens (Internal.Length.max date time)
+            Internal.Structures.getPattern internal.dateTimeTokens (Internal.Length.max date time)
                 |> List.concatMap
-                    (Locale.Internal.convertDateTimeToken
+                    (Internal.Locale.convertDateTimeToken
                         { internal = internal
                         , zone = zone
                         , date = date
