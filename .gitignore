@@ -4,3 +4,4 @@ elm-stuff
 repl-temp-*
 # example generated file
 example/build/dynamic.js
+example/build/static.js
