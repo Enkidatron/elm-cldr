@@ -502,10 +502,10 @@ af =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "v.C.", ad = "n.C." }
     }
@@ -641,10 +641,10 @@ af_NA =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "v.C.", ad = "n.C." }
     }
@@ -779,10 +779,10 @@ am =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "ዓ/ዓ", ad = "ዓ/ም" }
     }
@@ -917,10 +917,10 @@ ar =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -1056,10 +1056,10 @@ ar_AE =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -1195,10 +1195,10 @@ ar_BH =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -1334,10 +1334,10 @@ ar_DJ =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -1473,10 +1473,10 @@ ar_DZ =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -1612,10 +1612,10 @@ ar_EG =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -1751,10 +1751,10 @@ ar_EH =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -1890,10 +1890,10 @@ ar_ER =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -2017,10 +2017,10 @@ ar_IL =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -2156,10 +2156,10 @@ ar_IQ =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -2295,10 +2295,10 @@ ar_JO =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -2422,10 +2422,10 @@ ar_KM =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -2561,10 +2561,10 @@ ar_KW =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -2700,10 +2700,10 @@ ar_LB =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -2839,10 +2839,10 @@ ar_LY =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -2966,10 +2966,10 @@ ar_MA =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -3105,10 +3105,10 @@ ar_MR =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -3244,10 +3244,10 @@ ar_OM =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -3383,10 +3383,10 @@ ar_PS =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -3522,10 +3522,10 @@ ar_QA =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -3661,10 +3661,10 @@ ar_SA =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -3800,10 +3800,10 @@ ar_SD =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -3939,10 +3939,10 @@ ar_SO =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -4078,10 +4078,10 @@ ar_SS =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -4217,10 +4217,10 @@ ar_SY =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -4356,10 +4356,10 @@ ar_TD =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -4495,10 +4495,10 @@ ar_TN =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -4634,10 +4634,10 @@ ar_YE =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " في ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " في ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " في ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " في ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م", ad = "م" }
     }
@@ -4772,10 +4772,10 @@ locale_as =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "খ্ৰীঃ পূঃ", ad = "খ্ৰীঃ" }
     }
@@ -4843,8 +4843,7 @@ az =
             , DF (text ".")
             , DF monthFixed
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -4899,10 +4898,10 @@ az =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "e.ə.", ad = "y.e." }
     }
@@ -4971,8 +4970,7 @@ az_Latn =
             , DF (text ".")
             , DF monthFixed
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -5027,10 +5025,10 @@ az_Latn =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "e.ə.", ad = "y.e." }
     }
@@ -5098,8 +5096,7 @@ be =
             , DF (text ".")
             , DF monthFixed
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -5163,10 +5160,10 @@ be =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "у", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "у", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "у", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "у", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "да н.э.", ad = "н.э." }
     }
@@ -5235,8 +5232,7 @@ be_TARASK =
             , DF (text ".")
             , DF monthFixed
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -5300,10 +5296,10 @@ be_TARASK =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "у", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "у", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "у", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "у", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "да н.э.", ad = "н.э." }
     }
@@ -5371,8 +5367,7 @@ bg =
             , DF (text ".")
             , DF monthFixed
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             , DF (text " ")
             , DF (text "г")
             , DF (text ".")
@@ -5453,10 +5448,10 @@ bg =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "пр.Хр.", ad = "сл.Хр." }
     }
@@ -5524,8 +5519,7 @@ bn =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -5592,10 +5586,10 @@ bn =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "খ্রিস্টপূর্ব", ad = "খৃষ্টাব্দ" }
     }
@@ -5664,8 +5658,7 @@ bn_IN =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -5732,10 +5725,10 @@ bn_IN =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "খ্রিস্টপূর্ব", ad = "খৃষ্টাব্দ" }
     }
@@ -5862,10 +5855,10 @@ bs =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "u", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "u", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "u", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "u", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "p. n. e.", ad = "n. e." }
     }
@@ -5993,10 +5986,10 @@ bs_Latn =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "u", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "u", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "u", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "u", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "p. n. e.", ad = "n. e." }
     }
@@ -6064,8 +6057,7 @@ ca =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -6125,25 +6117,25 @@ ca =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
         , long =
-            [ TimeGoesHere
+            [ DateGoesHere
             , Text ", "
             , Text "a"
             , Text " "
             , Text "les"
             , Text " "
-            , DateGoesHere
+            , TimeGoesHere
             ]
         , full =
-            [ TimeGoesHere
+            [ DateGoesHere
             , Text ", "
             , Text "a"
             , Text " "
             , Text "les"
             , Text " "
-            , DateGoesHere
+            , TimeGoesHere
             ]
         }
     , eraNames = { bc = "aC", ad = "dC" }
@@ -6213,8 +6205,7 @@ ca_AD =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -6274,25 +6265,25 @@ ca_AD =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
         , long =
-            [ TimeGoesHere
+            [ DateGoesHere
             , Text ", "
             , Text "a"
             , Text " "
             , Text "les"
             , Text " "
-            , DateGoesHere
+            , TimeGoesHere
             ]
         , full =
-            [ TimeGoesHere
+            [ DateGoesHere
             , Text ", "
             , Text "a"
             , Text " "
             , Text "les"
             , Text " "
-            , DateGoesHere
+            , TimeGoesHere
             ]
         }
     , eraNames = { bc = "aC", ad = "dC" }
@@ -6366,8 +6357,7 @@ ca_ES_VALENCIA =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -6427,25 +6417,25 @@ ca_ES_VALENCIA =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
         , long =
-            [ TimeGoesHere
+            [ DateGoesHere
             , Text ", "
             , Text "a"
             , Text " "
             , Text "les"
             , Text " "
-            , DateGoesHere
+            , TimeGoesHere
             ]
         , full =
-            [ TimeGoesHere
+            [ DateGoesHere
             , Text ", "
             , Text "a"
             , Text " "
             , Text "les"
             , Text " "
-            , DateGoesHere
+            , TimeGoesHere
             ]
         }
     , eraNames = { bc = "aC", ad = "dC" }
@@ -6515,8 +6505,7 @@ ca_FR =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -6576,25 +6565,25 @@ ca_FR =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
         , long =
-            [ TimeGoesHere
+            [ DateGoesHere
             , Text ", "
             , Text "a"
             , Text " "
             , Text "les"
             , Text " "
-            , DateGoesHere
+            , TimeGoesHere
             ]
         , full =
-            [ TimeGoesHere
+            [ DateGoesHere
             , Text ", "
             , Text "a"
             , Text " "
             , Text "les"
             , Text " "
-            , DateGoesHere
+            , TimeGoesHere
             ]
         }
     , eraNames = { bc = "aC", ad = "dC" }
@@ -6664,8 +6653,7 @@ ca_IT =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -6725,25 +6713,25 @@ ca_IT =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
         , long =
-            [ TimeGoesHere
+            [ DateGoesHere
             , Text ", "
             , Text "a"
             , Text " "
             , Text "les"
             , Text " "
-            , DateGoesHere
+            , TimeGoesHere
             ]
         , full =
-            [ TimeGoesHere
+            [ DateGoesHere
             , Text ", "
             , Text "a"
             , Text " "
             , Text "les"
             , Text " "
-            , DateGoesHere
+            , TimeGoesHere
             ]
         }
     , eraNames = { bc = "aC", ad = "dC" }
@@ -6812,8 +6800,7 @@ cs =
             , DF (text ".")
             , DF monthFixed
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -6868,10 +6855,10 @@ cs =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "př. n. l.", ad = "n. l." }
     }
@@ -6939,8 +6926,7 @@ cy =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -6995,10 +6981,10 @@ cy =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "am", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "am", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "am", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "am", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "CC", ad = "OC" }
     }
@@ -7123,10 +7109,10 @@ da =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "kl", Text ". ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "kl", Text ". ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "kl", Text ". ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "kl", Text ". ", TimeGoesHere ]
         }
     , eraNames = { bc = "f.Kr.", ad = "e.Kr." }
     }
@@ -7252,10 +7238,10 @@ da_GL =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "kl", Text ". ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "kl", Text ". ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "kl", Text ". ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "kl", Text ". ", TimeGoesHere ]
         }
     , eraNames = { bc = "f.Kr.", ad = "e.Kr." }
     }
@@ -7323,8 +7309,7 @@ de =
             , DF (text ".")
             , DF monthFixed
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -7379,10 +7364,10 @@ de =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "um", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "um", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "um", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "um", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "v. Chr.", ad = "n. Chr." }
     }
@@ -7451,8 +7436,7 @@ de_AT =
             , DF (text ".")
             , DF monthFixed
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -7507,10 +7491,10 @@ de_AT =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "um", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "um", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "um", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "um", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "v. Chr.", ad = "n. Chr." }
     }
@@ -7579,8 +7563,7 @@ de_BE =
             , DF (text ".")
             , DF monthFixed
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -7635,10 +7618,10 @@ de_BE =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "um", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "um", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "um", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "um", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "v. Chr.", ad = "n. Chr." }
     }
@@ -7707,8 +7690,7 @@ de_CH =
             , DF (text ".")
             , DF monthFixed
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -7763,10 +7745,10 @@ de_CH =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "um", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "um", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "um", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "um", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "v. Chr.", ad = "n. Chr." }
     }
@@ -7835,8 +7817,7 @@ de_IT =
             , DF (text ".")
             , DF monthFixed
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -7891,10 +7872,10 @@ de_IT =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "um", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "um", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "um", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "um", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "v. Chr.", ad = "n. Chr." }
     }
@@ -7963,8 +7944,7 @@ de_LI =
             , DF (text ".")
             , DF monthFixed
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -8019,10 +7999,10 @@ de_LI =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "um", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "um", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "um", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "um", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "v. Chr.", ad = "n. Chr." }
     }
@@ -8091,8 +8071,7 @@ de_LU =
             , DF (text ".")
             , DF monthFixed
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -8147,10 +8126,10 @@ de_LU =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "um", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "um", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "um", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "um", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "v. Chr.", ad = "n. Chr." }
     }
@@ -8218,8 +8197,7 @@ el =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -8286,10 +8264,10 @@ el =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " - ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " - ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " - ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " - ", TimeGoesHere ]
         }
     , eraNames = { bc = "π.Χ.", ad = "μ.Χ." }
     }
@@ -8358,8 +8336,7 @@ el_CY =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -8426,10 +8403,10 @@ el_CY =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " - ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " - ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " - ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " - ", TimeGoesHere ]
         }
     , eraNames = { bc = "π.Χ.", ad = "μ.Χ." }
     }
@@ -8497,8 +8474,7 @@ en =
             , DF (text "/")
             , DF dayOfMonthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF monthNameAbbreviated
@@ -8565,10 +8541,10 @@ en =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -8704,10 +8680,10 @@ en_001 =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -8831,10 +8807,10 @@ en_150 =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -8970,10 +8946,10 @@ en_AE =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -9109,10 +9085,10 @@ en_AG =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -9236,10 +9212,10 @@ en_AI =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -9308,8 +9284,7 @@ en_AS =
             , DF (text "/")
             , DF dayOfMonthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF monthNameAbbreviated
@@ -9376,10 +9351,10 @@ en_AS =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -9503,10 +9478,10 @@ en_AT =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -9575,8 +9550,7 @@ en_AU =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -9643,10 +9617,10 @@ en_AU =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -9782,10 +9756,10 @@ en_BB =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -9854,8 +9828,7 @@ en_BE =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -9910,10 +9883,10 @@ en_BE =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -9982,8 +9955,7 @@ en_BI =
             , DF (text "/")
             , DF dayOfMonthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF monthNameAbbreviated
@@ -10038,10 +10010,10 @@ en_BI =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -10177,10 +10149,10 @@ en_BM =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -10316,10 +10288,10 @@ en_BS =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -10388,8 +10360,7 @@ en_BW =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -10444,10 +10415,10 @@ en_BW =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -10516,8 +10487,7 @@ en_BZ =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -10572,10 +10542,10 @@ en_BZ =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -10711,10 +10681,10 @@ en_CA =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -10838,10 +10808,10 @@ en_CC =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -10965,10 +10935,10 @@ en_CH =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -11092,10 +11062,10 @@ en_CK =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -11219,10 +11189,10 @@ en_CM =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -11346,10 +11316,10 @@ en_CX =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -11485,10 +11455,10 @@ en_CY =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -11612,10 +11582,10 @@ en_DE =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -11739,10 +11709,10 @@ en_DG =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -11866,10 +11836,10 @@ en_DK =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -12005,10 +11975,10 @@ en_DM =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -12144,10 +12114,10 @@ en_ER =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -12271,10 +12241,10 @@ en_FI =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -12410,10 +12380,10 @@ en_FJ =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -12537,10 +12507,10 @@ en_FK =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -12676,10 +12646,10 @@ en_FM =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -12803,10 +12773,10 @@ en_GB =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -12942,10 +12912,10 @@ en_GD =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -13069,10 +13039,10 @@ en_GG =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -13208,10 +13178,10 @@ en_GH =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -13335,10 +13305,10 @@ en_GI =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -13474,10 +13444,10 @@ en_GM =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -13546,8 +13516,7 @@ en_GU =
             , DF (text "/")
             , DF dayOfMonthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF monthNameAbbreviated
@@ -13614,10 +13583,10 @@ en_GU =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -13753,10 +13722,10 @@ en_GY =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -13892,10 +13861,10 @@ en_HK =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -14019,10 +13988,10 @@ en_IE =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -14146,10 +14115,10 @@ en_IL =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -14273,10 +14242,10 @@ en_IM =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -14345,8 +14314,7 @@ en_IN =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -14413,10 +14381,10 @@ en_IN =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -14540,10 +14508,10 @@ en_IO =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -14667,10 +14635,10 @@ en_JE =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -14806,10 +14774,10 @@ en_JM =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -14933,10 +14901,10 @@ en_KE =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -15072,10 +15040,10 @@ en_KI =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -15211,10 +15179,10 @@ en_KN =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -15350,10 +15318,10 @@ en_KY =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -15489,10 +15457,10 @@ en_LC =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -15628,10 +15596,10 @@ en_LR =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -15767,10 +15735,10 @@ en_LS =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -15894,10 +15862,10 @@ en_MG =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -15966,8 +15934,7 @@ en_MH =
             , DF (text "/")
             , DF dayOfMonthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF monthNameAbbreviated
@@ -16034,10 +16001,10 @@ en_MH =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -16173,10 +16140,10 @@ en_MO =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -16245,8 +16212,7 @@ en_MP =
             , DF (text "/")
             , DF dayOfMonthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF monthNameAbbreviated
@@ -16313,10 +16279,10 @@ en_MP =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -16440,10 +16406,10 @@ en_MS =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -16567,10 +16533,10 @@ en_MT =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -16694,10 +16660,10 @@ en_MU =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -16833,10 +16799,10 @@ en_MW =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -16972,10 +16938,10 @@ en_MY =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -17111,10 +17077,10 @@ en_NA =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -17238,10 +17204,10 @@ en_NF =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -17365,10 +17331,10 @@ en_NG =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -17492,10 +17458,10 @@ en_NL =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -17619,10 +17585,10 @@ en_NR =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -17746,10 +17712,10 @@ en_NU =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -17818,8 +17784,7 @@ en_NZ =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -17886,10 +17851,10 @@ en_NZ =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -18025,10 +17990,10 @@ en_PG =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -18097,8 +18062,7 @@ en_PH =
             , DF (text "/")
             , DF dayOfMonthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF monthNameAbbreviated
@@ -18165,10 +18129,10 @@ en_PH =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -18304,10 +18268,10 @@ en_PK =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -18431,10 +18395,10 @@ en_PN =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -18503,8 +18467,7 @@ en_PR =
             , DF (text "/")
             , DF dayOfMonthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF monthNameAbbreviated
@@ -18571,10 +18534,10 @@ en_PR =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -18710,10 +18673,10 @@ en_PW =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -18837,10 +18800,10 @@ en_RW =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -18976,10 +18939,10 @@ en_SB =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -19103,10 +19066,10 @@ en_SC =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -19242,10 +19205,10 @@ en_SD =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -19369,10 +19332,10 @@ en_SE =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -19441,8 +19404,7 @@ en_SG =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -19509,10 +19471,10 @@ en_SG =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -19636,10 +19598,10 @@ en_SH =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -19763,10 +19725,10 @@ en_SI =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -19902,10 +19864,10 @@ en_SL =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -20041,10 +20003,10 @@ en_SS =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -20168,10 +20130,10 @@ en_SX =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -20307,10 +20269,10 @@ en_SZ =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -20446,10 +20408,10 @@ en_TC =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -20573,10 +20535,10 @@ en_TK =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -20712,10 +20674,10 @@ en_TO =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -20851,10 +20813,10 @@ en_TT =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -20978,10 +20940,10 @@ en_TV =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -21105,10 +21067,10 @@ en_TZ =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -21232,10 +21194,10 @@ en_UG =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -21304,8 +21266,7 @@ en_UM =
             , DF (text "/")
             , DF dayOfMonthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF monthNameAbbreviated
@@ -21372,10 +21333,10 @@ en_UM =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -21511,10 +21472,10 @@ en_VC =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -21650,10 +21611,10 @@ en_VG =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -21722,8 +21683,7 @@ en_VI =
             , DF (text "/")
             , DF dayOfMonthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF monthNameAbbreviated
@@ -21790,10 +21750,10 @@ en_VI =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -21929,10 +21889,10 @@ en_VU =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -22068,10 +22028,10 @@ en_WS =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -22195,10 +22155,10 @@ en_ZA =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -22334,10 +22294,10 @@ en_ZM =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -22461,10 +22421,10 @@ en_ZW =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "at", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "at", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -22532,8 +22492,7 @@ es =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -22597,10 +22556,10 @@ es =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -22669,8 +22628,7 @@ es_419 =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -22733,10 +22691,10 @@ es_419 =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -22805,8 +22763,7 @@ es_AR =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -22869,10 +22826,10 @@ es_AR =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -22941,8 +22898,7 @@ es_BO =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -23007,10 +22963,10 @@ es_BO =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -23079,8 +23035,7 @@ es_BR =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -23143,10 +23098,10 @@ es_BR =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -23215,8 +23170,7 @@ es_BZ =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -23279,10 +23233,10 @@ es_BZ =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -23351,8 +23305,7 @@ es_CL =
             , DF (text "-")
             , DF monthFixed
             , DF (text "-")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -23415,10 +23368,10 @@ es_CL =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -23487,8 +23440,7 @@ es_CO =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -23563,10 +23515,10 @@ es_CO =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -23635,8 +23587,7 @@ es_CR =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -23699,10 +23650,10 @@ es_CR =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -23771,8 +23722,7 @@ es_CU =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -23835,10 +23785,10 @@ es_CU =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -23907,8 +23857,7 @@ es_DO =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -23983,10 +23932,10 @@ es_DO =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -24055,8 +24004,7 @@ es_EA =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -24120,10 +24068,10 @@ es_EA =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -24192,8 +24140,7 @@ es_EC =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -24256,10 +24203,10 @@ es_EC =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -24328,8 +24275,7 @@ es_GQ =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -24393,10 +24339,10 @@ es_GQ =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -24465,8 +24411,7 @@ es_GT =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -24529,10 +24474,10 @@ es_GT =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -24601,8 +24546,7 @@ es_HN =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -24665,10 +24609,10 @@ es_HN =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -24737,8 +24681,7 @@ es_IC =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -24802,10 +24745,10 @@ es_IC =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -24874,8 +24817,7 @@ es_MX =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -24938,10 +24880,10 @@ es_MX =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -25010,8 +24952,7 @@ es_NI =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -25074,10 +25015,10 @@ es_NI =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -25146,8 +25087,7 @@ es_PA =
             , DF (text "/")
             , DF dayOfMonthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF monthFixed
@@ -25222,10 +25162,10 @@ es_PA =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -25294,8 +25234,7 @@ es_PE =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -25358,10 +25297,10 @@ es_PE =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -25430,8 +25369,7 @@ es_PH =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -25506,10 +25444,10 @@ es_PH =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -25578,8 +25516,7 @@ es_PR =
             , DF (text "/")
             , DF dayOfMonthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF monthFixed
@@ -25654,10 +25591,10 @@ es_PR =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -25726,8 +25663,7 @@ es_PY =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -25790,10 +25726,10 @@ es_PY =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -25862,8 +25798,7 @@ es_SV =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -25926,10 +25861,10 @@ es_SV =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -26073,10 +26008,10 @@ es_US =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -26145,8 +26080,7 @@ es_UY =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -26209,10 +26143,10 @@ es_UY =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -26281,8 +26215,7 @@ es_VE =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -26357,10 +26290,10 @@ es_VE =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "a. C.", ad = "d. C." }
     }
@@ -26428,8 +26361,7 @@ et =
             , DF (text ".")
             , DF monthFixed
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -26484,10 +26416,10 @@ et =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "eKr", ad = "pKr" }
     }
@@ -26551,8 +26483,7 @@ eu =
         }
     , dateTokens =
         { short =
-            [ DF yearNumber
-            , DF yearNumber
+            [ DF yearNumberLastTwo
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
@@ -26635,10 +26566,10 @@ eu =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "K.a.", ad = "K.o." }
     }
@@ -26763,10 +26694,10 @@ fa =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text "،\u{200F} ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text "،\u{200F} ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text "، ساعت ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text "، ساعت ", DateGoesHere ]
+        { short = [ DateGoesHere, Text "،\u{200F} ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text "،\u{200F} ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text "، ساعت ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text "، ساعت ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م.", ad = "م." }
     }
@@ -26892,10 +26823,10 @@ fa_AF =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text "،\u{200F} ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text "،\u{200F} ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text "، ساعت ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text "، ساعت ", DateGoesHere ]
+        { short = [ DateGoesHere, Text "،\u{200F} ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text "،\u{200F} ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text "، ساعت ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text "، ساعت ", TimeGoesHere ]
         }
     , eraNames = { bc = "ق.م.", ad = "م." }
     }
@@ -27018,11 +26949,11 @@ fi =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
         , medium =
-            [ TimeGoesHere, Text " ", Text "klo", Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "klo", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "klo", Text " ", DateGoesHere ]
+            [ DateGoesHere, Text " ", Text "klo", Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "klo", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "klo", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "eKr.", ad = "jKr." }
     }
@@ -27090,8 +27021,7 @@ fil =
             , DF (text "/")
             , DF dayOfMonthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF monthNameAbbreviated
@@ -27158,10 +27088,10 @@ fil =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "nang", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "nang", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "nang", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "nang", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -27284,10 +27214,10 @@ fr =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -27356,8 +27286,7 @@ fr_BE =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -27418,10 +27347,10 @@ fr_BE =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -27545,10 +27474,10 @@ fr_BF =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -27672,10 +27601,10 @@ fr_BI =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -27799,10 +27728,10 @@ fr_BJ =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -27926,10 +27855,10 @@ fr_BL =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -28077,10 +28006,10 @@ fr_CA =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -28204,10 +28133,10 @@ fr_CD =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -28331,10 +28260,10 @@ fr_CF =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -28458,10 +28387,10 @@ fr_CG =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -28530,8 +28459,7 @@ fr_CH =
             , DF (text ".")
             , DF monthFixed
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -28588,10 +28516,10 @@ fr_CH =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -28715,10 +28643,10 @@ fr_CI =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -28842,10 +28770,10 @@ fr_CM =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -28981,10 +28909,10 @@ fr_DJ =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -29120,10 +29048,10 @@ fr_DZ =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -29247,10 +29175,10 @@ fr_GA =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -29374,10 +29302,10 @@ fr_GF =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -29501,10 +29429,10 @@ fr_GN =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -29628,10 +29556,10 @@ fr_GP =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -29755,10 +29683,10 @@ fr_GQ =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -29882,10 +29810,10 @@ fr_HT =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -30009,10 +29937,10 @@ fr_KM =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -30136,10 +30064,10 @@ fr_LU =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -30263,10 +30191,10 @@ fr_MA =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -30390,10 +30318,10 @@ fr_MC =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -30517,10 +30445,10 @@ fr_MF =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -30644,10 +30572,10 @@ fr_MG =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -30771,10 +30699,10 @@ fr_ML =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -30898,10 +30826,10 @@ fr_MQ =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -31037,10 +30965,10 @@ fr_MR =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -31164,10 +31092,10 @@ fr_MU =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -31291,10 +31219,10 @@ fr_NC =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -31418,10 +31346,10 @@ fr_NE =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -31545,10 +31473,10 @@ fr_PF =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -31672,10 +31600,10 @@ fr_PM =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -31799,10 +31727,10 @@ fr_RE =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -31926,10 +31854,10 @@ fr_RW =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -32053,10 +31981,10 @@ fr_SC =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -32180,10 +32108,10 @@ fr_SN =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -32319,10 +32247,10 @@ fr_SY =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -32458,10 +32386,10 @@ fr_TD =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -32585,10 +32513,10 @@ fr_TG =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -32724,10 +32652,10 @@ fr_TN =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -32863,10 +32791,10 @@ fr_VU =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -32990,10 +32918,10 @@ fr_WF =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -33117,10 +33045,10 @@ fr_YT =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "à", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "à", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "av. J.-C.", ad = "ap. J.-C." }
     }
@@ -33243,10 +33171,10 @@ ga =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "RC", ad = "AD" }
     }
@@ -33370,10 +33298,10 @@ ga_GB =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "RC", ad = "AD" }
     }
@@ -33441,8 +33369,7 @@ gl =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -33509,10 +33436,10 @@ gl =
             ]
         }
     , dateTimeTokens =
-        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
-        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
-        , long = [ DateGoesHere, Text " ", Text "do", Text " ", TimeGoesHere ]
-        , full = [ DateGoesHere, Text " ", Text "do", Text " ", TimeGoesHere ]
+        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        , long = [ TimeGoesHere, Text " ", Text "do", Text " ", DateGoesHere ]
+        , full = [ TimeGoesHere, Text " ", Text "do", Text " ", DateGoesHere ]
         }
     , eraNames = { bc = "a.C.", ad = "d.C." }
     }
@@ -33580,8 +33507,7 @@ gu =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -33648,10 +33574,10 @@ gu =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " એ ", DateGoesHere, Text " વાગ્યે" ]
-        , full = [ TimeGoesHere, Text " એ ", DateGoesHere, Text " વાગ્યે" ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " એ ", TimeGoesHere, Text " વાગ્યે" ]
+        , full = [ DateGoesHere, Text " એ ", TimeGoesHere, Text " વાગ્યે" ]
         }
     , eraNames = { bc = "ઈ.સ.પૂર્વે", ad = "ઈ.સ." }
     }
@@ -33774,10 +33700,10 @@ he =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " בשעה ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " בשעה ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " בשעה ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " בשעה ", TimeGoesHere ]
         }
     , eraNames = { bc = "לפנה״ס", ad = "לספירה" }
     }
@@ -33845,8 +33771,7 @@ hi =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -33913,10 +33838,10 @@ hi =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " को ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " को ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " को ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " को ", TimeGoesHere ]
         }
     , eraNames = { bc = "ईसा-पूर्व", ad = "ईस्वी" }
     }
@@ -34044,10 +33969,10 @@ hr =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "u", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "u", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "u", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "u", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "pr. Kr.", ad = "po. Kr." }
     }
@@ -34116,8 +34041,7 @@ hr_BA =
             , DF (text ". ")
             , DF monthNumber
             , DF (text ". ")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             , DF (text ".")
             ]
         , medium =
@@ -34177,10 +34101,10 @@ hr_BA =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "u", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "u", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "u", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "u", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "pr. Kr.", ad = "po. Kr." }
     }
@@ -34306,10 +34230,10 @@ hu =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "i. e.", ad = "i. sz." }
     }
@@ -34377,8 +34301,7 @@ hy =
             , DF (text ".")
             , DF monthFixed
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -34435,10 +34358,10 @@ hy =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "մ.թ.ա.", ad = "մ.թ." }
     }
@@ -34506,8 +34429,7 @@ id =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -34562,10 +34484,10 @@ id =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "SM", ad = "M" }
     }
@@ -34688,10 +34610,10 @@ is =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "kl", Text ". ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "kl", Text ". ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "kl", Text ". ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "kl", Text ". ", TimeGoesHere ]
         }
     , eraNames = { bc = "f.Kr.", ad = "e.Kr." }
     }
@@ -34759,8 +34681,7 @@ it =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -34815,10 +34736,10 @@ it =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "a.C.", ad = "d.C." }
     }
@@ -34887,8 +34808,7 @@ it_CH =
             , DF (text ".")
             , DF monthFixed
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -34943,10 +34863,10 @@ it_CH =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "a.C.", ad = "d.C." }
     }
@@ -35015,8 +34935,7 @@ it_SM =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -35071,10 +34990,10 @@ it_SM =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "a.C.", ad = "d.C." }
     }
@@ -35143,8 +35062,7 @@ it_VA =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -35199,10 +35117,10 @@ it_VA =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "a.C.", ad = "d.C." }
     }
@@ -35326,10 +35244,10 @@ ja =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "紀元前", ad = "西暦" }
     }
@@ -35452,10 +35370,10 @@ jv =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "SM", ad = "M" }
     }
@@ -35523,8 +35441,7 @@ ka =
             , DF (text ".")
             , DF monthFixed
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -35579,10 +35496,10 @@ ka =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "ძვ. წ.", ad = "ახ. წ." }
     }
@@ -35650,8 +35567,7 @@ kk =
             , DF (text ".")
             , DF monthFixed
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF yearNumber
@@ -35712,10 +35628,10 @@ kk =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "б.з.д.", ad = "б.з." }
     }
@@ -35783,8 +35699,7 @@ km =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -35851,10 +35766,10 @@ km =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " នៅ\u{200B}ម៉ោង ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " នៅ\u{200B}ម៉ោង ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " នៅ\u{200B}ម៉ោង ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " នៅ\u{200B}ម៉ោង ", TimeGoesHere ]
         }
     , eraNames = { bc = "មុន គ.ស.", ad = "គ.ស." }
     }
@@ -35922,8 +35837,7 @@ kn =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF monthNameAbbreviated
@@ -35990,10 +35904,10 @@ kn =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "ಕ್ರಿ.ಪೂ", ad = "ಕ್ರಿ.ಶ" }
     }
@@ -36057,8 +35971,7 @@ ko =
         }
     , dateTokens =
         { short =
-            [ DF yearNumber
-            , DF yearNumber
+            [ DF yearNumberLastTwo
             , DF (text ". ")
             , DF monthNumber
             , DF (text ". ")
@@ -36132,10 +36045,10 @@ ko =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -36200,8 +36113,7 @@ ko_KP =
         }
     , dateTokens =
         { short =
-            [ DF yearNumber
-            , DF yearNumber
+            [ DF yearNumberLastTwo
             , DF (text ". ")
             , DF monthNumber
             , DF (text ". ")
@@ -36275,10 +36187,10 @@ ko_KP =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -36346,8 +36258,7 @@ ky =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF yearNumber
@@ -36408,10 +36319,10 @@ ky =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "б.з.ч.", ad = "б.з." }
     }
@@ -36536,10 +36447,10 @@ lo =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "ກ່ອນ ຄ.ສ.", ad = "ຄ.ສ." }
     }
@@ -36671,10 +36582,10 @@ lt =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "pr. Kr.", ad = "po Kr." }
     }
@@ -36742,8 +36653,7 @@ lv =
             , DF (text ".")
             , DF monthFixed
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF yearNumber
@@ -36804,10 +36714,10 @@ lv =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "p.m.ē.", ad = "m.ē." }
     }
@@ -36875,8 +36785,7 @@ mk =
             , DF (text ".")
             , DF monthNumber
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -36931,11 +36840,11 @@ mk =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", Text "во", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", Text "во", Text " ", TimeGoesHere ]
         , medium =
-            [ TimeGoesHere, Text ", ", Text "во", Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", Text "во", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", Text "во", Text " ", DateGoesHere ]
+            [ DateGoesHere, Text ", ", Text "во", Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", Text "во", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", Text "во", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "п.н.е.", ad = "н.е." }
     }
@@ -37003,8 +36912,7 @@ ml =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF yearNumber
@@ -37071,10 +36979,10 @@ ml =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "ക്രി.മു.", ad = "എഡി" }
     }
@@ -37210,10 +37118,10 @@ mn =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "МЭӨ", ad = "МЭ" }
     }
@@ -37281,8 +37189,7 @@ mr =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -37349,10 +37256,10 @@ mr =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " रोजी ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " रोजी ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " रोजी ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " रोजी ", TimeGoesHere ]
         }
     , eraNames = { bc = "इ. स. पू.", ad = "इ. स." }
     }
@@ -37420,8 +37327,7 @@ ms =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -37488,10 +37394,10 @@ ms =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "S.M.", ad = "TM" }
     }
@@ -37560,8 +37466,7 @@ ms_BN =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -37626,10 +37531,10 @@ ms_BN =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "S.M.", ad = "TM" }
     }
@@ -37698,8 +37603,7 @@ ms_ID =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -37754,10 +37658,10 @@ ms_ID =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "S.M.", ad = "TM" }
     }
@@ -37826,8 +37730,7 @@ ms_SG =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -37894,10 +37797,10 @@ ms_SG =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "S.M.", ad = "TM" }
     }
@@ -37965,8 +37868,7 @@ my =
             , DF (text "-")
             , DF monthFixed
             , DF (text "-")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF yearNumber
@@ -38021,10 +37923,10 @@ my =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "ဘီစီ", ad = "အဒေီ" }
     }
@@ -38147,10 +38049,10 @@ nb =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "kl", Text ". ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "kl", Text ". ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "kl", Text ". ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "kl", Text ". ", TimeGoesHere ]
         }
     , eraNames = { bc = "f.Kr.", ad = "e.Kr." }
     }
@@ -38274,10 +38176,10 @@ nb_SJ =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "kl", Text ". ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "kl", Text ". ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "kl", Text ". ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "kl", Text ". ", TimeGoesHere ]
         }
     , eraNames = { bc = "f.Kr.", ad = "e.Kr." }
     }
@@ -38341,8 +38243,7 @@ ne =
         }
     , dateTokens =
         { short =
-            [ DF yearNumber
-            , DF yearNumber
+            [ DF yearNumberLastTwo
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
@@ -38401,10 +38302,10 @@ ne =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "ईसा पूर्व", ad = "सन्" }
     }
@@ -38469,8 +38370,7 @@ ne_IN =
         }
     , dateTokens =
         { short =
-            [ DF yearNumber
-            , DF yearNumber
+            [ DF yearNumberLastTwo
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
@@ -38541,10 +38441,10 @@ ne_IN =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "ईसा पूर्व", ad = "सन्" }
     }
@@ -38667,10 +38567,10 @@ nl =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "om", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "om", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "om", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "om", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "v.Chr.", ad = "n.Chr." }
     }
@@ -38794,10 +38694,10 @@ nl_AW =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "om", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "om", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "om", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "om", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "v.Chr.", ad = "n.Chr." }
     }
@@ -38921,10 +38821,10 @@ nl_BE =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "om", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "om", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "om", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "om", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "v.Chr.", ad = "n.Chr." }
     }
@@ -39048,10 +38948,10 @@ nl_BQ =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "om", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "om", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "om", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "om", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "v.Chr.", ad = "n.Chr." }
     }
@@ -39175,10 +39075,10 @@ nl_CW =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "om", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "om", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "om", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "om", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "v.Chr.", ad = "n.Chr." }
     }
@@ -39302,10 +39202,10 @@ nl_SR =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "om", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "om", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "om", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "om", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "v.Chr.", ad = "n.Chr." }
     }
@@ -39429,10 +39329,10 @@ nl_SX =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "om", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "om", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "om", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "om", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "v.Chr.", ad = "n.Chr." }
     }
@@ -39557,10 +39457,10 @@ nn =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "kl", Text ". ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "kl", Text ". ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "f.Kr.", ad = "e.Kr." }
     }
@@ -39683,10 +39583,10 @@ no =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "kl", Text ". ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "kl", Text ". ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "kl", Text ". ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "kl", Text ". ", TimeGoesHere ]
         }
     , eraNames = { bc = "f.Kr.", ad = "e.Kr." }
     }
@@ -39754,8 +39654,7 @@ or =
             , DF (text "/")
             , DF dayOfMonthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF monthNameAbbreviated
@@ -39822,10 +39721,10 @@ or =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ DateGoesHere, Text " ଠାରେ ", TimeGoesHere ]
-        , full = [ DateGoesHere, Text " ଠାରେ ", TimeGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ TimeGoesHere, Text " ଠାରେ ", DateGoesHere ]
+        , full = [ TimeGoesHere, Text " ଠାରେ ", DateGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -39893,8 +39792,7 @@ pa =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -39961,10 +39859,10 @@ pa =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "ਈ. ਪੂ.", ad = "ਸੰਨ" }
     }
@@ -40033,8 +39931,7 @@ pa_Guru =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -40101,10 +39998,10 @@ pa_Guru =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "ਈ. ਪੂ.", ad = "ਸੰਨ" }
     }
@@ -40227,10 +40124,10 @@ pl =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "p.n.e.", ad = "n.e." }
     }
@@ -40356,10 +40253,10 @@ ps =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "له میلاد وړاندې", ad = "م." }
     }
@@ -40496,10 +40393,10 @@ ps_PK =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "له میلاد وړاندې", ad = "م." }
     }
@@ -40634,10 +40531,10 @@ pt =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "a.C.", ad = "d.C." }
     }
@@ -40706,8 +40603,7 @@ pt_AO =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -40770,10 +40666,10 @@ pt_AO =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "a.C.", ad = "d.C." }
     }
@@ -40842,8 +40738,7 @@ pt_CH =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -40906,10 +40801,10 @@ pt_CH =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "a.C.", ad = "d.C." }
     }
@@ -40978,8 +40873,7 @@ pt_CV =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -41042,10 +40936,10 @@ pt_CV =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "a.C.", ad = "d.C." }
     }
@@ -41114,8 +41008,7 @@ pt_GQ =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -41178,10 +41071,10 @@ pt_GQ =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "a.C.", ad = "d.C." }
     }
@@ -41250,8 +41143,7 @@ pt_GW =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -41314,10 +41206,10 @@ pt_GW =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "a.C.", ad = "d.C." }
     }
@@ -41386,8 +41278,7 @@ pt_LU =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -41450,10 +41341,10 @@ pt_LU =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "a.C.", ad = "d.C." }
     }
@@ -41522,8 +41413,7 @@ pt_MO =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -41598,10 +41488,10 @@ pt_MO =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "a.C.", ad = "d.C." }
     }
@@ -41670,8 +41560,7 @@ pt_MZ =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -41734,10 +41623,10 @@ pt_MZ =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "a.C.", ad = "d.C." }
     }
@@ -41806,8 +41695,7 @@ pt_PT =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -41870,10 +41758,10 @@ pt_PT =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "a.C.", ad = "d.C." }
     }
@@ -41942,8 +41830,7 @@ pt_ST =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -42006,10 +41893,10 @@ pt_ST =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "a.C.", ad = "d.C." }
     }
@@ -42078,8 +41965,7 @@ pt_TL =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -42142,10 +42028,10 @@ pt_TL =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "às", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "a.C.", ad = "d.C." }
     }
@@ -42268,10 +42154,10 @@ ro =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "î.Hr.", ad = "d.Hr." }
     }
@@ -42395,10 +42281,10 @@ ro_MD =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "î.Hr.", ad = "d.Hr." }
     }
@@ -42530,10 +42416,10 @@ ru =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "до н. э.", ad = "н. э." }
     }
@@ -42666,10 +42552,10 @@ ru_BY =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "до н. э.", ad = "н. э." }
     }
@@ -42802,10 +42688,10 @@ ru_KG =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "до н. э.", ad = "н. э." }
     }
@@ -42938,10 +42824,10 @@ ru_KZ =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "до н. э.", ad = "н. э." }
     }
@@ -43074,10 +42960,10 @@ ru_MD =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "до н. э.", ad = "н. э." }
     }
@@ -43210,10 +43096,10 @@ ru_UA =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "до н. э.", ad = "н. э." }
     }
@@ -43348,10 +43234,10 @@ sd =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "CD" }
     }
@@ -43487,10 +43373,10 @@ sd_Arab =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "CD" }
     }
@@ -43613,10 +43499,10 @@ si =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "ක්\u{200D}රි.පූ.", ad = "ක්\u{200D}රි.ව." }
     }
@@ -43739,10 +43625,10 @@ sk =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "pred Kr.", ad = "po Kr." }
     }
@@ -43810,8 +43696,7 @@ sl =
             , DF (text ". ")
             , DF monthFixed
             , DF (text ". ")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -43866,10 +43751,10 @@ sl =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "pr. Kr.", ad = "po Kr." }
     }
@@ -43937,8 +43822,7 @@ so =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -44005,10 +43889,10 @@ so =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", Text "ee", Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "ee", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "ee", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", Text "ee", Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "ee", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "ee", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -44077,8 +43961,7 @@ so_DJ =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -44145,10 +44028,10 @@ so_DJ =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", Text "ee", Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "ee", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "ee", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", Text "ee", Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "ee", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "ee", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -44217,8 +44100,7 @@ so_ET =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -44285,10 +44167,10 @@ so_ET =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", Text "ee", Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "ee", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "ee", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", Text "ee", Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "ee", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "ee", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -44357,8 +44239,7 @@ so_KE =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthFixed
@@ -44413,10 +44294,10 @@ so_KE =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", Text "ee", Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "ee", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "ee", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", Text "ee", Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "ee", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "ee", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
@@ -44484,8 +44365,7 @@ sq =
             , DF (text ".")
             , DF monthNumber
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -44552,10 +44432,10 @@ sq =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "në", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "në", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "në", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "në", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "p.K.", ad = "mb.K." }
     }
@@ -44624,8 +44504,7 @@ sq_MK =
             , DF (text ".")
             , DF monthNumber
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -44680,10 +44559,10 @@ sq_MK =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "në", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "në", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "në", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "në", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "p.K.", ad = "mb.K." }
     }
@@ -44752,8 +44631,7 @@ sq_XK =
             , DF (text ".")
             , DF monthNumber
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -44808,10 +44686,10 @@ sq_XK =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "në", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "në", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "në", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "në", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "p.K.", ad = "mb.K." }
     }
@@ -44879,8 +44757,7 @@ sr =
             , DF (text ".")
             , DF monthNumber
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             , DF (text ".")
             ]
         , medium =
@@ -44939,10 +44816,10 @@ sr =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "п. н. е.", ad = "н. е." }
     }
@@ -45011,8 +44888,7 @@ sr_Cyrl =
             , DF (text ".")
             , DF monthNumber
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             , DF (text ".")
             ]
         , medium =
@@ -45071,10 +44947,10 @@ sr_Cyrl =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "п. н. е.", ad = "н. е." }
     }
@@ -45147,8 +45023,7 @@ sr_Cyrl_BA =
             , DF (text ".")
             , DF monthNumber
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             , DF (text ".")
             ]
         , medium =
@@ -45207,10 +45082,10 @@ sr_Cyrl_BA =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "п. н. е.", ad = "н. е." }
     }
@@ -45283,8 +45158,7 @@ sr_Cyrl_ME =
             , DF (text ".")
             , DF monthNumber
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             , DF (text ".")
             ]
         , medium =
@@ -45343,10 +45217,10 @@ sr_Cyrl_ME =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "п. н. е.", ad = "н. е." }
     }
@@ -45419,8 +45293,7 @@ sr_Cyrl_XK =
             , DF (text ".")
             , DF monthNumber
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             , DF (text ".")
             ]
         , medium =
@@ -45479,10 +45352,10 @@ sr_Cyrl_XK =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "п. н. е.", ad = "н. е." }
     }
@@ -45551,8 +45424,7 @@ sr_Latn =
             , DF (text ".")
             , DF monthNumber
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             , DF (text ".")
             ]
         , medium =
@@ -45611,10 +45483,10 @@ sr_Latn =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "p. n. e.", ad = "n. e." }
     }
@@ -45687,8 +45559,7 @@ sr_Latn_BA =
             , DF (text ".")
             , DF monthNumber
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             , DF (text ".")
             ]
         , medium =
@@ -45747,10 +45618,10 @@ sr_Latn_BA =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "p. n. e.", ad = "n. e." }
     }
@@ -45823,8 +45694,7 @@ sr_Latn_ME =
             , DF (text ".")
             , DF monthNumber
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             , DF (text ".")
             ]
         , medium =
@@ -45883,10 +45753,10 @@ sr_Latn_ME =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "p. n. e.", ad = "n. e." }
     }
@@ -45959,8 +45829,7 @@ sr_Latn_XK =
             , DF (text ".")
             , DF monthNumber
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             , DF (text ".")
             ]
         , medium =
@@ -46019,10 +45888,10 @@ sr_Latn_XK =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "p. n. e.", ad = "n. e." }
     }
@@ -46145,10 +46014,10 @@ sv =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "f.Kr.", ad = "e.Kr." }
     }
@@ -46272,10 +46141,10 @@ sv_AX =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "f.Kr.", ad = "e.Kr." }
     }
@@ -46399,10 +46268,10 @@ sv_FI =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "f.Kr.", ad = "e.Kr." }
     }
@@ -46525,10 +46394,10 @@ sw =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "KK", ad = "BK" }
     }
@@ -46652,10 +46521,10 @@ sw_CD =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "KK", ad = "BK" }
     }
@@ -46779,10 +46648,10 @@ sw_KE =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "KK", ad = "BK" }
     }
@@ -46906,10 +46775,10 @@ sw_UG =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "KK", ad = "BK" }
     }
@@ -46977,8 +46846,7 @@ ta =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -47045,10 +46913,10 @@ ta =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " அன்று ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " அன்று ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " அன்று ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " அன்று ", TimeGoesHere ]
         }
     , eraNames = { bc = "கி.மு.", ad = "கி.பி." }
     }
@@ -47117,8 +46985,7 @@ ta_LK =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -47173,10 +47040,10 @@ ta_LK =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " அன்று ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " அன்று ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " அன்று ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " அன்று ", TimeGoesHere ]
         }
     , eraNames = { bc = "கி.மு.", ad = "கி.பி." }
     }
@@ -47245,8 +47112,7 @@ ta_MY =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -47313,10 +47179,10 @@ ta_MY =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " அன்று ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " அன்று ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " அன்று ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " அன்று ", TimeGoesHere ]
         }
     , eraNames = { bc = "கி.மு.", ad = "கி.பி." }
     }
@@ -47385,8 +47251,7 @@ ta_SG =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -47453,10 +47318,10 @@ ta_SG =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " அன்று ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " அன்று ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " அன்று ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " அன்று ", TimeGoesHere ]
         }
     , eraNames = { bc = "கி.மு.", ad = "கி.பி." }
     }
@@ -47524,8 +47389,7 @@ te =
             , DF (text "-")
             , DF monthFixed
             , DF (text "-")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -47592,10 +47456,10 @@ te =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere, Text "కి" ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere, Text "కి" ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere, Text "కి" ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere, Text "కి" ]
         }
     , eraNames = { bc = "క్రీపూ", ad = "క్రీశ" }
     }
@@ -47663,8 +47527,7 @@ th =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -47723,10 +47586,10 @@ th =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "ก่อน ค.ศ.", ad = "ค.ศ." }
     }
@@ -47849,10 +47712,10 @@ tk =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "B.e.öň", ad = "B.e." }
     }
@@ -47975,10 +47838,10 @@ tr =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "MÖ", ad = "MS" }
     }
@@ -48114,10 +47977,10 @@ tr_CY =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "MÖ", ad = "MS" }
     }
@@ -48185,8 +48048,7 @@ uk =
             , DF (text ".")
             , DF monthFixed
             , DF (text ".")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -48250,10 +48112,10 @@ uk =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", Text "о", Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", Text "о", Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", Text "о", Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", Text "о", Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "до н. е.", ad = "н. е." }
     }
@@ -48376,10 +48238,10 @@ root =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BCE", ad = "CE" }
     }
@@ -48447,8 +48309,7 @@ ur =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -48515,10 +48376,10 @@ ur =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "قبل مسیح", ad = "عیسوی" }
     }
@@ -48587,8 +48448,7 @@ ur_IN =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -48655,10 +48515,10 @@ ur_IN =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "قبل مسیح", ad = "عیسوی" }
     }
@@ -48726,8 +48586,7 @@ uz =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -48784,10 +48643,10 @@ uz =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "m.a.", ad = "milodiy" }
     }
@@ -48856,8 +48715,7 @@ uz_Latn =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF dayOfMonthNumber
@@ -48914,10 +48772,10 @@ uz_Latn =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text ", ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text ", ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text ", ", TimeGoesHere ]
         }
     , eraNames = { bc = "m.a.", ad = "milodiy" }
     }
@@ -49040,10 +48898,10 @@ vi =
             ]
         }
     , dateTimeTokens =
-        { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
-        , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
-        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
-        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
+        { short = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        , medium = [ TimeGoesHere, Text ", ", DateGoesHere ]
+        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
+        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
         }
     , eraNames = { bc = "Trước CN", ad = "Sau CN" }
     }
@@ -49174,10 +49032,10 @@ yue =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "西元前", ad = "西元" }
     }
@@ -49309,10 +49167,10 @@ yue_Hant =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "西元前", ad = "西元" }
     }
@@ -49437,10 +49295,10 @@ zh =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "公元前", ad = "公元" }
     }
@@ -49566,10 +49424,10 @@ zh_Hans =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "公元前", ad = "公元" }
     }
@@ -49642,8 +49500,7 @@ zh_Hans_HK =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF yearNumber
@@ -49704,10 +49561,10 @@ zh_Hans_HK =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "公元前", ad = "公元" }
     }
@@ -49780,8 +49637,7 @@ zh_Hans_MO =
             , DF (text "/")
             , DF monthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF yearNumber
@@ -49842,10 +49698,10 @@ zh_Hans_MO =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "公元前", ad = "公元" }
     }
@@ -49918,8 +49774,7 @@ zh_Hans_SG =
             , DF (text "/")
             , DF monthFixed
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF yearNumber
@@ -49980,10 +49835,10 @@ zh_Hans_SG =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "公元前", ad = "公元" }
     }
@@ -50114,10 +49969,10 @@ zh_Hant =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "西元前", ad = "西元" }
     }
@@ -50253,10 +50108,10 @@ zh_Hant_HK =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "公元前", ad = "公元" }
     }
@@ -50392,10 +50247,10 @@ zh_Hant_MO =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "公元前", ad = "公元" }
     }
@@ -50463,8 +50318,7 @@ zu =
             , DF (text "/")
             , DF dayOfMonthNumber
             , DF (text "/")
-            , DF yearNumber
-            , DF yearNumber
+            , DF yearNumberLastTwo
             ]
         , medium =
             [ DF monthNameAbbreviated
@@ -50519,10 +50373,10 @@ zu =
             ]
         }
     , dateTimeTokens =
-        { short = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , medium = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , long = [ TimeGoesHere, Text " ", DateGoesHere ]
-        , full = [ TimeGoesHere, Text " ", DateGoesHere ]
+        { short = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , long = [ DateGoesHere, Text " ", TimeGoesHere ]
+        , full = [ DateGoesHere, Text " ", TimeGoesHere ]
         }
     , eraNames = { bc = "BC", ad = "AD" }
     }
