@@ -3,5 +3,5 @@ elm-stuff
 # elm-repl generated files
 repl-temp-*
 # example generated file
-example/build/dynamic.js
-example/build/static.js
+example/build/*.js
+example/build/*.js.gz
