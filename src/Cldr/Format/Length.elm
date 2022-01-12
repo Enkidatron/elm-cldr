@@ -5,9 +5,9 @@ module Cldr.Format.Length exposing (Length(..))
 
 # Length
 
-    Provides the length values for `Format.Date` and `Format.DateTime`
+Provides the length values for `Cldr.Format.Date` and `Cldr.Format.DateTime`
 
-    @docs Length
+@docs Length
 
 -}
 
@@ -16,7 +16,7 @@ module Cldr.Format.Length exposing (Length(..))
 These determine how verbose the formatted output will be.
 -}
 type Length
-    = Full
-    | Long
+    = Short
     | Medium
-    | Short
+    | Long
+    | Full
