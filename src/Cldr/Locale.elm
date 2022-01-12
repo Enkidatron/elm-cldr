@@ -32,6 +32,9 @@ import Internal.Locale
 
 {-| Represents the locale to use for formatting.
 You can parse a value from JS like `navigator.language` or use hardcoded locales.
+
+TODO: Make this be the actual union type, not an alias. 
+This will make the documentation links work better. 
 -}
 type alias Locale =
     Internal.Locale.Locale
@@ -39,10 +42,10 @@ type alias Locale =
 
 {-| Get the [Unicode](https://unicode.org/reports/tr35/#Identifiers) representation of a locale.
 
-    import Locale.En exposing (en_US)
+    import Cldr.Locale.En exposing (en_GB)
 
-    toUnicode en_US
-    --> "en-US"
+    toUnicode en_GB
+    --> "en-GB"
 
 -}
 toUnicode : Locale -> String
