@@ -60,7 +60,7 @@ full =
     DateAndTime { date = Full, time = Full }
 
 
-{-| Format a `Time.Posix` value, using the format for a specified `Locale` and the specified `Time.Zone`
+{-| Format a `Time.Posix` value, using the format for a specified `FormatType`, `Locale`, and `Time.Zone`
 
     import Time
     import Cldr.Locale.En exposing (en)

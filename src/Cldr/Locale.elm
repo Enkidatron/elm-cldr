@@ -33,8 +33,9 @@ import Internal.Locale
 {-| Represents the locale to use for formatting.
 You can parse a value from JS like `navigator.language` or use hardcoded locales.
 
-TODO: Make this be the actual union type, not an alias. 
-This will make the documentation links work better. 
+TODO: Make this be the actual union type, not an alias.
+This will make the documentation links work better.
+
 -}
 type alias Locale =
     Internal.Locale.Locale
