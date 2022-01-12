@@ -471,11 +471,19 @@ normalize langId =
                 (Maybe.map (Tagged.map String.toUpper) maybeVariant)
 
 
-matchNearestLocale : List Internal -> LanguageId -> Maybe Internal
-matchNearestLocale allLocales langId =
-    List.filter (.languageId >> languageIdNoConflicts langId) allLocales
+matchNearestLocale : List Locale -> LanguageId -> Maybe Locale
+matchNearestLocale locales langId =
+    locales
+        |> List.map unwrapLocale
+        |> List.filter (.languageId >> languageIdNoConflicts langId)
         |> List.sortBy (.languageId >> languageIdSimilarity langId)
         |> List.head
+        |> Maybe.map Locale
+
+
+unwrapLocale : Locale -> Internal
+unwrapLocale (Locale internal) =
+    internal
 
 
 languageIdNoConflicts : LanguageId -> LanguageId -> Bool

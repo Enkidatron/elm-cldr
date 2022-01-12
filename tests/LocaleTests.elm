@@ -44,7 +44,10 @@ localeRoundtrip label localeString =
     test label <|
         \_ ->
             Expect.equal
-                (localeString |> Cldr.Locale.fromString |> Maybe.map Cldr.Locale.toUnicode)
+                (localeString
+                    |> Cldr.Locale.fromString Cldr.Locale.allLocales
+                    |> Maybe.map Cldr.Locale.toUnicode
+                )
                 (Just localeString)
 
 

@@ -1,6 +1,7 @@
 module Cldr.Locale exposing
     ( Locale
     , fromString
+    , allLocales, basicLocales
     , toUnicode
     )
 
@@ -11,7 +12,15 @@ module Cldr.Locale exposing
 
 @docs Locale
 
+
+## Create
+
 @docs fromString
+@docs allLocales, basicLocales
+
+
+## Convert
+
 @docs toUnicode
 
 -}
@@ -43,14 +52,34 @@ toUnicode (Internal.Locale.Locale internal) =
 
 {-| Parse a `Locale` from a Unicode or BCP47 identifier.
 
-    import Cldr.Locale.En exposing (en_US)
+    import Cldr.Locale.En exposing (en, en_GB)
 
-    fromString "en-US"
-    --> Just en_US
+    fromString basicLocales "en"
+    --> Just en
+
+    fromString allLocales "en-GB"
+    --> Just en_GB
 
 -}
-fromString : String -> Maybe Locale
-fromString =
+fromString : List Locale -> String -> Maybe Locale
+fromString candidateLocales =
     Internal.Locale.languageIdFromString
-        >> Maybe.andThen (Internal.Locale.matchNearestLocale Internal.Generated.allLocales)
-        >> Maybe.map Internal.Locale.Locale
+        >> Maybe.andThen (Internal.Locale.matchNearestLocale candidateLocales)
+
+
+{-| A list of every locale listed in the JSON version of the CLDR.
+-}
+allLocales : List Locale
+allLocales =
+    List.map Internal.Locale.Locale Internal.Generated.allLocales
+
+
+{-| A list of every "basic" locale listed in the JSON version of the CLDR.
+
+A "basic" locale is a locale without a region, script, or variant subtag,
+such as `en` or `ru`.
+
+-}
+basicLocales : List Locale
+basicLocales =
+    List.map Internal.Locale.Locale Internal.Generated.basicLocales

@@ -58,7 +58,7 @@ init flags =
 localeFlagDecoder : Decoder (Maybe Locale)
 localeFlagDecoder =
     JD.field "locale" JD.string
-        |> JD.map Cldr.Locale.fromString
+        |> JD.map (Cldr.Locale.fromString Cldr.Locale.allLocales)
 
 
 
