@@ -4,7 +4,7 @@ module VerifyExamples.Cldr.Format.DateTime.Format0 exposing (spec0)
 -- Please don't modify this file by hand!
 
 import Cldr.Format.DateTime exposing (..)
-import Cldr.Locale.En exposing (en)
+import Cldr.Locale exposing (en)
 import Expect
 import Test
 import Time

@@ -3,8 +3,6 @@ module DateTimeFormatTest exposing (suite)
 import Cldr.Format.DateTime exposing (FormatType(..), format)
 import Cldr.Format.Length exposing (Length(..))
 import Cldr.Locale exposing (..)
-import Cldr.Locale.En exposing (en)
-import Cldr.Locale.Ru exposing (ru)
 import Expect
 import Test exposing (..)
 import Time exposing (Posix)

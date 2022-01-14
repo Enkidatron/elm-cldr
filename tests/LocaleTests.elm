@@ -1,8 +1,6 @@
 module LocaleTests exposing (suite)
 
 import Cldr.Locale exposing (..)
-import Cldr.Locale.En exposing (en)
-import Cldr.Locale.Ru exposing (ru)
 import Expect
 import Test exposing (..)
 

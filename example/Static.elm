@@ -5,7 +5,6 @@ import Cldr.Format.Date
 import Cldr.Format.DateTime
 import Cldr.Format.Length exposing (Length(..))
 import Cldr.Locale exposing (Locale)
-import Cldr.Locale.En
 import Date exposing (Date)
 import Html exposing (Html)
 import Task
@@ -75,7 +74,7 @@ update msg model =
 
 locale : Locale
 locale =
-    Cldr.Locale.En.en
+    Cldr.Locale.en
 
 
 view : Model -> Html Msg

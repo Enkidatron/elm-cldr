@@ -3,8 +3,6 @@ module DateFormatTest exposing (suite)
 import Cldr.Format.Date exposing (format)
 import Cldr.Format.Length exposing (Length(..))
 import Cldr.Locale exposing (..)
-import Cldr.Locale.En exposing (en)
-import Cldr.Locale.Ru exposing (ru)
 import Date exposing (Date)
 import Expect
 import Test exposing (..)

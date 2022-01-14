@@ -4,7 +4,6 @@ module VerifyExamples.Cldr.Locale.FromString1 exposing (spec1)
 -- Please don't modify this file by hand!
 
 import Cldr.Locale exposing (..)
-import Cldr.Locale.En exposing (en, en_GB)
 import Expect
 import Test
 

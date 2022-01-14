@@ -5,7 +5,7 @@ module VerifyExamples.Cldr.Format.Date.Format0 exposing (spec0)
 
 import Cldr.Format.Date exposing (..)
 import Cldr.Format.Length exposing (Length(..))
-import Cldr.Locale.En exposing (en)
+import Cldr.Locale exposing (en)
 import Date
 import Expect
 import Test

@@ -1,7 +1,7 @@
 module Cldr.Format.DateTime exposing
-    ( FormatType(..)
+    ( format
+    , FormatType(..)
     , short, medium, long, full
-    , format
     )
 
 {-|
@@ -9,10 +9,13 @@ module Cldr.Format.DateTime exposing
 
 # DateTime Formatting
 
+@docs format
+
+
+## Format Type
+
 @docs FormatType
 @docs short, medium, long, full
-
-@docs format
 
 -}
 
@@ -63,7 +66,7 @@ full =
 {-| Format a `Time.Posix` value, using the format for a specified `FormatType`, `Locale`, and `Time.Zone`
 
     import Time
-    import Cldr.Locale.En exposing (en)
+    import Cldr.Locale exposing (en)
 
     format short en Time.utc (Time.millisToPosix 959829796738)
     --> "6/1/00, 3:23 AM"

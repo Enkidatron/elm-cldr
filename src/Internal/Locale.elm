@@ -307,8 +307,8 @@ type VariantSubtagFlag
     = VariantSubtagFlag
 
 
-toUnicode : Internal -> String
-toUnicode internal =
+toUnicode : Locale -> String
+toUnicode (Locale internal) =
     languageIdToUnicode internal.languageId
 
 

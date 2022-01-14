@@ -32,8 +32,7 @@ See `examples` directory for full examples.
 ```elm
 import Cldr.Format.Date
 import Cldr.Format.Length exposing (Length(..))
-import Cldr.Locale
-import Cldr.Locale.En exposing (en)
+import Cldr.Locale exposing (root)
 import Date
 import Time
 
@@ -43,5 +42,5 @@ locale = Cldr.Locale.fromString Cldr.Locale.allLocales localeStringFromFlags
 
 date = Date.fromCalendarDate 2022 Time.Jan 10
 
-formatted = Cldr.Format.Date.format Short (Maybe.withDefault en locale) date
+formatted = Cldr.Format.Date.format Short (Maybe.withDefault root locale) date
 ```

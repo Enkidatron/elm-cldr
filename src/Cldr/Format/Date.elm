@@ -17,7 +17,7 @@ import Internal.Locale exposing (Locale(..))
 {-| Formats a `Date` using the specified `Length` and `Locale`.
 
     import Cldr.Format.Length exposing (Length(..))
-    import Cldr.Locale.En exposing (en)
+    import Cldr.Locale exposing (en)
     import Date
     import Time exposing (Month(..))
 

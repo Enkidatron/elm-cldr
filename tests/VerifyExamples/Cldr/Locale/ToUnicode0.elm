@@ -4,7 +4,6 @@ module VerifyExamples.Cldr.Locale.ToUnicode0 exposing (spec0)
 -- Please don't modify this file by hand!
 
 import Cldr.Locale exposing (..)
-import Cldr.Locale.En exposing (en_GB)
 import Expect
 import Test
 
