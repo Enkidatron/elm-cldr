@@ -19,10 +19,10 @@ elm install enkidatron/elm-cldr
 - Format a `Date` from [`justinmimbs/date`][datePackage]: [`Format.Date.format`][dateFormat]
 - Format a `Posix` from [`elm/time`][timePackage]: [`Format.DateTime.format`][dateTimeFormat]
 
-[fromString]: Cldr/Locale#fromString
-[en]: Cldr/Locale/En#en
-[dateFormat]: Cldr/Format/Date#format
-[dateTimeFormat]: Cldr/Format/DateTime#format
+[fromString]: Cldr-Locale#fromString
+[en]: Cldr-Locale#en
+[dateFormat]: Cldr-Format-Date#format
+[dateTimeFormat]: Cldr-Format-DateTime#format
 
 ## Examples
 
@@ -44,3 +44,8 @@ date = Date.fromCalendarDate 2022 Time.Jan 10
 
 formatted = Cldr.Format.Date.format Short (Maybe.withDefault root locale) date
 ```
+
+## Contributing
+
+The `Cldr.Locale` file is automatically generated from the CLDR JSON. In order to keep this library repo clean, the code for that generation can be found at [enkidatron/elm-cldr-generator](https://github.com/enkidatron/elm-cldr-generator)
+
