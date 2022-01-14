@@ -1,34 +1,31 @@
 {
-    "type": "application",
+    "type": "package",
+    "name": "enkidatron/elm-cldr",
+    "summary": "Locale based date and time formatting",
+    "license": "BSD-3-Clause",
+    "version": "1.0.0",
+    "exposed-modules": [
+        "Cldr.Locale",
+        "Cldr.Format.Date",
+        "Cldr.Format.DateTime",
+        "Cldr.Format.Length"
+    ],
     "source-directories": [
         "src"
     ],
-    "elm-version": "0.19.1",
+    "elm-version": "0.19.0 <= v < 0.20.0",
     "dependencies": {
-        "direct": {
-            "elm/browser": "1.0.2",
-            "elm/core": "1.0.5",
-            "elm/html": "1.0.0",
-            "elm/parser": "1.1.0",
-            "elm/time": "1.0.0",
-            "elm-community/string-extra": "4.0.1",
-            "joneshf/elm-tagged": "2.1.1",
-            "justinmimbs/date": "4.0.0",
-            "ryannhg/date-format": "2.3.0"
-        },
-        "indirect": {
-            "elm/json": "1.1.3",
-            "elm/regex": "1.0.0",
-            "elm/url": "1.0.0",
-            "elm/virtual-dom": "1.0.2"
-        }
+        "elm/browser": "1.0.2 <= v < 2.0.0",
+        "elm/core": "1.0.5 <= v < 2.0.0",
+        "elm/html": "1.0.0 <= v < 2.0.0",
+        "elm/parser": "1.1.0 <= v < 2.0.0",
+        "elm/time": "1.0.0 <= v < 2.0.0",
+        "elm-community/string-extra": "4.0.1 <= v < 5.0.0",
+        "joneshf/elm-tagged": "2.1.1 <= v < 3.0.0",
+        "justinmimbs/date": "4.0.0 <= v < 5.0.0",
+        "ryannhg/date-format": "2.3.0 <= v < 3.0.0"
     },
     "test-dependencies": {
-        "direct": {
-            "elm-explorations/test": "1.2.2"
-        },
-        "indirect": {
-            "elm/random": "1.0.0"
-        }
+        "elm-explorations/test": "1.2.2 <= v < 2.0.0"
     }
 }
