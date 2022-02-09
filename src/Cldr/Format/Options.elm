@@ -29,7 +29,7 @@ module Cldr.Format.Options exposing
 -}
 
 
-{-| The options that are relevant to formatting a DateTiem value.
+{-| The options that are relevant to formatting a DateTime value.
 
 These match the options that can be used in the
 [`Intl.DateTimeFormat`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat/DateTimeFormat) JS [API](https://402.ecma-international.org/8.0/#table-datetimeformat-components).
