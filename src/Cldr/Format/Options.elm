@@ -56,7 +56,7 @@ type alias DateTimeOptions =
     import Cldr.Format.Options exposing (defaultDateTimeOptions)
 
     options =
-        { defaultDateTimeOptionis | hour = Just Numeric }
+        { defaultDateTimeOptions | hour = Just Numeric }
 
 -}
 defaultDateTimeOptions : DateTimeOptions
