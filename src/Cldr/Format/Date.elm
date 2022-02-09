@@ -1,4 +1,7 @@
-module Cldr.Format.Date exposing (format)
+module Cldr.Format.Date exposing
+    ( format
+    , FormatType(..)
+    )
 
 {-|
 
@@ -7,11 +10,25 @@ module Cldr.Format.Date exposing (format)
 
 @docs format
 
+
+## Format Type
+
+@docs FormatType
+
 -}
 
 import Cldr.Format.Length exposing (Length(..))
+import Cldr.Format.Options exposing (DateOptions)
 import Date exposing (Date)
 import Internal.Locale exposing (Locale(..))
+
+
+{-| Dates can be formatted using a
+`Cldr.Format.Length.Length` or `Cldr.Format.Options.DateOptions`.
+-}
+type FormatType
+    = WithLength Length
+    | WithOptions DateOptions
 
 
 {-| Formats a `Date` using the specified `Length` and `Locale`.
@@ -21,25 +38,31 @@ import Internal.Locale exposing (Locale(..))
     import Date
     import Time exposing (Month(..))
 
-    format Short en (Date.fromCalendarDate 2000 Jan 1)
+    let
+        date = Date.fromCalendarDate 2000 Jan 1
+    in
+    format (WithLength Short) en date
     --> "1/1/00"
 
 -}
-format : Length -> Locale -> Date -> String
-format length (Locale internal) =
-    case length of
-        Short ->
+format : FormatType -> Locale -> Date -> String
+format formatType (Locale internal) =
+    case formatType of
+        WithLength Short ->
             Date.formatWithLanguage (Internal.Locale.toDateLanguage internal)
                 internal.datePatterns.short
 
-        Medium ->
+        WithLength Medium ->
             Date.formatWithLanguage (Internal.Locale.toDateLanguage internal)
                 internal.datePatterns.medium
 
-        Long ->
+        WithLength Long ->
             Date.formatWithLanguage (Internal.Locale.toDateLanguage internal)
                 internal.datePatterns.long
 
-        Full ->
+        WithLength Full ->
             Date.formatWithLanguage (Internal.Locale.toDateLanguage internal)
                 internal.datePatterns.full
+
+        WithOptions _ ->
+            always "Date formatting with options not implemented"

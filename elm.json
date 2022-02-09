@@ -8,7 +8,9 @@
         "Cldr.Locale",
         "Cldr.Format.Date",
         "Cldr.Format.DateTime",
-        "Cldr.Format.Length"
+        "Cldr.Format.Length",
+        "Cldr.Format.Options",
+        "Cldr.Format.OptionsBuilder"
     ],
     "source-directories": [
         "src"

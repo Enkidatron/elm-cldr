@@ -20,6 +20,7 @@ module Cldr.Format.DateTime exposing
 -}
 
 import Cldr.Format.Length exposing (Length(..))
+import Cldr.Format.Options exposing (DateTimeOptions)
 import DateFormat
 import Internal.Length
 import Internal.Locale exposing (Locale(..))
@@ -33,6 +34,7 @@ type FormatType
     = DateOnly Length
     | TimeOnly Length
     | DateAndTime { date : Length, time : Length }
+    | WithOptions DateTimeOptions
 
 
 {-| Use `Short` for both date and time
@@ -100,3 +102,6 @@ tokensForFormatType formatType internal zone =
                         , time = time
                         }
                     )
+
+        WithOptions _ ->
+            [ DateFormat.text "Formatting with options not implemented" ]
