@@ -10,14 +10,9 @@
         "Cldr.Format.DateTime",
         "Cldr.Format.Length"
     ],
-    "source-directories": [
-        "src"
-    ],
     "elm-version": "0.19.0 <= v < 0.20.0",
     "dependencies": {
-        "elm/browser": "1.0.2 <= v < 2.0.0",
         "elm/core": "1.0.5 <= v < 2.0.0",
-        "elm/html": "1.0.0 <= v < 2.0.0",
         "elm/parser": "1.1.0 <= v < 2.0.0",
         "elm/time": "1.0.0 <= v < 2.0.0",
         "elm-community/string-extra": "4.0.1 <= v < 5.0.0",
