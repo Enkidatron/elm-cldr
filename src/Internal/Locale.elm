@@ -1,8 +1,12 @@
 module Internal.Locale exposing
-    ( DateTimeToken(..)
+    ( AvailableFormat(..)
+    , DateAvailableFormat
+    , DateTimeAvailableFormat
+    , DateTimeToken(..)
     , Internal
     , LanguageId(..)
     , Locale(..)
+    , TimeAvailableFormat
     , TimeToken(..)
     , convertDateTimeToken
     , convertToken
@@ -10,15 +14,20 @@ module Internal.Locale exposing
     , languageIdSimilarity
     , matchNearestLocale
     , normalize
+    , toDateAvailableFormat
     , toDateLanguage
+    , toDateTimeAvailableFormat
     , toDateTimeLanguage
+    , toTimeAvailableFormat
     , toUnicode
     )
 
 import Cldr.Format.Length exposing (Length(..))
+import Cldr.Format.Options exposing (DateOptions, DateTimeOptions)
 import Date
 import DateFormat exposing (..)
 import DateFormat.Language
+import Internal.Options exposing (TimeOptions)
 import Internal.Structures exposing (..)
 import Parser exposing ((|.), (|=), Parser)
 import String.Extra
@@ -42,6 +51,8 @@ type alias Internal =
     , eraNames : EraNames
     , dateTimeTokens : Patterns (List DateTimeToken)
     , languageId : LanguageId
+    , availableFormats : List AvailableFormat
+    , hour12ByDefault : Bool
     }
 
 
@@ -50,6 +61,7 @@ type TimeToken
     | TimeZoneShort
     | TimeZoneFull
     | EraAbbr
+    | EraNarrow
 
 
 convertToken : EraNames -> Time.Zone -> TimeToken -> DateFormat.Token
@@ -66,6 +78,9 @@ convertToken { ad } zone token =
 
         EraAbbr ->
             DateFormat.text ad
+
+        EraNarrow ->
+            DateFormat.text (String.slice 0 1 ad)
 
 
 type DateTimeToken
@@ -550,3 +565,64 @@ similarityHelper points requested checked =
 
         ( Nothing, Just _ ) ->
             points
+
+
+
+-- AvailableFormats
+
+
+type AvailableFormat
+    = DateTimeAF DateTimeAvailableFormat
+    | TimeAF TimeAvailableFormat
+    | DateAF DateAvailableFormat
+
+
+type alias DateTimeAvailableFormat =
+    { options : DateTimeOptions, tokens : List TimeToken }
+
+
+type alias TimeAvailableFormat =
+    { options : TimeOptions, tokens : List TimeToken }
+
+
+type alias DateAvailableFormat =
+    { options : DateOptions, tokens : List TimeToken, formatString : String }
+
+
+toDateTimeAvailableFormat : AvailableFormat -> DateTimeAvailableFormat
+toDateTimeAvailableFormat af =
+    case af of
+        DateTimeAF format ->
+            format
+
+        TimeAF { options, tokens } ->
+            { options = Internal.Options.timeToDateTime options, tokens = tokens }
+
+        DateAF { options, tokens } ->
+            { options = Internal.Options.dateToDateTime options, tokens = tokens }
+
+
+toDateAvailableFormat : AvailableFormat -> Maybe DateAvailableFormat
+toDateAvailableFormat af =
+    case af of
+        DateAF format ->
+            Just format
+
+        DateTimeAF _ ->
+            Nothing
+
+        TimeAF _ ->
+            Nothing
+
+
+toTimeAvailableFormat : AvailableFormat -> Maybe TimeAvailableFormat
+toTimeAvailableFormat af =
+    case af of
+        TimeAF format ->
+            Just format
+
+        DateTimeAF _ ->
+            Nothing
+
+        DateAF _ ->
+            Nothing
