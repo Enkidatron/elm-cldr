@@ -228,8 +228,6 @@ ruOpts_yMd =
 
 ruOpts_yM : Test
 ruOpts_yM =
-    -- TODO: Handle "L..."
-    -- The Date.format function does not support it
     test "ru locale, Options test: yM" <|
         \_ ->
             let

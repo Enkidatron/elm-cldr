@@ -411,8 +411,6 @@ ruFullDateTime =
 
 ruOpts_EyMdhms : Test
 ruOpts_EyMdhms =
-    -- TODO: token replacement algorithm does not properly handle it when 
-    -- skeleton has "H", but pattern has "HH". This probably generalizes. 
     test "ru locale, Options test: EyMdhms" <|
         \_ ->
             let
@@ -469,10 +467,6 @@ ruOpts_yMd =
 
 ruOpts_yM : Test
 ruOpts_yM =
-    -- TODO: This is also breaking because of lack of "LLLL" support
-    -- but in a different way from the dates. 
-    -- This because we are parsing "LLLL" to the same token as "MMMM"
-    -- We do this because DateFormat does not have a true token for "LLLL"
     test "ru locale, Options test: yM" <|
         \_ ->
             let

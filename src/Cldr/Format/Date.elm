@@ -85,8 +85,6 @@ expandFormatString requested { options, formatString } =
 
 replaceFormat : (a -> Maybe b) -> (b -> String) -> a -> a -> String -> String
 replaceFormat getField toString requested candidate formatString =
-    -- TODO: Is there common code with DateTime.replaceToken?
-    -- TODO: This seems like a testing nightmare
     case ( getField requested, getField candidate ) of
         ( Just req, Just can ) ->
             String.replace (toString can) (toString req) formatString
@@ -110,8 +108,6 @@ replaceNumberOrTextFormat getField toString requested candidate formatString =
 
 eraFormat : Cldr.Format.Options.TextOption -> String
 eraFormat opt =
-    -- TODO: Date library does not support era in any way, it seems?
-    -- TODO: "G", "GG", and "GGG" are all Abbreviated, do we need to detect them all?
     case opt of
         Cldr.Format.Options.Narrow ->
             "GGGGG"
@@ -125,7 +121,6 @@ eraFormat opt =
 
 yearFormat : Cldr.Format.Options.NumberOption -> String
 yearFormat opt =
-    -- TODO: Do we need to support anything other than "y" and "yy"?
     case opt of
         Cldr.Format.Options.TwoDigit ->
             "yy"
@@ -155,7 +150,6 @@ monthFormat opt =
 
 dayFormat : Cldr.Format.Options.NumberOption -> String
 dayFormat opt =
-    -- TODO: Do we need to support anything other than "d" and "dd"?
     case opt of
         Cldr.Format.Options.Numeric ->
             "d"
@@ -166,7 +160,6 @@ dayFormat opt =
 
 weekdayFormat : Cldr.Format.Options.TextOption -> String
 weekdayFormat opt =
-    -- TODO: do we need to support "e..." or "c..."? or "EEEEEE", "EE", or "EEE"?
     case opt of
         Cldr.Format.Options.Narrow ->
             "EEEEE"

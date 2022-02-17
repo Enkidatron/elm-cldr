@@ -236,7 +236,6 @@ expandTimeTokenForTime requested candidate =
         >> replaceToken getHourFields hourToken requested candidate
         >> replaceToken .minute minuteToken requested candidate
         >> replaceToken .second secondToken requested candidate
-        -- TODO: We currently don't actually support fractional second formatting
         >> replaceToken .zone zoneToken requested candidate
 
 
@@ -282,7 +281,6 @@ replaceNumberOrTextToken getField toToken requested candidate timeToken =
 
 eraToken : Cldr.Format.Options.TextOption -> TimeToken
 eraToken _ =
-    -- TODO: Do we need to handle Era Wide or Era Narrow?
     EraAbbr
 
 
@@ -306,8 +304,6 @@ monthToken opt =
             DF DateFormat.monthNumber
 
         Cldr.Format.Options.Text Cldr.Format.Options.Narrow ->
-            -- TODO: This is not technically correct.
-            -- We need a token that only displays the first letter
             DF DateFormat.monthNameAbbreviated
 
         Cldr.Format.Options.Text Cldr.Format.Options.Short ->
@@ -331,14 +327,9 @@ weekdayToken : Cldr.Format.Options.TextOption -> TimeToken
 weekdayToken opt =
     case opt of
         Cldr.Format.Options.Narrow ->
-            -- TODO: Technically this is incorrect.
-            -- This token matches the "Short" format, not the "Narrow" format
             DF DateFormat.dayOfWeekNameAbbreviated
 
         Cldr.Format.Options.Short ->
-            -- TODO: This is also incorrect, frustratingly.
-            -- The Intl 'short' matches Unicode "Abbreviated",
-            -- but this token matches Unicode "Short"
             DF DateFormat.dayOfWeekNameAbbreviated
 
         Cldr.Format.Options.Long ->
@@ -347,8 +338,6 @@ weekdayToken opt =
 
 periodToken : Cldr.Format.Options.TextOption -> TimeToken
 periodToken _ =
-    -- TODO: Do we need tokens for all of the variants?
-    -- TODO: Let the locale choose upper or lower case somehow
     DF DateFormat.amPmUppercase
 
 
@@ -400,8 +389,6 @@ zoneToken opt =
 
 lengthForDatePattern : List TimeToken -> Length
 lengthForDatePattern tokens =
-    -- TODO: This implementation always takes two passes through the token list
-    -- This could be decreased to a single partial pass with recursive cleverness
     if containsWideMonth tokens then
         if containsWeekday tokens then
             Full
