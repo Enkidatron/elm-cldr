@@ -1,11 +1,10 @@
 module Generated.Sq exposing (sq, sq_MK, sq_XK)
 
 import Cldr.Format.Options as Opts
-import DateFormat exposing (..)
 import Dict
 import Internal.DayPeriodRule
 import Internal.FormatSymbols as Sym
-import Internal.Locale exposing (DateTimeToken(..), Internal, LanguageId(..), normalize)
+import Internal.Locale exposing (DateTimeToken(..), LanguageId(..))
 import Tagged exposing (Tagged(..))
 
 

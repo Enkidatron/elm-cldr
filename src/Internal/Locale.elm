@@ -19,9 +19,6 @@ module Internal.Locale exposing
 
 import Cldr.Format.Length exposing (Length(..))
 import Cldr.Format.Options exposing (DateOptions, DateTimeOptions)
-import Date
-import DateFormat exposing (..)
-import DateFormat.Language
 import Internal.DayPeriodRule exposing (DayPeriodRule)
 import Internal.FormatSymbols as Sym
 import Internal.Options exposing (TimeOptions)
@@ -57,80 +54,6 @@ type DateTimeToken
     = DateGoesHere
     | TimeGoesHere
     | Text String
-
-
-monthFun : MonthNames -> Month -> String
-monthFun names month =
-    case month of
-        Jan ->
-            names.jan
-
-        Feb ->
-            names.feb
-
-        Mar ->
-            names.mar
-
-        Apr ->
-            names.apr
-
-        May ->
-            names.may
-
-        Jun ->
-            names.jun
-
-        Jul ->
-            names.jul
-
-        Aug ->
-            names.aug
-
-        Sep ->
-            names.sep
-
-        Oct ->
-            names.oct
-
-        Nov ->
-            names.nov
-
-        Dec ->
-            names.dec
-
-
-weekdayFun : WeekdayNames -> Weekday -> String
-weekdayFun names weekday =
-    case weekday of
-        Sun ->
-            names.sun
-
-        Mon ->
-            names.mon
-
-        Tue ->
-            names.tue
-
-        Wed ->
-            names.wed
-
-        Thu ->
-            names.thu
-
-        Fri ->
-            names.fri
-
-        Sat ->
-            names.sat
-
-
-amPmFun : PeriodNames -> Int -> String
-amPmFun names hour =
-    if hour > 11 then
-        names.pm
-
-    else
-        names.am
 
 
 type LanguageId
@@ -426,15 +349,18 @@ type AvailableFormat
 
 
 type alias DateTimeAvailableFormat =
-    { options : DateTimeOptions, formatSymbols : List Sym.FormatWithLiteral }
+    { options : DateTimeOptions, 
+    formatSymbols : List Sym.FormatWithLiteral }
 
 
 type alias TimeAvailableFormat =
-    { options : TimeOptions, formatSymbols : List Sym.TimeWithLiteral }
+    { options : TimeOptions, 
+    formatSymbols : List Sym.TimeWithLiteral }
 
 
 type alias DateAvailableFormat =
-    { options : DateOptions, formatSymbols : List Sym.DateWithLiteral }
+    { options : DateOptions, 
+    formatSymbols : List Sym.DateWithLiteral }
 
 
 toDateTimeAvailableFormat : AvailableFormat -> DateTimeAvailableFormat

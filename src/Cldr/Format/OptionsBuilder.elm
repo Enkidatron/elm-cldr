@@ -50,7 +50,7 @@ module Cldr.Format.OptionsBuilder exposing
 
 -}
 
-import Cldr.Format.Options exposing (..)
+import Cldr.Format.Options as Opts
 
 
 {-| An opaque type that uses the "phantom builder" pattern.
@@ -93,20 +93,20 @@ type alias EmptyDate =
 
 {-| Start building a `DateTimeOptions` value
 -}
-initDateTime : OptionsBuilder EmptyDateTime DateTimeOptions
+initDateTime : OptionsBuilder EmptyDateTime Opts.DateTimeOptions
 initDateTime =
-    OptionsBuilder defaultDateTimeOptions
+    OptionsBuilder Opts.defaultDateTimeOptions
 
 
 {-| Start building a `DateTime` value
 -}
-initDate : OptionsBuilder EmptyDate DateOptions
+initDate : OptionsBuilder EmptyDate Opts.DateOptions
 initDate =
-    OptionsBuilder defaultDateOptions
+    OptionsBuilder Opts.defaultDateOptions
 
 
 type alias HasEra a =
-    { a | era : Maybe TextOption }
+    { a | era : Maybe Opts.TextOption }
 
 
 type alias EraNotSetYet a =
@@ -115,13 +115,13 @@ type alias EraNotSetYet a =
 
 {-| Set the `era` field.
 -}
-setEra : TextOption -> OptionsBuilder (EraNotSetYet a) (HasEra b) -> OptionsBuilder a (HasEra b)
+setEra : Opts.TextOption -> OptionsBuilder (EraNotSetYet a) (HasEra b) -> OptionsBuilder a (HasEra b)
 setEra opt (OptionsBuilder record) =
     OptionsBuilder { record | era = Just opt }
 
 
 type alias HasYear a =
-    { a | year : Maybe NumberOption }
+    { a | year : Maybe Opts.NumberOption }
 
 
 type alias YearNotSetYet a =
@@ -130,13 +130,13 @@ type alias YearNotSetYet a =
 
 {-| Set the `year` field.
 -}
-setYear : NumberOption -> OptionsBuilder (YearNotSetYet a) (HasYear b) -> OptionsBuilder a (HasYear b)
+setYear : Opts.NumberOption -> OptionsBuilder (YearNotSetYet a) (HasYear b) -> OptionsBuilder a (HasYear b)
 setYear opt (OptionsBuilder record) =
     OptionsBuilder { record | year = Just opt }
 
 
 type alias HasMonth a =
-    { a | month : Maybe NumberOrTextOption }
+    { a | month : Maybe Opts.NumberOrTextOption }
 
 
 type alias MonthNotSetYet a =
@@ -145,20 +145,20 @@ type alias MonthNotSetYet a =
 
 {-| Set the `month` field to a `NumberOption` value.
 -}
-setMonthNumber : NumberOption -> OptionsBuilder (MonthNotSetYet a) (HasMonth b) -> OptionsBuilder a (HasMonth b)
+setMonthNumber : Opts.NumberOption -> OptionsBuilder (MonthNotSetYet a) (HasMonth b) -> OptionsBuilder a (HasMonth b)
 setMonthNumber opt (OptionsBuilder record) =
-    OptionsBuilder { record | month = Just (Number opt) }
+    OptionsBuilder { record | month = Just (Opts.Number opt) }
 
 
 {-| Set the `month` field to a `TextOption` value.
 -}
-setMonthText : TextOption -> OptionsBuilder (MonthNotSetYet a) (HasMonth b) -> OptionsBuilder a (HasMonth b)
+setMonthText : Opts.TextOption -> OptionsBuilder (MonthNotSetYet a) (HasMonth b) -> OptionsBuilder a (HasMonth b)
 setMonthText opt (OptionsBuilder record) =
-    OptionsBuilder { record | month = Just (Text opt) }
+    OptionsBuilder { record | month = Just (Opts.Text opt) }
 
 
 type alias HasDay a =
-    { a | day : Maybe NumberOption }
+    { a | day : Maybe Opts.NumberOption }
 
 
 type alias DayNotSetYet a =
@@ -167,13 +167,13 @@ type alias DayNotSetYet a =
 
 {-| Set the `day` field.
 -}
-setDay : NumberOption -> OptionsBuilder (DayNotSetYet a) (HasDay b) -> OptionsBuilder a (HasDay b)
+setDay : Opts.NumberOption -> OptionsBuilder (DayNotSetYet a) (HasDay b) -> OptionsBuilder a (HasDay b)
 setDay opt (OptionsBuilder record) =
     OptionsBuilder { record | day = Just opt }
 
 
 type alias HasWeekday a =
-    { a | weekday : Maybe TextOption }
+    { a | weekday : Maybe Opts.TextOption }
 
 
 type alias WeekdayNotSetYet a =
@@ -182,13 +182,13 @@ type alias WeekdayNotSetYet a =
 
 {-| Set the `weekday` field.
 -}
-setWeekday : TextOption -> OptionsBuilder (WeekdayNotSetYet a) (HasWeekday b) -> OptionsBuilder a (HasWeekday b)
+setWeekday : Opts.TextOption -> OptionsBuilder (WeekdayNotSetYet a) (HasWeekday b) -> OptionsBuilder a (HasWeekday b)
 setWeekday opt (OptionsBuilder record) =
     OptionsBuilder { record | weekday = Just opt }
 
 
 type alias HasPeriod a =
-    { a | period : Maybe TextOption }
+    { a | period : Maybe Opts.TextOption }
 
 
 type alias PeriodNotSetYet a =
@@ -197,13 +197,13 @@ type alias PeriodNotSetYet a =
 
 {-| Set the `period` field.
 -}
-setPeriod : TextOption -> OptionsBuilder (PeriodNotSetYet a) (HasPeriod b) -> OptionsBuilder a (HasPeriod b)
+setPeriod : Opts.TextOption -> OptionsBuilder (PeriodNotSetYet a) (HasPeriod b) -> OptionsBuilder a (HasPeriod b)
 setPeriod opt (OptionsBuilder record) =
     OptionsBuilder { record | period = Just opt }
 
 
 type alias HasHour a =
-    { a | hour : Maybe NumberOption }
+    { a | hour : Maybe Opts.NumberOption }
 
 
 type alias HourNotSetYet a =
@@ -212,13 +212,13 @@ type alias HourNotSetYet a =
 
 {-| Set the `hour` field.
 -}
-setHour : NumberOption -> OptionsBuilder (HourNotSetYet a) (HasHour b) -> OptionsBuilder a (HasHour b)
+setHour : Opts.NumberOption -> OptionsBuilder (HourNotSetYet a) (HasHour b) -> OptionsBuilder a (HasHour b)
 setHour opt (OptionsBuilder record) =
     OptionsBuilder { record | hour = Just opt }
 
 
 type alias HasMinute a =
-    { a | minute : Maybe NumberOption }
+    { a | minute : Maybe Opts.NumberOption }
 
 
 type alias MinuteNotSetYet a =
@@ -227,13 +227,13 @@ type alias MinuteNotSetYet a =
 
 {-| Set the `minute` field.
 -}
-setMinute : NumberOption -> OptionsBuilder (MinuteNotSetYet a) (HasMinute b) -> OptionsBuilder a (HasMinute b)
+setMinute : Opts.NumberOption -> OptionsBuilder (MinuteNotSetYet a) (HasMinute b) -> OptionsBuilder a (HasMinute b)
 setMinute opt (OptionsBuilder record) =
     OptionsBuilder { record | minute = Just opt }
 
 
 type alias HasSecond a =
-    { a | second : Maybe NumberOption }
+    { a | second : Maybe Opts.NumberOption }
 
 
 type alias SecondNotSetYet a =
@@ -242,13 +242,13 @@ type alias SecondNotSetYet a =
 
 {-| Set the `second` field.
 -}
-setSecond : NumberOption -> OptionsBuilder (SecondNotSetYet a) (HasSecond b) -> OptionsBuilder a (HasSecond b)
+setSecond : Opts.NumberOption -> OptionsBuilder (SecondNotSetYet a) (HasSecond b) -> OptionsBuilder a (HasSecond b)
 setSecond opt (OptionsBuilder record) =
     OptionsBuilder { record | second = Just opt }
 
 
 type alias HasFractionalSecondDigits a =
-    { a | fractionalSecondDigits : Maybe FractionalDigits }
+    { a | fractionalSecondDigits : Maybe Opts.FractionalDigits }
 
 
 type alias FractionalSecondDigitsNotSetYet a =
@@ -257,13 +257,13 @@ type alias FractionalSecondDigitsNotSetYet a =
 
 {-| Set the `fractionalSecondDigits` field.
 -}
-setFractionalSecondDigits : FractionalDigits -> OptionsBuilder (FractionalSecondDigitsNotSetYet a) (HasFractionalSecondDigits b) -> OptionsBuilder a (HasFractionalSecondDigits b)
+setFractionalSecondDigits : Opts.FractionalDigits -> OptionsBuilder (FractionalSecondDigitsNotSetYet a) (HasFractionalSecondDigits b) -> OptionsBuilder a (HasFractionalSecondDigits b)
 setFractionalSecondDigits opt (OptionsBuilder record) =
     OptionsBuilder { record | fractionalSecondDigits = Just opt }
 
 
 type alias HasZone a =
-    { a | zone : Maybe NameOption }
+    { a | zone : Maybe Opts.NameOption }
 
 
 type alias ZoneNotSetYet a =
@@ -272,13 +272,13 @@ type alias ZoneNotSetYet a =
 
 {-| Set the `zone` field.
 -}
-setZone : NameOption -> OptionsBuilder (ZoneNotSetYet a) (HasZone b) -> OptionsBuilder a (HasZone b)
+setZone : Opts.NameOption -> OptionsBuilder (ZoneNotSetYet a) (HasZone b) -> OptionsBuilder a (HasZone b)
 setZone opt (OptionsBuilder record) =
     OptionsBuilder { record | zone = Just opt }
 
 
 type alias HasHour12 a =
-    { a | hour12 : Maybe HourType }
+    { a | hour12 : Maybe Opts.HourType }
 
 
 type alias Hour12NotSetYet a =
@@ -287,6 +287,6 @@ type alias Hour12NotSetYet a =
 
 {-| Set the `hour12` field.
 -}
-setHour12 : HourType -> OptionsBuilder (Hour12NotSetYet a) (HasHour12 b) -> OptionsBuilder a (HasHour12 b)
+setHour12 : Opts.HourType -> OptionsBuilder (Hour12NotSetYet a) (HasHour12 b) -> OptionsBuilder a (HasHour12 b)
 setHour12 opt (OptionsBuilder record) =
     OptionsBuilder { record | hour12 = Just opt }

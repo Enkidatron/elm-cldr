@@ -1,11 +1,10 @@
 module Generated.Sr exposing (sr, sr_Cyrl, sr_Cyrl_BA, sr_Cyrl_ME, sr_Cyrl_XK, sr_Latn, sr_Latn_BA, sr_Latn_ME, sr_Latn_XK)
 
 import Cldr.Format.Options as Opts
-import DateFormat exposing (..)
 import Dict
 import Internal.DayPeriodRule
 import Internal.FormatSymbols as Sym
-import Internal.Locale exposing (DateTimeToken(..), Internal, LanguageId(..), normalize)
+import Internal.Locale exposing (DateTimeToken(..), LanguageId(..))
 import Tagged exposing (Tagged(..))
 
 

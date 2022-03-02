@@ -1,11 +1,10 @@
 module Generated.De exposing (de, de_AT, de_BE, de_CH, de_IT, de_LI, de_LU)
 
 import Cldr.Format.Options as Opts
-import DateFormat exposing (..)
 import Dict
 import Internal.DayPeriodRule
 import Internal.FormatSymbols as Sym
-import Internal.Locale exposing (DateTimeToken(..), Internal, LanguageId(..), normalize)
+import Internal.Locale exposing (DateTimeToken(..), LanguageId(..))
 import Tagged exposing (Tagged(..))
 
 

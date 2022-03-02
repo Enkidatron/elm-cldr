@@ -1,11 +1,10 @@
 module Generated.So exposing (so, so_DJ, so_ET, so_KE)
 
 import Cldr.Format.Options as Opts
-import DateFormat exposing (..)
 import Dict
 import Internal.DayPeriodRule
 import Internal.FormatSymbols as Sym
-import Internal.Locale exposing (DateTimeToken(..), Internal, LanguageId(..), normalize)
+import Internal.Locale exposing (DateTimeToken(..), LanguageId(..))
 import Tagged exposing (Tagged(..))
 
 

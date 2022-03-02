@@ -22,13 +22,11 @@ module Cldr.Format.DateTime exposing
 import Cldr.Format.Length exposing (Length(..))
 import Cldr.Format.Options exposing (DateOptions, DateTimeOptions)
 import Date
-import DateFormat
 import Dict
 import Internal.DayPeriodRule exposing (DayPeriodRule)
 import Internal.Format
 import Internal.FormatSymbols as Sym
 import Internal.FormatSymbols.Expand as Expand
-import Internal.Length
 import Internal.Locale exposing (DateTimeToken(..), Locale(..))
 import Internal.Options exposing (TimeOptions)
 import Internal.Structures as Structs
@@ -87,7 +85,7 @@ format formatType (Locale internal) =
     -- DateFormat.formatWithLanguage (Internal.Locale.toDateTimeLanguage internal)
     --     (tokensForFormatType formatType internal zone)
     --     zone
-    formatDateTime internal (formatSymbolsForType internal formatType |> Debug.log "format Symbols")
+    formatDateTime internal (formatSymbolsForType internal formatType)
 
 
 formatDateTime : Internal.Locale.Internal -> List Sym.FormatWithLiteral -> Time.Zone -> Posix -> String
@@ -486,7 +484,7 @@ findAndCombineBestFormats internal dateOptions timeOptions =
 combineBestFormats : Internal.Locale.Internal -> List Sym.DateWithLiteral -> List Sym.TimeWithLiteral -> List Sym.FormatWithLiteral
 combineBestFormats internal dateSymbols timeSymbols =
     Structs.getPattern internal.dateTimeTokens
-        (lengthForDatePattern (Debug.log "date symbols for length calc" dateSymbols))
+        (lengthForDatePattern dateSymbols)
         |> List.concatMap (expandDateTimeTokenToFormatSymbols dateSymbols timeSymbols)
 
 

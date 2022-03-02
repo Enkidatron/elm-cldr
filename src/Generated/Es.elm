@@ -1,11 +1,10 @@
 module Generated.Es exposing (es, es_419, es_AR, es_BO, es_BR, es_BZ, es_CL, es_CO, es_CR, es_CU, es_DO, es_EA, es_EC, es_GQ, es_GT, es_HN, es_IC, es_MX, es_NI, es_PA, es_PE, es_PH, es_PR, es_PY, es_SV, es_US, es_UY, es_VE)
 
 import Cldr.Format.Options as Opts
-import DateFormat exposing (..)
 import Dict
 import Internal.DayPeriodRule
 import Internal.FormatSymbols as Sym
-import Internal.Locale exposing (DateTimeToken(..), Internal, LanguageId(..), normalize)
+import Internal.Locale exposing (DateTimeToken(..), LanguageId(..))
 import Tagged exposing (Tagged(..))
 
 

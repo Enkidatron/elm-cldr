@@ -559,8 +559,6 @@ module Cldr.Locale exposing
 
 -}
 
-import Cldr.Format.Options as Opts
-import DateFormat exposing (..)
 import Generated.Af
 import Generated.Am
 import Generated.Ar
@@ -646,7 +644,7 @@ import Generated.Vi
 import Generated.Yue
 import Generated.Zh
 import Generated.Zu
-import Internal.Locale exposing (DateTimeToken(..), Internal, LanguageId(..), normalize)
+import Internal.Locale exposing (DateTimeToken(..), LanguageId(..))
 import Tagged exposing (Tagged(..))
 
 

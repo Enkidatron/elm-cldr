@@ -22,14 +22,11 @@ import Cldr.Format.Options exposing (DateOptions)
 import Date exposing (Date)
 import Internal.Format
 import Internal.FormatSymbols as Sym
-import Internal.FormatSymbols.Convert as SymConv
 import Internal.FormatSymbols.Expand as Expand
 import Internal.Locale exposing (Locale(..))
 import Internal.Options
 import Internal.Structures as Structs
 import List.Extra
-import Maybe.Extra
-import Time
 
 
 {-| Dates can be formatted using a

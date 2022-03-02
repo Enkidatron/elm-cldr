@@ -7,50 +7,50 @@ module Internal.FormatSymbols.Convert exposing
     )
 
 import Cldr.Format.Options as Opts
-import Internal.FormatSymbols exposing (..)
+import Internal.FormatSymbols as Sym
 
 
-textWidth : Opts.TextOption -> TextWidth
+textWidth : Opts.TextOption -> Sym.TextWidth
 textWidth opt =
     case opt of
         Opts.Short ->
-            Abbreviated
+            Sym.Abbreviated
 
         Opts.Long ->
-            Wide
+            Sym.Wide
 
         Opts.Narrow ->
-            Narrow
+            Sym.Narrow
 
 
-numberWidth : Opts.NumberOption -> NumberWidth
+numberWidth : Opts.NumberOption -> Sym.NumberWidth
 numberWidth opt =
     case opt of
         Opts.Numeric ->
-            MinimumDigits
+            Sym.MinimumDigits
 
         Opts.TwoDigit ->
-            TwoDigit
+            Sym.TwoDigit
 
 
-width : Opts.NumberOrTextOption -> Width
+width : Opts.NumberOrTextOption -> Sym.Width
 width opt =
     case opt of
         Opts.Text text ->
-            Text (textWidth text)
+            Sym.Text (textWidth text)
 
         Opts.Number number ->
-            Number (numberWidth number)
+            Sym.Number (numberWidth number)
 
 
-nameWidth : Opts.NameOption -> NameWidth
+nameWidth : Opts.NameOption -> Sym.NameWidth
 nameWidth opt =
     case opt of
         Opts.LongName ->
-            Long
+            Sym.Long
 
         Opts.ShortName ->
-            Short
+            Sym.Short
 
 
 fractionalSeconds : Opts.FractionalDigits -> Int
