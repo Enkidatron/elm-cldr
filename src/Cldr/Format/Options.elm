@@ -42,6 +42,7 @@ type alias DateTimeOptions =
     , day : Maybe NumberOption
     , weekday : Maybe TextOption
     , period : Maybe TextOption
+    , dayPeriod : Maybe TextOption
     , hour : Maybe NumberOption
     , minute : Maybe NumberOption
     , second : Maybe NumberOption
@@ -67,6 +68,7 @@ defaultDateTimeOptions =
     , day = Nothing
     , weekday = Nothing
     , period = Nothing
+    , dayPeriod = Nothing
     , hour = Nothing
     , minute = Nothing
     , second = Nothing

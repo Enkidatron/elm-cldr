@@ -58,13 +58,13 @@ ruTests =
         , ruMediumDateTime
         , ruLongDateTime
         , ruFullDateTime
-        , Test.skip ruOpts_EyMdhms
+        , ruOpts_EyMdhms
         , ruOpts_EyMd
         , ruOpts_yMd
-        , Test.skip ruOpts_yM
+        , ruOpts_yM
         , ruOpts_Md
-        , Test.skip ruOpts_hms
-        , Test.skip ruOpts_hm
+        , ruOpts_hms
+        , ruOpts_hm
         ]
 
 
@@ -408,6 +408,7 @@ ruFullDateTime =
             Expect.equal
                 (format Cldr.Format.DateTime.full ru Time.utc testDateTime)
                 "четверг, 1 июня 2000 г., 03:23:16 GMT"
+
 
 ruOpts_EyMdhms : Test
 ruOpts_EyMdhms =

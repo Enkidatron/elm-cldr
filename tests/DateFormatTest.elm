@@ -42,7 +42,7 @@ ruTests =
         , ruFull
         , ruOpts_EyMd
         , ruOpts_yMd
-        , Test.skip ruOpts_yM
+        , ruOpts_yM
         , ruOpts_Md
         ]
 

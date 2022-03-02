@@ -18,6 +18,7 @@ import Cldr.Format.Options exposing (..)
 
 type alias TimeOptions =
     { period : Maybe TextOption
+    , dayPeriod : Maybe TextOption
     , hour : Maybe NumberOption
     , minute : Maybe NumberOption
     , second : Maybe NumberOption
@@ -40,6 +41,7 @@ type alias DateOptionsPlus a =
 type alias TimeOptionsPlus a =
     { a
         | period : Maybe TextOption
+        , dayPeriod : Maybe TextOption
         , hour : Maybe NumberOption
         , minute : Maybe NumberOption
         , second : Maybe NumberOption
@@ -135,6 +137,7 @@ dateSubset opts =
 timeSubset : DateTimeOptions -> TimeOptions
 timeSubset opts =
     { period = opts.period
+    , dayPeriod = opts.dayPeriod
     , hour = opts.hour
     , minute = opts.minute
     , second = opts.second
@@ -152,6 +155,7 @@ timeToDateTime opts =
     , day = Nothing
     , weekday = Nothing
     , period = opts.period
+    , dayPeriod = opts.dayPeriod
     , hour = opts.hour
     , minute = opts.minute
     , second = opts.second
@@ -169,6 +173,7 @@ dateToDateTime opts =
     , day = opts.day
     , weekday = opts.weekday
     , period = Nothing
+    , dayPeriod = Nothing
     , hour = Nothing
     , minute = Nothing
     , second = Nothing

@@ -20,10 +20,16 @@ module Cldr.Format.Date exposing
 import Cldr.Format.Length exposing (Length(..))
 import Cldr.Format.Options exposing (DateOptions)
 import Date exposing (Date)
+import Internal.Format
+import Internal.FormatSymbols as Sym
+import Internal.FormatSymbols.Convert as SymConv
+import Internal.FormatSymbols.Expand as Expand
 import Internal.Locale exposing (Locale(..))
 import Internal.Options
-import Internal.Structures
+import Internal.Structures as Structs
 import List.Extra
+import Maybe.Extra
+import Time
 
 
 {-| Dates can be formatted using a
@@ -50,122 +56,115 @@ type FormatType
 -}
 format : FormatType -> Locale -> Date -> String
 format formatType (Locale internal) =
-    Date.formatWithLanguage (Internal.Locale.toDateLanguage internal)
-        (formatStringForType internal formatType)
+    formatDate internal
+        (formatDateSymbolsForType internal formatType)
 
 
-formatStringForType : Internal.Locale.Internal -> FormatType -> String
-formatStringForType internal formatType =
+formatDate : Internal.Locale.Internal -> List Sym.DateWithLiteral -> Date -> String
+formatDate internal symbols date =
+    List.map (Sym.unwrap (formatSymbol internal date)) symbols
+        |> String.concat
+
+
+formatSymbol : Internal.Locale.Internal -> Date -> Sym.DateSymbol -> String
+formatSymbol internal date symbol =
+    case symbol of
+        Sym.Era textWidth ->
+            formatEra internal.eraNames textWidth date
+
+        Sym.Year numberWidth ->
+            formatYear numberWidth date
+
+        Sym.Month width ->
+            formatMonth internal.monthFormatNames width date
+
+        Sym.MonthStandalone width ->
+            formatMonth internal.monthStandaloneNames width date
+
+        Sym.Weekday textWidth ->
+            formatWeekday internal.weekdayFormatNames textWidth date
+
+        Sym.WeekdayStandalone textWidth ->
+            formatWeekday internal.weekdayStandaloneNames textWidth date
+
+        Sym.Day numberWidth ->
+            formatDay numberWidth date
+
+
+formatTextWidthHelper : (a -> Date -> String) -> Structs.Pattern3 a -> Sym.TextWidth -> Date -> String
+formatTextWidthHelper formatFun patterns textWidth =
+    formatFun (Structs.getPattern3 patterns textWidth)
+
+
+formatEra : Structs.Pattern3 Structs.EraNames -> Sym.TextWidth -> Date -> String
+formatEra =
+    formatTextWidthHelper formatEraHelper
+
+
+formatEraHelper : Structs.EraNames -> Date -> String
+formatEraHelper eraNames date =
+    Internal.Format.era eraNames (Date.year date)
+
+
+formatYear : Sym.NumberWidth -> Date -> String
+formatYear numberWidth date =
+    Internal.Format.year numberWidth (Date.year date)
+
+
+formatMonth : Structs.Pattern3 Structs.MonthNames -> Sym.Width -> Date -> String
+formatMonth monthPattern3 width =
+    case width of
+        Sym.Text textWidth ->
+            formatTextWidthHelper formatMonthHelper monthPattern3 textWidth
+
+        Sym.Number numberWidth ->
+            formatMonthNumberHelper numberWidth
+
+
+formatMonthNumberHelper : Sym.NumberWidth -> Date -> String
+formatMonthNumberHelper numberWidth date =
+    Internal.Format.number numberWidth (Date.monthNumber date)
+
+
+formatMonthHelper : Structs.MonthNames -> Date -> String
+formatMonthHelper monthNames date =
+    Internal.Format.month monthNames (Date.month date)
+
+
+formatWeekday : Structs.Pattern3 Structs.WeekdayNames -> Sym.TextWidth -> Date -> String
+formatWeekday =
+    formatTextWidthHelper formatWeekdayHelper
+
+
+formatWeekdayHelper : Structs.WeekdayNames -> Date -> String
+formatWeekdayHelper weekdayNames date =
+    Internal.Format.weekday weekdayNames (Date.weekday date)
+
+
+formatDay : Sym.NumberWidth -> Date -> String
+formatDay numberWidth date =
+    Internal.Format.number numberWidth (Date.day date)
+
+
+formatDateSymbolsForType : Internal.Locale.Internal -> FormatType -> List Sym.DateWithLiteral
+formatDateSymbolsForType internal formatType =
     case formatType of
         WithLength length ->
-            Internal.Structures.getPattern internal.datePatterns length
+            Structs.getPattern internal.dateSymbols length
 
         WithOptions options ->
-            formatStringFromOptions internal options
+            formatDateSymbolsFromOptions internal options
 
 
-formatStringFromOptions : Internal.Locale.Internal -> DateOptions -> String
-formatStringFromOptions internal requestedOptions =
+formatDateSymbolsFromOptions : Internal.Locale.Internal -> DateOptions -> List Sym.DateWithLiteral
+formatDateSymbolsFromOptions internal requestedOptions =
     internal.availableFormats
         |> List.filterMap Internal.Locale.toDateAvailableFormat
         |> List.Extra.maximumBy (.options >> Internal.Options.dateMatchScore requestedOptions)
-        |> Maybe.map (expandFormatString requestedOptions)
-        |> Maybe.withDefault ""
+        |> Maybe.map (.formatSymbols >> expandFormatDateSymbols requestedOptions)
+        |> Maybe.withDefault []
 
 
-expandFormatString : DateOptions -> Internal.Locale.DateAvailableFormat -> String
-expandFormatString requested { options, formatString } =
-    formatString
-        |> replaceFormat .era eraFormat requested options
-        |> replaceFormat .year yearFormat requested options
-        |> replaceNumberOrTextFormat .month monthFormat requested options
-        |> replaceFormat .day dayFormat requested options
-        |> replaceFormat .weekday weekdayFormat requested options
-
-
-replaceFormat : (a -> Maybe b) -> (b -> String) -> a -> a -> String -> String
-replaceFormat getField toString requested candidate formatString =
-    case ( getField requested, getField candidate ) of
-        ( Just req, Just can ) ->
-            String.replace (toString can) (toString req) formatString
-
-        _ ->
-            formatString
-
-
-replaceNumberOrTextFormat : (a -> Maybe Cldr.Format.Options.NumberOrTextOption) -> (Cldr.Format.Options.NumberOrTextOption -> String) -> a -> a -> String -> String
-replaceNumberOrTextFormat getField toString requested candidate formatString =
-    case ( getField requested, getField candidate ) of
-        ( Just (Cldr.Format.Options.Text req), Just (Cldr.Format.Options.Text can) ) ->
-            String.replace (toString (Cldr.Format.Options.Text can)) (toString (Cldr.Format.Options.Text req)) formatString
-
-        ( Just (Cldr.Format.Options.Number req), Just (Cldr.Format.Options.Number can) ) ->
-            String.replace (toString (Cldr.Format.Options.Number can)) (toString (Cldr.Format.Options.Number req)) formatString
-
-        _ ->
-            formatString
-
-
-eraFormat : Cldr.Format.Options.TextOption -> String
-eraFormat opt =
-    case opt of
-        Cldr.Format.Options.Narrow ->
-            "GGGGG"
-
-        Cldr.Format.Options.Short ->
-            "G"
-
-        Cldr.Format.Options.Long ->
-            "GGGG"
-
-
-yearFormat : Cldr.Format.Options.NumberOption -> String
-yearFormat opt =
-    case opt of
-        Cldr.Format.Options.TwoDigit ->
-            "yy"
-
-        Cldr.Format.Options.Numeric ->
-            "y"
-
-
-monthFormat : Cldr.Format.Options.NumberOrTextOption -> String
-monthFormat opt =
-    case opt of
-        Cldr.Format.Options.Number Cldr.Format.Options.Numeric ->
-            "M"
-
-        Cldr.Format.Options.Number Cldr.Format.Options.TwoDigit ->
-            "MM"
-
-        Cldr.Format.Options.Text Cldr.Format.Options.Narrow ->
-            "MMMMM"
-
-        Cldr.Format.Options.Text Cldr.Format.Options.Short ->
-            "MMM"
-
-        Cldr.Format.Options.Text Cldr.Format.Options.Long ->
-            "MMMM"
-
-
-dayFormat : Cldr.Format.Options.NumberOption -> String
-dayFormat opt =
-    case opt of
-        Cldr.Format.Options.Numeric ->
-            "d"
-
-        Cldr.Format.Options.TwoDigit ->
-            "dd"
-
-
-weekdayFormat : Cldr.Format.Options.TextOption -> String
-weekdayFormat opt =
-    case opt of
-        Cldr.Format.Options.Narrow ->
-            "EEEEE"
-
-        Cldr.Format.Options.Short ->
-            "E"
-
-        Cldr.Format.Options.Long ->
-            "EEEE"
+expandFormatDateSymbols : DateOptions -> List Sym.DateWithLiteral -> List Sym.DateWithLiteral
+expandFormatDateSymbols requested formatSymbols =
+    List.map (Sym.mapLiteral (Expand.date requested)) formatSymbols
