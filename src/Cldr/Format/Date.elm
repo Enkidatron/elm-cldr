@@ -37,7 +37,7 @@ type FormatType
     | WithOptions DateOptions
 
 
-{-| Formats a `Date` using the specified `Length` and `Locale`.
+{-| Formats a `Date` using the specified `FormatType` and `Locale`.
 
     import Cldr.Format.Length exposing (Length(..))
     import Cldr.Locale exposing (en)

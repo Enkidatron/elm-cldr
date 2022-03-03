@@ -32,17 +32,28 @@ See `examples` directory for full examples.
 ```elm
 import Cldr.Format.Date
 import Cldr.Format.Length exposing (Length(..))
-import Cldr.Locale exposing (root)
-import Date
+import Cldr.Locale exposing (Locale, root)
+import Date exposing (Date)
 import Time
 
+localeStringFromFlags : String
 localeStringFromFlags = "ru"
 
-locale = Cldr.Locale.fromString Cldr.Locale.allLocales localeStringFromFlags
+locale : Maybe Locale
+locale = 
+    Cldr.Locale.fromString
+        Cldr.Locale.allLocales
+        localeStringFromFlags
 
+date : Date
 date = Date.fromCalendarDate 2022 Time.Jan 10
 
-formatted = Cldr.Format.Date.format Short (Maybe.withDefault root locale) date
+formatted : String
+formatted = 
+    Cldr.Format.Date.format 
+        (Cldr.Format.Date.WithLength Short)
+        (Maybe.withDefault root locale)
+        date
 ```
 
 ## Contributing
