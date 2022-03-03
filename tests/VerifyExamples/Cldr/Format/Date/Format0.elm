@@ -14,8 +14,13 @@ import Time exposing (Month(..))
 
 spec0 : Test.Test
 spec0 =
-    Test.test "#format: \n\n    format Short en (Date.fromCalendarDate 2000 Jan 1)\n    --> \"1/1/00\"" <|
+    Test.test "#format: \n\n    let\n        date = Date.fromCalendarDate 2000 Jan 1\n    in\n    format (WithLength Short) en date\n    --> \"1/1/00\"" <|
         \() ->
             Expect.equal
-                (format Short en (Date.fromCalendarDate 2000 Jan 1))
+                (let
+                    date =
+                        Date.fromCalendarDate 2000 Jan 1
+                 in
+                 format (WithLength Short) en date
+                )
                 "1/1/00"

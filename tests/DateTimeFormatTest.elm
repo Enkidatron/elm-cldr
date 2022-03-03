@@ -2,6 +2,8 @@ module DateTimeFormatTest exposing (suite)
 
 import Cldr.Format.DateTime exposing (FormatType(..), format)
 import Cldr.Format.Length exposing (Length(..))
+import Cldr.Format.Options as Opt
+import Cldr.Format.OptionsBuilder as OptBuilder
 import Cldr.Locale exposing (..)
 import Expect
 import Test exposing (..)
@@ -31,6 +33,13 @@ enTests =
         , enMediumDateTime
         , enLongDateTime
         , enFullDateTime
+        , enOpts_EyMdhms
+        , enOpts_EyMd
+        , enOpts_yMd
+        , enOpts_yM
+        , enOpts_Md
+        , enOpts_hms
+        , enOpts_hm
         ]
 
 
@@ -49,6 +58,13 @@ ruTests =
         , ruMediumDateTime
         , ruLongDateTime
         , ruFullDateTime
+        , ruOpts_EyMdhms
+        , ruOpts_EyMd
+        , ruOpts_yMd
+        , ruOpts_yM
+        , ruOpts_Md
+        , ruOpts_hms
+        , ruOpts_hm
         ]
 
 
@@ -165,6 +181,127 @@ enFullDateTime =
                 "Thursday, June 1, 2000 at 3:23:16 AM GMT"
 
 
+enOpts_EyMdhms : Test
+enOpts_EyMdhms =
+    test "en locale, Options test: EyMdhms" <|
+        \_ ->
+            let
+                options =
+                    OptBuilder.initDateTime
+                        |> OptBuilder.setWeekday Opt.Long
+                        |> OptBuilder.setYear Opt.Numeric
+                        |> OptBuilder.setMonthText Opt.Long
+                        |> OptBuilder.setDay Opt.Numeric
+                        |> OptBuilder.setHour Opt.Numeric
+                        |> OptBuilder.setMinute Opt.TwoDigit
+                        |> OptBuilder.setSecond Opt.TwoDigit
+                        |> OptBuilder.toOptions
+            in
+            Expect.equal
+                (format (WithOptions options) en Time.utc testDateTime)
+                "Thursday, June 1, 2000 at 3:23:16 AM"
+
+
+enOpts_EyMd : Test
+enOpts_EyMd =
+    test "en locale, Options test: EyMd" <|
+        \_ ->
+            let
+                options =
+                    OptBuilder.initDateTime
+                        |> OptBuilder.setWeekday Opt.Long
+                        |> OptBuilder.setYear Opt.Numeric
+                        |> OptBuilder.setMonthText Opt.Long
+                        |> OptBuilder.setDay Opt.Numeric
+                        |> OptBuilder.toOptions
+            in
+            Expect.equal
+                (format (WithOptions options) en Time.utc testDateTime)
+                "Thursday, June 1, 2000"
+
+
+enOpts_yMd : Test
+enOpts_yMd =
+    test "en locale, Options test: yMd" <|
+        \_ ->
+            let
+                options =
+                    OptBuilder.initDateTime
+                        |> OptBuilder.setYear Opt.Numeric
+                        |> OptBuilder.setMonthText Opt.Long
+                        |> OptBuilder.setDay Opt.Numeric
+                        |> OptBuilder.toOptions
+            in
+            Expect.equal
+                (format (WithOptions options) en Time.utc testDateTime)
+                "June 1, 2000"
+
+
+enOpts_yM : Test
+enOpts_yM =
+    test "en locale, Options test: yM" <|
+        \_ ->
+            let
+                options =
+                    OptBuilder.initDateTime
+                        |> OptBuilder.setYear Opt.Numeric
+                        |> OptBuilder.setMonthText Opt.Long
+                        |> OptBuilder.toOptions
+            in
+            Expect.equal
+                (format (WithOptions options) en Time.utc testDateTime)
+                "June 2000"
+
+
+enOpts_Md : Test
+enOpts_Md =
+    test "en locale, Options test: Md" <|
+        \_ ->
+            let
+                options =
+                    OptBuilder.initDateTime
+                        |> OptBuilder.setMonthText Opt.Long
+                        |> OptBuilder.setDay Opt.Numeric
+                        |> OptBuilder.toOptions
+            in
+            Expect.equal
+                (format (WithOptions options) en Time.utc testDateTime)
+                "June 1"
+
+
+enOpts_hms : Test
+enOpts_hms =
+    test "en locale, Options test: hms" <|
+        \_ ->
+            let
+                options =
+                    OptBuilder.initDateTime
+                        |> OptBuilder.setHour Opt.Numeric
+                        |> OptBuilder.setMinute Opt.TwoDigit
+                        |> OptBuilder.setSecond Opt.TwoDigit
+                        |> OptBuilder.toOptions
+            in
+            Expect.equal
+                (format (WithOptions options) en Time.utc testDateTime)
+                "3:23:16 AM"
+
+
+enOpts_hm : Test
+enOpts_hm =
+    test "en locale, Options test: hm" <|
+        \_ ->
+            let
+                options =
+                    OptBuilder.initDateTime
+                        |> OptBuilder.setHour Opt.Numeric
+                        |> OptBuilder.setMinute Opt.TwoDigit
+                        |> OptBuilder.toOptions
+            in
+            Expect.equal
+                (format (WithOptions options) en Time.utc testDateTime)
+                "3:23 AM"
+
+
 ruShortDate : Test
 ruShortDate =
     test "ru locale, Short date format" <|
@@ -271,3 +408,124 @@ ruFullDateTime =
             Expect.equal
                 (format Cldr.Format.DateTime.full ru Time.utc testDateTime)
                 "четверг, 1 июня 2000 г., 03:23:16 GMT"
+
+
+ruOpts_EyMdhms : Test
+ruOpts_EyMdhms =
+    test "ru locale, Options test: EyMdhms" <|
+        \_ ->
+            let
+                options =
+                    OptBuilder.initDateTime
+                        |> OptBuilder.setWeekday Opt.Long
+                        |> OptBuilder.setYear Opt.Numeric
+                        |> OptBuilder.setMonthText Opt.Long
+                        |> OptBuilder.setDay Opt.Numeric
+                        |> OptBuilder.setHour Opt.Numeric
+                        |> OptBuilder.setMinute Opt.TwoDigit
+                        |> OptBuilder.setSecond Opt.TwoDigit
+                        |> OptBuilder.toOptions
+            in
+            Expect.equal
+                (format (WithOptions options) ru Time.utc testDateTime)
+                "четверг, 1 июня 2000 г., 3:23:16"
+
+
+ruOpts_EyMd : Test
+ruOpts_EyMd =
+    test "ru locale, Options test: EyMd" <|
+        \_ ->
+            let
+                options =
+                    OptBuilder.initDateTime
+                        |> OptBuilder.setWeekday Opt.Long
+                        |> OptBuilder.setYear Opt.Numeric
+                        |> OptBuilder.setMonthText Opt.Long
+                        |> OptBuilder.setDay Opt.Numeric
+                        |> OptBuilder.toOptions
+            in
+            Expect.equal
+                (format (WithOptions options) ru Time.utc testDateTime)
+                "четверг, 1 июня 2000 г."
+
+
+ruOpts_yMd : Test
+ruOpts_yMd =
+    test "ru locale, Options test: yMd" <|
+        \_ ->
+            let
+                options =
+                    OptBuilder.initDateTime
+                        |> OptBuilder.setYear Opt.Numeric
+                        |> OptBuilder.setMonthText Opt.Long
+                        |> OptBuilder.setDay Opt.Numeric
+                        |> OptBuilder.toOptions
+            in
+            Expect.equal
+                (format (WithOptions options) ru Time.utc testDateTime)
+                "1 июня 2000 г."
+
+
+ruOpts_yM : Test
+ruOpts_yM =
+    test "ru locale, Options test: yM" <|
+        \_ ->
+            let
+                options =
+                    OptBuilder.initDateTime
+                        |> OptBuilder.setYear Opt.Numeric
+                        |> OptBuilder.setMonthText Opt.Long
+                        |> OptBuilder.toOptions
+            in
+            Expect.equal
+                (format (WithOptions options) ru Time.utc testDateTime)
+                "июнь 2000 г."
+
+
+ruOpts_Md : Test
+ruOpts_Md =
+    test "ru locale, Options test: Md" <|
+        \_ ->
+            let
+                options =
+                    OptBuilder.initDateTime
+                        |> OptBuilder.setMonthText Opt.Long
+                        |> OptBuilder.setDay Opt.Numeric
+                        |> OptBuilder.toOptions
+            in
+            Expect.equal
+                (format (WithOptions options) ru Time.utc testDateTime)
+                "1 июня"
+
+
+ruOpts_hms : Test
+ruOpts_hms =
+    test "ru locale, Options test: hms" <|
+        \_ ->
+            let
+                options =
+                    OptBuilder.initDateTime
+                        |> OptBuilder.setHour Opt.Numeric
+                        |> OptBuilder.setMinute Opt.TwoDigit
+                        |> OptBuilder.setSecond Opt.TwoDigit
+                        |> OptBuilder.toOptions
+            in
+            Expect.equal
+                (format (WithOptions options) ru Time.utc testDateTime)
+                "3:23:16"
+
+
+ruOpts_hm : Test
+ruOpts_hm =
+    test "ru locale, Options test: hm" <|
+        \_ ->
+            let
+                options =
+                    OptBuilder.initDateTime
+                        |> OptBuilder.setHour Opt.Numeric
+                        |> OptBuilder.setMinute Opt.TwoDigit
+                        |> OptBuilder.toOptions
+            in
+            Expect.equal
+                (format (WithOptions options) ru Time.utc testDateTime)
+                "3:23"

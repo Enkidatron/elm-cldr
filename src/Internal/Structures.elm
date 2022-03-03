@@ -1,13 +1,17 @@
 module Internal.Structures exposing
-    ( AmPmNames
-    , EraNames
+    ( EraNames
     , MonthNames
+    , Pattern3
     , Patterns
+    , PeriodNames
     , WeekdayNames
     , getPattern
+    , getPattern3
     )
 
 import Cldr.Format.Length exposing (Length(..))
+import Dict exposing (Dict)
+import Internal.FormatSymbols as Sym
 
 
 type alias Patterns a =
@@ -32,6 +36,26 @@ getPattern patterns length =
 
         Full ->
             patterns.full
+
+
+type alias Pattern3 a =
+    { abbreviated : a
+    , wide : a
+    , narrow : a
+    }
+
+
+getPattern3 : Pattern3 a -> Sym.TextWidth -> a
+getPattern3 pattern textWidth =
+    case textWidth of
+        Sym.Abbreviated ->
+            pattern.abbreviated
+
+        Sym.Wide ->
+            pattern.wide
+
+        Sym.Narrow ->
+            pattern.narrow
 
 
 type alias MonthNames =
@@ -61,9 +85,10 @@ type alias WeekdayNames =
     }
 
 
-type alias AmPmNames =
+type alias PeriodNames =
     { am : String
     , pm : String
+    , dayPeriods : Dict String String
     }
 
 

@@ -86,25 +86,25 @@ view model =
             ]
         , Html.div []
             [ Html.text "Today - Short: "
-            , Maybe.map (Cldr.Format.Date.format Short locale) model.today
+            , Maybe.map (Cldr.Format.Date.format (Cldr.Format.Date.WithLength Short) locale) model.today
                 |> Maybe.withDefault ""
                 |> Html.text
             ]
         , Html.div []
             [ Html.text "Today - Medium: "
-            , Maybe.map (Cldr.Format.Date.format Medium locale) model.today
+            , Maybe.map (Cldr.Format.Date.format (Cldr.Format.Date.WithLength Medium) locale) model.today
                 |> Maybe.withDefault ""
                 |> Html.text
             ]
         , Html.div []
             [ Html.text "Today - Long: "
-            , Maybe.map (Cldr.Format.Date.format Long locale) model.today
+            , Maybe.map (Cldr.Format.Date.format (Cldr.Format.Date.WithLength Long) locale) model.today
                 |> Maybe.withDefault ""
                 |> Html.text
             ]
         , Html.div []
             [ Html.text "Today - Full: "
-            , Maybe.map (Cldr.Format.Date.format Full locale) model.today
+            , Maybe.map (Cldr.Format.Date.format (Cldr.Format.Date.WithLength Full) locale) model.today
                 |> Maybe.withDefault ""
                 |> Html.text
             ]

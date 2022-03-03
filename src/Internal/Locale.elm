@@ -1,24 +1,27 @@
 module Internal.Locale exposing
-    ( DateTimeToken(..)
+    ( AvailableFormat(..)
+    , DateAvailableFormat
+    , DateTimeAvailableFormat
+    , DateTimeToken(..)
     , Internal
     , LanguageId(..)
     , Locale(..)
-    , TimeToken(..)
-    , convertDateTimeToken
-    , convertToken
+    , TimeAvailableFormat
     , languageIdFromString
     , languageIdSimilarity
     , matchNearestLocale
     , normalize
-    , toDateLanguage
-    , toDateTimeLanguage
+    , toDateAvailableFormat
+    , toDateTimeAvailableFormat
+    , toTimeAvailableFormat
     , toUnicode
     )
 
 import Cldr.Format.Length exposing (Length(..))
-import Date
-import DateFormat exposing (..)
-import DateFormat.Language
+import Cldr.Format.Options exposing (DateOptions, DateTimeOptions)
+import Internal.DayPeriodRule exposing (DayPeriodRule)
+import Internal.FormatSymbols as Sym
+import Internal.Options exposing (TimeOptions)
 import Internal.Structures exposing (..)
 import Parser exposing ((|.), (|=), Parser)
 import String.Extra
@@ -31,243 +34,26 @@ type Locale
 
 
 type alias Internal =
-    { datePatterns : Patterns String
-    , monthNames : MonthNames
-    , monthNamesShort : MonthNames
-    , weekdayNames : WeekdayNames
-    , weekdayNamesShort : WeekdayNames
-    , dateTokens : Patterns (List TimeToken)
-    , timeTokens : Patterns (List TimeToken)
-    , amPmNames : AmPmNames
-    , eraNames : EraNames
+    { monthFormatNames : Pattern3 MonthNames
+    , monthStandaloneNames : Pattern3 MonthNames
+    , weekdayFormatNames : Pattern3 WeekdayNames
+    , weekdayStandaloneNames : Pattern3 WeekdayNames
+    , eraNames : Pattern3 EraNames
+    , periodNames : Pattern3 PeriodNames
+    , dayPeriodRuleSet : List DayPeriodRule
+    , dateSymbols : Patterns (List Sym.DateWithLiteral)
+    , timeSymbols : Patterns (List Sym.TimeWithLiteral)
     , dateTimeTokens : Patterns (List DateTimeToken)
     , languageId : LanguageId
+    , availableFormats : List AvailableFormat
+    , hour12ByDefault : Bool
     }
-
-
-type TimeToken
-    = DF DateFormat.Token
-    | TimeZoneShort
-    | TimeZoneFull
-    | EraAbbr
-
-
-convertToken : EraNames -> Time.Zone -> TimeToken -> DateFormat.Token
-convertToken { ad } zone token =
-    case token of
-        DF dfToken ->
-            dfToken
-
-        TimeZoneShort ->
-            getOffsets zone |> shortGmtFormat |> DateFormat.text
-
-        TimeZoneFull ->
-            getOffsets zone |> fullGmtFormat |> DateFormat.text
-
-        EraAbbr ->
-            DateFormat.text ad
 
 
 type DateTimeToken
     = DateGoesHere
     | TimeGoesHere
     | Text String
-
-
-type alias DateTimeTokenConvertInfo =
-    { internal : Internal
-    , zone : Time.Zone
-    , date : Length
-    , time : Length
-    }
-
-
-convertDateTimeToken : DateTimeTokenConvertInfo -> DateTimeToken -> List DateFormat.Token
-convertDateTimeToken { internal, zone, date, time } token =
-    case token of
-        DateGoesHere ->
-            getPattern internal.dateTokens date
-                |> List.map (convertToken internal.eraNames zone)
-
-        TimeGoesHere ->
-            getPattern internal.timeTokens time
-                |> List.map (convertToken internal.eraNames zone)
-
-        Text words ->
-            [ DateFormat.text words ]
-
-
-type alias Offsets =
-    { offsetIsPositive : Bool
-    , hours : Int
-    , minutes : Int
-    , seconds : Int
-    }
-
-
-getOffsets : Time.Zone -> Offsets
-getOffsets zone =
-    let
-        referenceTime =
-            Time.millisToPosix 946684800000
-    in
-    if Time.toYear zone referenceTime < 2000 then
-        { offsetIsPositive = False
-        , hours = ((31 - Time.toDay zone referenceTime) * 24) + (24 - Time.toHour zone referenceTime)
-        , minutes = 60 - Time.toMinute zone referenceTime |> remainderBy 60
-        , seconds = 60 - Time.toSecond zone referenceTime |> remainderBy 60
-        }
-
-    else
-        { offsetIsPositive = True
-        , hours = ((Time.toDay zone referenceTime - 1) * 24) + Time.toHour zone referenceTime
-        , minutes = Time.toMinute zone referenceTime
-        , seconds = Time.toSecond zone referenceTime
-        }
-
-
-shortGmtFormat : Offsets -> String
-shortGmtFormat offsets =
-    let
-        hasHoursOrLess =
-            offsets.hours /= 0 || offsets.minutes /= 0 || offsets.seconds /= 0
-
-        hasMinutesOrLess =
-            offsets.minutes /= 0 || offsets.seconds /= 0
-
-        hasSeconds =
-            offsets.seconds /= 0
-    in
-    [ ( True, "GMT" )
-    , ( hasHoursOrLess && offsets.offsetIsPositive, "+" )
-    , ( hasHoursOrLess && not offsets.offsetIsPositive, "-" )
-    , ( hasHoursOrLess, String.fromInt offsets.hours )
-    , ( hasMinutesOrLess, ":" )
-    , ( hasMinutesOrLess, String.fromInt offsets.minutes |> String.padLeft 2 '0' )
-    , ( hasSeconds, ":" )
-    , ( hasSeconds, String.fromInt offsets.seconds |> String.padLeft 2 '0' )
-    ]
-        |> List.filter Tuple.first
-        |> List.map Tuple.second
-        |> String.concat
-
-
-fullGmtFormat : Offsets -> String
-fullGmtFormat offsets =
-    let
-        hasHoursOrLess =
-            offsets.hours /= 0 || offsets.minutes /= 0 || offsets.seconds /= 0
-
-        hasSeconds =
-            offsets.seconds /= 0
-    in
-    [ ( True, "GMT" )
-    , ( hasHoursOrLess && offsets.offsetIsPositive, "+" )
-    , ( hasHoursOrLess && not offsets.offsetIsPositive, "-" )
-    , ( hasHoursOrLess, String.fromInt offsets.hours )
-    , ( hasHoursOrLess, ":" )
-    , ( hasHoursOrLess, String.fromInt offsets.minutes |> String.padLeft 2 '0' )
-    , ( hasSeconds, ":" )
-    , ( hasSeconds, String.fromInt offsets.seconds |> String.padLeft 2 '0' )
-    ]
-        |> List.filter Tuple.first
-        |> List.map Tuple.second
-        |> String.concat
-
-
-toDateLanguage : Internal -> Date.Language
-toDateLanguage internal =
-    { monthName = monthFun internal.monthNames
-    , monthNameShort = monthFun internal.monthNamesShort
-    , weekdayName = weekdayFun internal.weekdayNames
-    , weekdayNameShort = weekdayFun internal.weekdayNamesShort
-    , dayWithSuffix = String.fromInt
-    }
-
-
-toDateTimeLanguage : Internal -> DateFormat.Language.Language
-toDateTimeLanguage internal =
-    { toMonthName = monthFun internal.monthNames
-    , toMonthAbbreviation = monthFun internal.monthNamesShort
-    , toWeekdayName = weekdayFun internal.weekdayNames
-    , toWeekdayAbbreviation = weekdayFun internal.weekdayNamesShort
-    , toAmPm = amPmFun internal.amPmNames
-    , toOrdinalSuffix = always ""
-    }
-
-
-monthFun : MonthNames -> Month -> String
-monthFun names month =
-    case month of
-        Jan ->
-            names.jan
-
-        Feb ->
-            names.feb
-
-        Mar ->
-            names.mar
-
-        Apr ->
-            names.apr
-
-        May ->
-            names.may
-
-        Jun ->
-            names.jun
-
-        Jul ->
-            names.jul
-
-        Aug ->
-            names.aug
-
-        Sep ->
-            names.sep
-
-        Oct ->
-            names.oct
-
-        Nov ->
-            names.nov
-
-        Dec ->
-            names.dec
-
-
-weekdayFun : WeekdayNames -> Weekday -> String
-weekdayFun names weekday =
-    case weekday of
-        Sun ->
-            names.sun
-
-        Mon ->
-            names.mon
-
-        Tue ->
-            names.tue
-
-        Wed ->
-            names.wed
-
-        Thu ->
-            names.thu
-
-        Fri ->
-            names.fri
-
-        Sat ->
-            names.sat
-
-
-amPmFun : AmPmNames -> Int -> String
-amPmFun names hour =
-    if hour > 11 then
-        names.pm
-
-    else
-        names.am
 
 
 type LanguageId
@@ -550,3 +336,74 @@ similarityHelper points requested checked =
 
         ( Nothing, Just _ ) ->
             points
+
+
+
+-- AvailableFormats
+
+
+type AvailableFormat
+    = DateTimeAF DateTimeAvailableFormat
+    | TimeAF TimeAvailableFormat
+    | DateAF DateAvailableFormat
+
+
+type alias DateTimeAvailableFormat =
+    { options : DateTimeOptions
+    , formatSymbols : List Sym.FormatWithLiteral
+    }
+
+
+type alias TimeAvailableFormat =
+    { options : TimeOptions
+    , formatSymbols : List Sym.TimeWithLiteral
+    }
+
+
+type alias DateAvailableFormat =
+    { options : DateOptions
+    , formatSymbols : List Sym.DateWithLiteral
+    }
+
+
+toDateTimeAvailableFormat : AvailableFormat -> DateTimeAvailableFormat
+toDateTimeAvailableFormat af =
+    case af of
+        DateTimeAF format ->
+            format
+
+        TimeAF { options, formatSymbols } ->
+            { options = Internal.Options.timeToDateTime options
+            , formatSymbols = List.map (Sym.mapLiteral Sym.Time) formatSymbols
+            }
+
+        DateAF { options, formatSymbols } ->
+            { options = Internal.Options.dateToDateTime options
+            , formatSymbols = List.map (Sym.mapLiteral Sym.Date) formatSymbols
+            }
+
+
+toDateAvailableFormat : AvailableFormat -> Maybe DateAvailableFormat
+toDateAvailableFormat af =
+    case af of
+        DateAF format ->
+            Just format
+
+        DateTimeAF _ ->
+            Nothing
+
+        TimeAF _ ->
+            Nothing
+
+
+toTimeAvailableFormat : AvailableFormat -> Maybe TimeAvailableFormat
+toTimeAvailableFormat af =
+    case af of
+        TimeAF format ->
+            Just format
+
+        DateTimeAF _ ->
+            Nothing
+
+        DateAF _ ->
+            Nothing
