@@ -349,18 +349,21 @@ type AvailableFormat
 
 
 type alias DateTimeAvailableFormat =
-    { options : DateTimeOptions, 
-    formatSymbols : List Sym.FormatWithLiteral }
+    { options : DateTimeOptions
+    , formatSymbols : List Sym.FormatWithLiteral
+    }
 
 
 type alias TimeAvailableFormat =
-    { options : TimeOptions, 
-    formatSymbols : List Sym.TimeWithLiteral }
+    { options : TimeOptions
+    , formatSymbols : List Sym.TimeWithLiteral
+    }
 
 
 type alias DateAvailableFormat =
-    { options : DateOptions, 
-    formatSymbols : List Sym.DateWithLiteral }
+    { options : DateOptions
+    , formatSymbols : List Sym.DateWithLiteral
+    }
 
 
 toDateTimeAvailableFormat : AvailableFormat -> DateTimeAvailableFormat
