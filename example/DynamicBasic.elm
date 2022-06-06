@@ -4,7 +4,7 @@ import Browser
 import Cldr.Format.Date
 import Cldr.Format.DateTime
 import Cldr.Format.Length exposing (Length(..))
-import Cldr.LocaleAlt exposing (Locale)
+import Cldr.Locale exposing (Locale)
 import Date exposing (Date)
 import Html exposing (Html)
 import Json.Decode as JD exposing (Decoder)
@@ -58,7 +58,7 @@ init flags =
 localeFlagDecoder : Decoder (Maybe Locale)
 localeFlagDecoder =
     JD.field "locale" JD.string
-        |> JD.map (Cldr.LocaleAlt.fromString Cldr.LocaleAlt.basicLocales)
+        |> JD.map (Cldr.Locale.fromString Cldr.Locale.basicLocales)
 
 
 
@@ -87,7 +87,7 @@ view model =
     Html.div []
         [ Html.div []
             [ Html.text "Locale: "
-            , Maybe.map Cldr.LocaleAlt.toUnicode model.locale
+            , Maybe.map Cldr.Locale.toUnicode model.locale
                 |> Maybe.withDefault "Could not decode or parse locale"
                 |> Html.text
             ]
