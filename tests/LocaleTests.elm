@@ -1,6 +1,6 @@
 module LocaleTests exposing (suite)
 
-import Cldr.Locale exposing (..)
+import Cldr.LocaleAlt exposing (..)
 import Expect
 import Test exposing (..)
 
@@ -13,6 +13,7 @@ suite =
         , enGBRoundtrip
         , ruToUnicode
         , ruRoundtrip
+        , allLocalesParseCorrectly
         ]
 
 
@@ -43,8 +44,8 @@ localeRoundtrip label localeString =
         \_ ->
             Expect.equal
                 (localeString
-                    |> Cldr.Locale.fromString Cldr.Locale.allLocales
-                    |> Maybe.map Cldr.Locale.toUnicode
+                    |> Cldr.LocaleAlt.fromString Cldr.LocaleAlt.allLocales
+                    |> Maybe.map Cldr.LocaleAlt.toUnicode
                 )
                 (Just localeString)
 
@@ -62,3 +63,18 @@ ruRoundtrip : Test
 ruRoundtrip =
     localeRoundtrip "ru locale roundtrip"
         "ru"
+
+
+allLocalesParseCorrectly : Test
+allLocalesParseCorrectly =
+    describe "all locales parse correctly"
+        (List.indexedMap testParse allLocales)
+
+
+testParse : Int -> Locale -> Test
+testParse index locale =
+    test (String.fromInt index ++ ": " ++ toUnicode locale) <|
+        \_ ->
+            Expect.notEqual
+                (toUnicode locale)
+                ""

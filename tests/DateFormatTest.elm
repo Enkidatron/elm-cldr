@@ -4,7 +4,7 @@ import Cldr.Format.Date exposing (FormatType(..), format)
 import Cldr.Format.Length exposing (Length(..))
 import Cldr.Format.Options as Opt
 import Cldr.Format.OptionsBuilder as OptBuilder
-import Cldr.Locale exposing (..)
+import Cldr.LocaleAlt exposing (..)
 import Date exposing (Date)
 import Expect
 import Test exposing (..)
