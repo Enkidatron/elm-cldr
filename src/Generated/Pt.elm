@@ -1,11 +1,25 @@
 module Generated.Pt exposing (pt, pt_AO, pt_CH, pt_CV, pt_GQ, pt_GW, pt_LU, pt_MO, pt_MZ, pt_PT, pt_ST, pt_TL)
 
-import Cldr.Format.Options as Opts
-import Dict
+import Dict exposing (Dict)
 import Internal.DayPeriodRule
-import Internal.FormatSymbols as Sym
 import Internal.Locale exposing (DateTimeToken(..), LanguageId(..))
+import Internal.Parse
 import Tagged exposing (Tagged(..))
+
+
+dayPeriods : Dict String (List Internal.DayPeriodRule.DayPeriodRule)
+dayPeriods =
+    Dict.fromList
+        [ ( "pt"
+          , [ Internal.DayPeriodRule.FromBefore ( 12, 0 ) ( 19, 0 ) "afternoon1"
+            , Internal.DayPeriodRule.FromBefore ( 19, 0 ) ( 24, 0 ) "evening1"
+            , Internal.DayPeriodRule.At ( 0, 0 ) "midnight"
+            , Internal.DayPeriodRule.FromBefore ( 6, 0 ) ( 12, 0 ) "morning1"
+            , Internal.DayPeriodRule.FromBefore ( 0, 0 ) ( 6, 0 ) "night1"
+            , Internal.DayPeriodRule.At ( 12, 0 ) "noon"
+            ]
+          )
+        ]
 
 
 {-| Date format strings:
@@ -25,1168 +39,288 @@ Time format strings:
 -}
 pt : Internal.Locale.Locale
 pt =
-    Internal.Locale.Locale
-        { languageId = Lang (Tagged.tag "pt") Nothing Nothing Nothing
-        , monthFormatNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+    Maybe.withDefault
+        Internal.Locale.empty
+        (Internal.Parse.parse
+            dayPeriods
+            { language = "pt"
+            , script = Nothing
+            , territory = Nothing
+            , variant = Nothing
+            , periodNames =
+                { abbreviated =
+                    { am = "AM"
+                    , pm = "PM"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , wide =
+                    { am = "AM"
+                    , pm = "PM"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , narrow =
+                    { am = "AM"
+                    , pm = "PM"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , datePatterns =
+                { short = "dd/MM/y"
+                , medium = "d 'de' MMM 'de' y"
+                , long = "d 'de' MMMM 'de' y"
+                , full = "EEEE, d 'de' MMMM 'de' y"
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , monthFormatNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            }
-        , monthStandaloneNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+            , monthStandaloneNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , weekdayFormatNames =
+                { abbreviated =
+                    { sun = "dom."
+                    , mon = "seg."
+                    , tue = "ter."
+                    , wed = "qua."
+                    , thu = "qui."
+                    , fri = "sex."
+                    , sat = "sáb."
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , weekdayStandaloneNames =
+                { abbreviated =
+                    { sun = "dom."
+                    , mon = "seg."
+                    , tue = "ter."
+                    , wed = "qua."
+                    , thu = "qui."
+                    , fri = "sex."
+                    , sat = "sáb."
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            }
-        , weekdayFormatNames =
-            { abbreviated =
-                { sun = "dom."
-                , mon = "seg."
-                , tue = "ter."
-                , wed = "qua."
-                , thu = "qui."
-                , fri = "sex."
-                , sat = "sáb."
+            , eraNames =
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
+                , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
+            , timePatterns =
+                { short = "HH:mm"
+                , medium = "HH:mm:ss"
+                , long = "HH:mm:ss z"
+                , full = "HH:mm:ss zzzz"
                 }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
+            , dateTimePatterns =
+                { short = "{1} {0}"
+                , medium = "{1} {0}"
+                , long = "{1} {0}"
+                , full = "{1} {0}"
                 }
-            }
-        , weekdayStandaloneNames =
-            { abbreviated =
-                { sun = "dom."
-                , mon = "seg."
-                , tue = "ter."
-                , wed = "qua."
-                , thu = "qui."
-                , fri = "sex."
-                , sat = "sáb."
-                }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
-                }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
-                }
-            }
-        , eraNames =
-            { abbreviated = { bc = "a.C.", ad = "d.C." }
-            , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
-            , narrow = { bc = "a.C.", ad = "d.C." }
-            }
-        , periodNames =
-            { abbreviated =
-                { am = "AM"
-                , pm = "PM"
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , wide =
-                { am = "AM"
-                , pm = "PM"
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , narrow =
-                { am = "AM"
-                , pm = "PM"
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            }
-        , dayPeriodRuleSet = pt_dayPeriodRules
-        , dateSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
+            , availableFormats =
+                [ ( "Bh", "h B" )
+                , ( "Bhm", "h:mm B" )
+                , ( "Bhms", "h:mm:ss B" )
+                , ( "d", "d" )
+                , ( "E", "ccc" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
+                , ( "Ed", "E, d" )
+                , ( "Ehm", "E, h:mm a" )
+                , ( "EHm", "E, HH:mm" )
+                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "EHms", "E, HH:mm:ss" )
+                , ( "Gy", "y G" )
+                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMMM", "MMM 'de' y G" )
+                , ( "GyMMMd", "d 'de' MMM 'de' y G" )
+                , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
+                , ( "h", "h a" )
+                , ( "H", "HH" )
+                , ( "hm", "h:mm a" )
+                , ( "Hm", "HH:mm" )
+                , ( "hms", "h:mm:ss a" )
+                , ( "Hms", "HH:mm:ss" )
+                , ( "hmsv", "h:mm:ss a v" )
+                , ( "Hmsv", "HH:mm:ss v" )
+                , ( "hmv", "h:mm a v" )
+                , ( "Hmv", "HH:mm v" )
+                , ( "M", "L" )
+                , ( "Md", "d/M" )
+                , ( "MEd", "E, dd/MM" )
+                , ( "MMdd", "dd/MM" )
+                , ( "MMM", "LLL" )
+                , ( "MMMd", "d 'de' MMM" )
+                , ( "MMMEd", "E, d 'de' MMM" )
+                , ( "MMMMd", "d 'de' MMMM" )
+                , ( "MMMMEd", "E, d 'de' MMMM" )
+                , ( "MMMMW-count-one", "W'ª' 'semana' 'de' MMMM" )
+                , ( "MMMMW-count-other", "W'ª' 'semana' 'de' MMMM" )
+                , ( "ms", "mm:ss" )
+                , ( "y", "y" )
+                , ( "yM", "MM/y" )
+                , ( "yMd", "dd/MM/y" )
+                , ( "yMEd", "E, dd/MM/y" )
+                , ( "yMM", "MM/y" )
+                , ( "yMMM", "MMM 'de' y" )
+                , ( "yMMMd", "d 'de' MMM 'de' y" )
+                , ( "yMMMEd", "E, d 'de' MMM 'de' y" )
+                , ( "yMMMM", "MMMM 'de' y" )
+                , ( "yMMMMd", "d 'de' MMMM 'de' y" )
+                , ( "yMMMMEd", "E, d 'de' MMMM 'de' y" )
+                , ( "yQQQ", "QQQ 'de' y" )
+                , ( "yQQQQ", "QQQQ 'de' y" )
+                , ( "yw-count-one", "w'ª' 'semana' 'de' Y" )
+                , ( "yw-count-other", "w'ª' 'semana' 'de' Y" )
                 ]
-            , medium =
-                [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                , Sym.Literal ", "
-                , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
+            , timeSkeletons =
+                { short = "HHmm"
+                , medium = "HHmmss"
+                , long = "HHmmssz"
+                , full = "HHmmsszzzz"
+                }
             }
-        , timeSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                ]
-            , medium =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Short)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Long)
-                ]
-            }
-        , dateTimeTokens =
-            { short = [ DateGoesHere, Text " ", TimeGoesHere ]
-            , medium = [ DateGoesHere, Text " ", TimeGoesHere ]
-            , long = [ DateGoesHere, Text " ", TimeGoesHere ]
-            , full = [ DateGoesHere, Text " ", TimeGoesHere ]
-            }
-        , availableFormats =
-            [ Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Day Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated) ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.MinimumDigits))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Narrow)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit) ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Number Sym.MinimumDigits))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.MinimumDigits))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Just Opts.TwoDigit
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Text Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Nothing
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Year Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            ]
-        , hour12ByDefault = False
-        }
+        )
 
 
 {-| Date format strings:
@@ -1206,1171 +340,289 @@ Time format strings:
 -}
 pt_AO : Internal.Locale.Locale
 pt_AO =
-    Internal.Locale.Locale
-        { languageId =
-            Lang (Tagged.tag "pt") Nothing (Just (Tagged.tag "AO")) Nothing
-        , monthFormatNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+    Maybe.withDefault
+        Internal.Locale.empty
+        (Internal.Parse.parse
+            dayPeriods
+            { language = "pt"
+            , script = Nothing
+            , territory = Just "AO"
+            , variant = Nothing
+            , periodNames =
+                { abbreviated =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , wide =
+                    { am = "da manhã"
+                    , pm = "da tarde"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , narrow =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "tarde" )
+                            , ( "evening1", "noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "manhã" )
+                            , ( "night1", "madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , datePatterns =
+                { short = "dd/MM/yy"
+                , medium = "dd/MM/y"
+                , long = "d 'de' MMMM 'de' y"
+                , full = "EEEE, d 'de' MMMM 'de' y"
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , monthFormatNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            }
-        , monthStandaloneNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+            , monthStandaloneNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , weekdayFormatNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , weekdayStandaloneNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            }
-        , weekdayFormatNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
+            , eraNames =
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
+                , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
+            , timePatterns =
+                { short = "HH:mm"
+                , medium = "HH:mm:ss"
+                , long = "HH:mm:ss z"
+                , full = "HH:mm:ss zzzz"
                 }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
+            , dateTimePatterns =
+                { short = "{1}, {0}"
+                , medium = "{1}, {0}"
+                , long = "{1} 'às' {0}"
+                , full = "{1} 'às' {0}"
                 }
-            }
-        , weekdayStandaloneNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
-                }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
-                }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
-                }
-            }
-        , eraNames =
-            { abbreviated = { bc = "a.C.", ad = "d.C." }
-            , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
-            , narrow = { bc = "a.C.", ad = "d.C." }
-            }
-        , periodNames =
-            { abbreviated =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , wide =
-                { am = "da manhã"
-                , pm = "da tarde"
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , narrow =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "tarde" )
-                        , ( "evening1", "noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "manhã" )
-                        , ( "night1", "madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            }
-        , dayPeriodRuleSet = pt_dayPeriodRules
-        , dateSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.TwoDigit)
+            , availableFormats =
+                [ ( "Bh", "h B" )
+                , ( "Bhm", "h:mm B" )
+                , ( "Bhms", "h:mm:ss B" )
+                , ( "d", "d" )
+                , ( "E", "ccc" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
+                , ( "Ed", "E, d" )
+                , ( "Ehm", "E, h:mm a" )
+                , ( "EHm", "E, HH:mm" )
+                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "EHms", "E, HH:mm:ss" )
+                , ( "Gy", "y G" )
+                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMMM", "MMM 'de' y G" )
+                , ( "GyMMMd", "d 'de' MMM 'de' y G" )
+                , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
+                , ( "h", "h a" )
+                , ( "H", "HH" )
+                , ( "hm", "h:mm a" )
+                , ( "Hm", "HH:mm" )
+                , ( "hms", "h:mm:ss a" )
+                , ( "Hms", "HH:mm:ss" )
+                , ( "hmsv", "h:mm:ss a v" )
+                , ( "Hmsv", "HH:mm:ss v" )
+                , ( "hmv", "h:mm a v" )
+                , ( "Hmv", "HH:mm v" )
+                , ( "M", "L" )
+                , ( "Md", "dd/MM" )
+                , ( "MEd", "E, dd/MM" )
+                , ( "MMdd", "dd/MM" )
+                , ( "MMM", "LLL" )
+                , ( "MMMd", "d/MM" )
+                , ( "MMMEd", "E, d/MM" )
+                , ( "MMMMd", "d 'de' MMMM" )
+                , ( "MMMMEd", "ccc, d 'de' MMMM" )
+                , ( "MMMMW-count-one", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "MMMMW-count-other", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "ms", "mm:ss" )
+                , ( "y", "y" )
+                , ( "yM", "MM/y" )
+                , ( "yMd", "dd/MM/y" )
+                , ( "yMEd", "E, dd/MM/y" )
+                , ( "yMM", "MM/y" )
+                , ( "yMMM", "MM/y" )
+                , ( "yMMMd", "d/MM/y" )
+                , ( "yMMMEd", "E, d/MM/y" )
+                , ( "yMMMEEEEd", "EEEE, d/MM/y" )
+                , ( "yMMMM", "MMMM 'de' y" )
+                , ( "yMMMMd", "d 'de' MMMM 'de' y" )
+                , ( "yMMMMEd", "ccc, d 'de' MMMM 'de' y" )
+                , ( "yQQQ", "QQQQ 'de' y" )
+                , ( "yQQQQ", "QQQQ 'de' y" )
+                , ( "yw-count-one", "w.'ª' 'semana' 'de' Y" )
+                , ( "yw-count-other", "w.'ª' 'semana' 'de' Y" )
                 ]
-            , medium =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                , Sym.Literal ", "
-                , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
+            , timeSkeletons =
+                { short = "HHmm"
+                , medium = "HHmmss"
+                , long = "HHmmssz"
+                , full = "HHmmsszzzz"
+                }
             }
-        , timeSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                ]
-            , medium =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Short)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Long)
-                ]
-            }
-        , dateTimeTokens =
-            { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , long =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            , full =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            }
-        , availableFormats =
-            [ Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Day Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated) ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.MinimumDigits))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Narrow)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit) ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Number Sym.MinimumDigits))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Just Opts.TwoDigit
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Text Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Nothing
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Year Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Long
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            ]
-        , hour12ByDefault = False
-        }
+        )
 
 
 {-| Date format strings:
@@ -2390,1171 +642,289 @@ Time format strings:
 -}
 pt_CH : Internal.Locale.Locale
 pt_CH =
-    Internal.Locale.Locale
-        { languageId =
-            Lang (Tagged.tag "pt") Nothing (Just (Tagged.tag "CH")) Nothing
-        , monthFormatNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+    Maybe.withDefault
+        Internal.Locale.empty
+        (Internal.Parse.parse
+            dayPeriods
+            { language = "pt"
+            , script = Nothing
+            , territory = Just "CH"
+            , variant = Nothing
+            , periodNames =
+                { abbreviated =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , wide =
+                    { am = "da manhã"
+                    , pm = "da tarde"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , narrow =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "tarde" )
+                            , ( "evening1", "noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "manhã" )
+                            , ( "night1", "madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , datePatterns =
+                { short = "dd/MM/yy"
+                , medium = "dd/MM/y"
+                , long = "d 'de' MMMM 'de' y"
+                , full = "EEEE, d 'de' MMMM 'de' y"
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , monthFormatNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            }
-        , monthStandaloneNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+            , monthStandaloneNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , weekdayFormatNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , weekdayStandaloneNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            }
-        , weekdayFormatNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
+            , eraNames =
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
+                , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
+            , timePatterns =
+                { short = "HH:mm"
+                , medium = "HH:mm:ss"
+                , long = "HH:mm:ss z"
+                , full = "HH:mm:ss zzzz"
                 }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
+            , dateTimePatterns =
+                { short = "{1}, {0}"
+                , medium = "{1}, {0}"
+                , long = "{1} 'às' {0}"
+                , full = "{1} 'às' {0}"
                 }
-            }
-        , weekdayStandaloneNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
-                }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
-                }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
-                }
-            }
-        , eraNames =
-            { abbreviated = { bc = "a.C.", ad = "d.C." }
-            , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
-            , narrow = { bc = "a.C.", ad = "d.C." }
-            }
-        , periodNames =
-            { abbreviated =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , wide =
-                { am = "da manhã"
-                , pm = "da tarde"
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , narrow =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "tarde" )
-                        , ( "evening1", "noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "manhã" )
-                        , ( "night1", "madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            }
-        , dayPeriodRuleSet = pt_dayPeriodRules
-        , dateSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.TwoDigit)
+            , availableFormats =
+                [ ( "Bh", "h B" )
+                , ( "Bhm", "h:mm B" )
+                , ( "Bhms", "h:mm:ss B" )
+                , ( "d", "d" )
+                , ( "E", "ccc" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
+                , ( "Ed", "E, d" )
+                , ( "Ehm", "E, h:mm a" )
+                , ( "EHm", "E, HH:mm" )
+                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "EHms", "E, HH:mm:ss" )
+                , ( "Gy", "y G" )
+                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMMM", "MMM 'de' y G" )
+                , ( "GyMMMd", "d 'de' MMM 'de' y G" )
+                , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
+                , ( "h", "h a" )
+                , ( "H", "HH" )
+                , ( "hm", "h:mm a" )
+                , ( "Hm", "HH:mm" )
+                , ( "hms", "h:mm:ss a" )
+                , ( "Hms", "HH:mm:ss" )
+                , ( "hmsv", "h:mm:ss a v" )
+                , ( "Hmsv", "HH:mm:ss v" )
+                , ( "hmv", "h:mm a v" )
+                , ( "Hmv", "HH:mm v" )
+                , ( "M", "L" )
+                , ( "Md", "dd/MM" )
+                , ( "MEd", "E, dd/MM" )
+                , ( "MMdd", "dd/MM" )
+                , ( "MMM", "LLL" )
+                , ( "MMMd", "d/MM" )
+                , ( "MMMEd", "E, d/MM" )
+                , ( "MMMMd", "d 'de' MMMM" )
+                , ( "MMMMEd", "ccc, d 'de' MMMM" )
+                , ( "MMMMW-count-one", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "MMMMW-count-other", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "ms", "mm:ss" )
+                , ( "y", "y" )
+                , ( "yM", "MM/y" )
+                , ( "yMd", "dd/MM/y" )
+                , ( "yMEd", "E, dd/MM/y" )
+                , ( "yMM", "MM/y" )
+                , ( "yMMM", "MM/y" )
+                , ( "yMMMd", "d/MM/y" )
+                , ( "yMMMEd", "E, d/MM/y" )
+                , ( "yMMMEEEEd", "EEEE, d/MM/y" )
+                , ( "yMMMM", "MMMM 'de' y" )
+                , ( "yMMMMd", "d 'de' MMMM 'de' y" )
+                , ( "yMMMMEd", "ccc, d 'de' MMMM 'de' y" )
+                , ( "yQQQ", "QQQQ 'de' y" )
+                , ( "yQQQQ", "QQQQ 'de' y" )
+                , ( "yw-count-one", "w.'ª' 'semana' 'de' Y" )
+                , ( "yw-count-other", "w.'ª' 'semana' 'de' Y" )
                 ]
-            , medium =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                , Sym.Literal ", "
-                , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
+            , timeSkeletons =
+                { short = "HHmm"
+                , medium = "HHmmss"
+                , long = "HHmmssz"
+                , full = "HHmmsszzzz"
+                }
             }
-        , timeSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                ]
-            , medium =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Short)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Long)
-                ]
-            }
-        , dateTimeTokens =
-            { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , long =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            , full =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            }
-        , availableFormats =
-            [ Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Day Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated) ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.MinimumDigits))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Narrow)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit) ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Number Sym.MinimumDigits))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Just Opts.TwoDigit
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Text Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Nothing
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Year Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Long
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            ]
-        , hour12ByDefault = False
-        }
+        )
 
 
 {-| Date format strings:
@@ -3574,1171 +944,289 @@ Time format strings:
 -}
 pt_CV : Internal.Locale.Locale
 pt_CV =
-    Internal.Locale.Locale
-        { languageId =
-            Lang (Tagged.tag "pt") Nothing (Just (Tagged.tag "CV")) Nothing
-        , monthFormatNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+    Maybe.withDefault
+        Internal.Locale.empty
+        (Internal.Parse.parse
+            dayPeriods
+            { language = "pt"
+            , script = Nothing
+            , territory = Just "CV"
+            , variant = Nothing
+            , periodNames =
+                { abbreviated =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , wide =
+                    { am = "da manhã"
+                    , pm = "da tarde"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , narrow =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "tarde" )
+                            , ( "evening1", "noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "manhã" )
+                            , ( "night1", "madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , datePatterns =
+                { short = "dd/MM/yy"
+                , medium = "dd/MM/y"
+                , long = "d 'de' MMMM 'de' y"
+                , full = "EEEE, d 'de' MMMM 'de' y"
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , monthFormatNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            }
-        , monthStandaloneNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+            , monthStandaloneNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , weekdayFormatNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , weekdayStandaloneNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            }
-        , weekdayFormatNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
+            , eraNames =
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
+                , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
+            , timePatterns =
+                { short = "HH:mm"
+                , medium = "HH:mm:ss"
+                , long = "HH:mm:ss z"
+                , full = "HH:mm:ss zzzz"
                 }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
+            , dateTimePatterns =
+                { short = "{1}, {0}"
+                , medium = "{1}, {0}"
+                , long = "{1} 'às' {0}"
+                , full = "{1} 'às' {0}"
                 }
-            }
-        , weekdayStandaloneNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
-                }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
-                }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
-                }
-            }
-        , eraNames =
-            { abbreviated = { bc = "a.C.", ad = "d.C." }
-            , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
-            , narrow = { bc = "a.C.", ad = "d.C." }
-            }
-        , periodNames =
-            { abbreviated =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , wide =
-                { am = "da manhã"
-                , pm = "da tarde"
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , narrow =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "tarde" )
-                        , ( "evening1", "noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "manhã" )
-                        , ( "night1", "madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            }
-        , dayPeriodRuleSet = pt_dayPeriodRules
-        , dateSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.TwoDigit)
+            , availableFormats =
+                [ ( "Bh", "h B" )
+                , ( "Bhm", "h:mm B" )
+                , ( "Bhms", "h:mm:ss B" )
+                , ( "d", "d" )
+                , ( "E", "ccc" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
+                , ( "Ed", "E, d" )
+                , ( "Ehm", "E, h:mm a" )
+                , ( "EHm", "E, HH:mm" )
+                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "EHms", "E, HH:mm:ss" )
+                , ( "Gy", "y G" )
+                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMMM", "MMM 'de' y G" )
+                , ( "GyMMMd", "d 'de' MMM 'de' y G" )
+                , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
+                , ( "h", "h a" )
+                , ( "H", "HH" )
+                , ( "hm", "h:mm a" )
+                , ( "Hm", "HH:mm" )
+                , ( "hms", "h:mm:ss a" )
+                , ( "Hms", "HH:mm:ss" )
+                , ( "hmsv", "h:mm:ss a v" )
+                , ( "Hmsv", "HH:mm:ss v" )
+                , ( "hmv", "h:mm a v" )
+                , ( "Hmv", "HH:mm v" )
+                , ( "M", "L" )
+                , ( "Md", "dd/MM" )
+                , ( "MEd", "E, dd/MM" )
+                , ( "MMdd", "dd/MM" )
+                , ( "MMM", "LLL" )
+                , ( "MMMd", "d/MM" )
+                , ( "MMMEd", "E, d/MM" )
+                , ( "MMMMd", "d 'de' MMMM" )
+                , ( "MMMMEd", "ccc, d 'de' MMMM" )
+                , ( "MMMMW-count-one", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "MMMMW-count-other", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "ms", "mm:ss" )
+                , ( "y", "y" )
+                , ( "yM", "MM/y" )
+                , ( "yMd", "dd/MM/y" )
+                , ( "yMEd", "E, dd/MM/y" )
+                , ( "yMM", "MM/y" )
+                , ( "yMMM", "MM/y" )
+                , ( "yMMMd", "d/MM/y" )
+                , ( "yMMMEd", "E, d/MM/y" )
+                , ( "yMMMEEEEd", "EEEE, d/MM/y" )
+                , ( "yMMMM", "MMMM 'de' y" )
+                , ( "yMMMMd", "d 'de' MMMM 'de' y" )
+                , ( "yMMMMEd", "ccc, d 'de' MMMM 'de' y" )
+                , ( "yQQQ", "QQQQ 'de' y" )
+                , ( "yQQQQ", "QQQQ 'de' y" )
+                , ( "yw-count-one", "w.'ª' 'semana' 'de' Y" )
+                , ( "yw-count-other", "w.'ª' 'semana' 'de' Y" )
                 ]
-            , medium =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                , Sym.Literal ", "
-                , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
+            , timeSkeletons =
+                { short = "HHmm"
+                , medium = "HHmmss"
+                , long = "HHmmssz"
+                , full = "HHmmsszzzz"
+                }
             }
-        , timeSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                ]
-            , medium =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Short)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Long)
-                ]
-            }
-        , dateTimeTokens =
-            { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , long =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            , full =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            }
-        , availableFormats =
-            [ Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Day Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated) ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.MinimumDigits))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Narrow)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit) ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Number Sym.MinimumDigits))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Just Opts.TwoDigit
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Text Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Nothing
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Year Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Long
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            ]
-        , hour12ByDefault = False
-        }
+        )
 
 
 {-| Date format strings:
@@ -4758,1171 +1246,289 @@ Time format strings:
 -}
 pt_GQ : Internal.Locale.Locale
 pt_GQ =
-    Internal.Locale.Locale
-        { languageId =
-            Lang (Tagged.tag "pt") Nothing (Just (Tagged.tag "GQ")) Nothing
-        , monthFormatNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+    Maybe.withDefault
+        Internal.Locale.empty
+        (Internal.Parse.parse
+            dayPeriods
+            { language = "pt"
+            , script = Nothing
+            , territory = Just "GQ"
+            , variant = Nothing
+            , periodNames =
+                { abbreviated =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , wide =
+                    { am = "da manhã"
+                    , pm = "da tarde"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , narrow =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "tarde" )
+                            , ( "evening1", "noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "manhã" )
+                            , ( "night1", "madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , datePatterns =
+                { short = "dd/MM/yy"
+                , medium = "dd/MM/y"
+                , long = "d 'de' MMMM 'de' y"
+                , full = "EEEE, d 'de' MMMM 'de' y"
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , monthFormatNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            }
-        , monthStandaloneNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+            , monthStandaloneNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , weekdayFormatNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , weekdayStandaloneNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            }
-        , weekdayFormatNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
+            , eraNames =
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
+                , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
+            , timePatterns =
+                { short = "HH:mm"
+                , medium = "HH:mm:ss"
+                , long = "HH:mm:ss z"
+                , full = "HH:mm:ss zzzz"
                 }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
+            , dateTimePatterns =
+                { short = "{1}, {0}"
+                , medium = "{1}, {0}"
+                , long = "{1} 'às' {0}"
+                , full = "{1} 'às' {0}"
                 }
-            }
-        , weekdayStandaloneNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
-                }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
-                }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
-                }
-            }
-        , eraNames =
-            { abbreviated = { bc = "a.C.", ad = "d.C." }
-            , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
-            , narrow = { bc = "a.C.", ad = "d.C." }
-            }
-        , periodNames =
-            { abbreviated =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , wide =
-                { am = "da manhã"
-                , pm = "da tarde"
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , narrow =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "tarde" )
-                        , ( "evening1", "noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "manhã" )
-                        , ( "night1", "madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            }
-        , dayPeriodRuleSet = pt_dayPeriodRules
-        , dateSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.TwoDigit)
+            , availableFormats =
+                [ ( "Bh", "h B" )
+                , ( "Bhm", "h:mm B" )
+                , ( "Bhms", "h:mm:ss B" )
+                , ( "d", "d" )
+                , ( "E", "ccc" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
+                , ( "Ed", "E, d" )
+                , ( "Ehm", "E, h:mm a" )
+                , ( "EHm", "E, HH:mm" )
+                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "EHms", "E, HH:mm:ss" )
+                , ( "Gy", "y G" )
+                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMMM", "MMM 'de' y G" )
+                , ( "GyMMMd", "d 'de' MMM 'de' y G" )
+                , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
+                , ( "h", "h a" )
+                , ( "H", "HH" )
+                , ( "hm", "h:mm a" )
+                , ( "Hm", "HH:mm" )
+                , ( "hms", "h:mm:ss a" )
+                , ( "Hms", "HH:mm:ss" )
+                , ( "hmsv", "h:mm:ss a v" )
+                , ( "Hmsv", "HH:mm:ss v" )
+                , ( "hmv", "h:mm a v" )
+                , ( "Hmv", "HH:mm v" )
+                , ( "M", "L" )
+                , ( "Md", "dd/MM" )
+                , ( "MEd", "E, dd/MM" )
+                , ( "MMdd", "dd/MM" )
+                , ( "MMM", "LLL" )
+                , ( "MMMd", "d/MM" )
+                , ( "MMMEd", "E, d/MM" )
+                , ( "MMMMd", "d 'de' MMMM" )
+                , ( "MMMMEd", "ccc, d 'de' MMMM" )
+                , ( "MMMMW-count-one", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "MMMMW-count-other", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "ms", "mm:ss" )
+                , ( "y", "y" )
+                , ( "yM", "MM/y" )
+                , ( "yMd", "dd/MM/y" )
+                , ( "yMEd", "E, dd/MM/y" )
+                , ( "yMM", "MM/y" )
+                , ( "yMMM", "MM/y" )
+                , ( "yMMMd", "d/MM/y" )
+                , ( "yMMMEd", "E, d/MM/y" )
+                , ( "yMMMEEEEd", "EEEE, d/MM/y" )
+                , ( "yMMMM", "MMMM 'de' y" )
+                , ( "yMMMMd", "d 'de' MMMM 'de' y" )
+                , ( "yMMMMEd", "ccc, d 'de' MMMM 'de' y" )
+                , ( "yQQQ", "QQQQ 'de' y" )
+                , ( "yQQQQ", "QQQQ 'de' y" )
+                , ( "yw-count-one", "w.'ª' 'semana' 'de' Y" )
+                , ( "yw-count-other", "w.'ª' 'semana' 'de' Y" )
                 ]
-            , medium =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                , Sym.Literal ", "
-                , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
+            , timeSkeletons =
+                { short = "HHmm"
+                , medium = "HHmmss"
+                , long = "HHmmssz"
+                , full = "HHmmsszzzz"
+                }
             }
-        , timeSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                ]
-            , medium =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Short)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Long)
-                ]
-            }
-        , dateTimeTokens =
-            { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , long =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            , full =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            }
-        , availableFormats =
-            [ Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Day Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated) ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.MinimumDigits))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Narrow)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit) ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Number Sym.MinimumDigits))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Just Opts.TwoDigit
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Text Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Nothing
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Year Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Long
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            ]
-        , hour12ByDefault = False
-        }
+        )
 
 
 {-| Date format strings:
@@ -5942,1171 +1548,289 @@ Time format strings:
 -}
 pt_GW : Internal.Locale.Locale
 pt_GW =
-    Internal.Locale.Locale
-        { languageId =
-            Lang (Tagged.tag "pt") Nothing (Just (Tagged.tag "GW")) Nothing
-        , monthFormatNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+    Maybe.withDefault
+        Internal.Locale.empty
+        (Internal.Parse.parse
+            dayPeriods
+            { language = "pt"
+            , script = Nothing
+            , territory = Just "GW"
+            , variant = Nothing
+            , periodNames =
+                { abbreviated =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , wide =
+                    { am = "da manhã"
+                    , pm = "da tarde"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , narrow =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "tarde" )
+                            , ( "evening1", "noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "manhã" )
+                            , ( "night1", "madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , datePatterns =
+                { short = "dd/MM/yy"
+                , medium = "dd/MM/y"
+                , long = "d 'de' MMMM 'de' y"
+                , full = "EEEE, d 'de' MMMM 'de' y"
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , monthFormatNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            }
-        , monthStandaloneNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+            , monthStandaloneNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , weekdayFormatNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , weekdayStandaloneNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            }
-        , weekdayFormatNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
+            , eraNames =
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
+                , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
+            , timePatterns =
+                { short = "HH:mm"
+                , medium = "HH:mm:ss"
+                , long = "HH:mm:ss z"
+                , full = "HH:mm:ss zzzz"
                 }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
+            , dateTimePatterns =
+                { short = "{1}, {0}"
+                , medium = "{1}, {0}"
+                , long = "{1} 'às' {0}"
+                , full = "{1} 'às' {0}"
                 }
-            }
-        , weekdayStandaloneNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
-                }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
-                }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
-                }
-            }
-        , eraNames =
-            { abbreviated = { bc = "a.C.", ad = "d.C." }
-            , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
-            , narrow = { bc = "a.C.", ad = "d.C." }
-            }
-        , periodNames =
-            { abbreviated =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , wide =
-                { am = "da manhã"
-                , pm = "da tarde"
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , narrow =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "tarde" )
-                        , ( "evening1", "noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "manhã" )
-                        , ( "night1", "madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            }
-        , dayPeriodRuleSet = pt_dayPeriodRules
-        , dateSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.TwoDigit)
+            , availableFormats =
+                [ ( "Bh", "h B" )
+                , ( "Bhm", "h:mm B" )
+                , ( "Bhms", "h:mm:ss B" )
+                , ( "d", "d" )
+                , ( "E", "ccc" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
+                , ( "Ed", "E, d" )
+                , ( "Ehm", "E, h:mm a" )
+                , ( "EHm", "E, HH:mm" )
+                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "EHms", "E, HH:mm:ss" )
+                , ( "Gy", "y G" )
+                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMMM", "MMM 'de' y G" )
+                , ( "GyMMMd", "d 'de' MMM 'de' y G" )
+                , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
+                , ( "h", "h a" )
+                , ( "H", "HH" )
+                , ( "hm", "h:mm a" )
+                , ( "Hm", "HH:mm" )
+                , ( "hms", "h:mm:ss a" )
+                , ( "Hms", "HH:mm:ss" )
+                , ( "hmsv", "h:mm:ss a v" )
+                , ( "Hmsv", "HH:mm:ss v" )
+                , ( "hmv", "h:mm a v" )
+                , ( "Hmv", "HH:mm v" )
+                , ( "M", "L" )
+                , ( "Md", "dd/MM" )
+                , ( "MEd", "E, dd/MM" )
+                , ( "MMdd", "dd/MM" )
+                , ( "MMM", "LLL" )
+                , ( "MMMd", "d/MM" )
+                , ( "MMMEd", "E, d/MM" )
+                , ( "MMMMd", "d 'de' MMMM" )
+                , ( "MMMMEd", "ccc, d 'de' MMMM" )
+                , ( "MMMMW-count-one", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "MMMMW-count-other", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "ms", "mm:ss" )
+                , ( "y", "y" )
+                , ( "yM", "MM/y" )
+                , ( "yMd", "dd/MM/y" )
+                , ( "yMEd", "E, dd/MM/y" )
+                , ( "yMM", "MM/y" )
+                , ( "yMMM", "MM/y" )
+                , ( "yMMMd", "d/MM/y" )
+                , ( "yMMMEd", "E, d/MM/y" )
+                , ( "yMMMEEEEd", "EEEE, d/MM/y" )
+                , ( "yMMMM", "MMMM 'de' y" )
+                , ( "yMMMMd", "d 'de' MMMM 'de' y" )
+                , ( "yMMMMEd", "ccc, d 'de' MMMM 'de' y" )
+                , ( "yQQQ", "QQQQ 'de' y" )
+                , ( "yQQQQ", "QQQQ 'de' y" )
+                , ( "yw-count-one", "w.'ª' 'semana' 'de' Y" )
+                , ( "yw-count-other", "w.'ª' 'semana' 'de' Y" )
                 ]
-            , medium =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                , Sym.Literal ", "
-                , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
+            , timeSkeletons =
+                { short = "HHmm"
+                , medium = "HHmmss"
+                , long = "HHmmssz"
+                , full = "HHmmsszzzz"
+                }
             }
-        , timeSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                ]
-            , medium =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Short)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Long)
-                ]
-            }
-        , dateTimeTokens =
-            { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , long =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            , full =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            }
-        , availableFormats =
-            [ Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Day Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated) ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.MinimumDigits))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Narrow)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit) ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Number Sym.MinimumDigits))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Just Opts.TwoDigit
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Text Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Nothing
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Year Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Long
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            ]
-        , hour12ByDefault = False
-        }
+        )
 
 
 {-| Date format strings:
@@ -7126,1171 +1850,289 @@ Time format strings:
 -}
 pt_LU : Internal.Locale.Locale
 pt_LU =
-    Internal.Locale.Locale
-        { languageId =
-            Lang (Tagged.tag "pt") Nothing (Just (Tagged.tag "LU")) Nothing
-        , monthFormatNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+    Maybe.withDefault
+        Internal.Locale.empty
+        (Internal.Parse.parse
+            dayPeriods
+            { language = "pt"
+            , script = Nothing
+            , territory = Just "LU"
+            , variant = Nothing
+            , periodNames =
+                { abbreviated =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , wide =
+                    { am = "da manhã"
+                    , pm = "da tarde"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , narrow =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "tarde" )
+                            , ( "evening1", "noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "manhã" )
+                            , ( "night1", "madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , datePatterns =
+                { short = "dd/MM/yy"
+                , medium = "dd/MM/y"
+                , long = "d 'de' MMMM 'de' y"
+                , full = "EEEE, d 'de' MMMM 'de' y"
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , monthFormatNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            }
-        , monthStandaloneNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+            , monthStandaloneNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , weekdayFormatNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , weekdayStandaloneNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            }
-        , weekdayFormatNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
+            , eraNames =
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
+                , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
+            , timePatterns =
+                { short = "HH:mm"
+                , medium = "HH:mm:ss"
+                , long = "HH:mm:ss z"
+                , full = "HH:mm:ss zzzz"
                 }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
+            , dateTimePatterns =
+                { short = "{1}, {0}"
+                , medium = "{1}, {0}"
+                , long = "{1} 'às' {0}"
+                , full = "{1} 'às' {0}"
                 }
-            }
-        , weekdayStandaloneNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
-                }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
-                }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
-                }
-            }
-        , eraNames =
-            { abbreviated = { bc = "a.C.", ad = "d.C." }
-            , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
-            , narrow = { bc = "a.C.", ad = "d.C." }
-            }
-        , periodNames =
-            { abbreviated =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , wide =
-                { am = "da manhã"
-                , pm = "da tarde"
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , narrow =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "tarde" )
-                        , ( "evening1", "noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "manhã" )
-                        , ( "night1", "madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            }
-        , dayPeriodRuleSet = pt_dayPeriodRules
-        , dateSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.TwoDigit)
+            , availableFormats =
+                [ ( "Bh", "h B" )
+                , ( "Bhm", "h:mm B" )
+                , ( "Bhms", "h:mm:ss B" )
+                , ( "d", "d" )
+                , ( "E", "ccc" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
+                , ( "Ed", "E, d" )
+                , ( "Ehm", "E, h:mm a" )
+                , ( "EHm", "E, HH:mm" )
+                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "EHms", "E, HH:mm:ss" )
+                , ( "Gy", "y G" )
+                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMMM", "MMM 'de' y G" )
+                , ( "GyMMMd", "d 'de' MMM 'de' y G" )
+                , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
+                , ( "h", "h a" )
+                , ( "H", "HH" )
+                , ( "hm", "h:mm a" )
+                , ( "Hm", "HH:mm" )
+                , ( "hms", "h:mm:ss a" )
+                , ( "Hms", "HH:mm:ss" )
+                , ( "hmsv", "h:mm:ss a v" )
+                , ( "Hmsv", "HH:mm:ss v" )
+                , ( "hmv", "h:mm a v" )
+                , ( "Hmv", "HH:mm v" )
+                , ( "M", "L" )
+                , ( "Md", "dd/MM" )
+                , ( "MEd", "E, dd/MM" )
+                , ( "MMdd", "dd/MM" )
+                , ( "MMM", "LLL" )
+                , ( "MMMd", "d/MM" )
+                , ( "MMMEd", "E, d/MM" )
+                , ( "MMMMd", "d 'de' MMMM" )
+                , ( "MMMMEd", "ccc, d 'de' MMMM" )
+                , ( "MMMMW-count-one", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "MMMMW-count-other", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "ms", "mm:ss" )
+                , ( "y", "y" )
+                , ( "yM", "MM/y" )
+                , ( "yMd", "dd/MM/y" )
+                , ( "yMEd", "E, dd/MM/y" )
+                , ( "yMM", "MM/y" )
+                , ( "yMMM", "MM/y" )
+                , ( "yMMMd", "d/MM/y" )
+                , ( "yMMMEd", "E, d/MM/y" )
+                , ( "yMMMEEEEd", "EEEE, d/MM/y" )
+                , ( "yMMMM", "MMMM 'de' y" )
+                , ( "yMMMMd", "d 'de' MMMM 'de' y" )
+                , ( "yMMMMEd", "ccc, d 'de' MMMM 'de' y" )
+                , ( "yQQQ", "QQQQ 'de' y" )
+                , ( "yQQQQ", "QQQQ 'de' y" )
+                , ( "yw-count-one", "w.'ª' 'semana' 'de' Y" )
+                , ( "yw-count-other", "w.'ª' 'semana' 'de' Y" )
                 ]
-            , medium =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                , Sym.Literal ", "
-                , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
+            , timeSkeletons =
+                { short = "HHmm"
+                , medium = "HHmmss"
+                , long = "HHmmssz"
+                , full = "HHmmsszzzz"
+                }
             }
-        , timeSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                ]
-            , medium =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Short)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Long)
-                ]
-            }
-        , dateTimeTokens =
-            { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , long =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            , full =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            }
-        , availableFormats =
-            [ Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Day Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated) ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.MinimumDigits))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Narrow)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit) ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Number Sym.MinimumDigits))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Just Opts.TwoDigit
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Text Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Nothing
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Year Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Long
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            ]
-        , hour12ByDefault = False
-        }
+        )
 
 
 {-| Date format strings:
@@ -8310,1179 +2152,289 @@ Time format strings:
 -}
 pt_MO : Internal.Locale.Locale
 pt_MO =
-    Internal.Locale.Locale
-        { languageId =
-            Lang (Tagged.tag "pt") Nothing (Just (Tagged.tag "MO")) Nothing
-        , monthFormatNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+    Maybe.withDefault
+        Internal.Locale.empty
+        (Internal.Parse.parse
+            dayPeriods
+            { language = "pt"
+            , script = Nothing
+            , territory = Just "MO"
+            , variant = Nothing
+            , periodNames =
+                { abbreviated =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , wide =
+                    { am = "da manhã"
+                    , pm = "da tarde"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , narrow =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "tarde" )
+                            , ( "evening1", "noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "manhã" )
+                            , ( "night1", "madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , datePatterns =
+                { short = "dd/MM/yy"
+                , medium = "dd/MM/y"
+                , long = "d 'de' MMMM 'de' y"
+                , full = "EEEE, d 'de' MMMM 'de' y"
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , monthFormatNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            }
-        , monthStandaloneNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+            , monthStandaloneNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , weekdayFormatNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , weekdayStandaloneNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            }
-        , weekdayFormatNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
+            , eraNames =
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
+                , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
+            , timePatterns =
+                { short = "h:mm a"
+                , medium = "h:mm:ss a"
+                , long = "h:mm:ss a z"
+                , full = "h:mm:ss a zzzz"
                 }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
+            , dateTimePatterns =
+                { short = "{1}, {0}"
+                , medium = "{1}, {0}"
+                , long = "{1} 'às' {0}"
+                , full = "{1} 'às' {0}"
                 }
-            }
-        , weekdayStandaloneNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
-                }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
-                }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
-                }
-            }
-        , eraNames =
-            { abbreviated = { bc = "a.C.", ad = "d.C." }
-            , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
-            , narrow = { bc = "a.C.", ad = "d.C." }
-            }
-        , periodNames =
-            { abbreviated =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , wide =
-                { am = "da manhã"
-                , pm = "da tarde"
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , narrow =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "tarde" )
-                        , ( "evening1", "noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "manhã" )
-                        , ( "night1", "madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            }
-        , dayPeriodRuleSet = pt_dayPeriodRules
-        , dateSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.TwoDigit)
+            , availableFormats =
+                [ ( "Bh", "h B" )
+                , ( "Bhm", "h:mm B" )
+                , ( "Bhms", "h:mm:ss B" )
+                , ( "d", "d" )
+                , ( "E", "ccc" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
+                , ( "Ed", "E, d" )
+                , ( "Ehm", "E, h:mm a" )
+                , ( "EHm", "E, HH:mm" )
+                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "EHms", "E, HH:mm:ss" )
+                , ( "Gy", "y G" )
+                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMMM", "MMM 'de' y G" )
+                , ( "GyMMMd", "d 'de' MMM 'de' y G" )
+                , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
+                , ( "h", "h a" )
+                , ( "H", "HH" )
+                , ( "hm", "h:mm a" )
+                , ( "Hm", "HH:mm" )
+                , ( "hms", "h:mm:ss a" )
+                , ( "Hms", "HH:mm:ss" )
+                , ( "hmsv", "h:mm:ss a v" )
+                , ( "Hmsv", "HH:mm:ss v" )
+                , ( "hmv", "h:mm a v" )
+                , ( "Hmv", "HH:mm v" )
+                , ( "M", "L" )
+                , ( "Md", "dd/MM" )
+                , ( "MEd", "E, dd/MM" )
+                , ( "MMdd", "dd/MM" )
+                , ( "MMM", "LLL" )
+                , ( "MMMd", "d/MM" )
+                , ( "MMMEd", "E, d/MM" )
+                , ( "MMMMd", "d 'de' MMMM" )
+                , ( "MMMMEd", "ccc, d 'de' MMMM" )
+                , ( "MMMMW-count-one", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "MMMMW-count-other", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "ms", "mm:ss" )
+                , ( "y", "y" )
+                , ( "yM", "MM/y" )
+                , ( "yMd", "dd/MM/y" )
+                , ( "yMEd", "E, dd/MM/y" )
+                , ( "yMM", "MM/y" )
+                , ( "yMMM", "MM/y" )
+                , ( "yMMMd", "d/MM/y" )
+                , ( "yMMMEd", "E, d/MM/y" )
+                , ( "yMMMEEEEd", "EEEE, d/MM/y" )
+                , ( "yMMMM", "MMMM 'de' y" )
+                , ( "yMMMMd", "d 'de' MMMM 'de' y" )
+                , ( "yMMMMEd", "ccc, d 'de' MMMM 'de' y" )
+                , ( "yQQQ", "QQQQ 'de' y" )
+                , ( "yQQQQ", "QQQQ 'de' y" )
+                , ( "yw-count-one", "w.'ª' 'semana' 'de' Y" )
+                , ( "yw-count-other", "w.'ª' 'semana' 'de' Y" )
                 ]
-            , medium =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                , Sym.Literal ", "
-                , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
+            , timeSkeletons =
+                { short = "ahmm"
+                , medium = "ahmmss"
+                , long = "ahmmssz"
+                , full = "ahmmsszzzz"
+                }
             }
-        , timeSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                ]
-            , medium =
-                [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Short)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Long)
-                ]
-            }
-        , dateTimeTokens =
-            { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , long =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            , full =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            }
-        , availableFormats =
-            [ Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Day Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated) ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.MinimumDigits))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Narrow)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit) ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Number Sym.MinimumDigits))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Just Opts.TwoDigit
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Text Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Nothing
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Year Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Long
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            ]
-        , hour12ByDefault = True
-        }
+        )
 
 
 {-| Date format strings:
@@ -9502,1171 +2454,289 @@ Time format strings:
 -}
 pt_MZ : Internal.Locale.Locale
 pt_MZ =
-    Internal.Locale.Locale
-        { languageId =
-            Lang (Tagged.tag "pt") Nothing (Just (Tagged.tag "MZ")) Nothing
-        , monthFormatNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+    Maybe.withDefault
+        Internal.Locale.empty
+        (Internal.Parse.parse
+            dayPeriods
+            { language = "pt"
+            , script = Nothing
+            , territory = Just "MZ"
+            , variant = Nothing
+            , periodNames =
+                { abbreviated =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , wide =
+                    { am = "da manhã"
+                    , pm = "da tarde"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , narrow =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "tarde" )
+                            , ( "evening1", "noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "manhã" )
+                            , ( "night1", "madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , datePatterns =
+                { short = "dd/MM/yy"
+                , medium = "dd/MM/y"
+                , long = "d 'de' MMMM 'de' y"
+                , full = "EEEE, d 'de' MMMM 'de' y"
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , monthFormatNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            }
-        , monthStandaloneNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+            , monthStandaloneNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , weekdayFormatNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , weekdayStandaloneNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            }
-        , weekdayFormatNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
+            , eraNames =
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
+                , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
+            , timePatterns =
+                { short = "HH:mm"
+                , medium = "HH:mm:ss"
+                , long = "HH:mm:ss z"
+                , full = "HH:mm:ss zzzz"
                 }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
+            , dateTimePatterns =
+                { short = "{1}, {0}"
+                , medium = "{1}, {0}"
+                , long = "{1} 'às' {0}"
+                , full = "{1} 'às' {0}"
                 }
-            }
-        , weekdayStandaloneNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
-                }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
-                }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
-                }
-            }
-        , eraNames =
-            { abbreviated = { bc = "a.C.", ad = "d.C." }
-            , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
-            , narrow = { bc = "a.C.", ad = "d.C." }
-            }
-        , periodNames =
-            { abbreviated =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , wide =
-                { am = "da manhã"
-                , pm = "da tarde"
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , narrow =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "tarde" )
-                        , ( "evening1", "noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "manhã" )
-                        , ( "night1", "madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            }
-        , dayPeriodRuleSet = pt_dayPeriodRules
-        , dateSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.TwoDigit)
+            , availableFormats =
+                [ ( "Bh", "h B" )
+                , ( "Bhm", "h:mm B" )
+                , ( "Bhms", "h:mm:ss B" )
+                , ( "d", "d" )
+                , ( "E", "ccc" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
+                , ( "Ed", "E, d" )
+                , ( "Ehm", "E, h:mm a" )
+                , ( "EHm", "E, HH:mm" )
+                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "EHms", "E, HH:mm:ss" )
+                , ( "Gy", "y G" )
+                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMMM", "MMM 'de' y G" )
+                , ( "GyMMMd", "d 'de' MMM 'de' y G" )
+                , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
+                , ( "h", "h a" )
+                , ( "H", "HH" )
+                , ( "hm", "h:mm a" )
+                , ( "Hm", "HH:mm" )
+                , ( "hms", "h:mm:ss a" )
+                , ( "Hms", "HH:mm:ss" )
+                , ( "hmsv", "h:mm:ss a v" )
+                , ( "Hmsv", "HH:mm:ss v" )
+                , ( "hmv", "h:mm a v" )
+                , ( "Hmv", "HH:mm v" )
+                , ( "M", "L" )
+                , ( "Md", "dd/MM" )
+                , ( "MEd", "E, dd/MM" )
+                , ( "MMdd", "dd/MM" )
+                , ( "MMM", "LLL" )
+                , ( "MMMd", "d/MM" )
+                , ( "MMMEd", "E, d/MM" )
+                , ( "MMMMd", "d 'de' MMMM" )
+                , ( "MMMMEd", "ccc, d 'de' MMMM" )
+                , ( "MMMMW-count-one", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "MMMMW-count-other", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "ms", "mm:ss" )
+                , ( "y", "y" )
+                , ( "yM", "MM/y" )
+                , ( "yMd", "dd/MM/y" )
+                , ( "yMEd", "E, dd/MM/y" )
+                , ( "yMM", "MM/y" )
+                , ( "yMMM", "MM/y" )
+                , ( "yMMMd", "d/MM/y" )
+                , ( "yMMMEd", "E, d/MM/y" )
+                , ( "yMMMEEEEd", "EEEE, d/MM/y" )
+                , ( "yMMMM", "MMMM 'de' y" )
+                , ( "yMMMMd", "d 'de' MMMM 'de' y" )
+                , ( "yMMMMEd", "ccc, d 'de' MMMM 'de' y" )
+                , ( "yQQQ", "QQQQ 'de' y" )
+                , ( "yQQQQ", "QQQQ 'de' y" )
+                , ( "yw-count-one", "w.'ª' 'semana' 'de' Y" )
+                , ( "yw-count-other", "w.'ª' 'semana' 'de' Y" )
                 ]
-            , medium =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                , Sym.Literal ", "
-                , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
+            , timeSkeletons =
+                { short = "HHmm"
+                , medium = "HHmmss"
+                , long = "HHmmssz"
+                , full = "HHmmsszzzz"
+                }
             }
-        , timeSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                ]
-            , medium =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Short)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Long)
-                ]
-            }
-        , dateTimeTokens =
-            { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , long =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            , full =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            }
-        , availableFormats =
-            [ Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Day Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated) ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.MinimumDigits))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Narrow)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit) ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Number Sym.MinimumDigits))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Just Opts.TwoDigit
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Text Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Nothing
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Year Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Long
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            ]
-        , hour12ByDefault = False
-        }
+        )
 
 
 {-| Date format strings:
@@ -10686,1171 +2756,289 @@ Time format strings:
 -}
 pt_PT : Internal.Locale.Locale
 pt_PT =
-    Internal.Locale.Locale
-        { languageId =
-            Lang (Tagged.tag "pt") Nothing (Just (Tagged.tag "PT")) Nothing
-        , monthFormatNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+    Maybe.withDefault
+        Internal.Locale.empty
+        (Internal.Parse.parse
+            dayPeriods
+            { language = "pt"
+            , script = Nothing
+            , territory = Just "PT"
+            , variant = Nothing
+            , periodNames =
+                { abbreviated =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , wide =
+                    { am = "da manhã"
+                    , pm = "da tarde"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , narrow =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "tarde" )
+                            , ( "evening1", "noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "manhã" )
+                            , ( "night1", "madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , datePatterns =
+                { short = "dd/MM/yy"
+                , medium = "dd/MM/y"
+                , long = "d 'de' MMMM 'de' y"
+                , full = "EEEE, d 'de' MMMM 'de' y"
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , monthFormatNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            }
-        , monthStandaloneNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+            , monthStandaloneNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , weekdayFormatNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , weekdayStandaloneNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            }
-        , weekdayFormatNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
+            , eraNames =
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
+                , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
+            , timePatterns =
+                { short = "HH:mm"
+                , medium = "HH:mm:ss"
+                , long = "HH:mm:ss z"
+                , full = "HH:mm:ss zzzz"
                 }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
+            , dateTimePatterns =
+                { short = "{1}, {0}"
+                , medium = "{1}, {0}"
+                , long = "{1} 'às' {0}"
+                , full = "{1} 'às' {0}"
                 }
-            }
-        , weekdayStandaloneNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
-                }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
-                }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
-                }
-            }
-        , eraNames =
-            { abbreviated = { bc = "a.C.", ad = "d.C." }
-            , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
-            , narrow = { bc = "a.C.", ad = "d.C." }
-            }
-        , periodNames =
-            { abbreviated =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , wide =
-                { am = "da manhã"
-                , pm = "da tarde"
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , narrow =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "tarde" )
-                        , ( "evening1", "noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "manhã" )
-                        , ( "night1", "madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            }
-        , dayPeriodRuleSet = pt_dayPeriodRules
-        , dateSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.TwoDigit)
+            , availableFormats =
+                [ ( "Bh", "h B" )
+                , ( "Bhm", "h:mm B" )
+                , ( "Bhms", "h:mm:ss B" )
+                , ( "d", "d" )
+                , ( "E", "ccc" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
+                , ( "Ed", "E, d" )
+                , ( "Ehm", "E, h:mm a" )
+                , ( "EHm", "E, HH:mm" )
+                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "EHms", "E, HH:mm:ss" )
+                , ( "Gy", "y G" )
+                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMMM", "MMM 'de' y G" )
+                , ( "GyMMMd", "d 'de' MMM 'de' y G" )
+                , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
+                , ( "h", "h a" )
+                , ( "H", "HH" )
+                , ( "hm", "h:mm a" )
+                , ( "Hm", "HH:mm" )
+                , ( "hms", "h:mm:ss a" )
+                , ( "Hms", "HH:mm:ss" )
+                , ( "hmsv", "h:mm:ss a v" )
+                , ( "Hmsv", "HH:mm:ss v" )
+                , ( "hmv", "h:mm a v" )
+                , ( "Hmv", "HH:mm v" )
+                , ( "M", "L" )
+                , ( "Md", "dd/MM" )
+                , ( "MEd", "E, dd/MM" )
+                , ( "MMdd", "dd/MM" )
+                , ( "MMM", "LLL" )
+                , ( "MMMd", "d/MM" )
+                , ( "MMMEd", "E, d/MM" )
+                , ( "MMMMd", "d 'de' MMMM" )
+                , ( "MMMMEd", "ccc, d 'de' MMMM" )
+                , ( "MMMMW-count-one", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "MMMMW-count-other", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "ms", "mm:ss" )
+                , ( "y", "y" )
+                , ( "yM", "MM/y" )
+                , ( "yMd", "dd/MM/y" )
+                , ( "yMEd", "E, dd/MM/y" )
+                , ( "yMM", "MM/y" )
+                , ( "yMMM", "MM/y" )
+                , ( "yMMMd", "d/MM/y" )
+                , ( "yMMMEd", "E, d/MM/y" )
+                , ( "yMMMEEEEd", "EEEE, d/MM/y" )
+                , ( "yMMMM", "MMMM 'de' y" )
+                , ( "yMMMMd", "d 'de' MMMM 'de' y" )
+                , ( "yMMMMEd", "ccc, d 'de' MMMM 'de' y" )
+                , ( "yQQQ", "QQQQ 'de' y" )
+                , ( "yQQQQ", "QQQQ 'de' y" )
+                , ( "yw-count-one", "w.'ª' 'semana' 'de' Y" )
+                , ( "yw-count-other", "w.'ª' 'semana' 'de' Y" )
                 ]
-            , medium =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                , Sym.Literal ", "
-                , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
+            , timeSkeletons =
+                { short = "HHmm"
+                , medium = "HHmmss"
+                , long = "HHmmssz"
+                , full = "HHmmsszzzz"
+                }
             }
-        , timeSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                ]
-            , medium =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Short)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Long)
-                ]
-            }
-        , dateTimeTokens =
-            { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , long =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            , full =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            }
-        , availableFormats =
-            [ Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Day Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated) ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.MinimumDigits))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Narrow)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit) ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Number Sym.MinimumDigits))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Just Opts.TwoDigit
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Text Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Nothing
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Year Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Long
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            ]
-        , hour12ByDefault = False
-        }
+        )
 
 
 {-| Date format strings:
@@ -11870,1171 +3058,289 @@ Time format strings:
 -}
 pt_ST : Internal.Locale.Locale
 pt_ST =
-    Internal.Locale.Locale
-        { languageId =
-            Lang (Tagged.tag "pt") Nothing (Just (Tagged.tag "ST")) Nothing
-        , monthFormatNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+    Maybe.withDefault
+        Internal.Locale.empty
+        (Internal.Parse.parse
+            dayPeriods
+            { language = "pt"
+            , script = Nothing
+            , territory = Just "ST"
+            , variant = Nothing
+            , periodNames =
+                { abbreviated =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , wide =
+                    { am = "da manhã"
+                    , pm = "da tarde"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , narrow =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "tarde" )
+                            , ( "evening1", "noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "manhã" )
+                            , ( "night1", "madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , datePatterns =
+                { short = "dd/MM/yy"
+                , medium = "dd/MM/y"
+                , long = "d 'de' MMMM 'de' y"
+                , full = "EEEE, d 'de' MMMM 'de' y"
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , monthFormatNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            }
-        , monthStandaloneNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+            , monthStandaloneNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , weekdayFormatNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , weekdayStandaloneNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            }
-        , weekdayFormatNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
+            , eraNames =
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
+                , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
+            , timePatterns =
+                { short = "HH:mm"
+                , medium = "HH:mm:ss"
+                , long = "HH:mm:ss z"
+                , full = "HH:mm:ss zzzz"
                 }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
+            , dateTimePatterns =
+                { short = "{1}, {0}"
+                , medium = "{1}, {0}"
+                , long = "{1} 'às' {0}"
+                , full = "{1} 'às' {0}"
                 }
-            }
-        , weekdayStandaloneNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
-                }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
-                }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
-                }
-            }
-        , eraNames =
-            { abbreviated = { bc = "a.C.", ad = "d.C." }
-            , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
-            , narrow = { bc = "a.C.", ad = "d.C." }
-            }
-        , periodNames =
-            { abbreviated =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , wide =
-                { am = "da manhã"
-                , pm = "da tarde"
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , narrow =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "tarde" )
-                        , ( "evening1", "noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "manhã" )
-                        , ( "night1", "madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            }
-        , dayPeriodRuleSet = pt_dayPeriodRules
-        , dateSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.TwoDigit)
+            , availableFormats =
+                [ ( "Bh", "h B" )
+                , ( "Bhm", "h:mm B" )
+                , ( "Bhms", "h:mm:ss B" )
+                , ( "d", "d" )
+                , ( "E", "ccc" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
+                , ( "Ed", "E, d" )
+                , ( "Ehm", "E, h:mm a" )
+                , ( "EHm", "E, HH:mm" )
+                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "EHms", "E, HH:mm:ss" )
+                , ( "Gy", "y G" )
+                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMMM", "MMM 'de' y G" )
+                , ( "GyMMMd", "d 'de' MMM 'de' y G" )
+                , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
+                , ( "h", "h a" )
+                , ( "H", "HH" )
+                , ( "hm", "h:mm a" )
+                , ( "Hm", "HH:mm" )
+                , ( "hms", "h:mm:ss a" )
+                , ( "Hms", "HH:mm:ss" )
+                , ( "hmsv", "h:mm:ss a v" )
+                , ( "Hmsv", "HH:mm:ss v" )
+                , ( "hmv", "h:mm a v" )
+                , ( "Hmv", "HH:mm v" )
+                , ( "M", "L" )
+                , ( "Md", "dd/MM" )
+                , ( "MEd", "E, dd/MM" )
+                , ( "MMdd", "dd/MM" )
+                , ( "MMM", "LLL" )
+                , ( "MMMd", "d/MM" )
+                , ( "MMMEd", "E, d/MM" )
+                , ( "MMMMd", "d 'de' MMMM" )
+                , ( "MMMMEd", "ccc, d 'de' MMMM" )
+                , ( "MMMMW-count-one", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "MMMMW-count-other", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "ms", "mm:ss" )
+                , ( "y", "y" )
+                , ( "yM", "MM/y" )
+                , ( "yMd", "dd/MM/y" )
+                , ( "yMEd", "E, dd/MM/y" )
+                , ( "yMM", "MM/y" )
+                , ( "yMMM", "MM/y" )
+                , ( "yMMMd", "d/MM/y" )
+                , ( "yMMMEd", "E, d/MM/y" )
+                , ( "yMMMEEEEd", "EEEE, d/MM/y" )
+                , ( "yMMMM", "MMMM 'de' y" )
+                , ( "yMMMMd", "d 'de' MMMM 'de' y" )
+                , ( "yMMMMEd", "ccc, d 'de' MMMM 'de' y" )
+                , ( "yQQQ", "QQQQ 'de' y" )
+                , ( "yQQQQ", "QQQQ 'de' y" )
+                , ( "yw-count-one", "w.'ª' 'semana' 'de' Y" )
+                , ( "yw-count-other", "w.'ª' 'semana' 'de' Y" )
                 ]
-            , medium =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                , Sym.Literal ", "
-                , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
+            , timeSkeletons =
+                { short = "HHmm"
+                , medium = "HHmmss"
+                , long = "HHmmssz"
+                , full = "HHmmsszzzz"
+                }
             }
-        , timeSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                ]
-            , medium =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Short)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Long)
-                ]
-            }
-        , dateTimeTokens =
-            { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , long =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            , full =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            }
-        , availableFormats =
-            [ Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Day Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated) ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.MinimumDigits))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Narrow)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit) ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Number Sym.MinimumDigits))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Just Opts.TwoDigit
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Text Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Nothing
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Year Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Long
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            ]
-        , hour12ByDefault = False
-        }
+        )
 
 
 {-| Date format strings:
@@ -13054,1179 +3360,286 @@ Time format strings:
 -}
 pt_TL : Internal.Locale.Locale
 pt_TL =
-    Internal.Locale.Locale
-        { languageId =
-            Lang (Tagged.tag "pt") Nothing (Just (Tagged.tag "TL")) Nothing
-        , monthFormatNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+    Maybe.withDefault
+        Internal.Locale.empty
+        (Internal.Parse.parse
+            dayPeriods
+            { language = "pt"
+            , script = Nothing
+            , territory = Just "TL"
+            , variant = Nothing
+            , periodNames =
+                { abbreviated =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , wide =
+                    { am = "da manhã"
+                    , pm = "da tarde"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "da tarde" )
+                            , ( "evening1", "da noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "da manhã" )
+                            , ( "night1", "da madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
+                , narrow =
+                    { am = "a.m."
+                    , pm = "p.m."
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "tarde" )
+                            , ( "evening1", "noite" )
+                            , ( "midnight", "meia-noite" )
+                            , ( "morning1", "manhã" )
+                            , ( "night1", "madrugada" )
+                            , ( "noon", "meio-dia" )
+                            ]
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , datePatterns =
+                { short = "dd/MM/yy"
+                , medium = "dd/MM/y"
+                , long = "d 'de' MMMM 'de' y"
+                , full = "EEEE, d 'de' MMMM 'de' y"
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , monthFormatNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            }
-        , monthStandaloneNames =
-            { abbreviated =
-                { jan = "jan."
-                , feb = "fev."
-                , mar = "mar."
-                , apr = "abr."
-                , may = "mai."
-                , jun = "jun."
-                , jul = "jul."
-                , aug = "ago."
-                , sep = "set."
-                , oct = "out."
-                , nov = "nov."
-                , dec = "dez."
+            , monthStandaloneNames =
+                { abbreviated =
+                    { jan = "jan."
+                    , feb = "fev."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "mai."
+                    , jun = "jun."
+                    , jul = "jul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dez."
+                    }
+                , wide =
+                    { jan = "janeiro"
+                    , feb = "fevereiro"
+                    , mar = "março"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "junho"
+                    , jul = "julho"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "dezembro"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
                 }
-            , wide =
-                { jan = "janeiro"
-                , feb = "fevereiro"
-                , mar = "março"
-                , apr = "abril"
-                , may = "maio"
-                , jun = "junho"
-                , jul = "julho"
-                , aug = "agosto"
-                , sep = "setembro"
-                , oct = "outubro"
-                , nov = "novembro"
-                , dec = "dezembro"
+            , weekdayFormatNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            , narrow =
-                { jan = "J"
-                , feb = "F"
-                , mar = "M"
-                , apr = "A"
-                , may = "M"
-                , jun = "J"
-                , jul = "J"
-                , aug = "A"
-                , sep = "S"
-                , oct = "O"
-                , nov = "N"
-                , dec = "D"
+            , weekdayStandaloneNames =
+                { abbreviated =
+                    { sun = "domingo"
+                    , mon = "segunda"
+                    , tue = "terça"
+                    , wed = "quarta"
+                    , thu = "quinta"
+                    , fri = "sexta"
+                    , sat = "sábado"
+                    }
+                , wide =
+                    { sun = "domingo"
+                    , mon = "segunda-feira"
+                    , tue = "terça-feira"
+                    , wed = "quarta-feira"
+                    , thu = "quinta-feira"
+                    , fri = "sexta-feira"
+                    , sat = "sábado"
+                    }
+                , narrow =
+                    { sun = "D"
+                    , mon = "S"
+                    , tue = "T"
+                    , wed = "Q"
+                    , thu = "Q"
+                    , fri = "S"
+                    , sat = "S"
+                    }
                 }
-            }
-        , weekdayFormatNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
+            , eraNames =
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
+                , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
+            , timePatterns =
+                { short = "HH:mm"
+                , medium = "HH:mm:ss"
+                , long = "HH:mm:ss z"
+                , full = "HH:mm:ss zzzz"
                 }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
+            , dateTimePatterns =
+                { short = "{1}, {0}"
+                , medium = "{1}, {0}"
+                , long = "{1} 'às' {0}"
+                , full = "{1} 'às' {0}"
                 }
-            }
-        , weekdayStandaloneNames =
-            { abbreviated =
-                { sun = "domingo"
-                , mon = "segunda"
-                , tue = "terça"
-                , wed = "quarta"
-                , thu = "quinta"
-                , fri = "sexta"
-                , sat = "sábado"
-                }
-            , wide =
-                { sun = "domingo"
-                , mon = "segunda-feira"
-                , tue = "terça-feira"
-                , wed = "quarta-feira"
-                , thu = "quinta-feira"
-                , fri = "sexta-feira"
-                , sat = "sábado"
-                }
-            , narrow =
-                { sun = "D"
-                , mon = "S"
-                , tue = "T"
-                , wed = "Q"
-                , thu = "Q"
-                , fri = "S"
-                , sat = "S"
-                }
-            }
-        , eraNames =
-            { abbreviated = { bc = "a.C.", ad = "d.C." }
-            , wide = { bc = "antes de Cristo", ad = "depois de Cristo" }
-            , narrow = { bc = "a.C.", ad = "d.C." }
-            }
-        , periodNames =
-            { abbreviated =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , wide =
-                { am = "da manhã"
-                , pm = "da tarde"
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "da tarde" )
-                        , ( "evening1", "da noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "da manhã" )
-                        , ( "night1", "da madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            , narrow =
-                { am = "a.m."
-                , pm = "p.m."
-                , dayPeriods =
-                    Dict.fromList
-                        [ ( "afternoon1", "tarde" )
-                        , ( "evening1", "noite" )
-                        , ( "midnight", "meia-noite" )
-                        , ( "morning1", "manhã" )
-                        , ( "night1", "madrugada" )
-                        , ( "noon", "meio-dia" )
-                        ]
-                }
-            }
-        , dayPeriodRuleSet = pt_dayPeriodRules
-        , dateSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.TwoDigit)
+            , availableFormats =
+                [ ( "Bh", "h B" )
+                , ( "Bhm", "h:mm B" )
+                , ( "Bhms", "h:mm:ss B" )
+                , ( "d", "d" )
+                , ( "E", "ccc" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
+                , ( "Ed", "E, d" )
+                , ( "Ehm", "E, h:mm a" )
+                , ( "EHm", "E, HH:mm" )
+                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "EHms", "E, HH:mm:ss" )
+                , ( "Gy", "y G" )
+                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMMM", "MMM 'de' y G" )
+                , ( "GyMMMd", "d 'de' MMM 'de' y G" )
+                , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
+                , ( "h", "h a" )
+                , ( "H", "HH" )
+                , ( "hm", "h:mm a" )
+                , ( "Hm", "HH:mm" )
+                , ( "hms", "h:mm:ss a" )
+                , ( "Hms", "HH:mm:ss" )
+                , ( "hmsv", "h:mm:ss a v" )
+                , ( "Hmsv", "HH:mm:ss v" )
+                , ( "hmv", "h:mm a v" )
+                , ( "Hmv", "HH:mm v" )
+                , ( "M", "L" )
+                , ( "Md", "dd/MM" )
+                , ( "MEd", "E, dd/MM" )
+                , ( "MMdd", "dd/MM" )
+                , ( "MMM", "LLL" )
+                , ( "MMMd", "d/MM" )
+                , ( "MMMEd", "E, d/MM" )
+                , ( "MMMMd", "d 'de' MMMM" )
+                , ( "MMMMEd", "ccc, d 'de' MMMM" )
+                , ( "MMMMW-count-one", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "MMMMW-count-other", "W.'ª' 'semana' 'de' MMMM" )
+                , ( "ms", "mm:ss" )
+                , ( "y", "y" )
+                , ( "yM", "MM/y" )
+                , ( "yMd", "dd/MM/y" )
+                , ( "yMEd", "E, dd/MM/y" )
+                , ( "yMM", "MM/y" )
+                , ( "yMMM", "MM/y" )
+                , ( "yMMMd", "d/MM/y" )
+                , ( "yMMMEd", "E, d/MM/y" )
+                , ( "yMMMEEEEd", "EEEE, d/MM/y" )
+                , ( "yMMMM", "MMMM 'de' y" )
+                , ( "yMMMMd", "d 'de' MMMM 'de' y" )
+                , ( "yMMMMEd", "ccc, d 'de' MMMM 'de' y" )
+                , ( "yQQQ", "QQQQ 'de' y" )
+                , ( "yQQQQ", "QQQQ 'de' y" )
+                , ( "yw-count-one", "w.'ª' 'semana' 'de' Y" )
+                , ( "yw-count-other", "w.'ª' 'semana' 'de' Y" )
                 ]
-            , medium =
-                [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                , Sym.Literal "/"
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                , Sym.Literal ", "
-                , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                , Sym.Literal " "
-                , Sym.Literal "de"
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                ]
+            , timeSkeletons =
+                { short = "HHmm"
+                , medium = "HHmmss"
+                , long = "HHmmssz"
+                , full = "HHmmsszzzz"
+                }
             }
-        , timeSymbols =
-            { short =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                ]
-            , medium =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                ]
-            , long =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Short)
-                ]
-            , full =
-                [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                , Sym.Literal ":"
-                , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                , Sym.Literal " "
-                , Sym.Symbol (Sym.ZoneNonLocationFormat Sym.Long)
-                ]
-            }
-        , dateTimeTokens =
-            { short = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , medium = [ DateGoesHere, Text ", ", TimeGoesHere ]
-            , long =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            , full =
-                [ DateGoesHere, Text " ", Text "às", Text " ", TimeGoesHere ]
-            }
-        , availableFormats =
-            [ Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.FlexibleDayPeriod Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Day Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated) ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Just Opts.Short
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol
-                        (Sym.Time (Sym.FlexibleDayPeriod Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour12From1 Sym.MinimumDigits))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Time (Sym.Period Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateTimeAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Just Opts.Short
-                    , period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Date (Sym.Weekday Sym.Abbreviated))
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Time (Sym.Hour24From0 Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Minute Sym.TwoDigit))
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Time (Sym.Second Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.MinimumDigits))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Narrow)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Just Opts.Short
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Abbreviated))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Era Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Nothing
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit) ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour12
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour12From1 Sym.MinimumDigits)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Period Sym.Abbreviated)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Just Opts.Numeric
-                    , minute = Just Opts.Numeric
-                    , second = Nothing
-                    , fractionalSecondDigits = Nothing
-                    , zone = Just Opts.ShortName
-                    , hour12 = Just Opts.Hour24
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Hour24From0 Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.ZoneGenericNonLocationFormat Sym.Short)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Number Sym.MinimumDigits))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Just Opts.TwoDigit
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol
-                        (Sym.MonthStandalone (Sym.Text Sym.Abbreviated))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Nothing
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    ]
-                }
-            , Internal.Locale.TimeAF
-                { options =
-                    { period = Nothing
-                    , dayPeriod = Nothing
-                    , hour = Nothing
-                    , minute = Just Opts.Numeric
-                    , second = Just Opts.Numeric
-                    , fractionalSecondDigits = Nothing
-                    , zone = Nothing
-                    , hour12 = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Minute Sym.TwoDigit)
-                    , Sym.Literal ":"
-                    , Sym.Symbol (Sym.Second Sym.TwoDigit)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Nothing
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols = [ Sym.Symbol (Sym.Year Sym.MinimumDigits) ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.Numeric)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.TwoDigit)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Number Opts.TwoDigit)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Short)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Long
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Weekday Sym.Wide)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Month (Sym.Number Sym.TwoDigit))
-                    , Sym.Literal "/"
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Nothing
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Nothing
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            , Internal.Locale.DateAF
-                { options =
-                    { era = Nothing
-                    , year = Just Opts.Numeric
-                    , month = Just (Opts.Text Opts.Long)
-                    , day = Just Opts.Numeric
-                    , weekday = Just Opts.Short
-                    }
-                , formatSymbols =
-                    [ Sym.Symbol (Sym.WeekdayStandalone Sym.Abbreviated)
-                    , Sym.Literal ", "
-                    , Sym.Symbol (Sym.Day Sym.MinimumDigits)
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Month (Sym.Text Sym.Wide))
-                    , Sym.Literal " "
-                    , Sym.Literal "de"
-                    , Sym.Literal " "
-                    , Sym.Symbol (Sym.Year Sym.MinimumDigits)
-                    ]
-                }
-            ]
-        , hour12ByDefault = False
-        }
-
-
-pt_dayPeriodRules : List Internal.DayPeriodRule.DayPeriodRule
-pt_dayPeriodRules =
-    [ Internal.DayPeriodRule.FromBefore ( 12, 0 ) ( 19, 0 ) "afternoon1"
-    , Internal.DayPeriodRule.FromBefore ( 19, 0 ) ( 24, 0 ) "evening1"
-    , Internal.DayPeriodRule.At ( 0, 0 ) "midnight"
-    , Internal.DayPeriodRule.FromBefore ( 6, 0 ) ( 12, 0 ) "morning1"
-    , Internal.DayPeriodRule.FromBefore ( 0, 0 ) ( 6, 0 ) "night1"
-    , Internal.DayPeriodRule.At ( 12, 0 ) "noon"
-    ]
+        )

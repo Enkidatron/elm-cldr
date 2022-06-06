@@ -13,6 +13,7 @@ suite =
         , enGBRoundtrip
         , ruToUnicode
         , ruRoundtrip
+        , allLocalesParseCorrectly
         ]
 
 
@@ -62,3 +63,18 @@ ruRoundtrip : Test
 ruRoundtrip =
     localeRoundtrip "ru locale roundtrip"
         "ru"
+
+
+allLocalesParseCorrectly : Test
+allLocalesParseCorrectly =
+    describe "all locales parse correctly"
+        (List.indexedMap testParse allLocales)
+
+
+testParse : Int -> Locale -> Test
+testParse index locale =
+    test (String.fromInt index ++ ": " ++ toUnicode locale) <|
+        \_ ->
+            Expect.notEqual
+                (toUnicode locale)
+                ""

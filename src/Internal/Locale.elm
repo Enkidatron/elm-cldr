@@ -7,6 +7,7 @@ module Internal.Locale exposing
     , LanguageId(..)
     , Locale(..)
     , TimeAvailableFormat
+    , empty
     , languageIdFromString
     , languageIdSimilarity
     , matchNearestLocale
@@ -19,6 +20,7 @@ module Internal.Locale exposing
 
 import Cldr.Format.Length exposing (Length(..))
 import Cldr.Format.Options exposing (DateOptions, DateTimeOptions)
+import Dict
 import Internal.DayPeriodRule exposing (DayPeriodRule)
 import Internal.FormatSymbols as Sym
 import Internal.Options exposing (TimeOptions)
@@ -407,3 +409,201 @@ toTimeAvailableFormat af =
 
         DateAF _ ->
             Nothing
+
+
+
+-- Default empty locale
+
+
+empty : Locale
+empty =
+    Locale
+        { languageId = Lang (Tagged "") Nothing Nothing Nothing
+        , monthFormatNames =
+            { abbreviated =
+                { jan = "M01"
+                , feb = "M02"
+                , mar = "M03"
+                , apr = "M04"
+                , may = "M05"
+                , jun = "M06"
+                , jul = "M07"
+                , aug = "M08"
+                , sep = "M09"
+                , oct = "M10"
+                , nov = "M11"
+                , dec = "M12"
+                }
+            , wide =
+                { jan = "M01"
+                , feb = "M02"
+                , mar = "M03"
+                , apr = "M04"
+                , may = "M05"
+                , jun = "M06"
+                , jul = "M07"
+                , aug = "M08"
+                , sep = "M09"
+                , oct = "M10"
+                , nov = "M11"
+                , dec = "M12"
+                }
+            , narrow =
+                { jan = "1"
+                , feb = "2"
+                , mar = "3"
+                , apr = "4"
+                , may = "5"
+                , jun = "6"
+                , jul = "7"
+                , aug = "8"
+                , sep = "9"
+                , oct = "10"
+                , nov = "11"
+                , dec = "12"
+                }
+            }
+        , monthStandaloneNames =
+            { abbreviated =
+                { jan = "M01"
+                , feb = "M02"
+                , mar = "M03"
+                , apr = "M04"
+                , may = "M05"
+                , jun = "M06"
+                , jul = "M07"
+                , aug = "M08"
+                , sep = "M09"
+                , oct = "M10"
+                , nov = "M11"
+                , dec = "M12"
+                }
+            , wide =
+                { jan = "M01"
+                , feb = "M02"
+                , mar = "M03"
+                , apr = "M04"
+                , may = "M05"
+                , jun = "M06"
+                , jul = "M07"
+                , aug = "M08"
+                , sep = "M09"
+                , oct = "M10"
+                , nov = "M11"
+                , dec = "M12"
+                }
+            , narrow =
+                { jan = "1"
+                , feb = "2"
+                , mar = "3"
+                , apr = "4"
+                , may = "5"
+                , jun = "6"
+                , jul = "7"
+                , aug = "8"
+                , sep = "9"
+                , oct = "10"
+                , nov = "11"
+                , dec = "12"
+                }
+            }
+        , weekdayFormatNames =
+            { abbreviated =
+                { sun = "Sun"
+                , mon = "Mon"
+                , tue = "Tue"
+                , wed = "Wed"
+                , thu = "Thu"
+                , fri = "Fri"
+                , sat = "Sat"
+                }
+            , wide =
+                { sun = "Sun"
+                , mon = "Mon"
+                , tue = "Tue"
+                , wed = "Wed"
+                , thu = "Thu"
+                , fri = "Fri"
+                , sat = "Sat"
+                }
+            , narrow =
+                { sun = "S"
+                , mon = "M"
+                , tue = "T"
+                , wed = "W"
+                , thu = "T"
+                , fri = "F"
+                , sat = "S"
+                }
+            }
+        , weekdayStandaloneNames =
+            { abbreviated =
+                { sun = "Sun"
+                , mon = "Mon"
+                , tue = "Tue"
+                , wed = "Wed"
+                , thu = "Thu"
+                , fri = "Fri"
+                , sat = "Sat"
+                }
+            , wide =
+                { sun = "Sun"
+                , mon = "Mon"
+                , tue = "Tue"
+                , wed = "Wed"
+                , thu = "Thu"
+                , fri = "Fri"
+                , sat = "Sat"
+                }
+            , narrow =
+                { sun = "S"
+                , mon = "M"
+                , tue = "T"
+                , wed = "W"
+                , thu = "T"
+                , fri = "F"
+                , sat = "S"
+                }
+            }
+        , eraNames =
+            { abbreviated = { bc = "BCE", ad = "CE" }
+            , wide = { bc = "BCE", ad = "CE" }
+            , narrow = { bc = "BCE", ad = "CE" }
+            }
+        , periodNames =
+            { abbreviated =
+                { am = "AM", pm = "PM", dayPeriods = Dict.fromList [] }
+            , wide = { am = "AM", pm = "PM", dayPeriods = Dict.fromList [] }
+            , narrow = { am = "AM", pm = "PM", dayPeriods = Dict.fromList [] }
+            }
+        , dayPeriodRuleSet = []
+        , dateSymbols =
+            { short =
+                []
+            , medium =
+                []
+            , long =
+                []
+            , full =
+                []
+            }
+        , timeSymbols =
+            { short =
+                []
+            , medium =
+                []
+            , long =
+                []
+            , full =
+                []
+            }
+        , dateTimeTokens =
+            { short = []
+            , medium = []
+            , long = []
+            , full = []
+            }
+        , availableFormats =
+            []
+        , hour12ByDefault = False
+        }
