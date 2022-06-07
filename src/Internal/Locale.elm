@@ -261,10 +261,14 @@ normalize langId =
 
 matchNearestLocale : List Locale -> LanguageId -> Maybe Locale
 matchNearestLocale locales langId =
+    let
+        normalized =
+            normalize langId
+    in
     locales
         |> List.map unwrapLocale
-        |> List.filter (.languageId >> languageIdNoConflicts langId)
-        |> List.sortBy (.languageId >> languageIdSimilarity langId)
+        |> List.filter (.languageId >> languageIdNoConflicts normalized)
+        |> List.sortBy (.languageId >> languageIdSimilarity normalized)
         |> List.head
         |> Maybe.map Locale
 

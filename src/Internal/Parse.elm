@@ -89,6 +89,7 @@ toLanguageId info =
             (Maybe.map Tagged info.script)
             (Maybe.map Tagged info.territory)
             (Maybe.map Tagged info.variant)
+            |> Internal.Locale.normalize
 
 
 availableFormatList : LanguageInfo -> Maybe (List Internal.Locale.AvailableFormat)
