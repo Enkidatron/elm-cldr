@@ -60,3 +60,9 @@ formatted =
 
 The `Cldr.Locale` file is automatically generated from the CLDR JSON. In order to keep this library repo clean, the code for that generation can be found at [enkidatron/elm-cldr-generator](https://github.com/enkidatron/elm-cldr-generator)
 
+## CLDR Version History
+
+| CLDR Version | First Package Version |
+|--------------|-----------------------|
+| release-41   | 2.1.0                 |
+| release-40   | 1.0.0                 |
