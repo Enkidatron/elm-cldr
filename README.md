@@ -62,7 +62,5 @@ The `Cldr.Locale` file is automatically generated from the CLDR JSON. In order t
 
 ## CLDR Version History
 
-| CLDR Version | First Package Version |
-|--------------|-----------------------|
-| release-41   | 2.1.0                 |
-| release-40   | 1.0.0                 |
+- 2.1.0: release-41
+- 1.0.0: release-40
