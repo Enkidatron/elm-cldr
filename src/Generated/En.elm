@@ -1,4 +1,4 @@
-module Generated.En exposing (en, en_001, en_150, en_AE, en_AG, en_AI, en_AS, en_AT, en_AU, en_BB, en_BE, en_BI, en_BM, en_BS, en_BW, en_BZ, en_CA, en_CC, en_CH, en_CK, en_CM, en_CX, en_CY, en_DE, en_DG, en_DK, en_DM, en_ER, en_FI, en_FJ, en_FK, en_FM, en_GB, en_GD, en_GG, en_GH, en_GI, en_GM, en_GU, en_GY, en_HK, en_IE, en_IL, en_IM, en_IN, en_IO, en_JE, en_JM, en_KE, en_KI, en_KN, en_KY, en_LC, en_LR, en_LS, en_MG, en_MH, en_MO, en_MP, en_MS, en_MT, en_MU, en_MW, en_MY, en_NA, en_NF, en_NG, en_NL, en_NR, en_NU, en_NZ, en_PG, en_PH, en_PK, en_PN, en_PR, en_PW, en_RW, en_SB, en_SC, en_SD, en_SE, en_SG, en_SH, en_SI, en_SL, en_SS, en_SX, en_SZ, en_TC, en_TK, en_TO, en_TT, en_TV, en_TZ, en_UG, en_UM, en_VC, en_VG, en_VI, en_VU, en_WS, en_ZA, en_ZM, en_ZW)
+module Generated.En exposing (en, en_001, en_150, en_AE, en_AG, en_AI, en_AS, en_AT, en_AU, en_BB, en_BE, en_BI, en_BM, en_BS, en_BW, en_BZ, en_CA, en_CC, en_CH, en_CK, en_CM, en_CX, en_CY, en_DE, en_DG, en_DK, en_DM, en_ER, en_FI, en_FJ, en_FK, en_FM, en_GB, en_GD, en_GG, en_GH, en_GI, en_GM, en_GU, en_GY, en_HK, en_IE, en_IL, en_IM, en_IN, en_IO, en_JE, en_JM, en_KE, en_KI, en_KN, en_KY, en_LC, en_LR, en_LS, en_Latn, en_MG, en_MH, en_MO, en_MP, en_MS, en_MT, en_MU, en_MV, en_MW, en_MY, en_NA, en_NF, en_NG, en_NL, en_NR, en_NU, en_NZ, en_PG, en_PH, en_PK, en_PN, en_PR, en_PW, en_RW, en_SB, en_SC, en_SD, en_SE, en_SG, en_SH, en_SI, en_SL, en_SS, en_SX, en_SZ, en_TC, en_TK, en_TO, en_TT, en_TV, en_TZ, en_UG, en_UM, en_VC, en_VG, en_VI, en_VU, en_WS, en_ZA, en_ZM, en_ZW)
 
 import Dict exposing (Dict)
 import Internal.DayPeriodRule
@@ -18810,6 +18810,309 @@ en_MU =
 
 {-| Date format strings:
 
+  - Short : d-M-yy
+  - Medium : dd-MM-y
+  - Long : d MMMM y
+  - Full : EEEE d MMMM y
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : HH:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
+en_MV : Internal.Locale.Locale
+en_MV =
+    Maybe.withDefault
+        Internal.Locale.empty
+        (Internal.Parse.parse
+            dayPeriods
+            { language = "en"
+            , script = Nothing
+            , territory = Just "MV"
+            , variant = Nothing
+            , periodNames =
+                { abbreviated =
+                    { am = "am"
+                    , pm = "pm"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "in the afternoon" )
+                            , ( "am-alt-variant", "am" )
+                            , ( "evening1", "in the evening" )
+                            , ( "midnight", "midnight" )
+                            , ( "morning1", "in the morning" )
+                            , ( "night1", "at night" )
+                            , ( "noon", "noon" )
+                            , ( "pm-alt-variant", "pm" )
+                            ]
+                    }
+                , wide =
+                    { am = "am"
+                    , pm = "pm"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "in the afternoon" )
+                            , ( "am-alt-variant", "am" )
+                            , ( "evening1", "in the evening" )
+                            , ( "midnight", "midnight" )
+                            , ( "morning1", "in the morning" )
+                            , ( "night1", "at night" )
+                            , ( "noon", "noon" )
+                            , ( "pm-alt-variant", "pm" )
+                            ]
+                    }
+                , narrow =
+                    { am = "a"
+                    , pm = "p"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "in the afternoon" )
+                            , ( "am-alt-variant", "am" )
+                            , ( "evening1", "in the evening" )
+                            , ( "midnight", "mi" )
+                            , ( "morning1", "in the morning" )
+                            , ( "night1", "at night" )
+                            , ( "noon", "n" )
+                            , ( "pm-alt-variant", "pm" )
+                            ]
+                    }
+                }
+            , datePatterns =
+                { short = "d-M-yy"
+                , medium = "dd-MM-y"
+                , long = "d MMMM y"
+                , full = "EEEE d MMMM y"
+                }
+            , monthFormatNames =
+                { abbreviated =
+                    { jan = "Jan"
+                    , feb = "Feb"
+                    , mar = "Mar"
+                    , apr = "Apr"
+                    , may = "May"
+                    , jun = "Jun"
+                    , jul = "Jul"
+                    , aug = "Aug"
+                    , sep = "Sept"
+                    , oct = "Oct"
+                    , nov = "Nov"
+                    , dec = "Dec"
+                    }
+                , wide =
+                    { jan = "January"
+                    , feb = "February"
+                    , mar = "March"
+                    , apr = "April"
+                    , may = "May"
+                    , jun = "June"
+                    , jul = "July"
+                    , aug = "August"
+                    , sep = "September"
+                    , oct = "October"
+                    , nov = "November"
+                    , dec = "December"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
+                }
+            , monthStandaloneNames =
+                { abbreviated =
+                    { jan = "Jan"
+                    , feb = "Feb"
+                    , mar = "Mar"
+                    , apr = "Apr"
+                    , may = "May"
+                    , jun = "Jun"
+                    , jul = "Jul"
+                    , aug = "Aug"
+                    , sep = "Sept"
+                    , oct = "Oct"
+                    , nov = "Nov"
+                    , dec = "Dec"
+                    }
+                , wide =
+                    { jan = "January"
+                    , feb = "February"
+                    , mar = "March"
+                    , apr = "April"
+                    , may = "May"
+                    , jun = "June"
+                    , jul = "July"
+                    , aug = "August"
+                    , sep = "September"
+                    , oct = "October"
+                    , nov = "November"
+                    , dec = "December"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
+                }
+            , weekdayFormatNames =
+                { abbreviated =
+                    { sun = "Sun"
+                    , mon = "Mon"
+                    , tue = "Tue"
+                    , wed = "Wed"
+                    , thu = "Thu"
+                    , fri = "Fri"
+                    , sat = "Sat"
+                    }
+                , wide =
+                    { sun = "Sunday"
+                    , mon = "Monday"
+                    , tue = "Tuesday"
+                    , wed = "Wednesday"
+                    , thu = "Thursday"
+                    , fri = "Friday"
+                    , sat = "Saturday"
+                    }
+                , narrow =
+                    { sun = "S"
+                    , mon = "M"
+                    , tue = "T"
+                    , wed = "W"
+                    , thu = "T"
+                    , fri = "F"
+                    , sat = "S"
+                    }
+                }
+            , weekdayStandaloneNames =
+                { abbreviated =
+                    { sun = "Sun"
+                    , mon = "Mon"
+                    , tue = "Tue"
+                    , wed = "Wed"
+                    , thu = "Thu"
+                    , fri = "Fri"
+                    , sat = "Sat"
+                    }
+                , wide =
+                    { sun = "Sunday"
+                    , mon = "Monday"
+                    , tue = "Tuesday"
+                    , wed = "Wednesday"
+                    , thu = "Thursday"
+                    , fri = "Friday"
+                    , sat = "Saturday"
+                    }
+                , narrow =
+                    { sun = "S"
+                    , mon = "M"
+                    , tue = "T"
+                    , wed = "W"
+                    , thu = "T"
+                    , fri = "F"
+                    , sat = "S"
+                    }
+                }
+            , eraNames =
+                { abbreviated = { bc = "BC", ad = "AD" }
+                , wide = { bc = "Before Christ", ad = "Anno Domini" }
+                , narrow = { bc = "B", ad = "A" }
+                }
+            , timePatterns =
+                { short = "HH:mm"
+                , medium = "HH:mm:ss"
+                , long = "HH:mm:ss z"
+                , full = "HH:mm:ss zzzz"
+                }
+            , dateTimePatterns =
+                { short = "{1} {0}"
+                , medium = "{1} {0}"
+                , long = "{1} {0}"
+                , full = "{1} {0}"
+                }
+            , availableFormats =
+                [ ( "Bh", "h B" )
+                , ( "Bhm", "h:mm B" )
+                , ( "Bhms", "h:mm:ss B" )
+                , ( "d", "d" )
+                , ( "E", "ccc" )
+                , ( "EBhm", "E, h:mm B" )
+                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "Ed", "E d" )
+                , ( "Ehm", "E h:mm a" )
+                , ( "EHm", "E HH:mm" )
+                , ( "Ehms", "E h:mm:ss a" )
+                , ( "EHms", "E HH:mm:ss" )
+                , ( "Gy", "y G" )
+                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMMM", "MMM y G" )
+                , ( "GyMMMd", "d MMM y G" )
+                , ( "GyMMMEd", "E, d MMM y G" )
+                , ( "h", "h a" )
+                , ( "H", "HH" )
+                , ( "hm", "h:mm a" )
+                , ( "Hm", "HH:mm" )
+                , ( "hms", "h:mm:ss a" )
+                , ( "Hms", "HH:mm:ss" )
+                , ( "hmsv", "h:mm:ss a v" )
+                , ( "Hmsv", "HH:mm:ss v" )
+                , ( "hmv", "h:mm a v" )
+                , ( "Hmv", "HH:mm v" )
+                , ( "M", "L" )
+                , ( "Md", "dd/MM" )
+                , ( "MEd", "E, dd/MM" )
+                , ( "MMdd", "dd/MM" )
+                , ( "MMM", "LLL" )
+                , ( "MMMd", "d MMM" )
+                , ( "MMMEd", "E, d MMM" )
+                , ( "MMMMd", "d MMMM" )
+                , ( "MMMMW-count-one", "'week' W 'of' MMMM" )
+                , ( "MMMMW-count-other", "'week' W 'of' MMMM" )
+                , ( "ms", "mm:ss" )
+                , ( "y", "y" )
+                , ( "yM", "MM/y" )
+                , ( "yMd", "dd/MM/y" )
+                , ( "yMEd", "E, dd/MM/y" )
+                , ( "yMMM", "MMM y" )
+                , ( "yMMMd", "d MMM y" )
+                , ( "yMMMEd", "E, d MMM y" )
+                , ( "yMMMM", "MMMM y" )
+                , ( "yQQQ", "QQQ y" )
+                , ( "yQQQQ", "QQQQ y" )
+                , ( "yw-count-one", "'week' w 'of' Y" )
+                , ( "yw-count-other", "'week' w 'of' Y" )
+                ]
+            , timeSkeletons =
+                { short = "HHmm"
+                , medium = "HHmmss"
+                , long = "HHmmssz"
+                , full = "HHmmsszzzz"
+                }
+            }
+        )
+
+
+{-| Date format strings:
+
   - Short : dd/MM/y
   - Medium : d MMM y
   - Long : d MMMM y
@@ -31828,6 +32131,309 @@ en_ZW =
                 , medium = "HHmmss"
                 , long = "HHmmssz"
                 , full = "HHmmsszzzz"
+                }
+            }
+        )
+
+
+{-| Date format strings:
+
+  - Short : dd/MM/y
+  - Medium : dd-MMM-y
+  - Long : d MMMM y
+  - Full : EEEE, d MMMM, y
+
+Time format strings:
+
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
+
+-}
+en_Latn : Internal.Locale.Locale
+en_Latn =
+    Maybe.withDefault
+        Internal.Locale.empty
+        (Internal.Parse.parse
+            dayPeriods
+            { language = "en"
+            , script = Just "Latn"
+            , territory = Nothing
+            , variant = Nothing
+            , periodNames =
+                { abbreviated =
+                    { am = "AM"
+                    , pm = "PM"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "in the afternoon" )
+                            , ( "am-alt-variant", "am" )
+                            , ( "evening1", "in the evening" )
+                            , ( "midnight", "midnight" )
+                            , ( "morning1", "in the morning" )
+                            , ( "night1", "at night" )
+                            , ( "noon", "noon" )
+                            , ( "pm-alt-variant", "pm" )
+                            ]
+                    }
+                , wide =
+                    { am = "AM"
+                    , pm = "PM"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "dopahar" )
+                            , ( "am-alt-variant", "am" )
+                            , ( "evening1", "shaam" )
+                            , ( "midnight", "aadhi raat" )
+                            , ( "morning1", "subah" )
+                            , ( "night1", "raat" )
+                            , ( "noon", "noon" )
+                            , ( "pm-alt-variant", "pm" )
+                            ]
+                    }
+                , narrow =
+                    { am = "a"
+                    , pm = "p"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "in the afternoon" )
+                            , ( "am-alt-variant", "am" )
+                            , ( "evening1", "in the evening" )
+                            , ( "midnight", "mi" )
+                            , ( "morning1", "in the morning" )
+                            , ( "night1", "at night" )
+                            , ( "noon", "n" )
+                            , ( "pm-alt-variant", "pm" )
+                            ]
+                    }
+                }
+            , datePatterns =
+                { short = "dd/MM/y"
+                , medium = "dd-MMM-y"
+                , long = "d MMMM y"
+                , full = "EEEE, d MMMM, y"
+                }
+            , monthFormatNames =
+                { abbreviated =
+                    { jan = "Jan"
+                    , feb = "Feb"
+                    , mar = "Mar"
+                    , apr = "Apr"
+                    , may = "May"
+                    , jun = "Jun"
+                    , jul = "Jul"
+                    , aug = "Aug"
+                    , sep = "Sep"
+                    , oct = "Oct"
+                    , nov = "Nov"
+                    , dec = "Dec"
+                    }
+                , wide =
+                    { jan = "January"
+                    , feb = "February"
+                    , mar = "March"
+                    , apr = "April"
+                    , may = "May"
+                    , jun = "June"
+                    , jul = "July"
+                    , aug = "August"
+                    , sep = "September"
+                    , oct = "October"
+                    , nov = "November"
+                    , dec = "December"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
+                }
+            , monthStandaloneNames =
+                { abbreviated =
+                    { jan = "Jan"
+                    , feb = "Feb"
+                    , mar = "Mar"
+                    , apr = "Apr"
+                    , may = "May"
+                    , jun = "Jun"
+                    , jul = "Jul"
+                    , aug = "Aug"
+                    , sep = "Sept"
+                    , oct = "Oct"
+                    , nov = "Nov"
+                    , dec = "Dec"
+                    }
+                , wide =
+                    { jan = "January"
+                    , feb = "February"
+                    , mar = "March"
+                    , apr = "April"
+                    , may = "May"
+                    , jun = "June"
+                    , jul = "July"
+                    , aug = "August"
+                    , sep = "September"
+                    , oct = "October"
+                    , nov = "November"
+                    , dec = "December"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
+                }
+            , weekdayFormatNames =
+                { abbreviated =
+                    { sun = "ravi"
+                    , mon = "som"
+                    , tue = "mangal"
+                    , wed = "budh"
+                    , thu = "guru"
+                    , fri = "shukra"
+                    , sat = "shani"
+                    }
+                , wide =
+                    { sun = "ravivaar"
+                    , mon = "somvaar"
+                    , tue = "mangalvaar"
+                    , wed = "budhvaar"
+                    , thu = "guruvaar"
+                    , fri = "shukravaar"
+                    , sat = "shanivaar"
+                    }
+                , narrow =
+                    { sun = "ra"
+                    , mon = "so"
+                    , tue = "ma"
+                    , wed = "bu"
+                    , thu = "gu"
+                    , fri = "su"
+                    , sat = "sa"
+                    }
+                }
+            , weekdayStandaloneNames =
+                { abbreviated =
+                    { sun = "ravi"
+                    , mon = "som"
+                    , tue = "mangal"
+                    , wed = "budh"
+                    , thu = "guru"
+                    , fri = "shukra"
+                    , sat = "shani"
+                    }
+                , wide =
+                    { sun = "ravivaar"
+                    , mon = "somvaar"
+                    , tue = "mangalvaar"
+                    , wed = "budhvaar"
+                    , thu = "guruvaar"
+                    , fri = "shukravaar"
+                    , sat = "shanivaar"
+                    }
+                , narrow =
+                    { sun = "ra"
+                    , mon = "so"
+                    , tue = "ma"
+                    , wed = "bu"
+                    , thu = "gu"
+                    , fri = "su"
+                    , sat = "sa"
+                    }
+                }
+            , eraNames =
+                { abbreviated = { bc = "BC", ad = "AD" }
+                , wide = { bc = "Before Christ", ad = "Anno Domini" }
+                , narrow = { bc = "B", ad = "A" }
+                }
+            , timePatterns =
+                { short = "h:mm a"
+                , medium = "h:mm:ss a"
+                , long = "h:mm:ss a z"
+                , full = "h:mm:ss a zzzz"
+                }
+            , dateTimePatterns =
+                { short = "{1} {0}"
+                , medium = "{1} {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
+                }
+            , availableFormats =
+                [ ( "Bh", "h B" )
+                , ( "Bhm", "h:mm B" )
+                , ( "Bhms", "h:mm:ss B" )
+                , ( "d", "d" )
+                , ( "E", "ccc" )
+                , ( "EBhm", "E, h:mm B" )
+                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "Ed", "E d" )
+                , ( "Ehm", "E, h:mm a" )
+                , ( "EHm", "E, HH:mm" )
+                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "EHms", "E, HH:mm:ss" )
+                , ( "Gy", "y G" )
+                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMMM", "MMM y G" )
+                , ( "GyMMMd", "d MMM y G" )
+                , ( "GyMMMEd", "E, d MMM y G" )
+                , ( "h", "h a" )
+                , ( "H", "HH" )
+                , ( "hm", "h:mm a" )
+                , ( "Hm", "HH:mm" )
+                , ( "hms", "h:mm:ss a" )
+                , ( "Hms", "HH:mm:ss" )
+                , ( "hmsv", "h:mm:ss a v" )
+                , ( "Hmsv", "HH:mm:ss v" )
+                , ( "hmv", "h:mm a v" )
+                , ( "Hmv", "HH:mm v" )
+                , ( "M", "L" )
+                , ( "Md", "dd/MM" )
+                , ( "MEd", "E, dd/MM" )
+                , ( "MMdd", "dd/MM" )
+                , ( "MMM", "LLL" )
+                , ( "MMMd", "d MMM" )
+                , ( "MMMEd", "E, d MMM" )
+                , ( "MMMMd", "d MMMM" )
+                , ( "MMMMW-count-one", "'week' W 'of' MMMM" )
+                , ( "MMMMW-count-other", "'week' W 'of' MMMM" )
+                , ( "ms", "mm:ss" )
+                , ( "y", "y" )
+                , ( "yM", "MM/y" )
+                , ( "yMd", "d/M/y" )
+                , ( "yMEd", "E, d/M/y" )
+                , ( "yMMM", "MMM y" )
+                , ( "yMMMd", "d MMM y" )
+                , ( "yMMMEd", "E, d MMM, y" )
+                , ( "yMMMM", "MMMM y" )
+                , ( "yQQQ", "QQQ y" )
+                , ( "yQQQQ", "QQQQ y" )
+                , ( "yw-count-one", "'week' w 'of' Y" )
+                , ( "yw-count-other", "'week' w 'of' Y" )
+                ]
+            , timeSkeletons =
+                { short = "ahmm"
+                , medium = "ahmmss"
+                , long = "ahmmssz"
+                , full = "ahmmsszzzz"
                 }
             }
         )

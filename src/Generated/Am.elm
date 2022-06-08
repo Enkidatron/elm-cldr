@@ -271,7 +271,7 @@ am =
                 , ( "Ehms", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "GGGGG y-MM-dd" )
+                , ( "GyMd", "M/d/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "G y MMM d" )
                 , ( "GyMMMEd", "G y MMM d, E" )

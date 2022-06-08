@@ -273,7 +273,7 @@ hy =
                 , ( "Gy", "G y թ." )
                 , ( "GyMd", "dd.MM.y GGGGG" )
                 , ( "GyMMM", "G y թ. MMM" )
-                , ( "GyMMMd", "d MMM, y թ." )
+                , ( "GyMMMd", "d MMM, y թ. G" )
                 , ( "GyMMMEd", "G y թ. MMM d, E" )
                 , ( "h", "h a" )
                 , ( "H", "H" )
