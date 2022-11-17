@@ -7,6 +7,8 @@ module Internal.Structures exposing
     , WeekdayNames
     , getPattern
     , getPattern3
+    , mapPattern
+    , mapPattern3
     )
 
 import Cldr.Format.Length exposing (Length(..))
@@ -38,6 +40,15 @@ getPattern patterns length =
             patterns.full
 
 
+mapPattern : (a -> b) -> Patterns a -> Patterns b
+mapPattern f pattern =
+    { short = f pattern.short
+    , medium = f pattern.medium
+    , long = f pattern.long
+    , full = f pattern.full
+    }
+
+
 type alias Pattern3 a =
     { abbreviated : a
     , wide : a
@@ -56,6 +67,14 @@ getPattern3 pattern textWidth =
 
         Sym.Narrow ->
             pattern.narrow
+
+
+mapPattern3 : (a -> b) -> Pattern3 a -> Pattern3 b
+mapPattern3 f pattern =
+    { abbreviated = f pattern.abbreviated
+    , wide = f pattern.wide
+    , narrow = f pattern.narrow
+    }
 
 
 type alias MonthNames =

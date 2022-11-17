@@ -1,13 +1,20 @@
 module Generated.Zh exposing (zh, zh_Hans, zh_Hans_HK, zh_Hans_MO, zh_Hans_SG, zh_Hant, zh_Hant_HK, zh_Hant_MO)
 
-import Dict exposing (Dict)
+{-|
+
+@docs zh, zh_Hans, zh_Hans_HK, zh_Hans_MO, zh_Hans_SG, zh_Hant, zh_Hant_HK, zh_Hant_MO
+
+-}
+
+import Dict
 import Internal.DayPeriodRule
-import Internal.Locale exposing (DateTimeToken(..), LanguageId(..))
+import Internal.LanguageInfo
+import Internal.Locale
 import Internal.Parse
-import Tagged exposing (Tagged(..))
+import Internal.Structures
 
 
-dayPeriods : Dict String (List Internal.DayPeriodRule.DayPeriodRule)
+dayPeriods : Dict.Dict String (List Internal.DayPeriodRule.DayPeriodRule)
 dayPeriods =
     Dict.fromList
         [ ( "zh"

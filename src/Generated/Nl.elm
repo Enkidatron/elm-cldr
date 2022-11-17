@@ -1,13 +1,20 @@
 module Generated.Nl exposing (nl, nl_AW, nl_BE, nl_BQ, nl_CW, nl_SR, nl_SX)
 
-import Dict exposing (Dict)
+{-|
+
+@docs nl, nl_AW, nl_BE, nl_BQ, nl_CW, nl_SR, nl_SX
+
+-}
+
+import Dict
 import Internal.DayPeriodRule
-import Internal.Locale exposing (DateTimeToken(..), LanguageId(..))
+import Internal.LanguageInfo
+import Internal.Locale
 import Internal.Parse
-import Tagged exposing (Tagged(..))
+import Internal.Structures
 
 
-dayPeriods : Dict String (List Internal.DayPeriodRule.DayPeriodRule)
+dayPeriods : Dict.Dict String (List Internal.DayPeriodRule.DayPeriodRule)
 dayPeriods =
     Dict.fromList
         [ ( "nl"

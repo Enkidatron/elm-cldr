@@ -1,13 +1,20 @@
 module Generated.Sr exposing (sr, sr_Cyrl, sr_Cyrl_BA, sr_Cyrl_ME, sr_Cyrl_XK, sr_Latn, sr_Latn_BA, sr_Latn_ME, sr_Latn_XK)
 
-import Dict exposing (Dict)
+{-|
+
+@docs sr, sr_Cyrl, sr_Cyrl_BA, sr_Cyrl_ME, sr_Cyrl_XK, sr_Latn, sr_Latn_BA, sr_Latn_ME, sr_Latn_XK
+
+-}
+
+import Dict
 import Internal.DayPeriodRule
-import Internal.Locale exposing (DateTimeToken(..), LanguageId(..))
+import Internal.LanguageInfo
+import Internal.Locale
 import Internal.Parse
-import Tagged exposing (Tagged(..))
+import Internal.Structures
 
 
-dayPeriods : Dict String (List Internal.DayPeriodRule.DayPeriodRule)
+dayPeriods : Dict.Dict String (List Internal.DayPeriodRule.DayPeriodRule)
 dayPeriods =
     Dict.fromList
         [ ( "sr"

@@ -1,13 +1,20 @@
 module Generated.Ar exposing (ar, ar_AE, ar_BH, ar_DJ, ar_DZ, ar_EG, ar_EH, ar_ER, ar_IL, ar_IQ, ar_JO, ar_KM, ar_KW, ar_LB, ar_LY, ar_MA, ar_MR, ar_OM, ar_PS, ar_QA, ar_SA, ar_SD, ar_SO, ar_SS, ar_SY, ar_TD, ar_TN, ar_YE)
 
-import Dict exposing (Dict)
+{-|
+
+@docs ar, ar_AE, ar_BH, ar_DJ, ar_DZ, ar_EG, ar_EH, ar_ER, ar_IL, ar_IQ, ar_JO, ar_KM, ar_KW, ar_LB, ar_LY, ar_MA, ar_MR, ar_OM, ar_PS, ar_QA, ar_SA, ar_SD, ar_SO, ar_SS, ar_SY, ar_TD, ar_TN, ar_YE
+
+-}
+
+import Dict
 import Internal.DayPeriodRule
-import Internal.Locale exposing (DateTimeToken(..), LanguageId(..))
+import Internal.LanguageInfo
+import Internal.Locale
 import Internal.Parse
-import Tagged exposing (Tagged(..))
+import Internal.Structures
 
 
-dayPeriods : Dict String (List Internal.DayPeriodRule.DayPeriodRule)
+dayPeriods : Dict.Dict String (List Internal.DayPeriodRule.DayPeriodRule)
 dayPeriods =
     Dict.fromList
         [ ( "ar"

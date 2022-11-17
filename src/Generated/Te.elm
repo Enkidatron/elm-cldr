@@ -1,13 +1,20 @@
 module Generated.Te exposing (te)
 
-import Dict exposing (Dict)
+{-|
+
+@docs te
+
+-}
+
+import Dict
 import Internal.DayPeriodRule
-import Internal.Locale exposing (DateTimeToken(..), LanguageId(..))
+import Internal.LanguageInfo
+import Internal.Locale
 import Internal.Parse
-import Tagged exposing (Tagged(..))
+import Internal.Structures
 
 
-dayPeriods : Dict String (List Internal.DayPeriodRule.DayPeriodRule)
+dayPeriods : Dict.Dict String (List Internal.DayPeriodRule.DayPeriodRule)
 dayPeriods =
     Dict.fromList
         [ ( "te"

@@ -3,7 +3,6 @@ module Internal.LanguageInfo exposing (..)
 import Dict exposing (Dict)
 import Internal.DayPeriodRule exposing (DayPeriodRule)
 import Internal.Structures exposing (EraNames, MonthNames, Pattern3, Patterns, PeriodNames, WeekdayNames)
-import Tagged exposing (Tagged(..))
 
 
 type alias DayPeriodsInfo =
