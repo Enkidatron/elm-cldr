@@ -5,6 +5,7 @@ import Dict
 import Internal.DayPeriodRule
 import Internal.FormatSymbols as Sym exposing (NameWidth(..), NumberWidth(..), TextWidth(..), Width(..))
 import Internal.LanguageInfo exposing (DayPeriodsInfo, LanguageInfo)
+import Internal.LanguageInfo.Parse
 import Internal.Locale exposing (DateTimeToken(..))
 import Internal.Options
 import Internal.Structures exposing (Patterns)
@@ -14,8 +15,14 @@ import Set exposing (Set)
 import Tagged exposing (Tagged(..))
 
 
-parse : DayPeriodsInfo -> LanguageInfo -> Maybe Internal.Locale.Locale
-parse dayPeriods info =
+parse : DayPeriodsInfo -> String -> Maybe Internal.Locale.Locale
+parse dayPeriods text =
+    Internal.LanguageInfo.Parse.parse text
+        |> Maybe.andThen (parseInfo dayPeriods)
+
+
+parseInfo : DayPeriodsInfo -> LanguageInfo -> Maybe Internal.Locale.Locale
+parseInfo dayPeriods info =
     Just Internal.Locale.Internal
         |> Maybe.map ((|>) info.monthFormatNames)
         |> Maybe.map ((|>) info.monthStandaloneNames)

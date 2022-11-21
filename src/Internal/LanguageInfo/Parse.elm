@@ -1,0 +1,201 @@
+module Internal.LanguageInfo.Parse exposing (parse, parser)
+
+import Dict exposing (Dict)
+import Internal.LanguageInfo exposing (Compact, LanguageInfo)
+import Internal.Structures exposing (EraNames, MonthNames, Pattern3, Patterns, PeriodNames, WeekdayNames)
+import Parser exposing ((|.), (|=), Parser)
+import String.Extra
+
+
+parse : String -> Maybe LanguageInfo
+parse words =
+    Parser.run parser words
+        |> Result.toMaybe
+        |> Maybe.map Internal.LanguageInfo.expand
+
+
+parser : Parser Compact
+parser =
+    Parser.succeed Compact
+        |= pipeDelimitedString
+        |. pipe
+        |= maybeStringParser
+        |. pipe
+        |= maybeStringParser
+        |. pipe
+        |= maybeStringParser
+        |. pipe
+        |= pattern3Parser periodNamesParser
+        |= patternsParser (pipeDelimitedString |. pipe)
+        |= pattern3Parser monthNamesParser
+        |= maybeParser (pattern3Parser monthNamesParser)
+        |= pattern3Parser weekdayNamesParser
+        |= maybeParser (pattern3Parser weekdayNamesParser)
+        |= pattern3Parser eraNamesParser
+        |= patternsParser (pipeDelimitedString |. pipe)
+        |= patternsParser (pipeDelimitedString |. pipe)
+        |= listOfPairOfStringParser
+        |= patternsParser (pipeDelimitedString |. pipe)
+        |. Parser.end
+
+
+pipe : Parser ()
+pipe =
+    Parser.symbol "|"
+
+
+pipeDelimitedString : Parser String
+pipeDelimitedString =
+    Parser.chompWhile (\char -> char /= '|')
+        |> Parser.getChompedString
+
+
+maybeStringParser : Parser (Maybe String)
+maybeStringParser =
+    pipeDelimitedString
+        |> Parser.map String.Extra.nonEmpty
+
+
+pattern3Parser : Parser a -> Parser (Pattern3 a)
+pattern3Parser innerParser =
+    Parser.succeed Pattern3
+        |= innerParser
+        |= innerParser
+        |= innerParser
+
+
+periodNamesParser : Parser PeriodNames
+periodNamesParser =
+    Parser.succeed PeriodNames
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= dayPeriodsParser
+
+
+dayPeriodsParser : Parser (Dict String String)
+dayPeriodsParser =
+    listOfPairOfStringParser
+        |> Parser.map Dict.fromList
+
+
+listOfPairOfStringParser : Parser (List ( String, String ))
+listOfPairOfStringParser =
+    Parser.int
+        |. pipe
+        |> Parser.andThen
+            (\count ->
+                Parser.loop ( count, [] )
+                    (\( x, revItems ) ->
+                        if x > 0 then
+                            Parser.succeed Tuple.pair
+                                |= pipeDelimitedString
+                                |. pipe
+                                |= pipeDelimitedString
+                                |. pipe
+                                |> Parser.map (\item -> Parser.Loop ( x - 1, item :: revItems ))
+
+                        else
+                            Parser.succeed (Parser.Done (List.reverse revItems))
+                    )
+            )
+
+
+
+-- Parser.sequence
+--     { start = "["
+--     , separator = "|"
+--     , end = "]"
+--     , spaces = Parser.spaces
+--     , item =
+--         Parser.succeed Tuple.pair
+--             |= pipeDelimitedString
+--             |. pipe
+--             |= pipeDelimitedString
+--     , trailing = Parser.Mandatory
+--     }
+
+
+patternsParser : Parser a -> Parser (Patterns a)
+patternsParser innerParser =
+    Parser.succeed Patterns
+        |= innerParser
+        |= innerParser
+        |= innerParser
+        |= innerParser
+
+
+monthNamesParser : Parser MonthNames
+monthNamesParser =
+    Parser.succeed MonthNames
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+
+
+maybeParser : Parser a -> Parser (Maybe a)
+maybeParser innerParser =
+    Parser.int
+        |. pipe
+        |> Parser.andThen
+            (\x ->
+                case x of
+                    0 ->
+                        Parser.succeed Nothing
+
+                    1 ->
+                        Parser.map Just innerParser
+
+                    _ ->
+                        Parser.problem "Unexpected number encountered while evaulating a Maybe"
+            )
+
+
+weekdayNamesParser : Parser WeekdayNames
+weekdayNamesParser =
+    Parser.succeed WeekdayNames
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+
+
+eraNamesParser : Parser EraNames
+eraNamesParser =
+    Parser.succeed EraNames
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
