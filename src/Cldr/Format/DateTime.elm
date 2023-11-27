@@ -103,6 +103,9 @@ formatSymbol granularity internal zone posix symbol =
         Sym.Date (Sym.Year numberWidth) ->
             formatYear numberWidth zone posix
 
+        Sym.Date (Sym.YearOfWeek numberWidth) ->
+            formatYearOfWeek numberWidth zone posix
+
         Sym.Date (Sym.Month width) ->
             formatMonth internal.monthFormatNames width zone posix
 
@@ -171,6 +174,11 @@ formatEra eraNames zone posix =
 formatYear : Sym.NumberWidth -> Time.Zone -> Time.Posix -> String
 formatYear numberWidth zone posix =
     Internal.Format.year numberWidth (Time.toYear zone posix)
+
+
+formatYearOfWeek : Sym.NumberWidth -> Time.Zone -> Time.Posix -> String
+formatYearOfWeek numberWidth zone posix =
+    Internal.Format.year numberWidth (Date.weekYear (Date.fromPosix zone posix))
 
 
 formatMonth : Structs.Pattern3 Structs.MonthNames -> Sym.Width -> Time.Zone -> Time.Posix -> String

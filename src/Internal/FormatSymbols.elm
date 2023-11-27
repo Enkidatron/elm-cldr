@@ -40,6 +40,7 @@ type FormatSymbol
 type DateSymbol
     = Era TextWidth
     | Year NumberWidth
+    | YearOfWeek NumberWidth
     | Month Width
     | MonthStandalone Width
     | Weekday TextWidth

@@ -16,6 +16,9 @@ date requested symbol =
         Sym.Year year ->
             Sym.Year (Maybe.Extra.unwrap year SymConv.numberWidth requested.year)
 
+        Sym.YearOfWeek year ->
+            Sym.YearOfWeek (Maybe.Extra.unwrap year SymConv.numberWidth requested.year)
+
         Sym.Month month ->
             Sym.Month (Maybe.Extra.unwrap month SymConv.width requested.month)
 

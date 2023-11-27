@@ -183,6 +183,7 @@ dateSymbolParser =
     Parser.oneOf
         [ parseTextWidth5 "G" Sym.Era
         , parseNumberWidth2 "y" Sym.Year
+        , parseNumberWidth2 "Y" Sym.YearOfWeek
         , parseWidth5 "M" Sym.Month
         , parseWidth5 "L" Sym.MonthStandalone
         , parseTextWidth5 "E" Sym.Weekday

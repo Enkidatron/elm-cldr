@@ -72,6 +72,9 @@ formatSymbol internal date symbol =
         Sym.Year numberWidth ->
             formatYear numberWidth date
 
+        Sym.YearOfWeek numberWidth ->
+            formatYearOfWeek numberWidth date
+
         Sym.Month width ->
             formatMonth internal.monthFormatNames width date
 
@@ -106,6 +109,11 @@ formatEraHelper eraNames date =
 formatYear : Sym.NumberWidth -> Date -> String
 formatYear numberWidth date =
     Internal.Format.year numberWidth (Date.year date)
+
+
+formatYearOfWeek : Sym.NumberWidth -> Date -> String
+formatYearOfWeek numberWidth date =
+    Internal.Format.year numberWidth (Date.weekYear date)
 
 
 formatMonth : Structs.Pattern3 Structs.MonthNames -> Sym.Width -> Date -> String
