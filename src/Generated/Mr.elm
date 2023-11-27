@@ -19,8 +19,7 @@ dayPeriods =
     Dict.fromList
         [ ( "mr"
           , [ Internal.DayPeriodRule.FromBefore ( 12, 0 ) ( 16, 0 ) "afternoon1"
-            , Internal.DayPeriodRule.FromBefore ( 16, 0 ) ( 18, 0 ) "evening1"
-            , Internal.DayPeriodRule.FromBefore ( 18, 0 ) ( 21, 0 ) "evening2"
+            , Internal.DayPeriodRule.FromBefore ( 16, 0 ) ( 21, 0 ) "evening1"
             , Internal.DayPeriodRule.At ( 0, 0 ) "midnight"
             , Internal.DayPeriodRule.FromBefore ( 4, 0 ) ( 6, 0 ) "morning1"
             , Internal.DayPeriodRule.FromBefore ( 6, 0 ) ( 12, 0 ) "morning2"
@@ -64,7 +63,6 @@ mr =
                         Dict.fromList
                             [ ( "afternoon1", "दुपार" )
                             , ( "evening1", "संध्याकाळ" )
-                            , ( "evening2", "सायंकाळ" )
                             , ( "midnight", "मध्यरात्र" )
                             , ( "morning1", "पहाट" )
                             , ( "morning2", "सकाळ" )
@@ -79,7 +77,6 @@ mr =
                         Dict.fromList
                             [ ( "afternoon1", "दुपार" )
                             , ( "evening1", "संध्याकाळ" )
-                            , ( "evening2", "सायंकाळ" )
                             , ( "midnight", "मध्यरात्र" )
                             , ( "morning1", "पहाट" )
                             , ( "morning2", "सकाळ" )
@@ -94,7 +91,6 @@ mr =
                         Dict.fromList
                             [ ( "afternoon1", "दु" )
                             , ( "evening1", "सं" )
-                            , ( "evening2", "सा" )
                             , ( "midnight", "म.रा." )
                             , ( "morning1", "प" )
                             , ( "morning2", "स" )
@@ -256,9 +252,9 @@ mr =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "इ. स. पू.", ad = "इ. स." }
+                { abbreviated = { bc = "ई. स. पू.", ad = "इ. स." }
                 , wide = { bc = "ईसवीसनपूर्व", ad = "ईसवीसन" }
-                , narrow = { bc = "इ. स. पू.", ad = "इ. स." }
+                , narrow = { bc = "ई. स. पू.", ad = "इ. स." }
                 }
             , timePatterns =
                 { short = "h:mm a"
@@ -269,8 +265,8 @@ mr =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} रोजी {0}"
-                , full = "{1} रोजी {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "B h" )
@@ -286,7 +282,7 @@ mr =
                 , ( "Ehms", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "G y" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "GGGGG d/M/y" )
                 , ( "GyMMM", "MMM G y" )
                 , ( "GyMMMd", "d MMM, G y" )
                 , ( "GyMMMEd", "E, d MMM, G y" )
@@ -322,8 +318,8 @@ mr =
                 , ( "yMMMM", "MMMM y" )
                 , ( "yQQQ", "QQQ y" )
                 , ( "yQQQQ", "QQQQ y" )
-                , ( "yw-count-one", "Y चा w रा आठवडा" )
-                , ( "yw-count-other", "Y चा w रा आठवडा" )
+                , ( "yw-count-one", "Y चा w वा आठवडा" )
+                , ( "yw-count-other", "Y चा w वा आठवडा" )
                 ]
             , timeSkeletons =
                 { short = "ahmm"

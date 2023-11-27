@@ -269,24 +269,24 @@ af =
                 , ( "EBhm", "E hh:mm B" )
                 , ( "EBhms", "E hh:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E hh:mm a" )
+                , ( "Ehm", "E hh:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E hh:mm:ss a" )
+                , ( "Ehms", "E hh:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "GGGGG y-MM-dd" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "dd MMM y G" )
                 , ( "GyMMMEd", "E dd MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd-MM" )
@@ -331,10 +331,10 @@ af =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 af_NA : Internal.Locale.Locale
@@ -543,10 +543,10 @@ af_NA =
                 , narrow = { bc = "v.C.", ad = "n.C." }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1} {0}"
@@ -563,24 +563,24 @@ af_NA =
                 , ( "EBhm", "E hh:mm B" )
                 , ( "EBhms", "E hh:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E hh:mm a" )
+                , ( "Ehm", "E hh:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E hh:mm:ss a" )
+                , ( "Ehms", "E hh:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "GGGGG y-MM-dd" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "dd MMM y G" )
                 , ( "GyMMMEd", "E dd MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd-MM" )

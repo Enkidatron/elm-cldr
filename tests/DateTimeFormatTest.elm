@@ -115,7 +115,7 @@ enShortTime =
         \_ ->
             Expect.equal
                 (format (TimeOnly Short) en Time.utc testDateTime)
-                "3:23 AM"
+                "3:23\u{202F}AM"
 
 
 enMediumTime : Test
@@ -124,7 +124,7 @@ enMediumTime =
         \_ ->
             Expect.equal
                 (format (TimeOnly Medium) en Time.utc testDateTime)
-                "3:23:16 AM"
+                "3:23:16\u{202F}AM"
 
 
 enLongTime : Test
@@ -133,7 +133,7 @@ enLongTime =
         \_ ->
             Expect.equal
                 (format (TimeOnly Long) en Time.utc testDateTime)
-                "3:23:16 AM GMT"
+                "3:23:16\u{202F}AM GMT"
 
 
 enFullTime : Test
@@ -142,7 +142,7 @@ enFullTime =
         \_ ->
             Expect.equal
                 (format (TimeOnly Full) en Time.utc testDateTime)
-                "3:23:16 AM GMT"
+                "3:23:16\u{202F}AM GMT"
 
 
 enShortDateTime : Test
@@ -151,7 +151,7 @@ enShortDateTime =
         \_ ->
             Expect.equal
                 (format Cldr.Format.DateTime.short en Time.utc testDateTime)
-                "6/1/00, 3:23 AM"
+                "6/1/00, 3:23\u{202F}AM"
 
 
 enMediumDateTime : Test
@@ -160,7 +160,7 @@ enMediumDateTime =
         \_ ->
             Expect.equal
                 (format Cldr.Format.DateTime.medium en Time.utc testDateTime)
-                "Jun 1, 2000, 3:23:16 AM"
+                "Jun 1, 2000, 3:23:16\u{202F}AM"
 
 
 enLongDateTime : Test
@@ -169,7 +169,7 @@ enLongDateTime =
         \_ ->
             Expect.equal
                 (format Cldr.Format.DateTime.long en Time.utc testDateTime)
-                "June 1, 2000 at 3:23:16 AM GMT"
+                "June 1, 2000, 3:23:16\u{202F}AM GMT"
 
 
 enFullDateTime : Test
@@ -178,7 +178,7 @@ enFullDateTime =
         \_ ->
             Expect.equal
                 (format Cldr.Format.DateTime.full en Time.utc testDateTime)
-                "Thursday, June 1, 2000 at 3:23:16 AM GMT"
+                "Thursday, June 1, 2000, 3:23:16\u{202F}AM GMT"
 
 
 enOpts_EyMdhms : Test
@@ -199,7 +199,7 @@ enOpts_EyMdhms =
             in
             Expect.equal
                 (format (WithOptions options) en Time.utc testDateTime)
-                "Thursday, June 1, 2000 at 3:23:16 AM"
+                "Thursday, June 1, 2000, 3:23:16 AM"
 
 
 enOpts_EyMd : Test
@@ -317,7 +317,7 @@ ruMediumDate =
         \_ ->
             Expect.equal
                 (format (DateOnly Medium) ru Time.utc testDateTime)
-                "1 июн. 2000 г."
+                "1 июн. 2000\u{202F}г."
 
 
 ruLongDate : Test
@@ -326,7 +326,7 @@ ruLongDate =
         \_ ->
             Expect.equal
                 (format (DateOnly Long) ru Time.utc testDateTime)
-                "1 июня 2000 г."
+                "1 июня 2000\u{202F}г."
 
 
 ruFullDate : Test
@@ -335,7 +335,7 @@ ruFullDate =
         \_ ->
             Expect.equal
                 (format (DateOnly Full) ru Time.utc testDateTime)
-                "четверг, 1 июня 2000 г."
+                "четверг, 1 июня 2000\u{202F}г."
 
 
 ruShortTime : Test
@@ -389,7 +389,7 @@ ruMediumDateTime =
         \_ ->
             Expect.equal
                 (format Cldr.Format.DateTime.medium ru Time.utc testDateTime)
-                "1 июн. 2000 г., 03:23:16"
+                "1 июн. 2000\u{202F}г., 03:23:16"
 
 
 ruLongDateTime : Test
@@ -398,7 +398,7 @@ ruLongDateTime =
         \_ ->
             Expect.equal
                 (format Cldr.Format.DateTime.long ru Time.utc testDateTime)
-                "1 июня 2000 г., 03:23:16 GMT"
+                "1 июня 2000\u{202F}г., 03:23:16 GMT"
 
 
 ruFullDateTime : Test
@@ -407,7 +407,7 @@ ruFullDateTime =
         \_ ->
             Expect.equal
                 (format Cldr.Format.DateTime.full ru Time.utc testDateTime)
-                "четверг, 1 июня 2000 г., 03:23:16 GMT"
+                "четверг, 1 июня 2000\u{202F}г., 03:23:16 GMT"
 
 
 ruOpts_EyMdhms : Test
@@ -428,7 +428,7 @@ ruOpts_EyMdhms =
             in
             Expect.equal
                 (format (WithOptions options) ru Time.utc testDateTime)
-                "четверг, 1 июня 2000 г., 3:23:16"
+                "четверг, 1 июня 2000\u{202F}г., 3:23:16"
 
 
 ruOpts_EyMd : Test
@@ -446,7 +446,7 @@ ruOpts_EyMd =
             in
             Expect.equal
                 (format (WithOptions options) ru Time.utc testDateTime)
-                "четверг, 1 июня 2000 г."
+                "четверг, 1 июня 2000\u{202F}г."
 
 
 ruOpts_yMd : Test
@@ -463,7 +463,7 @@ ruOpts_yMd =
             in
             Expect.equal
                 (format (WithOptions options) ru Time.utc testDateTime)
-                "1 июня 2000 г."
+                "1 июня 2000\u{202F}г."
 
 
 ruOpts_yM : Test
@@ -479,7 +479,7 @@ ruOpts_yM =
             in
             Expect.equal
                 (format (WithOptions options) ru Time.utc testDateTime)
-                "июнь 2000 г."
+                "июнь 2000\u{202F}г."
 
 
 ruOpts_Md : Test

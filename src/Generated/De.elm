@@ -265,8 +265,8 @@ de =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'um' {0}"
-                , full = "{1} 'um' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -277,24 +277,24 @@ de =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d." )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "dd.MM.y GGGGG" )
+                , ( "GyMd", "dd.MM.y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d. MMM y G" )
                 , ( "GyMMMEd", "E, d. MMM y G" )
                 , ( "h", "h 'Uhr' a" )
                 , ( "H", "HH 'Uhr'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d.M." )
@@ -310,7 +310,7 @@ de =
                 , ( "MMMMW-count-other", "'Woche' W 'im' MMMM" )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y" )
-                , ( "yM", "M.y" )
+                , ( "yM", "M/y" )
                 , ( "yMd", "d.M.y" )
                 , ( "yMEd", "E, d.M.y" )
                 , ( "yMM", "MM.y" )
@@ -569,8 +569,8 @@ de_AT =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'um' {0}"
-                , full = "{1} 'um' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -581,24 +581,24 @@ de_AT =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d." )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "dd.MM.y GGGGG" )
+                , ( "GyMd", "dd.MM.y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d. MMM y G" )
                 , ( "GyMMMEd", "E, d. MMM y G" )
                 , ( "h", "h 'Uhr' a" )
                 , ( "H", "HH 'Uhr'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d.M." )
@@ -614,7 +614,7 @@ de_AT =
                 , ( "MMMMW-count-other", "'Woche' W 'im' MMMM" )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y" )
-                , ( "yM", "M.y" )
+                , ( "yM", "M/y" )
                 , ( "yMd", "d.M.y" )
                 , ( "yMEd", "E, d.M.y" )
                 , ( "yMM", "MM.y" )
@@ -873,8 +873,8 @@ de_BE =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'um' {0}"
-                , full = "{1} 'um' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -885,24 +885,24 @@ de_BE =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d." )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "dd.MM.y GGGGG" )
+                , ( "GyMd", "dd.MM.y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d. MMM y G" )
                 , ( "GyMMMEd", "E, d. MMM y G" )
                 , ( "h", "h 'Uhr' a" )
                 , ( "H", "HH 'Uhr'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d.M." )
@@ -918,7 +918,7 @@ de_BE =
                 , ( "MMMMW-count-other", "'Woche' W 'im' MMMM" )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y" )
-                , ( "yM", "M.y" )
+                , ( "yM", "M/y" )
                 , ( "yMd", "d.M.y" )
                 , ( "yMEd", "E, d.M.y" )
                 , ( "yMM", "MM.y" )
@@ -1177,8 +1177,8 @@ de_CH =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'um' {0}"
-                , full = "{1} 'um' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -1189,9 +1189,9 @@ de_CH =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d." )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd.MM.y GGGGG" )
@@ -1200,13 +1200,13 @@ de_CH =
                 , ( "GyMMMEd", "E, d. MMM y G" )
                 , ( "h", "h 'Uhr' a" )
                 , ( "H", "HH 'Uhr'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d.M." )
@@ -1222,7 +1222,7 @@ de_CH =
                 , ( "MMMMW-count-other", "'Woche' W 'im' MMMM" )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y" )
-                , ( "yM", "M.y" )
+                , ( "yM", "M/y" )
                 , ( "yMd", "d.M.y" )
                 , ( "yMEd", "E, d.M.y" )
                 , ( "yMM", "MM.y" )
@@ -1481,8 +1481,8 @@ de_IT =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'um' {0}"
-                , full = "{1} 'um' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -1493,24 +1493,24 @@ de_IT =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d." )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "dd.MM.y GGGGG" )
+                , ( "GyMd", "dd.MM.y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d. MMM y G" )
                 , ( "GyMMMEd", "E, d. MMM y G" )
                 , ( "h", "h 'Uhr' a" )
                 , ( "H", "HH 'Uhr'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d.M." )
@@ -1526,7 +1526,7 @@ de_IT =
                 , ( "MMMMW-count-other", "'Woche' W 'im' MMMM" )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y" )
-                , ( "yM", "M.y" )
+                , ( "yM", "M/y" )
                 , ( "yMd", "d.M.y" )
                 , ( "yMEd", "E, d.M.y" )
                 , ( "yMM", "MM.y" )
@@ -1785,8 +1785,8 @@ de_LI =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'um' {0}"
-                , full = "{1} 'um' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -1797,24 +1797,24 @@ de_LI =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d." )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "dd.MM.y GGGGG" )
+                , ( "GyMd", "dd.MM.y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d. MMM y G" )
                 , ( "GyMMMEd", "E, d. MMM y G" )
                 , ( "h", "h 'Uhr' a" )
                 , ( "H", "HH 'Uhr'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d.M." )
@@ -1830,7 +1830,7 @@ de_LI =
                 , ( "MMMMW-count-other", "'Woche' W 'im' MMMM" )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y" )
-                , ( "yM", "M.y" )
+                , ( "yM", "M/y" )
                 , ( "yMd", "d.M.y" )
                 , ( "yMEd", "E, d.M.y" )
                 , ( "yMM", "MM.y" )
@@ -2089,8 +2089,8 @@ de_LU =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'um' {0}"
-                , full = "{1} 'um' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -2101,24 +2101,24 @@ de_LU =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d." )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "dd.MM.y GGGGG" )
+                , ( "GyMd", "dd.MM.y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d. MMM y G" )
                 , ( "GyMMMEd", "E, d. MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'Uhr'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d.M." )
@@ -2134,7 +2134,7 @@ de_LU =
                 , ( "MMMMW-count-other", "'Woche' W 'im' MMMM" )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y" )
-                , ( "yM", "M.y" )
+                , ( "yM", "M/y" )
                 , ( "yMd", "d.M.y" )
                 , ( "yMEd", "E, d.M.y" )
                 , ( "yMM", "MM.y" )

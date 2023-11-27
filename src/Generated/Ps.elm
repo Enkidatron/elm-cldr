@@ -23,7 +23,7 @@ dayPeriods =
 
   - Short : y/M/d
   - Medium : y MMM d
-  - Long : د y د MMMM d
+  - Long : y MMMM d
   - Full : EEEE د y د MMMM d
 
 Time format strings:
@@ -46,7 +46,7 @@ ps =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "غ.م.", pm = "غ.و.", dayPeriods = Dict.fromList [] }
+                    { am = "AM", pm = "PM", dayPeriods = Dict.fromList [] }
                 , wide =
                     { am = "غ.م.", pm = "غ.و.", dayPeriods = Dict.fromList [] }
                 , narrow =
@@ -55,7 +55,7 @@ ps =
             , datePatterns =
                 { short = "y/M/d"
                 , medium = "y MMM d"
-                , long = "د y د MMMM d"
+                , long = "y MMMM d"
                 , full = "EEEE د y د MMMM d"
                 }
             , monthFormatNames =
@@ -257,7 +257,7 @@ ps =
                 , ( "MMMd", "MMM d" )
                 , ( "MMMEd", "E, MMM d" )
                 , ( "MMMMd", "MMMM d" )
-                , ( "MMMMW-count-one", "اونۍ‘ W د MMMM‘" )
+                , ( "MMMMW-count-one", "اونۍ W د MMMM" )
                 , ( "MMMMW-count-other", "اونۍ W د MMMM" )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y" )
@@ -287,7 +287,7 @@ ps =
 
   - Short : y/M/d
   - Medium : y MMM d
-  - Long : د y د MMMM d
+  - Long : y MMMM d
   - Full : EEEE د y د MMMM d
 
 Time format strings:
@@ -310,7 +310,7 @@ ps_PK =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "غ.م.", pm = "غ.و.", dayPeriods = Dict.fromList [] }
+                    { am = "AM", pm = "PM", dayPeriods = Dict.fromList [] }
                 , wide =
                     { am = "غ.م.", pm = "غ.و.", dayPeriods = Dict.fromList [] }
                 , narrow =
@@ -319,7 +319,7 @@ ps_PK =
             , datePatterns =
                 { short = "y/M/d"
                 , medium = "y MMM d"
-                , long = "د y د MMMM d"
+                , long = "y MMMM d"
                 , full = "EEEE د y د MMMM d"
                 }
             , monthFormatNames =
@@ -521,7 +521,7 @@ ps_PK =
                 , ( "MMMd", "MMM d" )
                 , ( "MMMEd", "E, MMM d" )
                 , ( "MMMMd", "MMMM d" )
-                , ( "MMMMW-count-one", "اونۍ‘ W د MMMM‘" )
+                , ( "MMMMW-count-one", "اونۍ W د MMMM" )
                 , ( "MMMMW-count-other", "اونۍ W د MMMM" )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y" )

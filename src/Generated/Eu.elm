@@ -92,7 +92,7 @@ eu =
                             [ ( "afternoon1", "eguerd." )
                             , ( "afternoon2", "arrats." )
                             , ( "evening1", "iluntz." )
-                            , ( "midnight", "gauerdia" )
+                            , ( "midnight", "gauerd." )
                             , ( "morning1", "goizald." )
                             , ( "morning2", "goizeko" )
                             , ( "night1", "gaueko" )
@@ -121,18 +121,18 @@ eu =
                     , dec = "abe."
                     }
                 , wide =
-                    { jan = "urtarrilak"
-                    , feb = "otsailak"
-                    , mar = "martxoak"
-                    , apr = "apirilak"
-                    , may = "maiatzak"
-                    , jun = "ekainak"
-                    , jul = "uztailak"
-                    , aug = "abuztuak"
-                    , sep = "irailak"
-                    , oct = "urriak"
-                    , nov = "azaroak"
-                    , dec = "abenduak"
+                    { jan = "urtarrila"
+                    , feb = "otsaila"
+                    , mar = "martxoa"
+                    , apr = "apirila"
+                    , may = "maiatza"
+                    , jun = "ekaina"
+                    , jul = "uztaila"
+                    , aug = "abuztua"
+                    , sep = "iraila"
+                    , oct = "urria"
+                    , nov = "azaroa"
+                    , dec = "abendua"
                     }
                 , narrow =
                     { jan = "U"
@@ -263,10 +263,10 @@ eu =
                 , full = "HH:mm:ss (zzzz)"
                 }
             , dateTimePatterns =
-                { short = "{1} {0}"
-                , medium = "{1} {0}"
-                , long = "{1} {0}"
-                , full = "{1} {0}"
+                { short = "{1} ({0})"
+                , medium = "{1} ({0})"
+                , long = "{1} ({0})"
+                , full = "{1} ({0})"
                 }
             , availableFormats =
                 [ ( "Bh", "B h" )
@@ -277,45 +277,45 @@ eu =
                 , ( "EBhm", "E B h:mm" )
                 , ( "EBhms", "E B h:mm:ss" )
                 , ( "Ed", "d, E" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "G y" )
                 , ( "GyMd", "GGGGG y-MM-dd" )
                 , ( "GyMMM", "G y. 'urteko' MMM" )
-                , ( "GyMMMd", "G y. 'urteko' MMM d" )
-                , ( "GyMMMEd", "G y. 'urteko' MMM d, E" )
-                , ( "h", "h a" )
+                , ( "GyMMMd", "G y. 'urteko' MMM d('a')" )
+                , ( "GyMMMEd", "G y. 'urteko' MMM d('a'), E" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "M/d" )
                 , ( "MEd", "M/d, E" )
                 , ( "MMM", "LLL" )
-                , ( "MMMd", "MMM d" )
-                , ( "MMMEd", "MMM d, E" )
-                , ( "MMMMd", "MMMM d" )
-                , ( "MMMMW-count-one", "MMMM W. 'astea'" )
-                , ( "MMMMW-count-other", "MMMM W. 'astea'" )
+                , ( "MMMd", "MMM d('a')" )
+                , ( "MMMEd", "MMM d('a'), E" )
+                , ( "MMMMd", "MMMM'ren' d('a')" )
+                , ( "MMMMW-count-one", "MMMM'ren' W. 'astea'" )
+                , ( "MMMMW-count-other", "MMMM'ren' W. 'astea'" )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y" )
                 , ( "yM", "y/M" )
                 , ( "yMd", "y/M/d" )
                 , ( "yMEd", "y/M/d, E" )
                 , ( "yMMM", "y MMM" )
-                , ( "yMMMd", "y MMM d" )
-                , ( "yMMMEd", "y MMM d, E" )
+                , ( "yMMMd", "y MMM d('a')" )
+                , ( "yMMMEd", "y MMM d('a'), E" )
                 , ( "yMMMM", "y('e')'ko' MMMM" )
-                , ( "yMMMMd", "y('e')'ko' MMMM'ren' d" )
-                , ( "yMMMMEd", "y('e')'ko' MMMM'k' d, E" )
+                , ( "yMMMMd", "y('e')'ko' MMMM'ren' d('a')" )
+                , ( "yMMMMEd", "y('e')'ko' MMMM'ren' d('a'), E" )
                 , ( "yQQQ", "y('e')'ko' QQQ" )
                 , ( "yQQQQ", "y('e')'ko' QQQQ" )
                 , ( "yw-count-one", "Y. 'urteko' w. 'astea'" )

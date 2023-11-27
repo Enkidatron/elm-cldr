@@ -22,9 +22,9 @@ dayPeriods =
 {-| Date format strings:
 
   - Short : d.MM.yy
-  - Medium : d MMM y 'г'.
-  - Long : d MMMM y 'г'.
-  - Full : EEEE, d MMMM y 'г'.
+  - Medium : d MMM y 'г'.
+  - Long : d MMMM y 'г'.
+  - Full : EEEE, d MMMM y 'г'.
 
 Time format strings:
 
@@ -53,9 +53,9 @@ be =
                 }
             , datePatterns =
                 { short = "d.MM.yy"
-                , medium = "d MMM y 'г'."
-                , long = "d MMMM y 'г'."
-                , full = "EEEE, d MMMM y 'г'."
+                , medium = "d MMM y\u{202F}'г'."
+                , long = "d MMMM y\u{202F}'г'."
+                , full = "EEEE, d MMMM y\u{202F}'г'."
                 }
             , monthFormatNames =
                 { abbreviated =
@@ -220,8 +220,8 @@ be =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'у' {0}"
-                , full = "{1} 'у' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -232,24 +232,24 @@ be =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "d, E" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
-                , ( "Gy", "y 'г'. G" )
+                , ( "Gy", "y\u{202F}'г'. G" )
                 , ( "GyMd", "dd.MM.y GGGGG" )
-                , ( "GyMMM", "LLL y 'г'. G" )
-                , ( "GyMMMd", "d MMM y 'г'. G" )
-                , ( "GyMMMEd", "E, d MMM y 'г'. G" )
-                , ( "h", "hh a" )
+                , ( "GyMMM", "LLL y\u{202F}'г'. G" )
+                , ( "GyMMMd", "d MMM y\u{202F}'г'. G" )
+                , ( "GyMMMEd", "E, d MMM y\u{202F}'г'. G" )
+                , ( "h", "hh\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d.M" )
@@ -292,9 +292,9 @@ be =
 {-| Date format strings:
 
   - Short : d.MM.yy
-  - Medium : d MMM y 'г'.
-  - Long : d MMMM y 'г'.
-  - Full : EEEE, d MMMM y 'г'.
+  - Medium : d MMM y 'г'.
+  - Long : d MMMM y 'г'.
+  - Full : EEEE, d MMMM y 'г'.
 
 Time format strings:
 
@@ -323,9 +323,9 @@ be_TARASK =
                 }
             , datePatterns =
                 { short = "d.MM.yy"
-                , medium = "d MMM y 'г'."
-                , long = "d MMMM y 'г'."
-                , full = "EEEE, d MMMM y 'г'."
+                , medium = "d MMM y\u{202F}'г'."
+                , long = "d MMMM y\u{202F}'г'."
+                , full = "EEEE, d MMMM y\u{202F}'г'."
                 }
             , monthFormatNames =
                 { abbreviated =
@@ -490,8 +490,8 @@ be_TARASK =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'у' {0}"
-                , full = "{1} 'у' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -502,24 +502,24 @@ be_TARASK =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "d, E" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
-                , ( "Gy", "y 'г'. G" )
+                , ( "Gy", "y\u{202F}'г'. G" )
                 , ( "GyMd", "dd.MM.y GGGGG" )
-                , ( "GyMMM", "LLL y 'г'. G" )
-                , ( "GyMMMd", "d MMM y 'г'. G" )
-                , ( "GyMMMEd", "E, d MMM y 'г'. G" )
-                , ( "h", "hh a" )
+                , ( "GyMMM", "LLL y\u{202F}'г'. G" )
+                , ( "GyMMMd", "d MMM y\u{202F}'г'. G" )
+                , ( "GyMMMEd", "E, d MMM y\u{202F}'г'. G" )
+                , ( "h", "hh\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d.M" )

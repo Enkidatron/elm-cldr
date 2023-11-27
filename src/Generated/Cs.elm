@@ -42,7 +42,7 @@ Time format strings:
   - Short : H:mm
   - Medium : H:mm:ss
   - Long : H:mm:ss z
-  - Full : H:mm:ss zzzz
+  - Full : H:mm:ss, zzzz
 
 -}
 cs : Internal.Locale.Locale
@@ -261,7 +261,7 @@ cs =
                 { short = "H:mm"
                 , medium = "H:mm:ss"
                 , long = "H:mm:ss z"
-                , full = "H:mm:ss zzzz"
+                , full = "H:mm:ss, zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1} {0}"
@@ -278,9 +278,9 @@ cs =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d." )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E H:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E H:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d. M. y GGGGG" )
@@ -289,16 +289,20 @@ cs =
                 , ( "GyMMMEd", "E d. M. y G" )
                 , ( "GyMMMMd", "d. MMMM y G" )
                 , ( "GyMMMMEd", "E d. MMMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "H" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "H:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "H:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "H:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a, vvvv" )
+                , ( "Hmsvvvv", "H:mm:ss, vvvv" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "H:mm v" )
+                , ( "hmvvvv", "h:mm\u{202F}a, vvvv" )
+                , ( "Hmvvvv", "H:mm, vvvv" )
                 , ( "M", "L" )
                 , ( "Md", "d. M." )
                 , ( "MEd", "E d. M." )

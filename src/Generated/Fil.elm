@@ -39,10 +39,10 @@ dayPeriods =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 fil : Internal.Locale.Locale
@@ -62,11 +62,11 @@ fil =
                     , dayPeriods =
                         Dict.fromList
                             [ ( "afternoon1", "tanghali" )
-                            , ( "evening1", "ng hapon" )
+                            , ( "evening1", "ng gabi" )
                             , ( "midnight", "hatinggabi" )
                             , ( "morning1", "nang umaga" )
                             , ( "morning2", "madaling-araw" )
-                            , ( "night1", "gabi" )
+                            , ( "night1", "ng gabi" )
                             , ( "noon", "tanghaling-tapat" )
                             ]
                     }
@@ -76,7 +76,7 @@ fil =
                     , dayPeriods =
                         Dict.fromList
                             [ ( "afternoon1", "tanghali" )
-                            , ( "evening1", "ng hapon" )
+                            , ( "evening1", "ng gabi" )
                             , ( "midnight", "hatinggabi" )
                             , ( "morning1", "nang umaga" )
                             , ( "morning2", "madaling-araw" )
@@ -94,7 +94,7 @@ fil =
                             , ( "midnight", "hatinggabi" )
                             , ( "morning1", "umaga" )
                             , ( "morning2", "madaling-araw" )
-                            , ( "night1", "gabi" )
+                            , ( "night1", "ng gabi" )
                             , ( "noon", "tanghaling-tapat" )
                             ]
                     }
@@ -257,16 +257,16 @@ fil =
                 , narrow = { bc = "BC", ad = "AD" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'nang' {0}"
-                , full = "{1} 'nang' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -277,24 +277,24 @@ fil =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "d E" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
-                , ( "Gy", "G y" )
-                , ( "GyMd", "M/d/y GGGGG" )
+                , ( "Gy", "y G" )
+                , ( "GyMd", "M/d/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "MMM d, y G" )
                 , ( "GyMMMEd", "E, MMM d, y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "M/d" )

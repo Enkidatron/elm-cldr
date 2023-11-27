@@ -60,11 +60,11 @@ am =
                     , pm = "ከሰዓት"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ከሰዓት 7" )
-                            , ( "evening1", "ማታ1" )
+                            [ ( "afternoon1", "ከሰዓት" )
+                            , ( "evening1", "በምሽት" )
                             , ( "midnight", "እኩለ ሌሊት" )
-                            , ( "morning1", "ጥዋት1" )
-                            , ( "night1", "ሌሊት1" )
+                            , ( "morning1", "ጥዋት" )
+                            , ( "night1", "በሌሊት" )
                             , ( "noon", "ቀትር" )
                             ]
                     }
@@ -73,11 +73,11 @@ am =
                     , pm = "ከሰዓት"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ከሰዓት 7 ሰዓት" )
-                            , ( "evening1", "ማታ1" )
+                            [ ( "afternoon1", "ከሰዓት" )
+                            , ( "evening1", "በምሽት" )
                             , ( "midnight", "እኩለ ሌሊት" )
-                            , ( "morning1", "ጥዋት1" )
-                            , ( "night1", "ሌሊት1" )
+                            , ( "morning1", "ጥዋት" )
+                            , ( "night1", "በሌሊት" )
                             , ( "noon", "ቀትር" )
                             ]
                     }
@@ -86,11 +86,11 @@ am =
                     , pm = "ከ"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ከሰዓት1" )
-                            , ( "evening1", "ማታ1" )
+                            [ ( "afternoon1", "ከሰዓት" )
+                            , ( "evening1", "በምሽት" )
                             , ( "midnight", "እኩለ ሌሊት" )
-                            , ( "morning1", "ጥዋት1" )
-                            , ( "night1", "ሌሊት1" )
+                            , ( "morning1", "ጥዋት" )
+                            , ( "night1", "በሌሊት" )
                             , ( "noon", "ቀ" )
                             ]
                     }
@@ -103,8 +103,8 @@ am =
                 }
             , monthFormatNames =
                 { abbreviated =
-                    { jan = "ጃንዩ"
-                    , feb = "ፌብሩ"
+                    { jan = "ጃን"
+                    , feb = "ፌብ"
                     , mar = "ማርች"
                     , apr = "ኤፕሪ"
                     , may = "ሜይ"
@@ -117,8 +117,8 @@ am =
                     , dec = "ዲሴም"
                     }
                 , wide =
-                    { jan = "ጃንዩወሪ"
-                    , feb = "ፌብሩወሪ"
+                    { jan = "ጃንዋሪ"
+                    , feb = "ፌብሩዋሪ"
                     , mar = "ማርች"
                     , apr = "ኤፕሪል"
                     , may = "ሜይ"
@@ -147,8 +147,8 @@ am =
                 }
             , monthStandaloneNames =
                 { abbreviated =
-                    { jan = "ጃንዩ"
-                    , feb = "ፌብሩ"
+                    { jan = "ጃን"
+                    , feb = "ፌብ"
                     , mar = "ማርች"
                     , apr = "ኤፕሪ"
                     , may = "ሜይ"
@@ -161,8 +161,8 @@ am =
                     , dec = "ዲሴም"
                     }
                 , wide =
-                    { jan = "ጃንዩወሪ"
-                    , feb = "ፌብሩወሪ"
+                    { jan = "ጃንዋሪ"
+                    , feb = "ፌብሩዋሪ"
                     , mar = "ማርች"
                     , apr = "ኤፕሪል"
                     , may = "ሜይ"
@@ -313,7 +313,6 @@ am =
                 , ( "yMMMM", "MMMM y" )
                 , ( "yQQQ", "QQQ y" )
                 , ( "yQQQQ", "QQQQ y" )
-                , ( "yw-count-one", "'week' w 'of' Y" )
                 , ( "yw-count-other", "'week' w 'of' Y" )
                 ]
             , timeSkeletons =

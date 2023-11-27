@@ -25,6 +25,15 @@ dayPeriods =
             , Internal.DayPeriodRule.FromBefore ( 20, 0 ) ( 4, 0 ) "night1"
             ]
           )
+        , ( "hi_latn"
+          , [ Internal.DayPeriodRule.FromBefore ( 12, 0 ) ( 16, 0 ) "afternoon1"
+            , Internal.DayPeriodRule.FromBefore ( 16, 0 ) ( 20, 0 ) "evening1"
+            , Internal.DayPeriodRule.At ( 0, 0 ) "midnight"
+            , Internal.DayPeriodRule.FromBefore ( 4, 0 ) ( 12, 0 ) "morning1"
+            , Internal.DayPeriodRule.FromBefore ( 20, 0 ) ( 4, 0 ) "night1"
+            , Internal.DayPeriodRule.At ( 12, 0 ) "noon"
+            ]
+          )
         ]
 
 
@@ -257,8 +266,8 @@ hi =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} को {0}"
-                , full = "{1} को {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "B h" )

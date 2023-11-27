@@ -62,8 +62,8 @@ es =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -86,8 +86,8 @@ es =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -276,9 +276,9 @@ es =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, H:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, H:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -288,17 +288,17 @@ es =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "H" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "H:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "H:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "H:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "H:mm:ss (vvvv)" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "H:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -348,10 +348,10 @@ es =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_419 : Internal.Locale.Locale
@@ -366,8 +366,8 @@ es_419 =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.m."
+                    , pm = "p.m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -378,8 +378,8 @@ es_419 =
                             ]
                     }
                 , wide =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.m."
+                    , pm = "p.m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -390,8 +390,8 @@ es_419 =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.m."
+                    , pm = "p.m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -516,13 +516,13 @@ es_419 =
                     , sat = "sábado"
                     }
                 , narrow =
-                    { sun = "d"
-                    , mon = "l"
-                    , tue = "m"
-                    , wed = "m"
-                    , thu = "j"
-                    , fri = "v"
-                    , sat = "s"
+                    { sun = "D"
+                    , mon = "L"
+                    , tue = "M"
+                    , wed = "M"
+                    , thu = "J"
+                    , fri = "V"
+                    , sat = "S"
                     }
                 }
             , weekdayStandaloneNames =
@@ -555,19 +555,19 @@ es_419 =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "HH:mm"
-                , medium = "HH:mm:ss"
-                , long = "HH:mm:ss z"
-                , full = "HH:mm:ss zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
-                , medium = "{1} {0}"
+                , medium = "{1}, {0}"
                 , long = "{1}, {0}"
                 , full = "{1}, {0}"
                 }
@@ -580,9 +580,9 @@ es_419 =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -592,17 +592,17 @@ es_419 =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss vvvv" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -635,10 +635,10 @@ es_419 =
                 , ( "yw-count-other", "'semana' w 'de' Y" )
                 ]
             , timeSkeletons =
-                { short = "HHmm"
-                , medium = "HHmmss"
-                , long = "HHmmssz"
-                , full = "HHmmsszzzz"
+                { short = "ahmm"
+                , medium = "ahmmss"
+                , long = "ahmmssz"
+                , full = "ahmmsszzzz"
                 }
             }
         )
@@ -653,10 +653,10 @@ es_419 =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_AR : Internal.Locale.Locale
@@ -671,8 +671,8 @@ es_AR =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "tarde" )
@@ -695,15 +695,15 @@ es_AR =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "evening1", "de la tarde" )
-                            , ( "morning1", "de la madrugada" )
-                            , ( "morning2", "de la mañana" )
-                            , ( "night1", "de la noche" )
-                            , ( "noon", "del mediodía" )
+                            [ ( "evening1", "tarde" )
+                            , ( "morning1", "madrugada" )
+                            , ( "morning2", "mañana" )
+                            , ( "night1", "noche" )
+                            , ( "noon", "mediodía" )
                             ]
                     }
                 }
@@ -860,19 +860,19 @@ es_AR =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "HH:mm"
-                , medium = "HH:mm:ss"
-                , long = "HH:mm:ss z"
-                , full = "HH:mm:ss zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
-                , medium = "{1} {0}"
+                , medium = "{1}, {0}"
                 , long = "{1}, {0}"
                 , full = "{1}, {0}"
                 }
@@ -885,9 +885,9 @@ es_AR =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -897,17 +897,17 @@ es_AR =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
                 , ( "hms", "hh:mm:ss" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss (vvvv)" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -940,10 +940,10 @@ es_AR =
                 , ( "yw-count-other", "'semana' w 'de' Y" )
                 ]
             , timeSkeletons =
-                { short = "HHmm"
-                , medium = "HHmmss"
-                , long = "HHmmssz"
-                , full = "HHmmsszzzz"
+                { short = "ahmm"
+                , medium = "ahmmss"
+                , long = "ahmmssz"
+                , full = "ahmmsszzzz"
                 }
             }
         )
@@ -958,10 +958,10 @@ es_AR =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_BO : Internal.Locale.Locale
@@ -976,8 +976,8 @@ es_BO =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -1000,8 +1000,8 @@ es_BO =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -1126,13 +1126,13 @@ es_BO =
                     , sat = "sábado"
                     }
                 , narrow =
-                    { sun = "d"
-                    , mon = "l"
-                    , tue = "m"
-                    , wed = "m"
-                    , thu = "j"
-                    , fri = "v"
-                    , sat = "s"
+                    { sun = "D"
+                    , mon = "L"
+                    , tue = "M"
+                    , wed = "M"
+                    , thu = "J"
+                    , fri = "V"
+                    , sat = "S"
                     }
                 }
             , weekdayStandaloneNames =
@@ -1165,19 +1165,19 @@ es_BO =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "HH:mm"
-                , medium = "HH:mm:ss"
-                , long = "HH:mm:ss z"
-                , full = "HH:mm:ss zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
-                , medium = "{1} {0}"
+                , medium = "{1}, {0}"
                 , long = "{1}, {0}"
                 , full = "{1}, {0}"
                 }
@@ -1190,9 +1190,9 @@ es_BO =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -1202,17 +1202,17 @@ es_BO =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss vvvv" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -1245,10 +1245,10 @@ es_BO =
                 , ( "yw-count-other", "'semana' w 'de' Y" )
                 ]
             , timeSkeletons =
-                { short = "HHmm"
-                , medium = "HHmmss"
-                , long = "HHmmssz"
-                , full = "HHmmsszzzz"
+                { short = "ahmm"
+                , medium = "ahmmss"
+                , long = "ahmmssz"
+                , full = "ahmmsszzzz"
                 }
             }
         )
@@ -1281,8 +1281,8 @@ es_BR =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.m."
+                    , pm = "p.m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -1293,8 +1293,8 @@ es_BR =
                             ]
                     }
                 , wide =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.m."
+                    , pm = "p.m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -1305,8 +1305,8 @@ es_BR =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.m."
+                    , pm = "p.m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -1431,13 +1431,13 @@ es_BR =
                     , sat = "sábado"
                     }
                 , narrow =
-                    { sun = "d"
-                    , mon = "l"
-                    , tue = "m"
-                    , wed = "m"
-                    , thu = "j"
-                    , fri = "v"
-                    , sat = "s"
+                    { sun = "D"
+                    , mon = "L"
+                    , tue = "M"
+                    , wed = "M"
+                    , thu = "J"
+                    , fri = "V"
+                    , sat = "S"
                     }
                 }
             , weekdayStandaloneNames =
@@ -1470,9 +1470,9 @@ es_BR =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
                 { short = "HH:mm"
@@ -1482,7 +1482,7 @@ es_BR =
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
-                , medium = "{1} {0}"
+                , medium = "{1}, {0}"
                 , long = "{1}, {0}"
                 , full = "{1}, {0}"
                 }
@@ -1495,9 +1495,9 @@ es_BR =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -1507,17 +1507,17 @@ es_BR =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss vvvv" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -1586,8 +1586,8 @@ es_BZ =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.m."
+                    , pm = "p.m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -1598,8 +1598,8 @@ es_BZ =
                             ]
                     }
                 , wide =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.m."
+                    , pm = "p.m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -1610,8 +1610,8 @@ es_BZ =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.m."
+                    , pm = "p.m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -1736,13 +1736,13 @@ es_BZ =
                     , sat = "sábado"
                     }
                 , narrow =
-                    { sun = "d"
-                    , mon = "l"
-                    , tue = "m"
-                    , wed = "m"
-                    , thu = "j"
-                    , fri = "v"
-                    , sat = "s"
+                    { sun = "D"
+                    , mon = "L"
+                    , tue = "M"
+                    , wed = "M"
+                    , thu = "J"
+                    , fri = "V"
+                    , sat = "S"
                     }
                 }
             , weekdayStandaloneNames =
@@ -1775,9 +1775,9 @@ es_BZ =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
                 { short = "HH:mm"
@@ -1787,7 +1787,7 @@ es_BZ =
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
-                , medium = "{1} {0}"
+                , medium = "{1}, {0}"
                 , long = "{1}, {0}"
                 , full = "{1}, {0}"
                 }
@@ -1800,9 +1800,9 @@ es_BZ =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -1812,17 +1812,17 @@ es_BZ =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss vvvv" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -1873,10 +1873,10 @@ es_BZ =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_CL : Internal.Locale.Locale
@@ -1891,8 +1891,8 @@ es_CL =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -1915,8 +1915,8 @@ es_CL =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -2041,13 +2041,13 @@ es_CL =
                     , sat = "sábado"
                     }
                 , narrow =
-                    { sun = "d"
-                    , mon = "l"
-                    , tue = "m"
-                    , wed = "m"
-                    , thu = "j"
-                    , fri = "v"
-                    , sat = "s"
+                    { sun = "D"
+                    , mon = "L"
+                    , tue = "M"
+                    , wed = "M"
+                    , thu = "J"
+                    , fri = "V"
+                    , sat = "S"
                     }
                 }
             , weekdayStandaloneNames =
@@ -2080,19 +2080,19 @@ es_CL =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "HH:mm"
-                , medium = "HH:mm:ss"
-                , long = "HH:mm:ss z"
-                , full = "HH:mm:ss zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
-                , medium = "{1} {0}"
+                , medium = "{1}, {0}"
                 , long = "{1}, {0}"
                 , full = "{1}, {0}"
                 }
@@ -2105,9 +2105,9 @@ es_CL =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -2117,17 +2117,17 @@ es_CL =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss vvvv" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd-MM" )
@@ -2160,10 +2160,10 @@ es_CL =
                 , ( "yw-count-other", "'semana' w 'de' Y" )
                 ]
             , timeSkeletons =
-                { short = "HHmm"
-                , medium = "HHmmss"
-                , long = "HHmmssz"
-                , full = "HHmmsszzzz"
+                { short = "ahmm"
+                , medium = "ahmmss"
+                , long = "ahmmssz"
+                , full = "ahmmsszzzz"
                 }
             }
         )
@@ -2178,10 +2178,10 @@ es_CL =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_CO : Internal.Locale.Locale
@@ -2196,8 +2196,8 @@ es_CO =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -2216,19 +2216,19 @@ es_CO =
                             , ( "morning1", "de la madrugada" )
                             , ( "morning2", "de la mañana" )
                             , ( "night1", "de la noche" )
-                            , ( "noon", "del mediodía" )
+                            , ( "noon", "m." )
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
                             , ( "morning1", "de la madrugada" )
                             , ( "morning2", "de la mañana" )
                             , ( "night1", "de la noche" )
-                            , ( "noon", "del mediodía" )
+                            , ( "noon", "m." )
                             ]
                     }
                 }
@@ -2349,7 +2349,7 @@ es_CO =
                     { sun = "D"
                     , mon = "L"
                     , tue = "M"
-                    , wed = "M"
+                    , wed = "m"
                     , thu = "J"
                     , fri = "V"
                     , sat = "S"
@@ -2385,15 +2385,15 @@ es_CO =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
@@ -2410,9 +2410,9 @@ es_CO =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -2422,17 +2422,17 @@ es_CO =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "H" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "H:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "H:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss vvvv" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -2483,10 +2483,10 @@ es_CO =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_CR : Internal.Locale.Locale
@@ -2501,8 +2501,8 @@ es_CR =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -2525,8 +2525,8 @@ es_CR =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -2651,13 +2651,13 @@ es_CR =
                     , sat = "sábado"
                     }
                 , narrow =
-                    { sun = "d"
-                    , mon = "l"
-                    , tue = "m"
-                    , wed = "m"
-                    , thu = "j"
-                    , fri = "v"
-                    , sat = "s"
+                    { sun = "D"
+                    , mon = "L"
+                    , tue = "M"
+                    , wed = "M"
+                    , thu = "J"
+                    , fri = "V"
+                    , sat = "S"
                     }
                 }
             , weekdayStandaloneNames =
@@ -2690,19 +2690,19 @@ es_CR =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "HH:mm"
-                , medium = "HH:mm:ss"
-                , long = "HH:mm:ss z"
-                , full = "HH:mm:ss zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
-                , medium = "{1} {0}"
+                , medium = "{1}, {0}"
                 , long = "{1}, {0}"
                 , full = "{1}, {0}"
                 }
@@ -2715,9 +2715,9 @@ es_CR =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -2727,17 +2727,17 @@ es_CR =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss vvvv" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -2770,10 +2770,10 @@ es_CR =
                 , ( "yw-count-other", "'semana' w 'de' Y" )
                 ]
             , timeSkeletons =
-                { short = "HHmm"
-                , medium = "HHmmss"
-                , long = "HHmmssz"
-                , full = "HHmmsszzzz"
+                { short = "ahmm"
+                , medium = "ahmmss"
+                , long = "ahmmssz"
+                , full = "ahmmsszzzz"
                 }
             }
         )
@@ -2788,10 +2788,10 @@ es_CR =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_CU : Internal.Locale.Locale
@@ -2806,8 +2806,8 @@ es_CU =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.m."
+                    , pm = "p.m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -2818,8 +2818,8 @@ es_CU =
                             ]
                     }
                 , wide =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.m."
+                    , pm = "p.m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -2830,8 +2830,8 @@ es_CU =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.m."
+                    , pm = "p.m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -2956,13 +2956,13 @@ es_CU =
                     , sat = "sábado"
                     }
                 , narrow =
-                    { sun = "d"
-                    , mon = "l"
-                    , tue = "m"
-                    , wed = "m"
-                    , thu = "j"
-                    , fri = "v"
-                    , sat = "s"
+                    { sun = "D"
+                    , mon = "L"
+                    , tue = "M"
+                    , wed = "M"
+                    , thu = "J"
+                    , fri = "V"
+                    , sat = "S"
                     }
                 }
             , weekdayStandaloneNames =
@@ -2995,19 +2995,19 @@ es_CU =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "HH:mm"
-                , medium = "HH:mm:ss"
-                , long = "HH:mm:ss z"
-                , full = "HH:mm:ss zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
-                , medium = "{1} {0}"
+                , medium = "{1}, {0}"
                 , long = "{1}, {0}"
                 , full = "{1}, {0}"
                 }
@@ -3020,9 +3020,9 @@ es_CU =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -3032,17 +3032,17 @@ es_CU =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss vvvv" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -3075,10 +3075,10 @@ es_CU =
                 , ( "yw-count-other", "'semana' w 'de' Y" )
                 ]
             , timeSkeletons =
-                { short = "HHmm"
-                , medium = "HHmmss"
-                , long = "HHmmssz"
-                , full = "HHmmsszzzz"
+                { short = "ahmm"
+                , medium = "ahmmss"
+                , long = "ahmmssz"
+                , full = "ahmmsszzzz"
                 }
             }
         )
@@ -3093,10 +3093,10 @@ es_CU =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_DO : Internal.Locale.Locale
@@ -3111,8 +3111,8 @@ es_DO =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -3135,8 +3135,8 @@ es_DO =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "tarde" )
@@ -3300,19 +3300,19 @@ es_DO =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
-                , medium = "{1} {0}"
+                , medium = "{1}, {0}"
                 , long = "{1}, {0}"
                 , full = "{1}, {0}"
                 }
@@ -3325,9 +3325,9 @@ es_DO =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -3337,17 +3337,17 @@ es_DO =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss vvvv" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -3416,8 +3416,8 @@ es_EA =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -3440,8 +3440,8 @@ es_EA =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -3630,9 +3630,9 @@ es_EA =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, H:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, H:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -3642,17 +3642,17 @@ es_EA =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "H" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "H:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "H:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "H:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "H:mm:ss (vvvv)" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "H:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -3702,10 +3702,10 @@ es_EA =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_EC : Internal.Locale.Locale
@@ -3720,8 +3720,8 @@ es_EC =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -3744,8 +3744,8 @@ es_EC =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -3870,13 +3870,13 @@ es_EC =
                     , sat = "sábado"
                     }
                 , narrow =
-                    { sun = "d"
-                    , mon = "l"
-                    , tue = "m"
-                    , wed = "m"
-                    , thu = "j"
-                    , fri = "v"
-                    , sat = "s"
+                    { sun = "D"
+                    , mon = "L"
+                    , tue = "M"
+                    , wed = "M"
+                    , thu = "J"
+                    , fri = "V"
+                    , sat = "S"
                     }
                 }
             , weekdayStandaloneNames =
@@ -3909,19 +3909,19 @@ es_EC =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "HH:mm"
-                , medium = "HH:mm:ss"
-                , long = "HH:mm:ss z"
-                , full = "HH:mm:ss zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
-                , medium = "{1} {0}"
+                , medium = "{1}, {0}"
                 , long = "{1}, {0}"
                 , full = "{1}, {0}"
                 }
@@ -3934,9 +3934,9 @@ es_EC =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -3946,17 +3946,17 @@ es_EC =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss vvvv" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -3989,10 +3989,10 @@ es_EC =
                 , ( "yw-count-other", "'semana' w 'de' Y" )
                 ]
             , timeSkeletons =
-                { short = "HHmm"
-                , medium = "HHmmss"
-                , long = "HHmmssz"
-                , full = "HHmmsszzzz"
+                { short = "ahmm"
+                , medium = "ahmmss"
+                , long = "ahmmssz"
+                , full = "ahmmsszzzz"
                 }
             }
         )
@@ -4025,8 +4025,8 @@ es_GQ =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -4049,8 +4049,8 @@ es_GQ =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -4239,9 +4239,9 @@ es_GQ =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, H:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, H:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -4251,17 +4251,17 @@ es_GQ =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "H" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "H:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "H:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "H:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "H:mm:ss (vvvv)" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "H:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -4311,10 +4311,10 @@ es_GQ =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_GT : Internal.Locale.Locale
@@ -4329,8 +4329,8 @@ es_GT =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -4353,8 +4353,8 @@ es_GT =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -4479,13 +4479,13 @@ es_GT =
                     , sat = "sábado"
                     }
                 , narrow =
-                    { sun = "d"
-                    , mon = "l"
-                    , tue = "m"
-                    , wed = "m"
-                    , thu = "j"
-                    , fri = "v"
-                    , sat = "s"
+                    { sun = "D"
+                    , mon = "L"
+                    , tue = "M"
+                    , wed = "M"
+                    , thu = "J"
+                    , fri = "V"
+                    , sat = "S"
                     }
                 }
             , weekdayStandaloneNames =
@@ -4518,19 +4518,19 @@ es_GT =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "HH:mm"
-                , medium = "HH:mm:ss"
-                , long = "HH:mm:ss z"
-                , full = "HH:mm:ss zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
-                , medium = "{1} {0}"
+                , medium = "{1}, {0}"
                 , long = "{1}, {0}"
                 , full = "{1}, {0}"
                 }
@@ -4543,9 +4543,9 @@ es_GT =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -4555,17 +4555,17 @@ es_GT =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss vvvv" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -4598,10 +4598,10 @@ es_GT =
                 , ( "yw-count-other", "'semana' w 'de' Y" )
                 ]
             , timeSkeletons =
-                { short = "HHmm"
-                , medium = "HHmmss"
-                , long = "HHmmssz"
-                , full = "HHmmsszzzz"
+                { short = "ahmm"
+                , medium = "ahmmss"
+                , long = "ahmmssz"
+                , full = "ahmmsszzzz"
                 }
             }
         )
@@ -4616,10 +4616,10 @@ es_GT =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_HN : Internal.Locale.Locale
@@ -4634,8 +4634,8 @@ es_HN =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -4658,8 +4658,8 @@ es_HN =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -4784,13 +4784,13 @@ es_HN =
                     , sat = "sábado"
                     }
                 , narrow =
-                    { sun = "d"
-                    , mon = "l"
-                    , tue = "m"
-                    , wed = "m"
-                    , thu = "j"
-                    , fri = "v"
-                    , sat = "s"
+                    { sun = "D"
+                    , mon = "L"
+                    , tue = "M"
+                    , wed = "M"
+                    , thu = "J"
+                    , fri = "V"
+                    , sat = "S"
                     }
                 }
             , weekdayStandaloneNames =
@@ -4823,19 +4823,19 @@ es_HN =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "HH:mm"
-                , medium = "HH:mm:ss"
-                , long = "HH:mm:ss z"
-                , full = "HH:mm:ss zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
-                , medium = "{1} {0}"
+                , medium = "{1}, {0}"
                 , long = "{1}, {0}"
                 , full = "{1}, {0}"
                 }
@@ -4848,9 +4848,9 @@ es_HN =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -4860,17 +4860,17 @@ es_HN =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss vvvv" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -4903,10 +4903,10 @@ es_HN =
                 , ( "yw-count-other", "'semana' w 'de' Y" )
                 ]
             , timeSkeletons =
-                { short = "HHmm"
-                , medium = "HHmmss"
-                , long = "HHmmssz"
-                , full = "HHmmsszzzz"
+                { short = "ahmm"
+                , medium = "ahmmss"
+                , long = "ahmmssz"
+                , full = "ahmmsszzzz"
                 }
             }
         )
@@ -4939,8 +4939,8 @@ es_IC =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -4963,8 +4963,8 @@ es_IC =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -5153,9 +5153,9 @@ es_IC =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, H:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, H:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -5165,17 +5165,17 @@ es_IC =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "H" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "H:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "H:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "H:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "H:mm:ss (vvvv)" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "H:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -5225,10 +5225,10 @@ es_IC =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_MX : Internal.Locale.Locale
@@ -5243,8 +5243,8 @@ es_MX =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.m."
+                    , pm = "p.m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -5255,8 +5255,8 @@ es_MX =
                             ]
                     }
                 , wide =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.m."
+                    , pm = "p.m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -5267,13 +5267,13 @@ es_MX =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
                             , ( "morning1", "de la madrugada" )
-                            , ( "morning2", "mañana" )
+                            , ( "morning2", "de la mañana" )
                             , ( "night1", "de la noche" )
                             , ( "noon", "del mediodía" )
                             ]
@@ -5295,7 +5295,7 @@ es_MX =
                     , jun = "jun"
                     , jul = "jul"
                     , aug = "ago"
-                    , sep = "sept"
+                    , sep = "sep"
                     , oct = "oct"
                     , nov = "nov"
                     , dec = "dic"
@@ -5339,7 +5339,7 @@ es_MX =
                     , jun = "jun"
                     , jul = "jul"
                     , aug = "ago"
-                    , sep = "sept"
+                    , sep = "sep"
                     , oct = "oct"
                     , nov = "nov"
                     , dec = "dic"
@@ -5432,19 +5432,19 @@ es_MX =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "HH:mm"
-                , medium = "HH:mm:ss"
-                , long = "HH:mm:ss z"
-                , full = "HH:mm:ss zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
-                , medium = "{1} {0}"
+                , medium = "{1}, {0}"
                 , long = "{1}, {0}"
                 , full = "{1}, {0}"
                 }
@@ -5457,9 +5457,9 @@ es_MX =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -5469,17 +5469,17 @@ es_MX =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss (vvvv)" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -5512,10 +5512,10 @@ es_MX =
                 , ( "yw-count-other", "'semana' w 'de' Y" )
                 ]
             , timeSkeletons =
-                { short = "HHmm"
-                , medium = "HHmmss"
-                , long = "HHmmssz"
-                , full = "HHmmsszzzz"
+                { short = "ahmm"
+                , medium = "ahmmss"
+                , long = "ahmmssz"
+                , full = "ahmmsszzzz"
                 }
             }
         )
@@ -5530,10 +5530,10 @@ es_MX =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_NI : Internal.Locale.Locale
@@ -5548,8 +5548,8 @@ es_NI =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -5572,8 +5572,8 @@ es_NI =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -5698,13 +5698,13 @@ es_NI =
                     , sat = "sábado"
                     }
                 , narrow =
-                    { sun = "d"
-                    , mon = "l"
-                    , tue = "m"
-                    , wed = "m"
-                    , thu = "j"
-                    , fri = "v"
-                    , sat = "s"
+                    { sun = "D"
+                    , mon = "L"
+                    , tue = "M"
+                    , wed = "M"
+                    , thu = "J"
+                    , fri = "V"
+                    , sat = "S"
                     }
                 }
             , weekdayStandaloneNames =
@@ -5737,19 +5737,19 @@ es_NI =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "HH:mm"
-                , medium = "HH:mm:ss"
-                , long = "HH:mm:ss z"
-                , full = "HH:mm:ss zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
-                , medium = "{1} {0}"
+                , medium = "{1}, {0}"
                 , long = "{1}, {0}"
                 , full = "{1}, {0}"
                 }
@@ -5762,9 +5762,9 @@ es_NI =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -5774,17 +5774,17 @@ es_NI =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss vvvv" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -5817,10 +5817,10 @@ es_NI =
                 , ( "yw-count-other", "'semana' w 'de' Y" )
                 ]
             , timeSkeletons =
-                { short = "HHmm"
-                , medium = "HHmmss"
-                , long = "HHmmssz"
-                , full = "HHmmsszzzz"
+                { short = "ahmm"
+                , medium = "ahmmss"
+                , long = "ahmmssz"
+                , full = "ahmmsszzzz"
                 }
             }
         )
@@ -5835,10 +5835,10 @@ es_NI =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_PA : Internal.Locale.Locale
@@ -5853,8 +5853,8 @@ es_PA =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -5877,15 +5877,15 @@ es_PA =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
                             , ( "morning1", "de la madrugada" )
                             , ( "morning2", "de la mañana" )
                             , ( "night1", "de la noche" )
-                            , ( "noon", "del mediodía" )
+                            , ( "noon", "mediodía" )
                             ]
                     }
                 }
@@ -6003,13 +6003,13 @@ es_PA =
                     , sat = "sábado"
                     }
                 , narrow =
-                    { sun = "d"
-                    , mon = "l"
-                    , tue = "m"
-                    , wed = "m"
-                    , thu = "j"
-                    , fri = "v"
-                    , sat = "s"
+                    { sun = "D"
+                    , mon = "L"
+                    , tue = "M"
+                    , wed = "M"
+                    , thu = "J"
+                    , fri = "V"
+                    , sat = "S"
                     }
                 }
             , weekdayStandaloneNames =
@@ -6042,19 +6042,19 @@ es_PA =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
-                , medium = "{1} {0}"
+                , medium = "{1}, {0}"
                 , long = "{1}, {0}"
                 , full = "{1}, {0}"
                 }
@@ -6067,9 +6067,9 @@ es_PA =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -6079,17 +6079,17 @@ es_PA =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss vvvv" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "MM/dd" )
@@ -6140,10 +6140,10 @@ es_PA =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_PE : Internal.Locale.Locale
@@ -6158,8 +6158,8 @@ es_PE =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -6182,8 +6182,8 @@ es_PE =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -6308,13 +6308,13 @@ es_PE =
                     , sat = "sábado"
                     }
                 , narrow =
-                    { sun = "d"
-                    , mon = "l"
-                    , tue = "m"
-                    , wed = "m"
-                    , thu = "j"
-                    , fri = "v"
-                    , sat = "s"
+                    { sun = "D"
+                    , mon = "L"
+                    , tue = "M"
+                    , wed = "M"
+                    , thu = "J"
+                    , fri = "V"
+                    , sat = "S"
                     }
                 }
             , weekdayStandaloneNames =
@@ -6347,19 +6347,19 @@ es_PE =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "HH:mm"
-                , medium = "HH:mm:ss"
-                , long = "HH:mm:ss z"
-                , full = "HH:mm:ss zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
-                , medium = "{1} {0}"
+                , medium = "{1}, {0}"
                 , long = "{1}, {0}"
                 , full = "{1}, {0}"
                 }
@@ -6372,9 +6372,9 @@ es_PE =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -6384,17 +6384,17 @@ es_PE =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss vvvv" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -6427,10 +6427,10 @@ es_PE =
                 , ( "yw-count-other", "'semana' w 'de' Y" )
                 ]
             , timeSkeletons =
-                { short = "HHmm"
-                , medium = "HHmmss"
-                , long = "HHmmssz"
-                , full = "HHmmsszzzz"
+                { short = "ahmm"
+                , medium = "ahmmss"
+                , long = "ahmmssz"
+                , full = "ahmmsszzzz"
                 }
             }
         )
@@ -6445,10 +6445,10 @@ es_PE =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_PH : Internal.Locale.Locale
@@ -6463,8 +6463,8 @@ es_PH =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -6487,8 +6487,8 @@ es_PH =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -6657,10 +6657,10 @@ es_PH =
                 , narrow = { bc = "a. C.", ad = "d. C." }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
@@ -6677,9 +6677,9 @@ es_PH =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, H:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, H:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -6689,17 +6689,17 @@ es_PH =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "H" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "H:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "H:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "H:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "H:mm:ss (vvvv)" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "H:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -6749,10 +6749,10 @@ es_PH =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_PR : Internal.Locale.Locale
@@ -6767,8 +6767,8 @@ es_PR =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -6791,8 +6791,8 @@ es_PR =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -6917,13 +6917,13 @@ es_PR =
                     , sat = "sábado"
                     }
                 , narrow =
-                    { sun = "d"
-                    , mon = "l"
-                    , tue = "m"
-                    , wed = "m"
-                    , thu = "j"
-                    , fri = "v"
-                    , sat = "s"
+                    { sun = "D"
+                    , mon = "L"
+                    , tue = "M"
+                    , wed = "M"
+                    , thu = "J"
+                    , fri = "V"
+                    , sat = "S"
                     }
                 }
             , weekdayStandaloneNames =
@@ -6956,19 +6956,19 @@ es_PR =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
-                , medium = "{1} {0}"
+                , medium = "{1}, {0}"
                 , long = "{1}, {0}"
                 , full = "{1}, {0}"
                 }
@@ -6981,9 +6981,9 @@ es_PR =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -6993,17 +6993,17 @@ es_PR =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss vvvv" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "MM/dd" )
@@ -7054,10 +7054,10 @@ es_PR =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_PY : Internal.Locale.Locale
@@ -7072,8 +7072,8 @@ es_PY =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -7096,8 +7096,8 @@ es_PY =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -7222,13 +7222,13 @@ es_PY =
                     , sat = "sábado"
                     }
                 , narrow =
-                    { sun = "d"
-                    , mon = "l"
-                    , tue = "m"
-                    , wed = "m"
-                    , thu = "j"
-                    , fri = "v"
-                    , sat = "s"
+                    { sun = "D"
+                    , mon = "L"
+                    , tue = "M"
+                    , wed = "M"
+                    , thu = "J"
+                    , fri = "V"
+                    , sat = "S"
                     }
                 }
             , weekdayStandaloneNames =
@@ -7261,19 +7261,19 @@ es_PY =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "HH:mm"
-                , medium = "HH:mm:ss"
-                , long = "HH:mm:ss z"
-                , full = "HH:mm:ss zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
-                , medium = "{1} {0}"
+                , medium = "{1}, {0}"
                 , long = "{1}, {0}"
                 , full = "{1}, {0}"
                 }
@@ -7286,9 +7286,9 @@ es_PY =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -7298,17 +7298,17 @@ es_PY =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss vvvv" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -7341,10 +7341,10 @@ es_PY =
                 , ( "yw-count-other", "'semana' w 'de' Y" )
                 ]
             , timeSkeletons =
-                { short = "HHmm"
-                , medium = "HHmmss"
-                , long = "HHmmssz"
-                , full = "HHmmsszzzz"
+                { short = "ahmm"
+                , medium = "ahmmss"
+                , long = "ahmmssz"
+                , full = "ahmmsszzzz"
                 }
             }
         )
@@ -7359,10 +7359,10 @@ es_PY =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_SV : Internal.Locale.Locale
@@ -7377,8 +7377,8 @@ es_SV =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -7401,8 +7401,8 @@ es_SV =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -7527,13 +7527,13 @@ es_SV =
                     , sat = "sábado"
                     }
                 , narrow =
-                    { sun = "d"
-                    , mon = "l"
-                    , tue = "m"
-                    , wed = "m"
-                    , thu = "j"
-                    , fri = "v"
-                    , sat = "s"
+                    { sun = "D"
+                    , mon = "L"
+                    , tue = "M"
+                    , wed = "M"
+                    , thu = "J"
+                    , fri = "V"
+                    , sat = "S"
                     }
                 }
             , weekdayStandaloneNames =
@@ -7566,19 +7566,19 @@ es_SV =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "HH:mm"
-                , medium = "HH:mm:ss"
-                , long = "HH:mm:ss z"
-                , full = "HH:mm:ss zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
-                , medium = "{1} {0}"
+                , medium = "{1}, {0}"
                 , long = "{1}, {0}"
                 , full = "{1}, {0}"
                 }
@@ -7591,9 +7591,9 @@ es_SV =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -7603,17 +7603,17 @@ es_SV =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss vvvv" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -7646,10 +7646,10 @@ es_SV =
                 , ( "yw-count-other", "'semana' w 'de' Y" )
                 ]
             , timeSkeletons =
-                { short = "HHmm"
-                , medium = "HHmmss"
-                , long = "HHmmssz"
-                , full = "HHmmsszzzz"
+                { short = "ahmm"
+                , medium = "ahmmss"
+                , long = "ahmmssz"
+                , full = "ahmmsszzzz"
                 }
             }
         )
@@ -7664,10 +7664,10 @@ es_SV =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_US : Internal.Locale.Locale
@@ -7682,8 +7682,8 @@ es_US =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.m."
+                    , pm = "p.m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -7694,8 +7694,8 @@ es_US =
                             ]
                     }
                 , wide =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.m."
+                    , pm = "p.m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -7706,8 +7706,8 @@ es_US =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.m."
+                    , pm = "p.m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -7871,15 +7871,15 @@ es_US =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
@@ -7896,9 +7896,9 @@ es_US =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -7908,17 +7908,17 @@ es_US =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss (vvvv)" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -7969,10 +7969,10 @@ es_US =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_UY : Internal.Locale.Locale
@@ -7987,8 +7987,8 @@ es_UY =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -8011,8 +8011,8 @@ es_UY =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -8137,13 +8137,13 @@ es_UY =
                     , sat = "sábado"
                     }
                 , narrow =
-                    { sun = "d"
-                    , mon = "l"
-                    , tue = "m"
-                    , wed = "m"
-                    , thu = "j"
-                    , fri = "v"
-                    , sat = "s"
+                    { sun = "D"
+                    , mon = "L"
+                    , tue = "M"
+                    , wed = "M"
+                    , thu = "J"
+                    , fri = "V"
+                    , sat = "S"
                     }
                 }
             , weekdayStandaloneNames =
@@ -8176,19 +8176,19 @@ es_UY =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "HH:mm"
-                , medium = "HH:mm:ss"
-                , long = "HH:mm:ss z"
-                , full = "HH:mm:ss zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
-                , medium = "{1} {0}"
+                , medium = "{1}, {0}"
                 , long = "{1}, {0}"
                 , full = "{1}, {0}"
                 }
@@ -8201,9 +8201,9 @@ es_UY =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -8213,17 +8213,17 @@ es_UY =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss vvvv" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -8256,10 +8256,10 @@ es_UY =
                 , ( "yw-count-other", "'semana' w 'de' Y" )
                 ]
             , timeSkeletons =
-                { short = "HHmm"
-                , medium = "HHmmss"
-                , long = "HHmmssz"
-                , full = "HHmmsszzzz"
+                { short = "ahmm"
+                , medium = "ahmmss"
+                , long = "ahmmssz"
+                , full = "ahmmsszzzz"
                 }
             }
         )
@@ -8274,10 +8274,10 @@ es_UY =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_VE : Internal.Locale.Locale
@@ -8292,8 +8292,8 @@ es_VE =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -8316,8 +8316,8 @@ es_VE =
                             ]
                     }
                 , narrow =
-                    { am = "a.\u{00A0}m."
-                    , pm = "p.\u{00A0}m."
+                    { am = "a.\u{202F}m."
+                    , pm = "p.\u{202F}m."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "evening1", "de la tarde" )
@@ -8442,13 +8442,13 @@ es_VE =
                     , sat = "sábado"
                     }
                 , narrow =
-                    { sun = "d"
-                    , mon = "l"
-                    , tue = "m"
-                    , wed = "m"
-                    , thu = "j"
-                    , fri = "v"
-                    , sat = "s"
+                    { sun = "D"
+                    , mon = "L"
+                    , tue = "M"
+                    , wed = "M"
+                    , thu = "J"
+                    , fri = "V"
+                    , sat = "S"
                     }
                 }
             , weekdayStandaloneNames =
@@ -8481,19 +8481,19 @@ es_VE =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "a. C.", ad = "d. C." }
+                { abbreviated = { bc = "a.C.", ad = "d.C." }
                 , wide = { bc = "antes de Cristo", ad = "después de Cristo" }
-                , narrow = { bc = "a. C.", ad = "d. C." }
+                , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
-                , medium = "{1} {0}"
+                , medium = "{1}, {0}"
                 , long = "{1}, {0}"
                 , full = "{1}, {0}"
                 }
@@ -8506,9 +8506,9 @@ es_VE =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
@@ -8518,17 +8518,17 @@ es_VE =
                 , ( "GyMMMM", "MMMM 'de' y G" )
                 , ( "GyMMMMd", "d 'de' MMMM 'de' y G" )
                 , ( "GyMMMMEd", "E, d 'de' MMMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmsvvvv", "h:mm:ss a (vvvv)" )
+                , ( "hmsvvvv", "h:mm:ss\u{202F}a (vvvv)" )
                 , ( "Hmsvvvv", "HH:mm:ss vvvv" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )

@@ -58,8 +58,8 @@ th =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "ก่อนเที่ยง"
-                    , pm = "หลังเที่ยง"
+                    { am = "AM"
+                    , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
                             [ ( "afternoon1", "ในตอนบ่าย" )
@@ -322,10 +322,10 @@ th =
                 , ( "yMMMd", "d MMM y" )
                 , ( "yMMMEd", "E d MMM y" )
                 , ( "yMMMEEEEd", "EEEEที่ d MMM y" )
-                , ( "yMMMM", "MMMM G y" )
-                , ( "yMMMMd", "d MMMM G y" )
-                , ( "yMMMMEd", "E d MMMM G y" )
-                , ( "yMMMMEEEEd", "EEEEที่ d MMMM G y" )
+                , ( "yMMMM", "MMMM y" )
+                , ( "yMMMMd", "d MMMM y" )
+                , ( "yMMMMEd", "E d MMMM y" )
+                , ( "yMMMMEEEEd", "EEEEที่ d MMMM y" )
                 , ( "yQQQ", "QQQ y" )
                 , ( "yQQQQ", "QQQQ G y" )
                 , ( "yw-count-other", "สัปดาห์ที่ w ของปี Y" )

@@ -273,27 +273,27 @@ pt =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM 'de' y G" )
                 , ( "GyMMMd", "d 'de' MMM 'de' y G" )
                 , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/M" )
+                , ( "Md", "dd/MM" )
                 , ( "MEd", "E, dd/MM" )
                 , ( "MMdd", "dd/MM" )
                 , ( "MMM", "LLL" )
@@ -562,8 +562,8 @@ pt_AO =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'às' {0}"
-                , full = "{1} 'às' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -574,24 +574,24 @@ pt_AO =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM 'de' y G" )
                 , ( "GyMMMd", "d 'de' MMM 'de' y G" )
                 , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -864,8 +864,8 @@ pt_CH =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'às' {0}"
-                , full = "{1} 'às' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -876,24 +876,24 @@ pt_CH =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM 'de' y G" )
                 , ( "GyMMMd", "d 'de' MMM 'de' y G" )
                 , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -1166,8 +1166,8 @@ pt_CV =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'às' {0}"
-                , full = "{1} 'às' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -1178,24 +1178,24 @@ pt_CV =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM 'de' y G" )
                 , ( "GyMMMd", "d 'de' MMM 'de' y G" )
                 , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -1468,8 +1468,8 @@ pt_GQ =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'às' {0}"
-                , full = "{1} 'às' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -1480,24 +1480,24 @@ pt_GQ =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM 'de' y G" )
                 , ( "GyMMMd", "d 'de' MMM 'de' y G" )
                 , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -1770,8 +1770,8 @@ pt_GW =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'às' {0}"
-                , full = "{1} 'às' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -1782,24 +1782,24 @@ pt_GW =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM 'de' y G" )
                 , ( "GyMMMd", "d 'de' MMM 'de' y G" )
                 , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -2072,8 +2072,8 @@ pt_LU =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'às' {0}"
-                , full = "{1} 'às' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -2084,24 +2084,24 @@ pt_LU =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM 'de' y G" )
                 , ( "GyMMMd", "d 'de' MMM 'de' y G" )
                 , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -2151,10 +2151,10 @@ pt_LU =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 pt_MO : Internal.Locale.Locale
@@ -2366,16 +2366,16 @@ pt_MO =
                 , narrow = { bc = "a.C.", ad = "d.C." }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'às' {0}"
-                , full = "{1} 'às' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -2386,24 +2386,24 @@ pt_MO =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM 'de' y G" )
                 , ( "GyMMMd", "d 'de' MMM 'de' y G" )
                 , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -2676,8 +2676,8 @@ pt_MZ =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'às' {0}"
-                , full = "{1} 'às' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -2688,24 +2688,24 @@ pt_MZ =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM 'de' y G" )
                 , ( "GyMMMd", "d 'de' MMM 'de' y G" )
                 , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -2978,8 +2978,8 @@ pt_PT =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'às' {0}"
-                , full = "{1} 'às' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -2990,24 +2990,24 @@ pt_PT =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM 'de' y G" )
                 , ( "GyMMMd", "d 'de' MMM 'de' y G" )
                 , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -3280,8 +3280,8 @@ pt_ST =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'às' {0}"
-                , full = "{1} 'às' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -3292,24 +3292,24 @@ pt_ST =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM 'de' y G" )
                 , ( "GyMMMd", "d 'de' MMM 'de' y G" )
                 , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -3582,8 +3582,8 @@ pt_TL =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'às' {0}"
-                , full = "{1} 'às' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -3594,24 +3594,24 @@ pt_TL =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM 'de' y G" )
                 , ( "GyMMMd", "d 'de' MMM 'de' y G" )
                 , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )

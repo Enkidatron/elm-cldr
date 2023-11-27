@@ -281,31 +281,31 @@ tr =
                 , ( "EBhm", "E B h:mm" )
                 , ( "EBhms", "E B h:mm:ss" )
                 , ( "Ed", "d E" )
-                , ( "Ehm", "E a h:mm" )
+                , ( "Ehm", "E a\u{202F}h:mm" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E a h:mm:ss" )
+                , ( "Ehms", "E a\u{202F}h:mm:ss" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "G y" )
                 , ( "GyMd", "d/M/y GGGGG" )
                 , ( "GyMMM", "G MMM y" )
                 , ( "GyMMMd", "G d MMM y" )
                 , ( "GyMMMEd", "G d MMM y E" )
-                , ( "h", "a h" )
+                , ( "h", "a\u{202F}h" )
                 , ( "H", "HH" )
-                , ( "hm", "a h:mm" )
+                , ( "hm", "a\u{202F}h:mm" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "a h:mm:ss" )
+                , ( "hms", "a\u{202F}h:mm:ss" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "a h:mm:ss v" )
+                , ( "hmsv", "a\u{202F}h:mm:ss v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "a h:mm v" )
+                , ( "hmv", "a\u{202F}h:mm v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
                 , ( "MEd", "d/MM E" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
-                , ( "MMMEd", "d MMMM E" )
+                , ( "MMMEd", "d MMM E" )
                 , ( "MMMMd", "d MMMM" )
                 , ( "MMMMEd", "d MMMM E" )
                 , ( "MMMMW-count-one", "MMMM 'ayının' W. 'haftası'" )
@@ -345,10 +345,10 @@ tr =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 tr_CY : Internal.Locale.Locale
@@ -566,10 +566,10 @@ tr_CY =
                 , narrow = { bc = "MÖ", ad = "MS" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1} {0}"
@@ -586,31 +586,31 @@ tr_CY =
                 , ( "EBhm", "E B h:mm" )
                 , ( "EBhms", "E B h:mm:ss" )
                 , ( "Ed", "d E" )
-                , ( "Ehm", "E a h:mm" )
+                , ( "Ehm", "E a\u{202F}h:mm" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E a h:mm:ss" )
+                , ( "Ehms", "E a\u{202F}h:mm:ss" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "G y" )
                 , ( "GyMd", "d/M/y GGGGG" )
                 , ( "GyMMM", "G MMM y" )
                 , ( "GyMMMd", "G d MMM y" )
                 , ( "GyMMMEd", "G d MMM y E" )
-                , ( "h", "a h" )
+                , ( "h", "a\u{202F}h" )
                 , ( "H", "HH" )
-                , ( "hm", "a h:mm" )
+                , ( "hm", "a\u{202F}h:mm" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "a h:mm:ss" )
+                , ( "hms", "a\u{202F}h:mm:ss" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "a h:mm:ss v" )
+                , ( "hmsv", "a\u{202F}h:mm:ss v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "a h:mm v" )
+                , ( "hmv", "a\u{202F}h:mm v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
                 , ( "MEd", "d/MM E" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
-                , ( "MMMEd", "d MMMM E" )
+                , ( "MMMEd", "d MMM E" )
                 , ( "MMMMd", "d MMMM" )
                 , ( "MMMMEd", "d MMMM E" )
                 , ( "MMMMW-count-one", "MMMM 'ayının' W. 'haftası'" )

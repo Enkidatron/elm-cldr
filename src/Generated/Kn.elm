@@ -106,7 +106,7 @@ kn =
                     , may = "ಮೇ"
                     , jun = "ಜೂನ್"
                     , jul = "ಜುಲೈ"
-                    , aug = "ಆಗ"
+                    , aug = "ಆಗಸ್ಟ್"
                     , sep = "ಸೆಪ್ಟೆಂ"
                     , oct = "ಅಕ್ಟೋ"
                     , nov = "ನವೆಂ"
@@ -296,7 +296,6 @@ kn =
                 , ( "MMMd", "MMM d" )
                 , ( "MMMEd", "E, d MMM" )
                 , ( "MMMMd", "d MMMM" )
-                , ( "MMMMW-count-one", "'week' W 'of' MMMM" )
                 , ( "MMMMW-count-other", "'week' W 'of' MMMM" )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y" )
@@ -310,7 +309,6 @@ kn =
                 , ( "yMMMM", "MMMM y" )
                 , ( "yQQQ", "QQQ y" )
                 , ( "yQQQQ", "QQQQ y" )
-                , ( "yw-count-one", "'week' w 'of' Y" )
                 , ( "yw-count-other", "'week' w 'of' Y" )
                 ]
             , timeSkeletons =

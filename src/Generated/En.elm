@@ -1,8 +1,8 @@
-module Generated.En exposing (en, en_001, en_150, en_AE, en_AG, en_AI, en_AS, en_AT, en_AU, en_BB, en_BE, en_BI, en_BM, en_BS, en_BW, en_BZ, en_CA, en_CC, en_CH, en_CK, en_CM, en_CX, en_CY, en_DE, en_DG, en_DK, en_DM, en_ER, en_FI, en_FJ, en_FK, en_FM, en_GB, en_GD, en_GG, en_GH, en_GI, en_GM, en_GU, en_GY, en_HK, en_IE, en_IL, en_IM, en_IN, en_IO, en_JE, en_JM, en_KE, en_KI, en_KN, en_KY, en_LC, en_LR, en_LS, en_Latn, en_MG, en_MH, en_MO, en_MP, en_MS, en_MT, en_MU, en_MV, en_MW, en_MY, en_NA, en_NF, en_NG, en_NL, en_NR, en_NU, en_NZ, en_PG, en_PH, en_PK, en_PN, en_PR, en_PW, en_RW, en_SB, en_SC, en_SD, en_SE, en_SG, en_SH, en_SI, en_SL, en_SS, en_SX, en_SZ, en_TC, en_TK, en_TO, en_TT, en_TV, en_TZ, en_UG, en_UM, en_VC, en_VG, en_VI, en_VU, en_WS, en_ZA, en_ZM, en_ZW)
+module Generated.En exposing (en, en_001, en_150, en_AE, en_AG, en_AI, en_AS, en_AT, en_AU, en_BB, en_BE, en_BI, en_BM, en_BS, en_BW, en_BZ, en_CA, en_CC, en_CH, en_CK, en_CM, en_CX, en_CY, en_DE, en_DG, en_DK, en_DM, en_ER, en_FI, en_FJ, en_FK, en_FM, en_GB, en_GD, en_GG, en_GH, en_GI, en_GM, en_GU, en_GY, en_HK, en_ID, en_IE, en_IL, en_IM, en_IN, en_IO, en_JE, en_JM, en_KE, en_KI, en_KN, en_KY, en_LC, en_LR, en_LS, en_Latn, en_MG, en_MH, en_MO, en_MP, en_MS, en_MT, en_MU, en_MV, en_MW, en_MY, en_NA, en_NF, en_NG, en_NL, en_NR, en_NU, en_NZ, en_PG, en_PH, en_PK, en_PN, en_PR, en_PW, en_RW, en_SB, en_SC, en_SD, en_SE, en_SG, en_SH, en_SI, en_SL, en_SS, en_SX, en_SZ, en_TC, en_TK, en_TO, en_TT, en_TV, en_TZ, en_UG, en_UM, en_VC, en_VG, en_VI, en_VU, en_WS, en_ZA, en_ZM, en_ZW)
 
 {-|
 
-@docs en, en_001, en_150, en_AE, en_AG, en_AI, en_AS, en_AT, en_AU, en_BB, en_BE, en_BI, en_BM, en_BS, en_BW, en_BZ, en_CA, en_CC, en_CH, en_CK, en_CM, en_CX, en_CY, en_DE, en_DG, en_DK, en_DM, en_ER, en_FI, en_FJ, en_FK, en_FM, en_GB, en_GD, en_GG, en_GH, en_GI, en_GM, en_GU, en_GY, en_HK, en_IE, en_IL, en_IM, en_IN, en_IO, en_JE, en_JM, en_KE, en_KI, en_KN, en_KY, en_LC, en_LR, en_LS, en_Latn, en_MG, en_MH, en_MO, en_MP, en_MS, en_MT, en_MU, en_MV, en_MW, en_MY, en_NA, en_NF, en_NG, en_NL, en_NR, en_NU, en_NZ, en_PG, en_PH, en_PK, en_PN, en_PR, en_PW, en_RW, en_SB, en_SC, en_SD, en_SE, en_SG, en_SH, en_SI, en_SL, en_SS, en_SX, en_SZ, en_TC, en_TK, en_TO, en_TT, en_TV, en_TZ, en_UG, en_UM, en_VC, en_VG, en_VI, en_VU, en_WS, en_ZA, en_ZM, en_ZW
+@docs en, en_001, en_150, en_AE, en_AG, en_AI, en_AS, en_AT, en_AU, en_BB, en_BE, en_BI, en_BM, en_BS, en_BW, en_BZ, en_CA, en_CC, en_CH, en_CK, en_CM, en_CX, en_CY, en_DE, en_DG, en_DK, en_DM, en_ER, en_FI, en_FJ, en_FK, en_FM, en_GB, en_GD, en_GG, en_GH, en_GI, en_GM, en_GU, en_GY, en_HK, en_ID, en_IE, en_IL, en_IM, en_IN, en_IO, en_JE, en_JM, en_KE, en_KI, en_KN, en_KY, en_LC, en_LR, en_LS, en_Latn, en_MG, en_MH, en_MO, en_MP, en_MS, en_MT, en_MU, en_MV, en_MW, en_MY, en_NA, en_NF, en_NG, en_NL, en_NR, en_NU, en_NZ, en_PG, en_PH, en_PK, en_PN, en_PR, en_PW, en_RW, en_SB, en_SC, en_SD, en_SE, en_SG, en_SH, en_SI, en_SL, en_SS, en_SX, en_SZ, en_TC, en_TK, en_TO, en_TT, en_TV, en_TZ, en_UG, en_UM, en_VC, en_VG, en_VI, en_VU, en_WS, en_ZA, en_ZM, en_ZW
 
 -}
 
@@ -38,10 +38,10 @@ dayPeriods =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en : Internal.Locale.Locale
@@ -259,16 +259,16 @@ en =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -279,24 +279,31 @@ en =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "d E" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "M/d/y GGGGG" )
+                , ( "GyMd", "M/d/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "MMM d, y G" )
                 , ( "GyMMMEd", "E, MMM d, y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "M/d" )
@@ -340,10 +347,10 @@ en =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_001 : Internal.Locale.Locale
@@ -561,16 +568,16 @@ en_001 =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -578,27 +585,34 @@ en_001 =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -872,8 +886,8 @@ en_150 =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -881,27 +895,34 @@ en_150 =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -946,10 +967,10 @@ en_150 =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_AE : Internal.Locale.Locale
@@ -1167,16 +1188,16 @@ en_AE =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -1187,24 +1208,31 @@ en_AE =
                 , ( "EBhm", "E, h:mm B" )
                 , ( "EBhms", "E, h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "M/d/y GGGGG" )
+                , ( "GyMd", "M/d/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -1249,10 +1277,10 @@ en_AE =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_AG : Internal.Locale.Locale
@@ -1470,16 +1498,16 @@ en_AG =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -1487,27 +1515,34 @@ en_AG =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -1781,8 +1816,8 @@ en_AI =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -1790,27 +1825,34 @@ en_AI =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -1855,10 +1897,10 @@ en_AI =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_AS : Internal.Locale.Locale
@@ -2076,16 +2118,16 @@ en_AS =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -2096,24 +2138,31 @@ en_AS =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "d E" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "M/d/y GGGGG" )
+                , ( "GyMd", "M/d/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "MMM d, y G" )
                 , ( "GyMMMEd", "E, MMM d, y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "M/d" )
@@ -2386,8 +2435,8 @@ en_AT =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -2395,27 +2444,34 @@ en_AT =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -2456,14 +2512,14 @@ en_AT =
   - Short : d/M/yy
   - Medium : d MMM y
   - Long : d MMMM y
-  - Full : EEEE, d MMMM y
+  - Full : EEEE d MMMM y
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_AU : Internal.Locale.Locale
@@ -2482,12 +2538,12 @@ en_AU =
                     , pm = "pm"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "afternoon" )
+                            [ ( "afternoon1", "in the afternoon" )
                             , ( "am-alt-variant", "am" )
-                            , ( "evening1", "evening" )
+                            , ( "evening1", "in the evening" )
                             , ( "midnight", "midnight" )
-                            , ( "morning1", "morning" )
-                            , ( "night1", "night" )
+                            , ( "morning1", "in the morning" )
+                            , ( "night1", "at night" )
                             , ( "noon", "midday" )
                             , ( "pm-alt-variant", "pm" )
                             ]
@@ -2512,12 +2568,12 @@ en_AU =
                     , pm = "pm"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "afternoon" )
+                            [ ( "afternoon1", "in the afternoon" )
                             , ( "am-alt-variant", "am" )
-                            , ( "evening1", "evening" )
+                            , ( "evening1", "in the evening" )
                             , ( "midnight", "midnight" )
-                            , ( "morning1", "morning" )
-                            , ( "night1", "night" )
+                            , ( "morning1", "in the morning" )
+                            , ( "night1", "at night" )
                             , ( "noon", "midday" )
                             , ( "pm-alt-variant", "pm" )
                             ]
@@ -2527,7 +2583,7 @@ en_AU =
                 { short = "d/M/yy"
                 , medium = "d MMM y"
                 , long = "d MMMM y"
-                , full = "EEEE, d MMMM y"
+                , full = "EEEE d MMMM y"
                 }
             , monthFormatNames =
                 { abbreviated =
@@ -2580,10 +2636,10 @@ en_AU =
                     , mar = "Mar"
                     , apr = "Apr"
                     , may = "May"
-                    , jun = "Jun"
-                    , jul = "Jul"
+                    , jun = "June"
+                    , jul = "July"
                     , aug = "Aug"
-                    , sep = "Sep"
+                    , sep = "Sept"
                     , oct = "Oct"
                     , nov = "Nov"
                     , dec = "Dec"
@@ -2666,13 +2722,13 @@ en_AU =
                     , sat = "Saturday"
                     }
                 , narrow =
-                    { sun = "Su."
-                    , mon = "M."
-                    , tue = "Tu."
-                    , wed = "W."
-                    , thu = "Th."
-                    , fri = "F."
-                    , sat = "Sa."
+                    { sun = "S"
+                    , mon = "M"
+                    , tue = "T"
+                    , wed = "W"
+                    , thu = "T"
+                    , fri = "F"
+                    , sat = "S"
                     }
                 }
             , eraNames =
@@ -2681,16 +2737,16 @@ en_AU =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -2698,27 +2754,35 @@ en_AU =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "GyMMMEEEEd", "EEEE d MMM y G" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -2727,7 +2791,9 @@ en_AU =
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
                 , ( "MMMEd", "E, d MMM" )
+                , ( "MMMEEEEd", "EEEE d MMM" )
                 , ( "MMMMd", "d MMMM" )
+                , ( "MMMMEEEEd", "EEEE d MMMM" )
                 , ( "MMMMW-count-one", "'week' W 'of' MMMM" )
                 , ( "MMMMW-count-other", "'week' W 'of' MMMM" )
                 , ( "ms", "mm:ss" )
@@ -2738,7 +2804,9 @@ en_AU =
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
                 , ( "yMMMEd", "E, d MMM y" )
+                , ( "yMMMEEEEd", "EEEE d MMM y" )
                 , ( "yMMMM", "MMMM y" )
+                , ( "yMMMMEEEEd", "EEEE d MMMM y" )
                 , ( "yQQQ", "QQQ y" )
                 , ( "yQQQQ", "QQQQ y" )
                 , ( "yw-count-one", "'week' w 'of' Y" )
@@ -2763,10 +2831,10 @@ en_AU =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_BB : Internal.Locale.Locale
@@ -2984,16 +3052,16 @@ en_BB =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -3001,27 +3069,34 @@ en_BB =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -3295,8 +3370,8 @@ en_BE =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -3304,27 +3379,34 @@ en_BE =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -3598,8 +3680,8 @@ en_BI =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -3610,24 +3692,31 @@ en_BI =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "d E" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "M/d/y GGGGG" )
+                , ( "GyMd", "M/d/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "MMM d, y G" )
                 , ( "GyMMMEd", "E, MMM d, y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "M/d" )
@@ -3671,10 +3760,10 @@ en_BI =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_BM : Internal.Locale.Locale
@@ -3892,16 +3981,16 @@ en_BM =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -3909,27 +3998,34 @@ en_BM =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -3974,10 +4070,10 @@ en_BM =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_BS : Internal.Locale.Locale
@@ -4195,16 +4291,16 @@ en_BS =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -4212,27 +4308,34 @@ en_BS =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -4506,8 +4609,8 @@ en_BW =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -4515,27 +4618,34 @@ en_BW =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "dd MMM y G" )
                 , ( "GyMMMEd", "E, dd MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -4809,8 +4919,8 @@ en_BZ =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -4818,27 +4928,34 @@ en_BZ =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -4883,10 +5000,10 @@ en_BZ =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_CA : Internal.Locale.Locale
@@ -4962,7 +5079,7 @@ en_CA =
                     , jun = "Jun"
                     , jul = "Jul"
                     , aug = "Aug"
-                    , sep = "Sept"
+                    , sep = "Sep"
                     , oct = "Oct"
                     , nov = "Nov"
                     , dec = "Dec"
@@ -5006,7 +5123,7 @@ en_CA =
                     , jun = "Jun"
                     , jul = "Jul"
                     , aug = "Aug"
-                    , sep = "Sept"
+                    , sep = "Sep"
                     , oct = "Oct"
                     , nov = "Nov"
                     , dec = "Dec"
@@ -5104,16 +5221,16 @@ en_CA =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -5121,27 +5238,34 @@ en_CA =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "M/d/y GGGGG" )
+                , ( "GyMd", "M/d/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "MMM d, y G" )
                 , ( "GyMMMEd", "E, MMM d, y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "MM-dd" )
@@ -5158,7 +5282,7 @@ en_CA =
                 , ( "MMMMW-count-other", "'week' W 'of' MMMM" )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y" )
-                , ( "yM", "MM/y" )
+                , ( "yM", "y-MM" )
                 , ( "yMd", "y-MM-dd" )
                 , ( "yMd-alt-variant", "d/M/y" )
                 , ( "yMEd", "E, y-MM-dd" )
@@ -5420,8 +5544,8 @@ en_CC =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -5429,27 +5553,34 @@ en_CC =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -5487,7 +5618,7 @@ en_CC =
 
 {-| Date format strings:
 
-  - Short : dd/MM/y
+  - Short : dd.MM.y
   - Medium : d MMM y
   - Long : d MMMM y
   - Full : EEEE, d MMMM y
@@ -5558,7 +5689,7 @@ en_CH =
                     }
                 }
             , datePatterns =
-                { short = "dd/MM/y"
+                { short = "dd.MM.y"
                 , medium = "d MMM y"
                 , long = "d MMMM y"
                 , full = "EEEE, d MMMM y"
@@ -5723,8 +5854,8 @@ en_CH =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -5732,32 +5863,39 @@ en_CH =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d.M.y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "dd/MM" )
-                , ( "MEd", "E, dd/MM" )
-                , ( "MMdd", "dd/MM" )
+                , ( "Md", "dd.MM" )
+                , ( "MEd", "E, dd.MM" )
+                , ( "MMdd", "dd.MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
                 , ( "MMMEd", "E, d MMM" )
@@ -5766,9 +5904,9 @@ en_CH =
                 , ( "MMMMW-count-other", "'week' W 'of' MMMM" )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y" )
-                , ( "yM", "MM/y" )
-                , ( "yMd", "dd/MM/y" )
-                , ( "yMEd", "E, dd/MM/y" )
+                , ( "yM", "MM.y" )
+                , ( "yMd", "dd.MM.y" )
+                , ( "yMEd", "E, dd.MM.y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
                 , ( "yMMMEd", "E, d MMM y" )
@@ -6026,8 +6164,8 @@ en_CK =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -6035,27 +6173,34 @@ en_CK =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -6329,8 +6474,8 @@ en_CM =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -6338,27 +6483,34 @@ en_CM =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -6632,8 +6784,8 @@ en_CX =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -6641,27 +6793,34 @@ en_CX =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -6706,10 +6865,10 @@ en_CX =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_CY : Internal.Locale.Locale
@@ -6927,16 +7086,16 @@ en_CY =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -6944,27 +7103,34 @@ en_CY =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -7238,8 +7404,8 @@ en_DE =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -7247,27 +7413,34 @@ en_DE =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -7541,8 +7714,8 @@ en_DG =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -7550,27 +7723,34 @@ en_DG =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -7844,8 +8024,8 @@ en_DK =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -7853,27 +8033,34 @@ en_DK =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h.mm a" )
+                , ( "Ehm", "E h.mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h.mm a" )
                 , ( "EHm", "E HH.mm" )
-                , ( "Ehms", "E h.mm.ss a" )
+                , ( "Ehms", "E h.mm.ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h.mm.ss a" )
                 , ( "EHms", "E HH.mm.ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h.mm a" )
+                , ( "hm", "h.mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h.mm a" )
                 , ( "Hm", "HH.mm" )
-                , ( "hms", "h.mm.ss a" )
+                , ( "hms", "h.mm.ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h.mm.ss a" )
                 , ( "Hms", "HH.mm.ss" )
-                , ( "hmsv", "h.mm.ss a v" )
+                , ( "hmsv", "h.mm.ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h.mm.ss a v" )
                 , ( "Hmsv", "HH.mm.ss v" )
-                , ( "hmv", "h.mm a v" )
+                , ( "hmv", "h.mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h.mm a v" )
                 , ( "Hmv", "HH.mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -7918,10 +8105,10 @@ en_DK =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_DM : Internal.Locale.Locale
@@ -8139,16 +8326,16 @@ en_DM =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -8156,27 +8343,34 @@ en_DM =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -8221,10 +8415,10 @@ en_DM =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_ER : Internal.Locale.Locale
@@ -8442,16 +8636,16 @@ en_ER =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -8459,27 +8653,34 @@ en_ER =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -8753,8 +8954,8 @@ en_FI =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -8762,27 +8963,34 @@ en_FI =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h.mm a" )
+                , ( "Ehm", "E h.mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h.mm a" )
                 , ( "EHm", "E H.mm" )
-                , ( "Ehms", "E h.mm.ss a" )
+                , ( "Ehms", "E h.mm.ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h.mm.ss a" )
                 , ( "EHms", "E H.mm.ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h.mm a" )
+                , ( "hm", "h.mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h.mm a" )
                 , ( "Hm", "H.mm" )
-                , ( "hms", "h.mm.ss a" )
+                , ( "hms", "h.mm.ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h.mm.ss a" )
                 , ( "Hms", "H.mm.ss" )
-                , ( "hmsv", "h.mm.ss a v" )
+                , ( "hmsv", "h.mm.ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h.mm.ss a v" )
                 , ( "Hmsv", "H.mm.ss v" )
-                , ( "hmv", "h.mm a v" )
+                , ( "hmv", "h.mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h.mm a v" )
                 , ( "Hmv", "H.mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -8827,10 +9035,10 @@ en_FI =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_FJ : Internal.Locale.Locale
@@ -9048,16 +9256,16 @@ en_FJ =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -9065,27 +9273,34 @@ en_FJ =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -9359,8 +9574,8 @@ en_FK =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -9368,27 +9583,34 @@ en_FK =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -9433,10 +9655,10 @@ en_FK =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_FM : Internal.Locale.Locale
@@ -9654,16 +9876,16 @@ en_FM =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -9671,27 +9893,34 @@ en_FM =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -9732,7 +9961,7 @@ en_FM =
   - Short : dd/MM/y
   - Medium : d MMM y
   - Long : d MMMM y
-  - Full : EEEE, d MMMM y
+  - Full : EEEE d MMMM y
 
 Time format strings:
 
@@ -9803,7 +10032,7 @@ en_GB =
                 { short = "dd/MM/y"
                 , medium = "d MMM y"
                 , long = "d MMMM y"
-                , full = "EEEE, d MMMM y"
+                , full = "EEEE d MMMM y"
                 }
             , monthFormatNames =
                 { abbreviated =
@@ -9965,8 +10194,8 @@ en_GB =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -9977,24 +10206,32 @@ en_GB =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "dd/MM/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "GyMMMEEEEd", "EEEE d MMM y G" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -10003,7 +10240,9 @@ en_GB =
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
                 , ( "MMMEd", "E, d MMM" )
+                , ( "MMMEEEEd", "EEEE d MMM" )
                 , ( "MMMMd", "d MMMM" )
+                , ( "MMMMEEEEd", "EEEE d MMMM" )
                 , ( "MMMMW-count-one", "'week' W 'of' MMMM" )
                 , ( "MMMMW-count-other", "'week' W 'of' MMMM" )
                 , ( "ms", "mm:ss" )
@@ -10014,7 +10253,9 @@ en_GB =
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
                 , ( "yMMMEd", "E, d MMM y" )
+                , ( "yMMMEEEEd", "EEEE d MMM y" )
                 , ( "yMMMM", "MMMM y" )
+                , ( "yMMMMEEEEd", "EEEE d MMMM y" )
                 , ( "yQQQ", "QQQ y" )
                 , ( "yQQQQ", "QQQQ y" )
                 , ( "yw-count-one", "'week' w 'of' Y" )
@@ -10039,10 +10280,10 @@ en_GB =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_GD : Internal.Locale.Locale
@@ -10260,16 +10501,16 @@ en_GD =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -10277,27 +10518,34 @@ en_GD =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -10571,8 +10819,8 @@ en_GG =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -10580,27 +10828,34 @@ en_GG =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -10645,10 +10900,10 @@ en_GG =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_GH : Internal.Locale.Locale
@@ -10866,16 +11121,16 @@ en_GH =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -10883,27 +11138,34 @@ en_GH =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -11177,8 +11439,8 @@ en_GI =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -11186,27 +11448,34 @@ en_GI =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -11251,10 +11520,10 @@ en_GI =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_GM : Internal.Locale.Locale
@@ -11472,16 +11741,16 @@ en_GM =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -11489,27 +11758,34 @@ en_GM =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -11554,10 +11830,10 @@ en_GM =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_GU : Internal.Locale.Locale
@@ -11775,16 +12051,16 @@ en_GU =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -11795,24 +12071,31 @@ en_GU =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "d E" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "M/d/y GGGGG" )
+                , ( "GyMd", "M/d/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "MMM d, y G" )
                 , ( "GyMMMEd", "E, MMM d, y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "M/d" )
@@ -11856,10 +12139,10 @@ en_GU =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_GY : Internal.Locale.Locale
@@ -12077,16 +12360,16 @@ en_GY =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -12094,27 +12377,34 @@ en_GY =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -12159,10 +12449,10 @@ en_GY =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_HK : Internal.Locale.Locale
@@ -12380,16 +12670,16 @@ en_HK =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -12397,27 +12687,34 @@ en_HK =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -12449,6 +12746,316 @@ en_HK =
                 , medium = "ahmmss"
                 , long = "ahmmssz"
                 , full = "ahmmsszzzz"
+                }
+            }
+        )
+
+
+{-| Date format strings:
+
+  - Short : dd/MM/y
+  - Medium : d MMM y
+  - Long : d MMMM y
+  - Full : EEEE, d MMMM y
+
+Time format strings:
+
+  - Short : HH.mm
+  - Medium : HH.mm.ss
+  - Long : HH.mm.ss z
+  - Full : HH.mm.ss zzzz
+
+-}
+en_ID : Internal.Locale.Locale
+en_ID =
+    Maybe.withDefault
+        Internal.Locale.empty
+        (Internal.Parse.parse
+            dayPeriods
+            { language = "en"
+            , script = Nothing
+            , territory = Just "ID"
+            , variant = Nothing
+            , periodNames =
+                { abbreviated =
+                    { am = "am"
+                    , pm = "pm"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "in the afternoon" )
+                            , ( "am-alt-variant", "am" )
+                            , ( "evening1", "in the evening" )
+                            , ( "midnight", "midnight" )
+                            , ( "morning1", "in the morning" )
+                            , ( "night1", "at night" )
+                            , ( "noon", "noon" )
+                            , ( "pm-alt-variant", "pm" )
+                            ]
+                    }
+                , wide =
+                    { am = "am"
+                    , pm = "pm"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "in the afternoon" )
+                            , ( "am-alt-variant", "am" )
+                            , ( "evening1", "in the evening" )
+                            , ( "midnight", "midnight" )
+                            , ( "morning1", "in the morning" )
+                            , ( "night1", "at night" )
+                            , ( "noon", "noon" )
+                            , ( "pm-alt-variant", "pm" )
+                            ]
+                    }
+                , narrow =
+                    { am = "a"
+                    , pm = "p"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "in the afternoon" )
+                            , ( "am-alt-variant", "am" )
+                            , ( "evening1", "in the evening" )
+                            , ( "midnight", "mi" )
+                            , ( "morning1", "in the morning" )
+                            , ( "night1", "at night" )
+                            , ( "noon", "n" )
+                            , ( "pm-alt-variant", "pm" )
+                            ]
+                    }
+                }
+            , datePatterns =
+                { short = "dd/MM/y"
+                , medium = "d MMM y"
+                , long = "d MMMM y"
+                , full = "EEEE, d MMMM y"
+                }
+            , monthFormatNames =
+                { abbreviated =
+                    { jan = "Jan"
+                    , feb = "Feb"
+                    , mar = "Mar"
+                    , apr = "Apr"
+                    , may = "May"
+                    , jun = "Jun"
+                    , jul = "Jul"
+                    , aug = "Aug"
+                    , sep = "Sept"
+                    , oct = "Oct"
+                    , nov = "Nov"
+                    , dec = "Dec"
+                    }
+                , wide =
+                    { jan = "January"
+                    , feb = "February"
+                    , mar = "March"
+                    , apr = "April"
+                    , may = "May"
+                    , jun = "June"
+                    , jul = "July"
+                    , aug = "August"
+                    , sep = "September"
+                    , oct = "October"
+                    , nov = "November"
+                    , dec = "December"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
+                }
+            , monthStandaloneNames =
+                { abbreviated =
+                    { jan = "Jan"
+                    , feb = "Feb"
+                    , mar = "Mar"
+                    , apr = "Apr"
+                    , may = "May"
+                    , jun = "Jun"
+                    , jul = "Jul"
+                    , aug = "Aug"
+                    , sep = "Sept"
+                    , oct = "Oct"
+                    , nov = "Nov"
+                    , dec = "Dec"
+                    }
+                , wide =
+                    { jan = "January"
+                    , feb = "February"
+                    , mar = "March"
+                    , apr = "April"
+                    , may = "May"
+                    , jun = "June"
+                    , jul = "July"
+                    , aug = "August"
+                    , sep = "September"
+                    , oct = "October"
+                    , nov = "November"
+                    , dec = "December"
+                    }
+                , narrow =
+                    { jan = "J"
+                    , feb = "F"
+                    , mar = "M"
+                    , apr = "A"
+                    , may = "M"
+                    , jun = "J"
+                    , jul = "J"
+                    , aug = "A"
+                    , sep = "S"
+                    , oct = "O"
+                    , nov = "N"
+                    , dec = "D"
+                    }
+                }
+            , weekdayFormatNames =
+                { abbreviated =
+                    { sun = "Sun"
+                    , mon = "Mon"
+                    , tue = "Tue"
+                    , wed = "Wed"
+                    , thu = "Thu"
+                    , fri = "Fri"
+                    , sat = "Sat"
+                    }
+                , wide =
+                    { sun = "Sunday"
+                    , mon = "Monday"
+                    , tue = "Tuesday"
+                    , wed = "Wednesday"
+                    , thu = "Thursday"
+                    , fri = "Friday"
+                    , sat = "Saturday"
+                    }
+                , narrow =
+                    { sun = "S"
+                    , mon = "M"
+                    , tue = "T"
+                    , wed = "W"
+                    , thu = "T"
+                    , fri = "F"
+                    , sat = "S"
+                    }
+                }
+            , weekdayStandaloneNames =
+                { abbreviated =
+                    { sun = "Sun"
+                    , mon = "Mon"
+                    , tue = "Tue"
+                    , wed = "Wed"
+                    , thu = "Thu"
+                    , fri = "Fri"
+                    , sat = "Sat"
+                    }
+                , wide =
+                    { sun = "Sunday"
+                    , mon = "Monday"
+                    , tue = "Tuesday"
+                    , wed = "Wednesday"
+                    , thu = "Thursday"
+                    , fri = "Friday"
+                    , sat = "Saturday"
+                    }
+                , narrow =
+                    { sun = "S"
+                    , mon = "M"
+                    , tue = "T"
+                    , wed = "W"
+                    , thu = "T"
+                    , fri = "F"
+                    , sat = "S"
+                    }
+                }
+            , eraNames =
+                { abbreviated = { bc = "BC", ad = "AD" }
+                , wide = { bc = "Before Christ", ad = "Anno Domini" }
+                , narrow = { bc = "B", ad = "A" }
+                }
+            , timePatterns =
+                { short = "HH.mm"
+                , medium = "HH.mm.ss"
+                , long = "HH.mm.ss z"
+                , full = "HH.mm.ss zzzz"
+                }
+            , dateTimePatterns =
+                { short = "{1}, {0}"
+                , medium = "{1}, {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
+                }
+            , availableFormats =
+                [ ( "Bh", "h B" )
+                , ( "Bhm", "h.mm B" )
+                , ( "Bhms", "h.mm.ss B" )
+                , ( "d", "d" )
+                , ( "E", "ccc" )
+                , ( "EBhm", "E h.mm B" )
+                , ( "EBhms", "E h.mm.ss B" )
+                , ( "Ed", "E d" )
+                , ( "Ehm", "E h.mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
+                , ( "EHm", "E HH.mm" )
+                , ( "Ehms", "E h.mm.ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
+                , ( "EHms", "E HH.mm.ss" )
+                , ( "Gy", "y G" )
+                , ( "GyMd", "d/M/y G" )
+                , ( "GyMMM", "MMM y G" )
+                , ( "GyMMMd", "d MMM y G" )
+                , ( "GyMMMEd", "E, d MMM y G" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
+                , ( "H", "HH" )
+                , ( "hm", "h.mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
+                , ( "Hm", "HH.mm" )
+                , ( "hms", "h.mm.ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
+                , ( "Hms", "HH.mm.ss" )
+                , ( "hmsv", "h.mm.ss. a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
+                , ( "Hmsv", "HH.mm.ss v" )
+                , ( "hmv", "h.mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
+                , ( "Hmv", "HH.mm v" )
+                , ( "M", "L" )
+                , ( "Md", "dd/MM" )
+                , ( "MEd", "E, dd/MM" )
+                , ( "MMdd", "dd/MM" )
+                , ( "MMM", "LLL" )
+                , ( "MMMd", "d MMM" )
+                , ( "MMMEd", "E, d MMM" )
+                , ( "MMMMd", "d MMMM" )
+                , ( "MMMMW-count-one", "'week' W 'of' MMMM" )
+                , ( "MMMMW-count-other", "'week' W 'of' MMMM" )
+                , ( "ms", "mm.ss" )
+                , ( "y", "y" )
+                , ( "yM", "MM/y" )
+                , ( "yMd", "dd/MM/y" )
+                , ( "yMEd", "E, dd/MM/y" )
+                , ( "yMMM", "MMM y" )
+                , ( "yMMMd", "d MMM y" )
+                , ( "yMMMEd", "E, d MMM y" )
+                , ( "yMMMM", "MMMM y" )
+                , ( "yQQQ", "QQQ y" )
+                , ( "yQQQQ", "QQQQ y" )
+                , ( "yw-count-one", "'week' w 'of' Y" )
+                , ( "yw-count-other", "'week' w 'of' Y" )
+                ]
+            , timeSkeletons =
+                { short = "HHmm"
+                , medium = "HHmmss"
+                , long = "HHmmssz"
+                , full = "HHmmsszzzz"
                 }
             }
         )
@@ -12692,8 +13299,8 @@ en_IE =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -12701,27 +13308,34 @@ en_IE =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -12995,8 +13609,8 @@ en_IL =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -13004,27 +13618,34 @@ en_IL =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E H:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E H:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "H" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "H:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "H:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -13298,8 +13919,8 @@ en_IM =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -13307,27 +13928,34 @@ en_IM =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -13366,16 +13994,16 @@ en_IM =
 {-| Date format strings:
 
   - Short : dd/MM/yy
-  - Medium : dd-MMM-y
+  - Medium : d MMM y
   - Long : d MMMM y
-  - Full : EEEE, d MMMM, y
+  - Full : EEEE d MMMM, y
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_IN : Internal.Locale.Locale
@@ -13437,9 +14065,9 @@ en_IN =
                 }
             , datePatterns =
                 { short = "dd/MM/yy"
-                , medium = "dd-MMM-y"
+                , medium = "d MMM y"
                 , long = "d MMMM y"
-                , full = "EEEE, d MMMM, y"
+                , full = "EEEE d MMMM, y"
                 }
             , monthFormatNames =
                 { abbreviated =
@@ -13593,16 +14221,16 @@ en_IN =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -13613,24 +14241,32 @@ en_IN =
                 , ( "EBhm", "E, h:mm B" )
                 , ( "EBhms", "E, h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E, h:mm a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E, h:mm:ss a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "GyMMMEEEEd", "EEEE d MMM, y G" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -13639,7 +14275,9 @@ en_IN =
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
                 , ( "MMMEd", "E, d MMM" )
+                , ( "MMMEEEEd", "EEEE d MMM" )
                 , ( "MMMMd", "d MMMM" )
+                , ( "MMMMEEEEd", "EEEE d MMMM" )
                 , ( "MMMMW-count-one", "'week' W 'of' MMMM" )
                 , ( "MMMMW-count-other", "'week' W 'of' MMMM" )
                 , ( "ms", "mm:ss" )
@@ -13650,7 +14288,9 @@ en_IN =
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
                 , ( "yMMMEd", "E, d MMM, y" )
+                , ( "yMMMEEEEd", "EEEE d MMM, y" )
                 , ( "yMMMM", "MMMM y" )
+                , ( "yMMMMEEEEd", "EEEE d MMMM, y" )
                 , ( "yQQQ", "QQQ y" )
                 , ( "yQQQQ", "QQQQ y" )
                 , ( "yw-count-one", "'week' w 'of' Y" )
@@ -13904,8 +14544,8 @@ en_IO =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -13913,27 +14553,34 @@ en_IO =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -14207,8 +14854,8 @@ en_JE =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -14216,27 +14863,34 @@ en_JE =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -14281,10 +14935,10 @@ en_JE =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_JM : Internal.Locale.Locale
@@ -14502,16 +15156,16 @@ en_JM =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -14519,27 +15173,34 @@ en_JM =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -14813,8 +15474,8 @@ en_KE =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -14822,27 +15483,34 @@ en_KE =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -14887,10 +15555,10 @@ en_KE =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_KI : Internal.Locale.Locale
@@ -15108,16 +15776,16 @@ en_KI =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -15125,27 +15793,34 @@ en_KI =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -15190,10 +15865,10 @@ en_KI =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_KN : Internal.Locale.Locale
@@ -15411,16 +16086,16 @@ en_KN =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -15428,27 +16103,34 @@ en_KN =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -15493,10 +16175,10 @@ en_KN =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_KY : Internal.Locale.Locale
@@ -15714,16 +16396,16 @@ en_KY =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -15731,27 +16413,34 @@ en_KY =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -15796,10 +16485,10 @@ en_KY =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_LC : Internal.Locale.Locale
@@ -16017,16 +16706,16 @@ en_LC =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -16034,27 +16723,34 @@ en_LC =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -16099,10 +16795,10 @@ en_LC =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_LR : Internal.Locale.Locale
@@ -16320,16 +17016,16 @@ en_LR =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -16337,27 +17033,34 @@ en_LR =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -16402,10 +17105,10 @@ en_LR =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_LS : Internal.Locale.Locale
@@ -16623,16 +17326,16 @@ en_LS =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -16640,27 +17343,34 @@ en_LS =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -16934,8 +17644,8 @@ en_MG =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -16943,27 +17653,34 @@ en_MG =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -17008,10 +17725,10 @@ en_MG =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_MH : Internal.Locale.Locale
@@ -17229,16 +17946,16 @@ en_MH =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -17249,24 +17966,31 @@ en_MH =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "d E" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "M/d/y GGGGG" )
+                , ( "GyMd", "M/d/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "MMM d, y G" )
                 , ( "GyMMMEd", "E, MMM d, y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "M/d" )
@@ -17310,10 +18034,10 @@ en_MH =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_MO : Internal.Locale.Locale
@@ -17531,16 +18255,16 @@ en_MO =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -17548,27 +18272,34 @@ en_MO =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -17613,10 +18344,10 @@ en_MO =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_MP : Internal.Locale.Locale
@@ -17834,16 +18565,16 @@ en_MP =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -17854,24 +18585,31 @@ en_MP =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "d E" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "M/d/y GGGGG" )
+                , ( "GyMd", "M/d/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "MMM d, y G" )
                 , ( "GyMMMEd", "E, MMM d, y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "M/d" )
@@ -18144,8 +18882,8 @@ en_MS =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -18153,27 +18891,34 @@ en_MS =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -18447,8 +19192,8 @@ en_MT =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -18456,27 +19201,34 @@ en_MT =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -18750,8 +19502,8 @@ en_MU =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -18759,27 +19511,34 @@ en_MU =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -19062,27 +19821,34 @@ en_MV =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -19127,10 +19893,10 @@ en_MV =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_MW : Internal.Locale.Locale
@@ -19348,16 +20114,16 @@ en_MW =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -19365,27 +20131,34 @@ en_MW =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -19430,10 +20203,10 @@ en_MW =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_MY : Internal.Locale.Locale
@@ -19651,16 +20424,16 @@ en_MY =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -19668,27 +20441,34 @@ en_MY =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -19733,10 +20513,10 @@ en_MY =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_NA : Internal.Locale.Locale
@@ -19954,16 +20734,16 @@ en_NA =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -19971,27 +20751,34 @@ en_NA =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -20265,8 +21052,8 @@ en_NF =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -20274,27 +21061,34 @@ en_NF =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -20568,8 +21362,8 @@ en_NG =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -20577,27 +21371,34 @@ en_NG =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -20871,8 +21672,8 @@ en_NL =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -20880,27 +21681,34 @@ en_NL =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -21174,8 +21982,8 @@ en_NR =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -21183,27 +21991,34 @@ en_NR =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -21477,8 +22292,8 @@ en_NU =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -21486,27 +22301,34 @@ en_NU =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -21544,17 +22366,17 @@ en_NU =
 
 {-| Date format strings:
 
-  - Short : d/MM/yy
-  - Medium : d/MM/y
+  - Short : dd/MM/y
+  - Medium : d MMM y
   - Long : d MMMM y
   - Full : EEEE, d MMMM y
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_NZ : Internal.Locale.Locale
@@ -21615,8 +22437,8 @@ en_NZ =
                     }
                 }
             , datePatterns =
-                { short = "d/MM/yy"
-                , medium = "d/MM/y"
+                { short = "dd/MM/y"
+                , medium = "d MMM y"
                 , long = "d MMMM y"
                 , full = "EEEE, d MMMM y"
                 }
@@ -21772,16 +22594,16 @@ en_NZ =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -21789,27 +22611,34 @@ en_NZ =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -21854,10 +22683,10 @@ en_NZ =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_PG : Internal.Locale.Locale
@@ -22075,16 +22904,16 @@ en_PG =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -22092,27 +22921,34 @@ en_PG =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -22157,10 +22993,10 @@ en_PG =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_PH : Internal.Locale.Locale
@@ -22378,16 +23214,16 @@ en_PH =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -22398,24 +23234,31 @@ en_PH =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "d E" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "M/d/y GGGGG" )
+                , ( "GyMd", "M/d/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "MMM d, y G" )
                 , ( "GyMMMEd", "E, MMM d, y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "M/d" )
@@ -22459,10 +23302,10 @@ en_PH =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_PK : Internal.Locale.Locale
@@ -22680,16 +23523,16 @@ en_PK =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -22697,27 +23540,34 @@ en_PK =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -22991,8 +23841,8 @@ en_PN =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -23000,27 +23850,34 @@ en_PN =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -23065,10 +23922,10 @@ en_PN =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_PR : Internal.Locale.Locale
@@ -23286,16 +24143,16 @@ en_PR =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -23306,24 +24163,31 @@ en_PR =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "d E" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "M/d/y GGGGG" )
+                , ( "GyMd", "M/d/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "MMM d, y G" )
                 , ( "GyMMMEd", "E, MMM d, y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "M/d" )
@@ -23367,10 +24231,10 @@ en_PR =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_PW : Internal.Locale.Locale
@@ -23588,16 +24452,16 @@ en_PW =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -23605,27 +24469,34 @@ en_PW =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -23899,8 +24770,8 @@ en_RW =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -23908,27 +24779,34 @@ en_RW =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -23973,10 +24851,10 @@ en_RW =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_SB : Internal.Locale.Locale
@@ -24194,16 +25072,16 @@ en_SB =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -24211,27 +25089,34 @@ en_SB =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -24505,8 +25390,8 @@ en_SC =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -24514,27 +25399,34 @@ en_SC =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -24579,10 +25471,10 @@ en_SC =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_SD : Internal.Locale.Locale
@@ -24800,16 +25692,16 @@ en_SD =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -24817,27 +25709,34 @@ en_SD =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -25111,8 +26010,8 @@ en_SE =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -25120,27 +26019,34 @@ en_SE =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -25185,10 +26091,10 @@ en_SE =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_SG : Internal.Locale.Locale
@@ -25406,16 +26312,16 @@ en_SG =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -25423,27 +26329,34 @@ en_SG =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -25717,8 +26630,8 @@ en_SH =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -25726,27 +26639,34 @@ en_SH =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -26020,8 +26940,8 @@ en_SI =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -26029,27 +26949,34 @@ en_SI =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -26094,10 +27021,10 @@ en_SI =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_SL : Internal.Locale.Locale
@@ -26315,16 +27242,16 @@ en_SL =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -26332,27 +27259,34 @@ en_SL =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -26397,10 +27331,10 @@ en_SL =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_SS : Internal.Locale.Locale
@@ -26618,16 +27552,16 @@ en_SS =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -26635,27 +27569,34 @@ en_SS =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -26929,8 +27870,8 @@ en_SX =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -26938,27 +27879,34 @@ en_SX =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -27003,10 +27951,10 @@ en_SX =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_SZ : Internal.Locale.Locale
@@ -27224,16 +28172,16 @@ en_SZ =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -27241,27 +28189,34 @@ en_SZ =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -27306,10 +28261,10 @@ en_SZ =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_TC : Internal.Locale.Locale
@@ -27527,16 +28482,16 @@ en_TC =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -27544,27 +28499,34 @@ en_TC =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -27838,8 +28800,8 @@ en_TK =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -27847,27 +28809,34 @@ en_TK =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -27912,10 +28881,10 @@ en_TK =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_TO : Internal.Locale.Locale
@@ -28133,16 +29102,16 @@ en_TO =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -28150,27 +29119,34 @@ en_TO =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -28215,10 +29191,10 @@ en_TO =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_TT : Internal.Locale.Locale
@@ -28436,16 +29412,16 @@ en_TT =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -28453,27 +29429,34 @@ en_TT =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -28747,8 +29730,8 @@ en_TV =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -28756,27 +29739,34 @@ en_TV =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -29050,8 +30040,8 @@ en_TZ =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -29059,27 +30049,34 @@ en_TZ =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -29353,8 +30350,8 @@ en_UG =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -29362,27 +30359,34 @@ en_UG =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -29427,10 +30431,10 @@ en_UG =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_UM : Internal.Locale.Locale
@@ -29648,16 +30652,16 @@ en_UM =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -29668,24 +30672,31 @@ en_UM =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "d E" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "M/d/y GGGGG" )
+                , ( "GyMd", "M/d/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "MMM d, y G" )
                 , ( "GyMMMEd", "E, MMM d, y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "M/d" )
@@ -29729,10 +30740,10 @@ en_UM =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_VC : Internal.Locale.Locale
@@ -29950,16 +30961,16 @@ en_VC =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -29967,27 +30978,34 @@ en_VC =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -30032,10 +31050,10 @@ en_VC =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_VG : Internal.Locale.Locale
@@ -30253,16 +31271,16 @@ en_VG =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -30270,27 +31288,34 @@ en_VG =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -30335,10 +31360,10 @@ en_VG =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_VI : Internal.Locale.Locale
@@ -30556,16 +31581,16 @@ en_VI =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -30576,24 +31601,31 @@ en_VI =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "d E" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "M/d/y GGGGG" )
+                , ( "GyMd", "M/d/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "MMM d, y G" )
                 , ( "GyMMMEd", "E, MMM d, y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "M/d" )
@@ -30637,10 +31669,10 @@ en_VI =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_VU : Internal.Locale.Locale
@@ -30858,16 +31890,16 @@ en_VU =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -30875,27 +31907,34 @@ en_VU =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -30940,10 +31979,10 @@ en_VU =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_WS : Internal.Locale.Locale
@@ -31161,16 +32200,16 @@ en_WS =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -31178,27 +32217,34 @@ en_WS =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -31472,8 +32518,8 @@ en_ZA =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -31481,27 +32527,34 @@ en_ZA =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "MM/dd" )
@@ -31546,10 +32599,10 @@ en_ZA =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_ZM : Internal.Locale.Locale
@@ -31767,16 +32820,16 @@ en_ZM =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -31784,27 +32837,34 @@ en_ZM =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -32078,8 +33138,8 @@ en_ZW =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'at' {0}"
-                , full = "{1} 'at' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -32087,27 +33147,34 @@ en_ZW =
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E, h:mm B" )
-                , ( "EBhms", "E, h:mm:ss B" )
+                , ( "EBhm", "E h:mm B" )
+                , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E h:mm a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
@@ -32146,16 +33213,16 @@ en_ZW =
 {-| Date format strings:
 
   - Short : dd/MM/y
-  - Medium : dd-MMM-y
-  - Long : d MMMM y
-  - Full : EEEE, d MMMM, y
+  - Medium : dd MMM, y
+  - Long : d MMMM, y
+  - Full : EEEE d MMMM, y
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_Latn : Internal.Locale.Locale
@@ -32174,12 +33241,12 @@ en_Latn =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "in the afternoon" )
+                            [ ( "afternoon1", "dopahar" )
                             , ( "am-alt-variant", "am" )
-                            , ( "evening1", "in the evening" )
+                            , ( "evening1", "shaam" )
                             , ( "midnight", "midnight" )
-                            , ( "morning1", "in the morning" )
-                            , ( "night1", "at night" )
+                            , ( "morning1", "subah" )
+                            , ( "night1", "raat" )
                             , ( "noon", "noon" )
                             , ( "pm-alt-variant", "pm" )
                             ]
@@ -32195,7 +33262,7 @@ en_Latn =
                             , ( "midnight", "aadhi raat" )
                             , ( "morning1", "subah" )
                             , ( "night1", "raat" )
-                            , ( "noon", "noon" )
+                            , ( "noon", "Madhyanh" )
                             , ( "pm-alt-variant", "pm" )
                             ]
                     }
@@ -32204,12 +33271,12 @@ en_Latn =
                     , pm = "p"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "in the afternoon" )
+                            [ ( "afternoon1", "dopahar" )
                             , ( "am-alt-variant", "am" )
-                            , ( "evening1", "in the evening" )
+                            , ( "evening1", "shaam" )
                             , ( "midnight", "mi" )
-                            , ( "morning1", "in the morning" )
-                            , ( "night1", "at night" )
+                            , ( "morning1", "subah" )
+                            , ( "night1", "raat" )
                             , ( "noon", "n" )
                             , ( "pm-alt-variant", "pm" )
                             ]
@@ -32217,9 +33284,9 @@ en_Latn =
                 }
             , datePatterns =
                 { short = "dd/MM/y"
-                , medium = "dd-MMM-y"
-                , long = "d MMMM y"
-                , full = "EEEE, d MMMM, y"
+                , medium = "dd MMM, y"
+                , long = "d MMMM, y"
+                , full = "EEEE d MMMM, y"
                 }
             , monthFormatNames =
                 { abbreviated =
@@ -32311,60 +33378,60 @@ en_Latn =
                 }
             , weekdayFormatNames =
                 { abbreviated =
-                    { sun = "ravi"
-                    , mon = "som"
-                    , tue = "mangal"
-                    , wed = "budh"
-                    , thu = "guru"
-                    , fri = "shukra"
-                    , sat = "shani"
+                    { sun = "Ravi"
+                    , mon = "Som"
+                    , tue = "Mangal"
+                    , wed = "Budh"
+                    , thu = "Guru"
+                    , fri = "Shukra"
+                    , sat = "Shani"
                     }
                 , wide =
-                    { sun = "ravivaar"
-                    , mon = "somvaar"
-                    , tue = "mangalvaar"
-                    , wed = "budhvaar"
-                    , thu = "guruvaar"
-                    , fri = "shukravaar"
-                    , sat = "shanivaar"
+                    { sun = "Raviwaar"
+                    , mon = "Somwaar"
+                    , tue = "Mangalwaar"
+                    , wed = "Budhwaar"
+                    , thu = "Guruwaar"
+                    , fri = "Shukrawaar"
+                    , sat = "Shaniwaar"
                     }
                 , narrow =
-                    { sun = "ra"
-                    , mon = "so"
-                    , tue = "ma"
-                    , wed = "bu"
-                    , thu = "gu"
-                    , fri = "su"
-                    , sat = "sa"
+                    { sun = "Ra"
+                    , mon = "So"
+                    , tue = "Ma"
+                    , wed = "Bu"
+                    , thu = "Gu"
+                    , fri = "Sh"
+                    , sat = "Sha"
                     }
                 }
             , weekdayStandaloneNames =
                 { abbreviated =
-                    { sun = "ravi"
-                    , mon = "som"
-                    , tue = "mangal"
-                    , wed = "budh"
-                    , thu = "guru"
-                    , fri = "shukra"
-                    , sat = "shani"
+                    { sun = "Ravi"
+                    , mon = "Som"
+                    , tue = "Mangal"
+                    , wed = "Budh"
+                    , thu = "Guru"
+                    , fri = "Shukra"
+                    , sat = "Shani"
                     }
                 , wide =
-                    { sun = "ravivaar"
-                    , mon = "somvaar"
-                    , tue = "mangalvaar"
-                    , wed = "budhvaar"
-                    , thu = "guruvaar"
-                    , fri = "shukravaar"
-                    , sat = "shanivaar"
+                    { sun = "Raviwaar"
+                    , mon = "Somwaar"
+                    , tue = "Mangalwaar"
+                    , wed = "Budhwaar"
+                    , thu = "Guruwaar"
+                    , fri = "Shukrawaar"
+                    , sat = "Shaniwaar"
                     }
                 , narrow =
-                    { sun = "ra"
-                    , mon = "so"
-                    , tue = "ma"
-                    , wed = "bu"
-                    , thu = "gu"
-                    , fri = "su"
-                    , sat = "sa"
+                    { sun = "Ra"
+                    , mon = "So"
+                    , tue = "Ma"
+                    , wed = "Bu"
+                    , thu = "Gu"
+                    , fri = "Sh"
+                    , sat = "Sha"
                     }
                 }
             , eraNames =
@@ -32373,10 +33440,10 @@ en_Latn =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1} {0}"
@@ -32393,24 +33460,32 @@ en_Latn =
                 , ( "EBhm", "E, h:mm B" )
                 , ( "EBhms", "E, h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
+                , ( "Ehm-alt-ascii", "E, h:mm a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
+                , ( "Ehms-alt-ascii", "E, h:mm:ss a" )
                 , ( "EHms", "E, HH:mm:ss" )
-                , ( "Gy", "y G" )
-                , ( "GyMd", "d/M/y GGGGG" )
-                , ( "GyMMM", "MMM y G" )
-                , ( "GyMMMd", "d MMM y G" )
-                , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "Gy", "G y" )
+                , ( "GyMd", "d/M/y G" )
+                , ( "GyMMM", "G y MMM" )
+                , ( "GyMMMd", "G y, d MMM" )
+                , ( "GyMMMEd", "G y, dd MMM, E" )
+                , ( "GyMMMEEEEd", "EEEE d MMM, y G" )
+                , ( "h", "h\u{202F}a" )
+                , ( "h-alt-ascii", "h a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
+                , ( "hm-alt-ascii", "h:mm a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
+                , ( "hms-alt-ascii", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
+                , ( "hmsv-alt-ascii", "h:mm:ss a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
+                , ( "hmv-alt-ascii", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -32419,22 +33494,26 @@ en_Latn =
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
                 , ( "MMMEd", "E, d MMM" )
+                , ( "MMMEEEEd", "EEEE d MMM" )
                 , ( "MMMMd", "d MMMM" )
-                , ( "MMMMW-count-one", "'week' W 'of' MMMM" )
-                , ( "MMMMW-count-other", "'week' W 'of' MMMM" )
+                , ( "MMMMEEEEd", "EEEE d MMMM" )
+                , ( "MMMMW-count-one", "MMMM 'kaa' 'week' W" )
+                , ( "MMMMW-count-other", "MMMM 'kaa' 'week' W" )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y" )
                 , ( "yM", "MM/y" )
                 , ( "yMd", "d/M/y" )
                 , ( "yMEd", "E, d/M/y" )
                 , ( "yMMM", "MMM y" )
-                , ( "yMMMd", "d MMM y" )
+                , ( "yMMMd", "d MMM, y" )
                 , ( "yMMMEd", "E, d MMM, y" )
+                , ( "yMMMEEEEd", "EEEE d MMM, y" )
                 , ( "yMMMM", "MMMM y" )
+                , ( "yMMMMEEEEd", "EEEE d MMMM, y" )
                 , ( "yQQQ", "QQQ y" )
                 , ( "yQQQQ", "QQQQ y" )
-                , ( "yw-count-one", "'week' w 'of' Y" )
-                , ( "yw-count-other", "'week' w 'of' Y" )
+                , ( "yw-count-one", "Y 'kaa' 'week' w" )
+                , ( "yw-count-other", "Y 'kaa' 'week' w" )
                 ]
             , timeSkeletons =
                 { short = "ahmm"

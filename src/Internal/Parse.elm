@@ -241,6 +241,7 @@ dateTimeTokenParser =
 isSupportedKey : String -> Bool
 isSupportedKey key =
     not (Set.member key unsupportedKeys)
+        && not (String.endsWith "-alt-ascii" key)
 
 
 unsupportedKeys : Set String

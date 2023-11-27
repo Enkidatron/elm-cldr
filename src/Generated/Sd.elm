@@ -24,7 +24,7 @@ dayPeriods =
   - Short : y-MM-dd
   - Medium : y MMM d
   - Long : y MMMM d
-  - Full : y MMMM d, EEEE
+  - Full : EEEE, MMMM d, y
 
 Time format strings:
 
@@ -46,8 +46,8 @@ sd =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "صبح، منجهند"
-                    , pm = "شام، منجهند"
+                    { am = "صبح،\u{202F}منجهند"
+                    , pm = "شام،\u{202F}منجهند"
                     , dayPeriods = Dict.fromList []
                     }
                 , wide =
@@ -56,8 +56,8 @@ sd =
                     , dayPeriods = Dict.fromList []
                     }
                 , narrow =
-                    { am = "صبح، منجهند"
-                    , pm = "منجهند، شام"
+                    { am = "صبح،\u{202F}منجهند"
+                    , pm = "منجهند،\u{202F}شام"
                     , dayPeriods = Dict.fromList []
                     }
                 }
@@ -65,7 +65,7 @@ sd =
                 { short = "y-MM-dd"
                 , medium = "y MMM d"
                 , long = "y MMMM d"
-                , full = "y MMMM d, EEEE"
+                , full = "EEEE, MMMM d, y"
                 }
             , monthFormatNames =
                 { abbreviated =
@@ -296,7 +296,7 @@ sd =
   - Short : y-MM-dd
   - Medium : y MMM d
   - Long : y MMMM d
-  - Full : y MMMM d, EEEE
+  - Full : EEEE, MMMM d, y
 
 Time format strings:
 
@@ -318,8 +318,8 @@ sd_Arab =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "صبح، منجهند"
-                    , pm = "شام، منجهند"
+                    { am = "صبح،\u{202F}منجهند"
+                    , pm = "شام،\u{202F}منجهند"
                     , dayPeriods = Dict.fromList []
                     }
                 , wide =
@@ -328,8 +328,8 @@ sd_Arab =
                     , dayPeriods = Dict.fromList []
                     }
                 , narrow =
-                    { am = "صبح، منجهند"
-                    , pm = "منجهند، شام"
+                    { am = "صبح،\u{202F}منجهند"
+                    , pm = "منجهند،\u{202F}شام"
                     , dayPeriods = Dict.fromList []
                     }
                 }
@@ -337,7 +337,7 @@ sd_Arab =
                 { short = "y-MM-dd"
                 , medium = "y MMM d"
                 , long = "y MMMM d"
-                , full = "y MMMM d, EEEE"
+                , full = "EEEE, MMMM d, y"
                 }
             , monthFormatNames =
                 { abbreviated =

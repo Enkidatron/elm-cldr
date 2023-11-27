@@ -267,9 +267,9 @@ fi =
                 }
             , dateTimePatterns =
                 { short = "{1} {0}"
-                , medium = "{1} 'klo' {0}"
-                , long = "{1} 'klo' {0}"
-                , full = "{1} 'klo' {0}"
+                , medium = "{1} {0}"
+                , long = "{1} {0}"
+                , full = "{1} {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -280,9 +280,9 @@ fi =
                 , ( "EBhm", "E h.mm B" )
                 , ( "EBhms", "E h.mm.ss B" )
                 , ( "Ed", "E d." )
-                , ( "Ehm", "E h.mm a" )
+                , ( "Ehm", "E h.mm\u{202F}a" )
                 , ( "EHm", "E H.mm" )
-                , ( "Ehms", "E h.mm.ss a" )
+                , ( "Ehms", "E h.mm.ss\u{202F}a" )
                 , ( "EHms", "E H.mm.ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "M.d.y G" )
@@ -291,15 +291,15 @@ fi =
                 , ( "GyMMMEd", "E d. MMM y G" )
                 , ( "GyMMMMd", "d. MMMM y G" )
                 , ( "GyMMMMEd", "E d. MMMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "H" )
-                , ( "hm", "h.mm a" )
+                , ( "hm", "h.mm\u{202F}a" )
                 , ( "Hm", "H.mm" )
-                , ( "hms", "h.mm.ss a" )
+                , ( "hms", "h.mm.ss\u{202F}a" )
                 , ( "Hms", "H.mm.ss" )
-                , ( "hmsv", "h.mm.ss a v" )
+                , ( "hmsv", "h.mm.ss\u{202F}a v" )
                 , ( "Hmsv", "H.mm.ss v" )
-                , ( "hmv", "h.mm a v" )
+                , ( "hmv", "h.mm\u{202F}a v" )
                 , ( "Hmv", "H.mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d.M." )

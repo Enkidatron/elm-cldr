@@ -12,8 +12,8 @@ import Time
 
 spec0 : Test.Test
 spec0 =
-    Test.test "#format: \n\n    format short en Time.utc (Time.millisToPosix 959829796738)\n    --> \"6/1/00, 3:23 AM\"" <|
+    Test.test "#format: \n\n    format short en Time.utc (Time.millisToPosix 959829796738)\n    --> \"6/1/00, 3:23\u{202F}AM\"" <|
         \() ->
             Expect.equal
                 (format short en Time.utc (Time.millisToPosix 959829796738))
-                "6/1/00, 3:23 AM"
+                "6/1/00, 3:23\u{202F}AM"

@@ -265,8 +265,8 @@ he =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} בשעה {0}"
-                , full = "{1} בשעה {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -305,7 +305,6 @@ he =
                 , ( "MMMMd", "d בMMMM" )
                 , ( "MMMMW-count-one", "שבוע W בMMMM" )
                 , ( "MMMMW-count-two", "שבוע W בMMMM" )
-                , ( "MMMMW-count-many", "שבוע W בMMMM" )
                 , ( "MMMMW-count-other", "שבוע W בMMMM" )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y" )
@@ -321,7 +320,6 @@ he =
                 , ( "yQQQQ", "QQQQ y" )
                 , ( "yw-count-one", "שבוע w בשנת Y" )
                 , ( "yw-count-two", "שבוע w בשנת Y" )
-                , ( "yw-count-many", "שבוע w בשנת Y" )
                 , ( "yw-count-other", "שבוע w בשנת Y" )
                 ]
             , timeSkeletons =

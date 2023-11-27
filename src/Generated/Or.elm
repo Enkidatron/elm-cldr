@@ -217,8 +217,8 @@ or =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{0} ଠାରେ {1}"
-                , full = "{0} ଠାରେ {1}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )

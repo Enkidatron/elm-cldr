@@ -59,7 +59,7 @@ ta =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "முற்பகல்"
+                    { am = "AM"
                     , pm = "பிற்பகல்"
                     , dayPeriods =
                         Dict.fromList
@@ -75,7 +75,7 @@ ta =
                             ]
                     }
                 , wide =
-                    { am = "முற்பகல்"
+                    { am = "AM"
                     , pm = "பிற்பகல்"
                     , dayPeriods =
                         Dict.fromList
@@ -273,8 +273,8 @@ ta =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} அன்று {0}"
-                , full = "{1} அன்று {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "B h" )
@@ -290,7 +290,7 @@ ta =
                 , ( "Ehms", "E a h:mm:ss" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "G y" )
-                , ( "GyMd", "GGGGG y-MM-dd" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "G y MMM" )
                 , ( "GyMMMd", "G y MMM d" )
                 , ( "GyMMMEd", "G y MMM d, E" )
@@ -366,7 +366,7 @@ ta_LK =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "முற்பகல்"
+                    { am = "AM"
                     , pm = "பிற்பகல்"
                     , dayPeriods =
                         Dict.fromList
@@ -382,7 +382,7 @@ ta_LK =
                             ]
                     }
                 , wide =
-                    { am = "முற்பகல்"
+                    { am = "AM"
                     , pm = "பிற்பகல்"
                     , dayPeriods =
                         Dict.fromList
@@ -580,8 +580,8 @@ ta_LK =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} அன்று {0}"
-                , full = "{1} அன்று {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "B h" )
@@ -597,7 +597,7 @@ ta_LK =
                 , ( "Ehms", "E a h:mm:ss" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "G y" )
-                , ( "GyMd", "GGGGG y-MM-dd" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "G y MMM" )
                 , ( "GyMMMd", "G y MMM d" )
                 , ( "GyMMMEd", "G y MMM d, E" )
@@ -673,7 +673,7 @@ ta_MY =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "முற்பகல்"
+                    { am = "AM"
                     , pm = "பிற்பகல்"
                     , dayPeriods =
                         Dict.fromList
@@ -689,7 +689,7 @@ ta_MY =
                             ]
                     }
                 , wide =
-                    { am = "முற்பகல்"
+                    { am = "AM"
                     , pm = "பிற்பகல்"
                     , dayPeriods =
                         Dict.fromList
@@ -887,8 +887,8 @@ ta_MY =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} அன்று {0}"
-                , full = "{1} அன்று {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "B h" )
@@ -904,7 +904,7 @@ ta_MY =
                 , ( "Ehms", "E a h:mm:ss" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "G y" )
-                , ( "GyMd", "GGGGG y-MM-dd" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "G y MMM" )
                 , ( "GyMMMd", "G y MMM d" )
                 , ( "GyMMMEd", "G y MMM d, E" )
@@ -980,7 +980,7 @@ ta_SG =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "முற்பகல்"
+                    { am = "AM"
                     , pm = "பிற்பகல்"
                     , dayPeriods =
                         Dict.fromList
@@ -996,7 +996,7 @@ ta_SG =
                             ]
                     }
                 , wide =
-                    { am = "முற்பகல்"
+                    { am = "AM"
                     , pm = "பிற்பகல்"
                     , dayPeriods =
                         Dict.fromList
@@ -1194,8 +1194,8 @@ ta_SG =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} அன்று {0}"
-                , full = "{1} அன்று {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "B h" )
@@ -1211,7 +1211,7 @@ ta_SG =
                 , ( "Ehms", "E a h:mm:ss" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "G y" )
-                , ( "GyMd", "GGGGG y-MM-dd" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "G y MMM" )
                 , ( "GyMMMd", "G y MMM d" )
                 , ( "GyMMMEd", "G y MMM d, E" )

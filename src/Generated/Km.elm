@@ -261,8 +261,8 @@ km =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} នៅ\u{200B}ម៉ោង {0}"
-                , full = "{1} នៅ\u{200B}ម៉ោង {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )

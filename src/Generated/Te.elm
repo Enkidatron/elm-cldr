@@ -257,8 +257,8 @@ te =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1} {0}"
-                , long = "{1} {0}కి"
-                , full = "{1} {0}కి"
+                , long = "{1} {0}"
+                , full = "{1} {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )

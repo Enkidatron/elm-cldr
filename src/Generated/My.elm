@@ -31,10 +31,10 @@ dayPeriods =
 
 {-| Date format strings:
 
-  - Short : dd-MM-yy
-  - Medium : y- MMM d
-  - Long : y- MMMM d
-  - Full : y- MMMM d- EEEE
+  - Short : d/M/yy
+  - Medium : y၊ MMM d
+  - Long : y၊ MMMM d
+  - Full : y၊ MMMM d၊ EEEE
 
 Time format strings:
 
@@ -96,10 +96,10 @@ my =
                     }
                 }
             , datePatterns =
-                { short = "dd-MM-yy"
-                , medium = "y- MMM d"
-                , long = "y- MMMM d"
-                , full = "y- MMMM d- EEEE"
+                { short = "d/M/yy"
+                , medium = "y၊ MMM d"
+                , long = "y၊ MMMM d"
+                , full = "y၊ MMMM d၊ EEEE"
                 }
             , monthFormatNames =
                 { abbreviated =
@@ -269,19 +269,19 @@ my =
                 , ( "Bhm", "B h:mm" )
                 , ( "Bhms", "B h:mm:ss" )
                 , ( "d", "d" )
-                , ( "E", "cccနေ့" )
+                , ( "E", "ccc" )
                 , ( "EBhm", "E B h:mm" )
                 , ( "EBhms", "E B h:mm:ss" )
-                , ( "Ed", "d ရက် Eနေ့" )
+                , ( "Ed", "d ရက် E" )
                 , ( "Ehm", "E B h:mm" )
                 , ( "EHm", "E HH:mm" )
                 , ( "Ehms", "E B h:mm:ss" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "G y" )
-                , ( "GyMd", "GGGGG y-MM-dd" )
+                , ( "GyMd", "G y/M/d" )
                 , ( "GyMMM", "G y MMM" )
-                , ( "GyMMMd", "G y- MMM d" )
-                , ( "GyMMMEd", "G y- MMM d- E" )
+                , ( "GyMMMd", "G y၊ MMM d" )
+                , ( "GyMMMEd", "G y၊ MMM d၊ E" )
                 , ( "h", "B h" )
                 , ( "H", "HH" )
                 , ( "hm", "B h:mm" )
@@ -294,21 +294,21 @@ my =
                 , ( "Hmv", "v HH:mm" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )
-                , ( "MEd", "d-M- E" )
+                , ( "MEd", "d/M၊ E" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
-                , ( "MMMEd", "MMM d- E" )
+                , ( "MMMEd", "MMM d၊ E" )
                 , ( "MMMMd", "MMMM d" )
-                , ( "MMMMEd", "MMMM d ရက် Eနေ့" )
+                , ( "MMMMEd", "MMMM d ရက် E" )
                 , ( "MMMMW-count-other", "MMMM လ W ပတ်မြောက်" )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y" )
                 , ( "yM", "M/y" )
-                , ( "yMd", "dd-MM-y" )
-                , ( "yMEd", "d/M/y- E" )
+                , ( "yMd", "d/M/y" )
+                , ( "yMEd", "d/M/y၊ E" )
                 , ( "yMMM", "MMM y" )
-                , ( "yMMMd", "y- MMM d" )
-                , ( "yMMMEd", "y- MMM d- E" )
+                , ( "yMMMd", "y၊ MMM d" )
+                , ( "yMMMEd", "y၊ MMM d၊ E" )
                 , ( "yMMMM", "y MMMM" )
                 , ( "yQQQ", "y QQQ" )
                 , ( "yQQQQ", "y QQQQ" )

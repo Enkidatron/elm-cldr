@@ -1,8 +1,8 @@
-module Generated.Ko exposing (ko, ko_KP)
+module Generated.Ko exposing (ko, ko_CN, ko_KP)
 
 {-|
 
-@docs ko, ko_KP
+@docs ko, ko_CN, ko_KP
 
 -}
 
@@ -34,8 +34,8 @@ dayPeriods =
 
   - Short : yy. M. d.
   - Medium : y. M. d.
-  - Long : y년 M월 d일
-  - Full : y년 M월 d일 EEEE
+  - Long : y년 MMMM d일
+  - Full : y년 MMMM d일 EEEE
 
 Time format strings:
 
@@ -102,8 +102,8 @@ ko =
             , datePatterns =
                 { short = "yy. M. d."
                 , medium = "y. M. d."
-                , long = "y년 M월 d일"
-                , full = "y년 M월 d일 EEEE"
+                , long = "y년 MMMM d일"
+                , full = "y년 MMMM d일 EEEE"
                 }
             , monthFormatNames =
                 { abbreviated =
@@ -340,8 +340,314 @@ ko =
 
   - Short : yy. M. d.
   - Medium : y. M. d.
-  - Long : y년 M월 d일
-  - Full : y년 M월 d일 EEEE
+  - Long : y년 MMMM d일
+  - Full : y년 MMMM d일 EEEE
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : z HH:mm:ss
+  - Full : zzzz HH:mm:ss
+
+-}
+ko_CN : Internal.Locale.Locale
+ko_CN =
+    Maybe.withDefault
+        Internal.Locale.empty
+        (Internal.Parse.parse
+            dayPeriods
+            { language = "ko"
+            , script = Nothing
+            , territory = Just "CN"
+            , variant = Nothing
+            , periodNames =
+                { abbreviated =
+                    { am = "AM"
+                    , pm = "PM"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "오후" )
+                            , ( "evening1", "저녁" )
+                            , ( "midnight", "자정" )
+                            , ( "morning1", "새벽" )
+                            , ( "morning2", "오전" )
+                            , ( "night1", "밤" )
+                            , ( "noon", "정오" )
+                            ]
+                    }
+                , wide =
+                    { am = "오전"
+                    , pm = "오후"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "오후" )
+                            , ( "evening1", "저녁" )
+                            , ( "midnight", "자정" )
+                            , ( "morning1", "새벽" )
+                            , ( "morning2", "오전" )
+                            , ( "night1", "밤" )
+                            , ( "noon", "정오" )
+                            ]
+                    }
+                , narrow =
+                    { am = "AM"
+                    , pm = "PM"
+                    , dayPeriods =
+                        Dict.fromList
+                            [ ( "afternoon1", "오후" )
+                            , ( "evening1", "저녁" )
+                            , ( "midnight", "자정" )
+                            , ( "morning1", "새벽" )
+                            , ( "morning2", "오전" )
+                            , ( "night1", "밤" )
+                            , ( "noon", "정오" )
+                            ]
+                    }
+                }
+            , datePatterns =
+                { short = "yy. M. d."
+                , medium = "y. M. d."
+                , long = "y년 MMMM d일"
+                , full = "y년 MMMM d일 EEEE"
+                }
+            , monthFormatNames =
+                { abbreviated =
+                    { jan = "1월"
+                    , feb = "2월"
+                    , mar = "3월"
+                    , apr = "4월"
+                    , may = "5월"
+                    , jun = "6월"
+                    , jul = "7월"
+                    , aug = "8월"
+                    , sep = "9월"
+                    , oct = "10월"
+                    , nov = "11월"
+                    , dec = "12월"
+                    }
+                , wide =
+                    { jan = "1월"
+                    , feb = "2월"
+                    , mar = "3월"
+                    , apr = "4월"
+                    , may = "5월"
+                    , jun = "6월"
+                    , jul = "7월"
+                    , aug = "8월"
+                    , sep = "9월"
+                    , oct = "10월"
+                    , nov = "11월"
+                    , dec = "12월"
+                    }
+                , narrow =
+                    { jan = "1월"
+                    , feb = "2월"
+                    , mar = "3월"
+                    , apr = "4월"
+                    , may = "5월"
+                    , jun = "6월"
+                    , jul = "7월"
+                    , aug = "8월"
+                    , sep = "9월"
+                    , oct = "10월"
+                    , nov = "11월"
+                    , dec = "12월"
+                    }
+                }
+            , monthStandaloneNames =
+                { abbreviated =
+                    { jan = "1월"
+                    , feb = "2월"
+                    , mar = "3월"
+                    , apr = "4월"
+                    , may = "5월"
+                    , jun = "6월"
+                    , jul = "7월"
+                    , aug = "8월"
+                    , sep = "9월"
+                    , oct = "10월"
+                    , nov = "11월"
+                    , dec = "12월"
+                    }
+                , wide =
+                    { jan = "1월"
+                    , feb = "2월"
+                    , mar = "3월"
+                    , apr = "4월"
+                    , may = "5월"
+                    , jun = "6월"
+                    , jul = "7월"
+                    , aug = "8월"
+                    , sep = "9월"
+                    , oct = "10월"
+                    , nov = "11월"
+                    , dec = "12월"
+                    }
+                , narrow =
+                    { jan = "1월"
+                    , feb = "2월"
+                    , mar = "3월"
+                    , apr = "4월"
+                    , may = "5월"
+                    , jun = "6월"
+                    , jul = "7월"
+                    , aug = "8월"
+                    , sep = "9월"
+                    , oct = "10월"
+                    , nov = "11월"
+                    , dec = "12월"
+                    }
+                }
+            , weekdayFormatNames =
+                { abbreviated =
+                    { sun = "일"
+                    , mon = "월"
+                    , tue = "화"
+                    , wed = "수"
+                    , thu = "목"
+                    , fri = "금"
+                    , sat = "토"
+                    }
+                , wide =
+                    { sun = "일요일"
+                    , mon = "월요일"
+                    , tue = "화요일"
+                    , wed = "수요일"
+                    , thu = "목요일"
+                    , fri = "금요일"
+                    , sat = "토요일"
+                    }
+                , narrow =
+                    { sun = "일"
+                    , mon = "월"
+                    , tue = "화"
+                    , wed = "수"
+                    , thu = "목"
+                    , fri = "금"
+                    , sat = "토"
+                    }
+                }
+            , weekdayStandaloneNames =
+                { abbreviated =
+                    { sun = "일"
+                    , mon = "월"
+                    , tue = "화"
+                    , wed = "수"
+                    , thu = "목"
+                    , fri = "금"
+                    , sat = "토"
+                    }
+                , wide =
+                    { sun = "일요일"
+                    , mon = "월요일"
+                    , tue = "화요일"
+                    , wed = "수요일"
+                    , thu = "목요일"
+                    , fri = "금요일"
+                    , sat = "토요일"
+                    }
+                , narrow =
+                    { sun = "일"
+                    , mon = "월"
+                    , tue = "화"
+                    , wed = "수"
+                    , thu = "목"
+                    , fri = "금"
+                    , sat = "토"
+                    }
+                }
+            , eraNames =
+                { abbreviated = { bc = "BC", ad = "AD" }
+                , wide = { bc = "기원전", ad = "서기" }
+                , narrow = { bc = "BC", ad = "AD" }
+                }
+            , timePatterns =
+                { short = "HH:mm"
+                , medium = "HH:mm:ss"
+                , long = "z HH:mm:ss"
+                , full = "zzzz HH:mm:ss"
+                }
+            , dateTimePatterns =
+                { short = "{1} {0}"
+                , medium = "{1} {0}"
+                , long = "{1} {0}"
+                , full = "{1} {0}"
+                }
+            , availableFormats =
+                [ ( "Bh", "B h시" )
+                , ( "Bhm", "B h:mm" )
+                , ( "Bhms", "B h:mm:ss" )
+                , ( "d", "d일" )
+                , ( "E", "ccc" )
+                , ( "EBhm", "(E) B h:mm" )
+                , ( "EBhms", "(E) B h:mm:ss" )
+                , ( "Ed", "d일 (E)" )
+                , ( "EEEEd", "d일 EEEE" )
+                , ( "Ehm", "(E) a h:mm" )
+                , ( "EHm", "(E) HH:mm" )
+                , ( "Ehms", "(E) a h:mm:ss" )
+                , ( "EHms", "(E) HH:mm:ss" )
+                , ( "Gy", "G y년" )
+                , ( "GyMd", "GGGGG y/M/d" )
+                , ( "GyMMM", "G y년 MMM" )
+                , ( "GyMMMd", "G y년 MMM d일" )
+                , ( "GyMMMEd", "G y년 MMM d일 (E)" )
+                , ( "GyMMMEEEEd", "G y년 MMM d일 EEEE" )
+                , ( "h", "a h시" )
+                , ( "H", "H시" )
+                , ( "HHmmss", "HH:mm:ss" )
+                , ( "hm", "a h:mm" )
+                , ( "Hm", "HH:mm" )
+                , ( "hms", "a h:mm:ss" )
+                , ( "Hms", "H시 m분 s초" )
+                , ( "hmsv", "a h:mm:ss v" )
+                , ( "Hmsv", "H시 m분 s초 v" )
+                , ( "hmv", "a h:mm v" )
+                , ( "Hmv", "HH:mm v" )
+                , ( "M", "M월" )
+                , ( "Md", "M. d." )
+                , ( "MEd", "M. d. (E)" )
+                , ( "MEEEEd", "M. d. EEEE" )
+                , ( "MMM", "LLL" )
+                , ( "MMMd", "MMM d일" )
+                , ( "MMMEd", "MMM d일 (E)" )
+                , ( "MMMEEEEd", "MMM d일 EEEE" )
+                , ( "MMMMd", "MMMM d일" )
+                , ( "MMMMW-count-other", "MMMM W번째 주" )
+                , ( "mmss", "mm:ss" )
+                , ( "ms", "mm:ss" )
+                , ( "y", "y년" )
+                , ( "yM", "y. M." )
+                , ( "yMd", "y. M. d." )
+                , ( "yMEd", "y. M. d. (E)" )
+                , ( "yMEEEEd", "y. M. d. EEEE" )
+                , ( "yMM", "y. M." )
+                , ( "yMMM", "y년 MMM" )
+                , ( "yMMMd", "y년 MMM d일" )
+                , ( "yMMMEd", "y년 MMM d일 (E)" )
+                , ( "yMMMEEEEd", "y년 MMM d일 EEEE" )
+                , ( "yMMMM", "y년 MMMM" )
+                , ( "yQQQ", "y년 QQQ" )
+                , ( "yQQQQ", "y년 QQQQ" )
+                , ( "yw-count-other", "Y년 w번째 주" )
+                ]
+            , timeSkeletons =
+                { short = "HHmm"
+                , medium = "HHmmss"
+                , long = "HHmmssz"
+                , full = "HHmmsszzzz"
+                }
+            }
+        )
+
+
+{-| Date format strings:
+
+  - Short : yy. M. d.
+  - Medium : y. M. d.
+  - Long : y년 MMMM d일
+  - Full : y년 MMMM d일 EEEE
 
 Time format strings:
 
@@ -408,8 +714,8 @@ ko_KP =
             , datePatterns =
                 { short = "yy. M. d."
                 , medium = "y. M. d."
-                , long = "y년 M월 d일"
-                , full = "y년 M월 d일 EEEE"
+                , long = "y년 MMMM d일"
+                , full = "y년 MMMM d일 EEEE"
                 }
             , monthFormatNames =
                 { abbreviated =

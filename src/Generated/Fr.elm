@@ -60,11 +60,11 @@ fr =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -90,7 +90,7 @@ fr =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -262,8 +262,8 @@ fr =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -274,24 +274,24 @@ fr =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -357,11 +357,11 @@ fr_BE =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -387,7 +387,7 @@ fr_BE =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -559,8 +559,8 @@ fr_BE =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -571,24 +571,24 @@ fr_BE =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -654,11 +654,11 @@ fr_BF =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -684,7 +684,7 @@ fr_BF =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -856,8 +856,8 @@ fr_BF =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -868,24 +868,24 @@ fr_BF =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -951,11 +951,11 @@ fr_BI =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -981,7 +981,7 @@ fr_BI =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -1153,8 +1153,8 @@ fr_BI =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -1165,24 +1165,24 @@ fr_BI =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -1248,11 +1248,11 @@ fr_BJ =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -1278,7 +1278,7 @@ fr_BJ =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -1450,8 +1450,8 @@ fr_BJ =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -1462,24 +1462,24 @@ fr_BJ =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -1545,11 +1545,11 @@ fr_BL =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -1575,7 +1575,7 @@ fr_BL =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -1747,8 +1747,8 @@ fr_BL =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -1759,24 +1759,24 @@ fr_BL =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -1869,7 +1869,7 @@ fr_CA =
                     , dayPeriods =
                         Dict.fromList
                             [ ( "afternoon1", "après-midi" )
-                            , ( "evening1", "soir" )
+                            , ( "evening1", "du soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
                             , ( "night1", "mat." )
@@ -2044,8 +2044,8 @@ fr_CA =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h 'h' B" )
@@ -2056,7 +2056,7 @@ fr_CA =
                 , ( "EBhm", "E h 'h' mm B" )
                 , ( "EBhms", "E h 'h' mm 'min' ss 's' B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h 'h' mm a" )
+                , ( "Ehm", "E h 'h' mm\u{202F}a" )
                 , ( "EHm", "E HH 'h' mm" )
                 , ( "Ehms", "E h 'h' mm 'min' ss 's' a" )
                 , ( "EHms", "E HH 'h' mm 'min' ss 's'" )
@@ -2067,18 +2067,18 @@ fr_CA =
                 , ( "GyMMMEd", "E d MMM y G" )
                 , ( "h", "h 'h' a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h 'h' mm a" )
+                , ( "hm", "h 'h' mm\u{202F}a" )
                 , ( "Hm", "HH 'h' mm" )
                 , ( "hms", "h 'h' mm 'min' ss 's' a" )
                 , ( "Hms", "HH 'h' mm 'min' ss 's'" )
                 , ( "hmsv", "h 'h' mm 'min' ss 's' a v" )
                 , ( "Hmsv", "HH 'h' mm 'min' ss 's' v" )
-                , ( "hmv", "h 'h' mm a v" )
+                , ( "hmv", "h 'h' mm\u{202F}a v" )
                 , ( "Hmv", "HH 'h' mm v" )
                 , ( "M", "L" )
-                , ( "Md", "M-d" )
-                , ( "MEd", "E M-d" )
-                , ( "MMd", "MM-d" )
+                , ( "Md", "MM-dd" )
+                , ( "MEd", "E MM-dd" )
+                , ( "MMd", "MM-dd" )
                 , ( "MMdd", "MM-dd" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -2142,11 +2142,11 @@ fr_CD =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -2172,7 +2172,7 @@ fr_CD =
                             , ( "evening1", "soir" )
                             , ( "midnight", "min." )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -2344,8 +2344,8 @@ fr_CD =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -2356,24 +2356,24 @@ fr_CD =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -2439,11 +2439,11 @@ fr_CF =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -2469,7 +2469,7 @@ fr_CF =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -2641,8 +2641,8 @@ fr_CF =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -2653,24 +2653,24 @@ fr_CF =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -2736,11 +2736,11 @@ fr_CG =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -2766,7 +2766,7 @@ fr_CG =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -2938,8 +2938,8 @@ fr_CG =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -2950,24 +2950,24 @@ fr_CG =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -3235,8 +3235,8 @@ fr_CH =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -3247,24 +3247,24 @@ fr_CH =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd.MM." )
@@ -3331,11 +3331,11 @@ fr_CI =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -3361,7 +3361,7 @@ fr_CI =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -3533,8 +3533,8 @@ fr_CI =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -3545,24 +3545,24 @@ fr_CI =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -3628,11 +3628,11 @@ fr_CM =
                     , pm = "soir"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -3658,7 +3658,7 @@ fr_CM =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -3830,8 +3830,8 @@ fr_CM =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -3903,10 +3903,10 @@ fr_CM =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 fr_DJ : Internal.Locale.Locale
@@ -3925,11 +3925,11 @@ fr_DJ =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -3955,7 +3955,7 @@ fr_DJ =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -4119,16 +4119,16 @@ fr_DJ =
                 , narrow = { bc = "av. J.-C.", ad = "ap. J.-C." }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -4139,24 +4139,24 @@ fr_DJ =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -4200,10 +4200,10 @@ fr_DJ =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 fr_DZ : Internal.Locale.Locale
@@ -4222,11 +4222,11 @@ fr_DZ =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -4252,7 +4252,7 @@ fr_DZ =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -4416,16 +4416,16 @@ fr_DZ =
                 , narrow = { bc = "av. J.-C.", ad = "ap. J.-C." }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -4436,24 +4436,24 @@ fr_DZ =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -4519,11 +4519,11 @@ fr_GA =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -4549,7 +4549,7 @@ fr_GA =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -4721,8 +4721,8 @@ fr_GA =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -4733,24 +4733,24 @@ fr_GA =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -4816,11 +4816,11 @@ fr_GF =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -4846,7 +4846,7 @@ fr_GF =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -5018,8 +5018,8 @@ fr_GF =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -5030,24 +5030,24 @@ fr_GF =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -5113,11 +5113,11 @@ fr_GN =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -5143,7 +5143,7 @@ fr_GN =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -5315,8 +5315,8 @@ fr_GN =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -5327,24 +5327,24 @@ fr_GN =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -5410,11 +5410,11 @@ fr_GP =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -5440,7 +5440,7 @@ fr_GP =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -5612,8 +5612,8 @@ fr_GP =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -5624,24 +5624,24 @@ fr_GP =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -5707,11 +5707,11 @@ fr_GQ =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -5737,7 +5737,7 @@ fr_GQ =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -5909,8 +5909,8 @@ fr_GQ =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -5921,24 +5921,24 @@ fr_GQ =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -6004,11 +6004,11 @@ fr_HT =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -6034,7 +6034,7 @@ fr_HT =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -6206,8 +6206,8 @@ fr_HT =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -6218,24 +6218,24 @@ fr_HT =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -6301,11 +6301,11 @@ fr_KM =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -6331,7 +6331,7 @@ fr_KM =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -6503,8 +6503,8 @@ fr_KM =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -6515,24 +6515,24 @@ fr_KM =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -6598,11 +6598,11 @@ fr_LU =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -6628,7 +6628,7 @@ fr_LU =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -6800,8 +6800,8 @@ fr_LU =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -6812,24 +6812,24 @@ fr_LU =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -6895,11 +6895,11 @@ fr_MA =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -6925,7 +6925,7 @@ fr_MA =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -7097,8 +7097,8 @@ fr_MA =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -7109,24 +7109,24 @@ fr_MA =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -7192,11 +7192,11 @@ fr_MC =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -7222,7 +7222,7 @@ fr_MC =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -7394,8 +7394,8 @@ fr_MC =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -7406,24 +7406,24 @@ fr_MC =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -7489,11 +7489,11 @@ fr_MF =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -7519,7 +7519,7 @@ fr_MF =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -7691,8 +7691,8 @@ fr_MF =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -7703,24 +7703,24 @@ fr_MF =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -7786,11 +7786,11 @@ fr_MG =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -7816,7 +7816,7 @@ fr_MG =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -7988,8 +7988,8 @@ fr_MG =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -8000,24 +8000,24 @@ fr_MG =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -8083,11 +8083,11 @@ fr_ML =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -8113,7 +8113,7 @@ fr_ML =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -8285,8 +8285,8 @@ fr_ML =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -8297,24 +8297,24 @@ fr_ML =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -8380,11 +8380,11 @@ fr_MQ =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -8410,7 +8410,7 @@ fr_MQ =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -8582,8 +8582,8 @@ fr_MQ =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -8594,24 +8594,24 @@ fr_MQ =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -8655,10 +8655,10 @@ fr_MQ =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 fr_MR : Internal.Locale.Locale
@@ -8677,11 +8677,11 @@ fr_MR =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -8707,7 +8707,7 @@ fr_MR =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -8871,16 +8871,16 @@ fr_MR =
                 , narrow = { bc = "av. J.-C.", ad = "ap. J.-C." }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -8891,24 +8891,24 @@ fr_MR =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -8974,11 +8974,11 @@ fr_MU =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -9004,7 +9004,7 @@ fr_MU =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -9176,8 +9176,8 @@ fr_MU =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -9188,24 +9188,24 @@ fr_MU =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -9271,11 +9271,11 @@ fr_NC =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -9301,7 +9301,7 @@ fr_NC =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -9473,8 +9473,8 @@ fr_NC =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -9485,24 +9485,24 @@ fr_NC =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -9568,11 +9568,11 @@ fr_NE =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -9598,7 +9598,7 @@ fr_NE =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -9770,8 +9770,8 @@ fr_NE =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -9782,24 +9782,24 @@ fr_NE =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -9865,11 +9865,11 @@ fr_PF =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -9895,7 +9895,7 @@ fr_PF =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -10067,8 +10067,8 @@ fr_PF =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -10079,24 +10079,24 @@ fr_PF =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -10162,11 +10162,11 @@ fr_PM =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -10192,7 +10192,7 @@ fr_PM =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -10364,8 +10364,8 @@ fr_PM =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -10376,24 +10376,24 @@ fr_PM =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -10463,7 +10463,7 @@ fr_RE =
                             , ( "evening1", "soir" )
                             , ( "midnight", "min." )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -10489,7 +10489,7 @@ fr_RE =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -10661,8 +10661,8 @@ fr_RE =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -10673,24 +10673,24 @@ fr_RE =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -10756,11 +10756,11 @@ fr_RW =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -10786,7 +10786,7 @@ fr_RW =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -10958,8 +10958,8 @@ fr_RW =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -10970,24 +10970,24 @@ fr_RW =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -11053,11 +11053,11 @@ fr_SC =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -11083,7 +11083,7 @@ fr_SC =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -11255,8 +11255,8 @@ fr_SC =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -11267,24 +11267,24 @@ fr_SC =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -11354,7 +11354,7 @@ fr_SN =
                             , ( "evening1", "soir" )
                             , ( "midnight", "min." )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -11378,9 +11378,9 @@ fr_SN =
                         Dict.fromList
                             [ ( "afternoon1", "ap.m." )
                             , ( "evening1", "soir" )
-                            , ( "midnight", "min." )
+                            , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -11552,8 +11552,8 @@ fr_SN =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -11564,24 +11564,24 @@ fr_SN =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -11625,10 +11625,10 @@ fr_SN =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 fr_SY : Internal.Locale.Locale
@@ -11647,11 +11647,11 @@ fr_SY =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -11677,7 +11677,7 @@ fr_SY =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -11841,16 +11841,16 @@ fr_SY =
                 , narrow = { bc = "av. J.-C.", ad = "ap. J.-C." }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -11861,24 +11861,24 @@ fr_SY =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -11922,10 +11922,10 @@ fr_SY =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 fr_TD : Internal.Locale.Locale
@@ -11944,11 +11944,11 @@ fr_TD =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -11974,7 +11974,7 @@ fr_TD =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -12138,16 +12138,16 @@ fr_TD =
                 , narrow = { bc = "av. J.-C.", ad = "ap. J.-C." }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -12158,24 +12158,24 @@ fr_TD =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -12241,11 +12241,11 @@ fr_TG =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -12271,7 +12271,7 @@ fr_TG =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -12443,8 +12443,8 @@ fr_TG =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -12455,24 +12455,24 @@ fr_TG =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -12516,10 +12516,10 @@ fr_TG =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 fr_TN : Internal.Locale.Locale
@@ -12538,11 +12538,11 @@ fr_TN =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -12568,7 +12568,7 @@ fr_TN =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -12732,16 +12732,16 @@ fr_TN =
                 , narrow = { bc = "av. J.-C.", ad = "ap. J.-C." }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -12752,24 +12752,24 @@ fr_TN =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -12813,10 +12813,10 @@ fr_TN =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 fr_VU : Internal.Locale.Locale
@@ -12835,11 +12835,11 @@ fr_VU =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -12865,7 +12865,7 @@ fr_VU =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -13029,16 +13029,16 @@ fr_VU =
                 , narrow = { bc = "av. J.-C.", ad = "ap. J.-C." }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -13049,24 +13049,24 @@ fr_VU =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -13132,11 +13132,11 @@ fr_WF =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -13162,7 +13162,7 @@ fr_WF =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -13334,8 +13334,8 @@ fr_WF =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -13346,24 +13346,24 @@ fr_WF =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )
@@ -13429,11 +13429,11 @@ fr_YT =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "ap.m." )
+                            [ ( "afternoon1", "après-midi" )
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
-                            , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "morning1", "matin" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -13459,7 +13459,7 @@ fr_YT =
                             , ( "evening1", "soir" )
                             , ( "midnight", "minuit" )
                             , ( "morning1", "mat." )
-                            , ( "night1", "nuit" )
+                            , ( "night1", "matin" )
                             , ( "noon", "midi" )
                             ]
                     }
@@ -13631,8 +13631,8 @@ fr_YT =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'à' {0}"
-                , full = "{1} 'à' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -13643,24 +13643,24 @@ fr_YT =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd/MM/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH 'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "dd/MM" )

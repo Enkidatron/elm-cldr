@@ -257,8 +257,8 @@ gu =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1} {0}"
-                , long = "{1} એ {0} વાગ્યે"
-                , full = "{1} એ {0} વાગ્યે"
+                , long = "{1} {0}"
+                , full = "{1} {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )

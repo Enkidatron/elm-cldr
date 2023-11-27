@@ -31,15 +31,15 @@ dayPeriods =
 
 {-| Date format strings:
 
-  - Short : d.MM.yy 'г'.
-  - Medium : d.MM.y 'г'.
-  - Long : d MMMM y 'г'.
-  - Full : EEEE, d MMMM y 'г'.
+  - Short : d.MM.yy 'г'.
+  - Medium : d.MM.y 'г'.
+  - Long : d MMMM y 'г'.
+  - Full : EEEE, d MMMM y 'г'.
 
 Time format strings:
 
-  - Short : H:mm 'ч'.
-  - Medium : H:mm:ss 'ч'.
+  - Short : H:mm
+  - Medium : H:mm:ss
   - Long : H:mm:ss 'ч'. z
   - Full : H:mm:ss 'ч'. zzzz
 
@@ -96,10 +96,10 @@ bg =
                     }
                 }
             , datePatterns =
-                { short = "d.MM.yy 'г'."
-                , medium = "d.MM.y 'г'."
-                , long = "d MMMM y 'г'."
-                , full = "EEEE, d MMMM y 'г'."
+                { short = "d.MM.yy\u{202F}'г'."
+                , medium = "d.MM.y\u{202F}'г'."
+                , long = "d MMMM y\u{202F}'г'."
+                , full = "EEEE, d MMMM y\u{202F}'г'."
                 }
             , monthFormatNames =
                 { abbreviated =
@@ -253,8 +253,8 @@ bg =
                 , narrow = { bc = "пр.Хр.", ad = "сл.Хр." }
                 }
             , timePatterns =
-                { short = "H:mm 'ч'."
-                , medium = "H:mm:ss 'ч'."
+                { short = "H:mm"
+                , medium = "H:mm:ss"
                 , long = "H:mm:ss 'ч'. z"
                 , full = "H:mm:ss 'ч'. zzzz"
                 }
@@ -277,14 +277,14 @@ bg =
                 , ( "EHm", "E, HH:mm 'ч'." )
                 , ( "Ehms", "E, h:mm:ss 'ч'. a" )
                 , ( "EHms", "E, HH:mm:ss 'ч'." )
-                , ( "Gy", "y 'г'. G" )
-                , ( "GyMd", "dd.MM.y 'г'. GGGGG" )
-                , ( "GyMMM", "MM.y 'г'. G" )
-                , ( "GyMMMd", "d.MM.y 'г'. G" )
-                , ( "GyMMMEd", "E, d.MM.y 'г'. G" )
-                , ( "GyMMMM", "MMMM y 'г'. G" )
-                , ( "GyMMMMd", "d MMMM y 'г'. G" )
-                , ( "GyMMMMEd", "E, d MMMM y 'г'. G" )
+                , ( "Gy", "y\u{202F}'г'. G" )
+                , ( "GyMd", "dd.MM.y\u{202F}'г'. GGGGG" )
+                , ( "GyMMM", "MM.y\u{202F}'г'. G" )
+                , ( "GyMMMd", "d.MM.y\u{202F}'г'. G" )
+                , ( "GyMMMEd", "E, d.MM.y\u{202F}'г'. G" )
+                , ( "GyMMMM", "MMMM y\u{202F}'г'. G" )
+                , ( "GyMMMMd", "d MMMM y\u{202F}'г'. G" )
+                , ( "GyMMMMEd", "E, d MMMM y\u{202F}'г'. G" )
                 , ( "h", "h 'ч'. a" )
                 , ( "H", "HH 'ч'." )
                 , ( "hm", "h:mm 'ч'. a" )
@@ -308,18 +308,18 @@ bg =
                 , ( "MMMMW-count-one", "'седмица' W 'от' MMMM" )
                 , ( "MMMMW-count-other", "'седмица' W 'от' MMMM" )
                 , ( "ms", "m:ss" )
-                , ( "y", "y 'г'." )
-                , ( "yM", "MM.y 'г'." )
-                , ( "yMd", "d.MM.y 'г'." )
-                , ( "yMEd", "E, d.MM.y 'г'." )
-                , ( "yMMM", "MM.y 'г'." )
-                , ( "yMMMd", "d.MM.y 'г'." )
-                , ( "yMMMEd", "E, d.MM.y 'г'." )
-                , ( "yMMMM", "MMMM y 'г'." )
-                , ( "yMMMMd", "d MMMM y 'г'." )
-                , ( "yMMMMEd", "E, d MMMM y 'г'." )
-                , ( "yQQQ", "QQQ y 'г'." )
-                , ( "yQQQQ", "QQQQ y 'г'." )
+                , ( "y", "y\u{202F}'г'." )
+                , ( "yM", "MM.y\u{202F}'г'." )
+                , ( "yMd", "d.MM.y\u{202F}'г'." )
+                , ( "yMEd", "E, d.MM.y\u{202F}'г'." )
+                , ( "yMMM", "MM.y\u{202F}'г'." )
+                , ( "yMMMd", "d.MM.y\u{202F}'г'." )
+                , ( "yMMMEd", "E, d.MM.y\u{202F}'г'." )
+                , ( "yMMMM", "MMMM y\u{202F}'г'." )
+                , ( "yMMMMd", "d MMMM y\u{202F}'г'." )
+                , ( "yMMMMEd", "E, d MMMM y\u{202F}'г'." )
+                , ( "yQQQ", "QQQ y\u{202F}'г'." )
+                , ( "yQQQQ", "QQQQ y\u{202F}'г'." )
                 , ( "yw-count-one", "'седмица' w 'от' Y 'г'." )
                 , ( "yw-count-other", "'седмица' w 'от' Y 'г'." )
                 ]

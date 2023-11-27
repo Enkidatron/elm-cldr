@@ -32,7 +32,7 @@ dayPeriods =
 
 {-| Date format strings:
 
-  - Short : d. MM. yy
+  - Short : d. M. yy
   - Medium : d. MMM y
   - Long : d. MMMM y
   - Full : EEEE, d. MMMM y
@@ -100,7 +100,7 @@ sl =
                     }
                 }
             , datePatterns =
-                { short = "d. MM. yy"
+                { short = "d. M. yy"
                 , medium = "d. MMM y"
                 , long = "d. MMMM y"
                 , full = "EEEE, d. MMMM y"
@@ -277,25 +277,25 @@ sl =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d." )
-                , ( "Ehm", "E, h:mm a" )
-                , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
-                , ( "EHms", "E HH:mm:ss" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
+                , ( "EHm", "E, HH:mm" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
+                , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyM", "MMM y G" )
                 , ( "GyMd", "d. M. y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d. MMM y G" )
                 , ( "GyMMMEd", "E, d. MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH'h'" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d. M." )

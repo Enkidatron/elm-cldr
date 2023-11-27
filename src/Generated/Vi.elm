@@ -31,7 +31,7 @@ dayPeriods =
 
 {-| Date format strings:
 
-  - Short : dd/MM/y
+  - Short : d/M/yy
   - Medium : d MMM, y
   - Long : d MMMM, y
   - Full : EEEE, d MMMM, y
@@ -78,7 +78,7 @@ vi =
                             , ( "midnight", "nửa đêm" )
                             , ( "morning1", "sáng" )
                             , ( "night1", "đêm" )
-                            , ( "noon", "TR" )
+                            , ( "noon", "trưa" )
                             ]
                     }
                 , narrow =
@@ -96,7 +96,7 @@ vi =
                     }
                 }
             , datePatterns =
-                { short = "dd/MM/y"
+                { short = "d/M/yy"
                 , medium = "d MMM, y"
                 , long = "d MMMM, y"
                 , full = "EEEE, d MMMM, y"
@@ -147,18 +147,18 @@ vi =
                 }
             , monthStandaloneNames =
                 { abbreviated =
-                    { jan = "Thg 1"
-                    , feb = "Thg 2"
-                    , mar = "Thg 3"
-                    , apr = "Thg 4"
-                    , may = "Thg 5"
-                    , jun = "Thg 6"
-                    , jul = "Thg 7"
-                    , aug = "Thg 8"
-                    , sep = "Thg 9"
-                    , oct = "Thg 10"
-                    , nov = "Thg 11"
-                    , dec = "Thg 12"
+                    { jan = "Tháng 1"
+                    , feb = "Tháng 2"
+                    , mar = "Tháng 3"
+                    , apr = "Tháng 4"
+                    , may = "Tháng 5"
+                    , jun = "Tháng 6"
+                    , jul = "Tháng 7"
+                    , aug = "Tháng 8"
+                    , sep = "Tháng 9"
+                    , oct = "Tháng 10"
+                    , nov = "Tháng 11"
+                    , dec = "Tháng 12"
                     }
                 , wide =
                     { jan = "Tháng 1"
@@ -248,9 +248,10 @@ vi =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "Trước CN", ad = "Sau CN" }
-                , wide = { bc = "Trước Thiên Chúa", ad = "Sau Công Nguyên" }
-                , narrow = { bc = "tr. CN", ad = "sau CN" }
+                { abbreviated = { bc = "TCN", ad = "SCN" }
+                , wide =
+                    { bc = "Trước Chúa Giáng Sinh", ad = "Sau Công Nguyên" }
+                , narrow = { bc = "TCN", ad = "CN" }
                 }
             , timePatterns =
                 { short = "HH:mm"
@@ -259,42 +260,42 @@ vi =
                 , full = "HH:mm:ss zzzz"
                 }
             , dateTimePatterns =
-                { short = "{0}, {1}"
-                , medium = "{0}, {1}"
+                { short = "{0} {1}"
+                , medium = "{0} {1}"
                 , long = "{0} {1}"
                 , full = "{0} {1}"
                 }
             , availableFormats =
-                [ ( "Bh", "h B" )
+                [ ( "Bh", "h 'giờ' B" )
                 , ( "Bhm", "h:mm B" )
                 , ( "Bhms", "h:mm:ss B" )
                 , ( "d", "d" )
                 , ( "E", "ccc" )
-                , ( "EBhm", "E h:mm B" )
-                , ( "EBhms", "E h:mm:ss B" )
+                , ( "EBhm", "h:mm B E" )
+                , ( "EBhms", "h:mm:ss B E" )
                 , ( "Ed", "E, 'ngày' d" )
-                , ( "Ehm", "E h:mm a" )
-                , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
-                , ( "EHms", "E HH:mm:ss" )
+                , ( "Ehm", "h:mm\u{202F}a E" )
+                , ( "EHm", "HH:mm E" )
+                , ( "Ehms", "h:mm:ss\u{202F}a E" )
+                , ( "EHms", "HH:mm:ss E" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "dd/MM/y GGGGG" )
+                , ( "GyMd", "d/M/y G" )
                 , ( "GyMMM", "MMM y G" )
-                , ( "GyMMMd", "dd MMM, y G" )
-                , ( "GyMMMEd", "E, dd/MM/y G" )
-                , ( "h", "h a" )
-                , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "GyMMMd", "d MMM, y G" )
+                , ( "GyMMMEd", "E, d MMM, y G" )
+                , ( "h", "h\u{202F}a" )
+                , ( "H", "HH 'giờ'" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "H:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "dd/M" )
-                , ( "MEd", "E, dd/M" )
+                , ( "Md", "d/M" )
+                , ( "MEd", "E, d/M" )
                 , ( "MMdd", "dd-MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -307,7 +308,7 @@ vi =
                 , ( "y", "y" )
                 , ( "yM", "M/y" )
                 , ( "yMd", "d/M/y" )
-                , ( "yMEd", "E, dd/M/y" )
+                , ( "yMEd", "E, d/M/y" )
                 , ( "yMM", "'tháng' MM, y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM, y" )

@@ -28,10 +28,10 @@ dayPeriods =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 so : Internal.Locale.Locale
@@ -123,11 +123,11 @@ so =
                     , may = "May"
                     , jun = "Juun"
                     , jul = "Luuliyo"
-                    , aug = "Ogost"
-                    , sep = "Sebtembar"
+                    , aug = "Ogosto"
+                    , sep = "Sebteembar"
                     , oct = "Oktoobar"
-                    , nov = "Nofembar"
-                    , dec = "Desembar"
+                    , nov = "Noofeembar"
+                    , dec = "Diseembar"
                     }
                 , narrow =
                     { jan = "J"
@@ -208,16 +208,16 @@ so =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1} {0}"
-                , medium = "{1} 'ee' {0}"
-                , long = "{1} 'ee' {0}"
-                , full = "{1} 'ee' {0}"
+                , medium = "{1} {0}"
+                , long = "{1} {0}"
+                , full = "{1} {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -243,7 +243,7 @@ so =
                 , ( "Hm", "HH:mm" )
                 , ( "hms", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
@@ -290,10 +290,10 @@ so =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 so_DJ : Internal.Locale.Locale
@@ -385,11 +385,11 @@ so_DJ =
                     , may = "May"
                     , jun = "Juun"
                     , jul = "Luuliyo"
-                    , aug = "Ogost"
-                    , sep = "Sebtembar"
+                    , aug = "Ogosto"
+                    , sep = "Sebteembar"
                     , oct = "Oktoobar"
-                    , nov = "Nofembar"
-                    , dec = "Desembar"
+                    , nov = "Noofeembar"
+                    , dec = "Diseembar"
                     }
                 , narrow =
                     { jan = "J"
@@ -470,16 +470,16 @@ so_DJ =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1} {0}"
-                , medium = "{1} 'ee' {0}"
-                , long = "{1} 'ee' {0}"
-                , full = "{1} 'ee' {0}"
+                , medium = "{1} {0}"
+                , long = "{1} {0}"
+                , full = "{1} {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -505,7 +505,7 @@ so_DJ =
                 , ( "Hm", "HH:mm" )
                 , ( "hms", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
@@ -552,10 +552,10 @@ so_DJ =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 so_ET : Internal.Locale.Locale
@@ -647,11 +647,11 @@ so_ET =
                     , may = "May"
                     , jun = "Juun"
                     , jul = "Luuliyo"
-                    , aug = "Ogost"
-                    , sep = "Sebtembar"
+                    , aug = "Ogosto"
+                    , sep = "Sebteembar"
                     , oct = "Oktoobar"
-                    , nov = "Nofembar"
-                    , dec = "Desembar"
+                    , nov = "Noofeembar"
+                    , dec = "Diseembar"
                     }
                 , narrow =
                     { jan = "J"
@@ -732,16 +732,16 @@ so_ET =
                 , narrow = { bc = "B", ad = "A" }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a z"
-                , full = "h:mm:ss a zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a z"
+                , full = "h:mm:ss\u{202F}a zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1} {0}"
-                , medium = "{1} 'ee' {0}"
-                , long = "{1} 'ee' {0}"
-                , full = "{1} 'ee' {0}"
+                , medium = "{1} {0}"
+                , long = "{1} {0}"
+                , full = "{1} {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -767,7 +767,7 @@ so_ET =
                 , ( "Hm", "HH:mm" )
                 , ( "hms", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
@@ -909,11 +909,11 @@ so_KE =
                     , may = "May"
                     , jun = "Juun"
                     , jul = "Luuliyo"
-                    , aug = "Ogost"
-                    , sep = "Sebtembar"
+                    , aug = "Ogosto"
+                    , sep = "Sebteembar"
                     , oct = "Oktoobar"
-                    , nov = "Nofembar"
-                    , dec = "Desembar"
+                    , nov = "Noofeembar"
+                    , dec = "Diseembar"
                     }
                 , narrow =
                     { jan = "J"
@@ -1001,9 +1001,9 @@ so_KE =
                 }
             , dateTimePatterns =
                 { short = "{1} {0}"
-                , medium = "{1} 'ee' {0}"
-                , long = "{1} 'ee' {0}"
-                , full = "{1} 'ee' {0}"
+                , medium = "{1} {0}"
+                , long = "{1} {0}"
+                , full = "{1} {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -1029,7 +1029,7 @@ so_KE =
                 , ( "Hm", "HH:mm" )
                 , ( "hms", "h:mm:ss a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )

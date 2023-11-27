@@ -14,18 +14,20 @@ module Cldr.Locale exposing
     , bn, bn_IN
     , bs, bs_Latn
     , ca, ca_AD, ca_ES_VALENCIA, ca_FR, ca_IT
+    , chr
     , cs
     , cy
     , da, da_GL
     , de, de_AT, de_BE, de_CH, de_IT, de_LI, de_LU
-    , el, el_CY
+    , dsb
+    , el, el_CY, el_POLYTON
     , en, en_001, en_150, en_AE, en_AG, en_AI, en_AS, en_AT, en_AU, en_BB, en_BE, en_BI, en_BM, en_BS, en_BW, en_BZ
     , en_CA, en_CC, en_CH, en_CK, en_CM, en_CX, en_CY, en_DE, en_DG, en_DK, en_DM, en_ER, en_FI, en_FJ, en_FK, en_FM
-    , en_GB, en_GD, en_GG, en_GH, en_GI, en_GM, en_GU, en_GY, en_HK, en_IE, en_IL, en_IM, en_IN, en_IO, en_JE, en_JM
-    , en_KE, en_KI, en_KN, en_KY, en_LC, en_LR, en_LS, en_MG, en_MH, en_MO, en_MP, en_MS, en_MT, en_MU, en_MV, en_MW
-    , en_MY, en_NA, en_NF, en_NG, en_NL, en_NR, en_NU, en_NZ, en_PG, en_PH, en_PK, en_PN, en_PR, en_PW, en_RW, en_SB
-    , en_SC, en_SD, en_SE, en_SG, en_SH, en_SI, en_SL, en_SS, en_SX, en_SZ, en_TC, en_TK, en_TO, en_TT, en_TV, en_TZ
-    , en_UG, en_UM, en_VC, en_VG, en_VI, en_VU, en_WS, en_ZA, en_ZM, en_ZW, en_Latn
+    , en_GB, en_GD, en_GG, en_GH, en_GI, en_GM, en_GU, en_GY, en_HK, en_ID, en_IE, en_IL, en_IM, en_IN, en_IO, en_JE
+    , en_JM, en_KE, en_KI, en_KN, en_KY, en_LC, en_LR, en_LS, en_MG, en_MH, en_MO, en_MP, en_MS, en_MT, en_MU, en_MV
+    , en_MW, en_MY, en_NA, en_NF, en_NG, en_NL, en_NR, en_NU, en_NZ, en_PG, en_PH, en_PK, en_PN, en_PR, en_PW, en_RW
+    , en_SB, en_SC, en_SD, en_SE, en_SG, en_SH, en_SI, en_SL, en_SS, en_SX, en_SZ, en_TC, en_TK, en_TO, en_TT, en_TV
+    , en_TZ, en_UG, en_UM, en_VC, en_VG, en_VI, en_VU, en_WS, en_ZA, en_ZM, en_ZW, en_Latn
     , es, es_419, es_AR, es_BO, es_BR, es_BZ, es_CL, es_CO, es_CR, es_CU, es_DO, es_EA, es_EC, es_GQ, es_GT, es_HN
     , es_IC, es_MX, es_NI, es_PA, es_PE, es_PH, es_PR, es_PY, es_SV, es_US, es_UY, es_VE
     , et
@@ -37,14 +39,18 @@ module Cldr.Locale exposing
     , fr_GF, fr_GN, fr_GP, fr_GQ, fr_HT, fr_KM, fr_LU, fr_MA, fr_MC, fr_MF, fr_MG, fr_ML, fr_MQ, fr_MR, fr_MU, fr_NC
     , fr_NE, fr_PF, fr_PM, fr_RE, fr_RW, fr_SC, fr_SN, fr_SY, fr_TD, fr_TG, fr_TN, fr_VU, fr_WF, fr_YT
     , ga, ga_GB
+    , gd
     , gl
     , gu
+    , ha, ha_GH, ha_NE
     , he
     , hi
     , hr, hr_BA
+    , hsb
     , hu
     , hy
     , id
+    , ig
     , is
     , it, it_CH, it_SM, it_VA
     , ja
@@ -53,7 +59,8 @@ module Cldr.Locale exposing
     , kk
     , km
     , kn
-    , ko, ko_KP
+    , ko, ko_CN, ko_KP
+    , kok
     , ky
     , lo
     , lt
@@ -95,7 +102,8 @@ module Cldr.Locale exposing
     , ur, ur_IN
     , uz, uz_Latn
     , vi
-    , yue, yue_Hant
+    , yo, yo_BJ
+    , yue, yue_Hans, yue_Hant
     , zh, zh_Hans, zh_Hans_HK, zh_Hans_MO, zh_Hans_SG, zh_Hant, zh_Hant_HK, zh_Hant_MO
     , zu
     )
@@ -175,6 +183,11 @@ module Cldr.Locale exposing
 @docs ca, ca_AD, ca_ES_VALENCIA, ca_FR, ca_IT
 
 
+### Chr
+
+@docs chr
+
+
 ### Cs
 
 @docs cs
@@ -195,9 +208,14 @@ module Cldr.Locale exposing
 @docs de, de_AT, de_BE, de_CH, de_IT, de_LI, de_LU
 
 
+### Dsb
+
+@docs dsb
+
+
 ### El
 
-@docs el, el_CY
+@docs el, el_CY, el_POLYTON
 
 
 ### En
@@ -206,15 +224,15 @@ module Cldr.Locale exposing
 
 @docs en_CA, en_CC, en_CH, en_CK, en_CM, en_CX, en_CY, en_DE, en_DG, en_DK, en_DM, en_ER, en_FI, en_FJ, en_FK, en_FM
 
-@docs en_GB, en_GD, en_GG, en_GH, en_GI, en_GM, en_GU, en_GY, en_HK, en_IE, en_IL, en_IM, en_IN, en_IO, en_JE, en_JM
+@docs en_GB, en_GD, en_GG, en_GH, en_GI, en_GM, en_GU, en_GY, en_HK, en_ID, en_IE, en_IL, en_IM, en_IN, en_IO, en_JE
 
-@docs en_KE, en_KI, en_KN, en_KY, en_LC, en_LR, en_LS, en_MG, en_MH, en_MO, en_MP, en_MS, en_MT, en_MU, en_MV, en_MW
+@docs en_JM, en_KE, en_KI, en_KN, en_KY, en_LC, en_LR, en_LS, en_MG, en_MH, en_MO, en_MP, en_MS, en_MT, en_MU, en_MV
 
-@docs en_MY, en_NA, en_NF, en_NG, en_NL, en_NR, en_NU, en_NZ, en_PG, en_PH, en_PK, en_PN, en_PR, en_PW, en_RW, en_SB
+@docs en_MW, en_MY, en_NA, en_NF, en_NG, en_NL, en_NR, en_NU, en_NZ, en_PG, en_PH, en_PK, en_PN, en_PR, en_PW, en_RW
 
-@docs en_SC, en_SD, en_SE, en_SG, en_SH, en_SI, en_SL, en_SS, en_SX, en_SZ, en_TC, en_TK, en_TO, en_TT, en_TV, en_TZ
+@docs en_SB, en_SC, en_SD, en_SE, en_SG, en_SH, en_SI, en_SL, en_SS, en_SX, en_SZ, en_TC, en_TK, en_TO, en_TT, en_TV
 
-@docs en_UG, en_UM, en_VC, en_VG, en_VI, en_VU, en_WS, en_ZA, en_ZM, en_ZW, en_Latn
+@docs en_TZ, en_UG, en_UM, en_VC, en_VG, en_VI, en_VU, en_WS, en_ZA, en_ZM, en_ZW, en_Latn
 
 
 ### Es
@@ -263,6 +281,11 @@ module Cldr.Locale exposing
 @docs ga, ga_GB
 
 
+### Gd
+
+@docs gd
+
+
 ### Gl
 
 @docs gl
@@ -271,6 +294,11 @@ module Cldr.Locale exposing
 ### Gu
 
 @docs gu
+
+
+### Ha
+
+@docs ha, ha_GH, ha_NE
 
 
 ### He
@@ -288,6 +316,11 @@ module Cldr.Locale exposing
 @docs hr, hr_BA
 
 
+### Hsb
+
+@docs hsb
+
+
 ### Hu
 
 @docs hu
@@ -301,6 +334,11 @@ module Cldr.Locale exposing
 ### Id
 
 @docs id
+
+
+### Ig
+
+@docs ig
 
 
 ### Is
@@ -345,7 +383,12 @@ module Cldr.Locale exposing
 
 ### Ko
 
-@docs ko, ko_KP
+@docs ko, ko_CN, ko_KP
+
+
+### Kok
+
+@docs kok
 
 
 ### Ky
@@ -553,9 +596,14 @@ module Cldr.Locale exposing
 @docs vi
 
 
+### Yo
+
+@docs yo, yo_BJ
+
+
 ### Yue
 
-@docs yue, yue_Hant
+@docs yue, yue_Hans, yue_Hant
 
 
 ### Zh
@@ -579,10 +627,12 @@ import Generated.Bg
 import Generated.Bn
 import Generated.Bs
 import Generated.Ca
+import Generated.Chr
 import Generated.Cs
 import Generated.Cy
 import Generated.Da
 import Generated.De
+import Generated.Dsb
 import Generated.El
 import Generated.En
 import Generated.Es
@@ -593,14 +643,18 @@ import Generated.Fi
 import Generated.Fil
 import Generated.Fr
 import Generated.Ga
+import Generated.Gd
 import Generated.Gl
 import Generated.Gu
+import Generated.Ha
 import Generated.He
 import Generated.Hi
 import Generated.Hr
+import Generated.Hsb
 import Generated.Hu
 import Generated.Hy
 import Generated.Id
+import Generated.Ig
 import Generated.Is
 import Generated.It
 import Generated.Ja
@@ -610,6 +664,7 @@ import Generated.Kk
 import Generated.Km
 import Generated.Kn
 import Generated.Ko
+import Generated.Kok
 import Generated.Ky
 import Generated.Lo
 import Generated.Lt
@@ -651,6 +706,7 @@ import Generated.Uk
 import Generated.Ur
 import Generated.Uz
 import Generated.Vi
+import Generated.Yo
 import Generated.Yue
 import Generated.Zh
 import Generated.Zu
@@ -742,6 +798,7 @@ allLocales =
     , ca_ES_VALENCIA
     , ca_FR
     , ca_IT
+    , chr
     , cs
     , cy
     , da
@@ -753,8 +810,10 @@ allLocales =
     , de_IT
     , de_LI
     , de_LU
+    , dsb
     , el
     , el_CY
+    , el_POLYTON
     , en
     , en_001
     , en_150
@@ -796,6 +855,7 @@ allLocales =
     , en_GU
     , en_GY
     , en_HK
+    , en_ID
     , en_IE
     , en_IL
     , en_IM
@@ -944,15 +1004,21 @@ allLocales =
     , fr_YT
     , ga
     , ga_GB
+    , gd
     , gl
     , gu
+    , ha
+    , ha_GH
+    , ha_NE
     , he
     , hi
     , hr
     , hr_BA
+    , hsb
     , hu
     , hy
     , id
+    , ig
     , is
     , it
     , it_CH
@@ -965,7 +1031,9 @@ allLocales =
     , km
     , kn
     , ko
+    , ko_CN
     , ko_KP
+    , kok
     , ky
     , lo
     , lt
@@ -1062,7 +1130,10 @@ allLocales =
     , uz
     , uz_Latn
     , vi
+    , yo
+    , yo_BJ
     , yue
+    , yue_Hans
     , yue_Hant
     , zh
     , zh_Hans
@@ -1093,10 +1164,12 @@ basicLocales =
     , bn
     , bs
     , ca
+    , chr
     , cs
     , cy
     , da
     , de
+    , dsb
     , el
     , en
     , es
@@ -1107,14 +1180,18 @@ basicLocales =
     , fil
     , fr
     , ga
+    , gd
     , gl
     , gu
+    , ha
     , he
     , hi
     , hr
+    , hsb
     , hu
     , hy
     , id
+    , ig
     , is
     , it
     , ja
@@ -1124,6 +1201,7 @@ basicLocales =
     , km
     , kn
     , ko
+    , kok
     , ky
     , lo
     , lt
@@ -1165,6 +1243,7 @@ basicLocales =
     , ur
     , uz
     , vi
+    , yo
     , yue
     , zh
     , zu
@@ -1200,10 +1279,10 @@ af =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 af_NA : Locale
@@ -1854,9 +1933,9 @@ az_Latn =
 {-| Date format strings:
 
   - Short : d.MM.yy
-  - Medium : d MMM y 'г'.
-  - Long : d MMMM y 'г'.
-  - Full : EEEE, d MMMM y 'г'.
+  - Medium : d MMM y 'г'.
+  - Long : d MMMM y 'г'.
+  - Full : EEEE, d MMMM y 'г'.
 
 Time format strings:
 
@@ -1874,9 +1953,9 @@ be =
 {-| Date format strings:
 
   - Short : d.MM.yy
-  - Medium : d MMM y 'г'.
-  - Long : d MMMM y 'г'.
-  - Full : EEEE, d MMMM y 'г'.
+  - Medium : d MMM y 'г'.
+  - Long : d MMMM y 'г'.
+  - Full : EEEE, d MMMM y 'г'.
 
 Time format strings:
 
@@ -1893,15 +1972,15 @@ be_TARASK =
 
 {-| Date format strings:
 
-  - Short : d.MM.yy 'г'.
-  - Medium : d.MM.y 'г'.
-  - Long : d MMMM y 'г'.
-  - Full : EEEE, d MMMM y 'г'.
+  - Short : d.MM.yy 'г'.
+  - Medium : d.MM.y 'г'.
+  - Long : d MMMM y 'г'.
+  - Full : EEEE, d MMMM y 'г'.
 
 Time format strings:
 
-  - Short : H:mm 'ч'.
-  - Medium : H:mm:ss 'ч'.
+  - Short : H:mm
+  - Medium : H:mm:ss
   - Long : H:mm:ss 'ч'. z
   - Full : H:mm:ss 'ч'. zzzz
 
@@ -1995,8 +2074,8 @@ bs_Latn =
 
   - Short : d/M/yy
   - Medium : d MMM y
-  - Long : d MMMM 'de' y
-  - Full : EEEE, d MMMM 'de' y
+  - Long : d MMMM 'del' y
+  - Full : EEEE, d MMMM 'del' y
 
 Time format strings:
 
@@ -2015,8 +2094,8 @@ ca =
 
   - Short : d/M/yy
   - Medium : d MMM y
-  - Long : d MMMM 'de' y
-  - Full : EEEE, d MMMM 'de' y
+  - Long : d MMMM 'del' y
+  - Full : EEEE, d MMMM 'del' y
 
 Time format strings:
 
@@ -2035,8 +2114,8 @@ ca_AD =
 
   - Short : d/M/yy
   - Medium : d MMM y
-  - Long : d MMMM 'de' y
-  - Full : EEEE, d MMMM 'de' y
+  - Long : d MMMM 'del' y
+  - Full : EEEE, d MMMM 'del' y
 
 Time format strings:
 
@@ -2055,8 +2134,8 @@ ca_ES_VALENCIA =
 
   - Short : d/M/yy
   - Medium : d MMM y
-  - Long : d MMMM 'de' y
-  - Full : EEEE, d MMMM 'de' y
+  - Long : d MMMM 'del' y
+  - Full : EEEE, d MMMM 'del' y
 
 Time format strings:
 
@@ -2075,8 +2154,8 @@ ca_FR =
 
   - Short : d/M/yy
   - Medium : d MMM y
-  - Long : d MMMM 'de' y
-  - Full : EEEE, d MMMM 'de' y
+  - Long : d MMMM 'del' y
+  - Full : EEEE, d MMMM 'del' y
 
 Time format strings:
 
@@ -2093,6 +2172,26 @@ ca_IT =
 
 {-| Date format strings:
 
+  - Short : M/d/yy
+  - Medium : MMM d, y
+  - Long : MMMM d, y
+  - Full : EEEE, MMMM d, y
+
+Time format strings:
+
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
+
+-}
+chr : Locale
+chr =
+    Generated.Chr.chr
+
+
+{-| Date format strings:
+
   - Short : dd.MM.yy
   - Medium : d. M. y
   - Long : d. MMMM y
@@ -2103,7 +2202,7 @@ Time format strings:
   - Short : H:mm
   - Medium : H:mm:ss
   - Long : H:mm:ss z
-  - Full : H:mm:ss zzzz
+  - Full : H:mm:ss, zzzz
 
 -}
 cs : Locale
@@ -2313,6 +2412,26 @@ de_LU =
 
 {-| Date format strings:
 
+  - Short : d.M.yy
+  - Medium : d.M.y
+  - Long : d. MMMM y
+  - Full : EEEE, d. MMMM y
+
+Time format strings:
+
+  - Short : H:mm
+  - Medium : H:mm:ss
+  - Long : H:mm:ss z
+  - Full : H:mm:ss zzzz
+
+-}
+dsb : Locale
+dsb =
+    Generated.Dsb.dsb
+
+
+{-| Date format strings:
+
   - Short : d/M/yy
   - Medium : d MMM y
   - Long : d MMMM y
@@ -2320,10 +2439,10 @@ de_LU =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 el : Locale
@@ -2340,15 +2459,35 @@ el =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 el_CY : Locale
 el_CY =
     Generated.El.el_CY
+
+
+{-| Date format strings:
+
+  - Short : d/M/yy
+  - Medium : d MMM y
+  - Long : d MMMM y
+  - Full : EEEE d MMMM y
+
+Time format strings:
+
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
+
+-}
+el_POLYTON : Locale
+el_POLYTON =
+    Generated.El.el_POLYTON
 
 
 {-| Date format strings:
@@ -2360,10 +2499,10 @@ el_CY =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en : Locale
@@ -2380,10 +2519,10 @@ en =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_001 : Locale
@@ -2420,10 +2559,10 @@ en_150 =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_AE : Locale
@@ -2440,10 +2579,10 @@ en_AE =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_AG : Locale
@@ -2480,10 +2619,10 @@ en_AI =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_AS : Locale
@@ -2516,14 +2655,14 @@ en_AT =
   - Short : d/M/yy
   - Medium : d MMM y
   - Long : d MMMM y
-  - Full : EEEE, d MMMM y
+  - Full : EEEE d MMMM y
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_AU : Locale
@@ -2540,10 +2679,10 @@ en_AU =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_BB : Locale
@@ -2600,10 +2739,10 @@ en_BI =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_BM : Locale
@@ -2620,10 +2759,10 @@ en_BM =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_BS : Locale
@@ -2680,10 +2819,10 @@ en_BZ =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_CA : Locale
@@ -2713,7 +2852,7 @@ en_CC =
 
 {-| Date format strings:
 
-  - Short : dd/MM/y
+  - Short : dd.MM.y
   - Medium : d MMM y
   - Long : d MMMM y
   - Full : EEEE, d MMMM y
@@ -2800,10 +2939,10 @@ en_CX =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_CY : Locale
@@ -2880,10 +3019,10 @@ en_DK =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_DM : Locale
@@ -2900,10 +3039,10 @@ en_DM =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_ER : Locale
@@ -2940,10 +3079,10 @@ en_FI =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_FJ : Locale
@@ -2980,10 +3119,10 @@ en_FK =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_FM : Locale
@@ -2996,7 +3135,7 @@ en_FM =
   - Short : dd/MM/y
   - Medium : d MMM y
   - Long : d MMMM y
-  - Full : EEEE, d MMMM y
+  - Full : EEEE d MMMM y
 
 Time format strings:
 
@@ -3020,10 +3159,10 @@ en_GB =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_GD : Locale
@@ -3060,10 +3199,10 @@ en_GG =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_GH : Locale
@@ -3100,10 +3239,10 @@ en_GI =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_GM : Locale
@@ -3120,10 +3259,10 @@ en_GM =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_GU : Locale
@@ -3140,10 +3279,10 @@ en_GU =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_GY : Locale
@@ -3160,15 +3299,35 @@ en_GY =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_HK : Locale
 en_HK =
     Generated.En.en_HK
+
+
+{-| Date format strings:
+
+  - Short : dd/MM/y
+  - Medium : d MMM y
+  - Long : d MMMM y
+  - Full : EEEE, d MMMM y
+
+Time format strings:
+
+  - Short : HH.mm
+  - Medium : HH.mm.ss
+  - Long : HH.mm.ss z
+  - Full : HH.mm.ss zzzz
+
+-}
+en_ID : Locale
+en_ID =
+    Generated.En.en_ID
 
 
 {-| Date format strings:
@@ -3234,16 +3393,16 @@ en_IM =
 {-| Date format strings:
 
   - Short : dd/MM/yy
-  - Medium : dd-MMM-y
+  - Medium : d MMM y
   - Long : d MMMM y
-  - Full : EEEE, d MMMM, y
+  - Full : EEEE d MMMM, y
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_IN : Locale
@@ -3300,10 +3459,10 @@ en_JE =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_JM : Locale
@@ -3340,10 +3499,10 @@ en_KE =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_KI : Locale
@@ -3360,10 +3519,10 @@ en_KI =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_KN : Locale
@@ -3380,10 +3539,10 @@ en_KN =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_KY : Locale
@@ -3400,10 +3559,10 @@ en_KY =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_LC : Locale
@@ -3420,10 +3579,10 @@ en_LC =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_LR : Locale
@@ -3440,10 +3599,10 @@ en_LR =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_LS : Locale
@@ -3480,10 +3639,10 @@ en_MG =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_MH : Locale
@@ -3500,10 +3659,10 @@ en_MH =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_MO : Locale
@@ -3520,10 +3679,10 @@ en_MO =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_MP : Locale
@@ -3620,10 +3779,10 @@ en_MV =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_MW : Locale
@@ -3640,10 +3799,10 @@ en_MW =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_MY : Locale
@@ -3660,10 +3819,10 @@ en_MY =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_NA : Locale
@@ -3773,17 +3932,17 @@ en_NU =
 
 {-| Date format strings:
 
-  - Short : d/MM/yy
-  - Medium : d/MM/y
+  - Short : dd/MM/y
+  - Medium : d MMM y
   - Long : d MMMM y
   - Full : EEEE, d MMMM y
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_NZ : Locale
@@ -3800,10 +3959,10 @@ en_NZ =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_PG : Locale
@@ -3820,10 +3979,10 @@ en_PG =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_PH : Locale
@@ -3840,10 +3999,10 @@ en_PH =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_PK : Locale
@@ -3880,10 +4039,10 @@ en_PN =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_PR : Locale
@@ -3900,10 +4059,10 @@ en_PR =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_PW : Locale
@@ -3940,10 +4099,10 @@ en_RW =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_SB : Locale
@@ -3980,10 +4139,10 @@ en_SC =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_SD : Locale
@@ -4020,10 +4179,10 @@ en_SE =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_SG : Locale
@@ -4080,10 +4239,10 @@ en_SI =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_SL : Locale
@@ -4100,10 +4259,10 @@ en_SL =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_SS : Locale
@@ -4140,10 +4299,10 @@ en_SX =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_SZ : Locale
@@ -4160,10 +4319,10 @@ en_SZ =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_TC : Locale
@@ -4200,10 +4359,10 @@ en_TK =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_TO : Locale
@@ -4220,10 +4379,10 @@ en_TO =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_TT : Locale
@@ -4300,10 +4459,10 @@ en_UG =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_UM : Locale
@@ -4320,10 +4479,10 @@ en_UM =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_VC : Locale
@@ -4340,10 +4499,10 @@ en_VC =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_VG : Locale
@@ -4360,10 +4519,10 @@ en_VG =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_VI : Locale
@@ -4380,10 +4539,10 @@ en_VI =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_VU : Locale
@@ -4400,10 +4559,10 @@ en_VU =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_WS : Locale
@@ -4440,10 +4599,10 @@ en_ZA =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_ZM : Locale
@@ -4474,16 +4633,16 @@ en_ZW =
 {-| Date format strings:
 
   - Short : dd/MM/y
-  - Medium : dd-MMM-y
-  - Long : d MMMM y
-  - Full : EEEE, d MMMM, y
+  - Medium : dd MMM, y
+  - Long : d MMMM, y
+  - Full : EEEE d MMMM, y
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 en_Latn : Locale
@@ -4520,10 +4679,10 @@ es =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_419 : Locale
@@ -4540,10 +4699,10 @@ es_419 =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_AR : Locale
@@ -4560,10 +4719,10 @@ es_AR =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_BO : Locale
@@ -4620,10 +4779,10 @@ es_BZ =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_CL : Locale
@@ -4640,10 +4799,10 @@ es_CL =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_CO : Locale
@@ -4660,10 +4819,10 @@ es_CO =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_CR : Locale
@@ -4680,10 +4839,10 @@ es_CR =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_CU : Locale
@@ -4700,10 +4859,10 @@ es_CU =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_DO : Locale
@@ -4740,10 +4899,10 @@ es_EA =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_EC : Locale
@@ -4780,10 +4939,10 @@ es_GQ =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_GT : Locale
@@ -4800,10 +4959,10 @@ es_GT =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_HN : Locale
@@ -4840,10 +4999,10 @@ es_IC =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_MX : Locale
@@ -4860,10 +5019,10 @@ es_MX =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_NI : Locale
@@ -4880,10 +5039,10 @@ es_NI =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_PA : Locale
@@ -4900,10 +5059,10 @@ es_PA =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_PE : Locale
@@ -4920,10 +5079,10 @@ es_PE =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_PH : Locale
@@ -4940,10 +5099,10 @@ es_PH =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_PR : Locale
@@ -4960,10 +5119,10 @@ es_PR =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_PY : Locale
@@ -4980,10 +5139,10 @@ es_PY =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_SV : Locale
@@ -5000,10 +5159,10 @@ es_SV =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_US : Locale
@@ -5020,10 +5179,10 @@ es_US =
 
 Time format strings:
 
-  - Short : HH:mm
-  - Medium : HH:mm:ss
-  - Long : HH:mm:ss z
-  - Full : HH:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_UY : Locale
@@ -5040,10 +5199,10 @@ es_UY =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 es_VE : Locale
@@ -5160,10 +5319,10 @@ fi =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 fil : Locale
@@ -5440,10 +5599,10 @@ fr_CM =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 fr_DJ : Locale
@@ -5460,10 +5619,10 @@ fr_DJ =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 fr_DZ : Locale
@@ -5760,10 +5919,10 @@ fr_MQ =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 fr_MR : Locale
@@ -5960,10 +6119,10 @@ fr_SN =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 fr_SY : Locale
@@ -5980,10 +6139,10 @@ fr_SY =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 fr_TD : Locale
@@ -6020,10 +6179,10 @@ fr_TG =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 fr_TN : Locale
@@ -6040,10 +6199,10 @@ fr_TN =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 fr_VU : Locale
@@ -6133,6 +6292,26 @@ ga_GB =
 
 {-| Date format strings:
 
+  - Short : dd/MM/y
+  - Medium : d MMM y
+  - Long : d'mh' MMMM y
+  - Full : EEEE, d'mh' MMMM y
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : HH:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
+gd : Locale
+gd =
+    Generated.Gd.gd
+
+
+{-| Date format strings:
+
   - Short : dd/MM/yy
   - Medium : d 'de' MMM 'de' y
   - Long : d 'de' MMMM 'de' y
@@ -6169,6 +6348,66 @@ Time format strings:
 gu : Locale
 gu =
     Generated.Gu.gu
+
+
+{-| Date format strings:
+
+  - Short : d/M/yy
+  - Medium : d MMM, y
+  - Long : d MMMM, y
+  - Full : EEEE d MMMM, y
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : HH:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
+ha : Locale
+ha =
+    Generated.Ha.ha
+
+
+{-| Date format strings:
+
+  - Short : d/M/yy
+  - Medium : d MMM, y
+  - Long : d MMMM, y
+  - Full : EEEE d MMMM, y
+
+Time format strings:
+
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
+
+-}
+ha_GH : Locale
+ha_GH =
+    Generated.Ha.ha_GH
+
+
+{-| Date format strings:
+
+  - Short : d/M/yy
+  - Medium : d MMM, y
+  - Long : d MMMM, y
+  - Full : EEEE d MMMM, y
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : HH:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
+ha_NE : Locale
+ha_NE =
+    Generated.Ha.ha_NE
 
 
 {-| Date format strings:
@@ -6253,6 +6492,26 @@ hr_BA =
 
 {-| Date format strings:
 
+  - Short : d.M.yy
+  - Medium : d.M.y
+  - Long : d. MMMM y
+  - Full : EEEE, d. MMMM y
+
+Time format strings:
+
+  - Short : H:mm 'hodź'.
+  - Medium : H:mm:ss
+  - Long : H:mm:ss z
+  - Full : H:mm:ss zzzz
+
+-}
+hsb : Locale
+hsb =
+    Generated.Hsb.hsb
+
+
+{-| Date format strings:
+
   - Short : y. MM. dd.
   - Medium : y. MMM d.
   - Long : y. MMMM d.
@@ -6309,6 +6568,26 @@ Time format strings:
 id : Locale
 id =
     Generated.Id.id
+
+
+{-| Date format strings:
+
+  - Short : d/M/yy
+  - Medium : d MMM y
+  - Long : d MMMM y
+  - Full : EEEE, d MMMM y
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : HH:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
+ig : Locale
+ig =
+    Generated.Ig.ig
 
 
 {-| Date format strings:
@@ -6474,9 +6753,9 @@ ka =
 {-| Date format strings:
 
   - Short : dd.MM.yy
-  - Medium : y 'ж'. dd MMM
-  - Long : y 'ж'. d MMMM
-  - Full : y 'ж'. d MMMM, EEEE
+  - Medium : y 'ж'. dd MMM
+  - Long : y 'ж'. d MMMM
+  - Full : y 'ж'. d MMMM, EEEE
 
 Time format strings:
 
@@ -6535,8 +6814,8 @@ kn =
 
   - Short : yy. M. d.
   - Medium : y. M. d.
-  - Long : y년 M월 d일
-  - Full : y년 M월 d일 EEEE
+  - Long : y년 MMMM d일
+  - Full : y년 MMMM d일 EEEE
 
 Time format strings:
 
@@ -6555,8 +6834,28 @@ ko =
 
   - Short : yy. M. d.
   - Medium : y. M. d.
-  - Long : y년 M월 d일
-  - Full : y년 M월 d일 EEEE
+  - Long : y년 MMMM d일
+  - Full : y년 MMMM d일 EEEE
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : z HH:mm:ss
+  - Full : zzzz HH:mm:ss
+
+-}
+ko_CN : Locale
+ko_CN =
+    Generated.Ko.ko_CN
+
+
+{-| Date format strings:
+
+  - Short : yy. M. d.
+  - Medium : y. M. d.
+  - Long : y년 MMMM d일
+  - Full : y년 MMMM d일 EEEE
 
 Time format strings:
 
@@ -6569,6 +6868,26 @@ Time format strings:
 ko_KP : Locale
 ko_KP =
     Generated.Ko.ko_KP
+
+
+{-| Date format strings:
+
+  - Short : d-M-yy
+  - Medium : d-MMM-y
+  - Long : d MMMM y
+  - Full : EEEE d MMMM y
+
+Time format strings:
+
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
+
+-}
+kok : Locale
+kok =
+    Generated.Kok.kok
 
 
 {-| Date format strings:
@@ -6694,9 +7013,9 @@ ml =
 {-| Date format strings:
 
   - Short : y.MM.dd
-  - Medium : y 'оны' MMM'ын' d
-  - Long : y 'оны' MMMM'ын' d
-  - Full : y 'оны' MMMM'ын' d, EEEE 'гараг'
+  - Medium : y 'оны' MMM'ын' d
+  - Long : y 'оны' MMMM'ын' d
+  - Full : y 'оны' MMMM'ын' d, EEEE 'гараг'
 
 Time format strings:
 
@@ -6740,10 +7059,10 @@ mr =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 ms : Locale
@@ -6760,10 +7079,10 @@ ms =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 ms_BN : Locale
@@ -6800,10 +7119,10 @@ ms_ID =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 ms_SG : Locale
@@ -6813,10 +7132,10 @@ ms_SG =
 
 {-| Date format strings:
 
-  - Short : dd-MM-yy
-  - Medium : y- MMM d
-  - Long : y- MMMM d
-  - Full : y- MMMM d- EEEE
+  - Short : d/M/yy
+  - Medium : y၊ MMM d
+  - Long : y၊ MMMM d
+  - Full : y၊ MMMM d၊ EEEE
 
 Time format strings:
 
@@ -7175,7 +7494,7 @@ pl =
 
   - Short : y/M/d
   - Medium : y MMM d
-  - Long : د y د MMMM d
+  - Long : y MMMM d
   - Full : EEEE د y د MMMM d
 
 Time format strings:
@@ -7195,7 +7514,7 @@ ps =
 
   - Short : y/M/d
   - Medium : y MMM d
-  - Long : د y د MMMM d
+  - Long : y MMMM d
   - Full : EEEE د y د MMMM d
 
 Time format strings:
@@ -7360,10 +7679,10 @@ pt_LU =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 pt_MO : Locale
@@ -7494,9 +7813,9 @@ ro_MD =
 {-| Date format strings:
 
   - Short : dd.MM.y
-  - Medium : d MMM y 'г'.
-  - Long : d MMMM y 'г'.
-  - Full : EEEE, d MMMM y 'г'.
+  - Medium : d MMM y 'г'.
+  - Long : d MMMM y 'г'.
+  - Full : EEEE, d MMMM y 'г'.
 
 Time format strings:
 
@@ -7514,9 +7833,9 @@ ru =
 {-| Date format strings:
 
   - Short : dd.MM.y
-  - Medium : d MMM y 'г'.
-  - Long : d MMMM y 'г'.
-  - Full : EEEE, d MMMM y 'г'.
+  - Medium : d MMM y 'г'.
+  - Long : d MMMM y 'г'.
+  - Full : EEEE, d MMMM y 'г'.
 
 Time format strings:
 
@@ -7534,9 +7853,9 @@ ru_BY =
 {-| Date format strings:
 
   - Short : dd.MM.y
-  - Medium : d MMM y 'г'.
-  - Long : d MMMM y 'г'.
-  - Full : EEEE, d MMMM y 'г'.
+  - Medium : d MMM y 'г'.
+  - Long : d MMMM y 'г'.
+  - Full : EEEE, d MMMM y 'г'.
 
 Time format strings:
 
@@ -7554,9 +7873,9 @@ ru_KG =
 {-| Date format strings:
 
   - Short : dd.MM.y
-  - Medium : d MMM y 'г'.
-  - Long : d MMMM y 'г'.
-  - Full : EEEE, d MMMM y 'г'.
+  - Medium : d MMM y 'г'.
+  - Long : d MMMM y 'г'.
+  - Full : EEEE, d MMMM y 'г'.
 
 Time format strings:
 
@@ -7574,9 +7893,9 @@ ru_KZ =
 {-| Date format strings:
 
   - Short : dd.MM.y
-  - Medium : d MMM y 'г'.
-  - Long : d MMMM y 'г'.
-  - Full : EEEE, d MMMM y 'г'.
+  - Medium : d MMM y 'г'.
+  - Long : d MMMM y 'г'.
+  - Full : EEEE, d MMMM y 'г'.
 
 Time format strings:
 
@@ -7594,9 +7913,9 @@ ru_MD =
 {-| Date format strings:
 
   - Short : dd.MM.y
-  - Medium : d MMM y 'г'.
-  - Long : d MMMM y 'г'.
-  - Full : EEEE, d MMMM y 'г'.
+  - Medium : d MMM y 'г'.
+  - Long : d MMMM y 'г'.
+  - Full : EEEE, d MMMM y 'г'.
 
 Time format strings:
 
@@ -7616,7 +7935,7 @@ ru_UA =
   - Short : y-MM-dd
   - Medium : y MMM d
   - Long : y MMMM d
-  - Full : y MMMM d, EEEE
+  - Full : EEEE, MMMM d, y
 
 Time format strings:
 
@@ -7636,7 +7955,7 @@ sd =
   - Short : y-MM-dd
   - Medium : y MMM d
   - Long : y MMMM d
-  - Full : y MMMM d, EEEE
+  - Full : EEEE, MMMM d, y
 
 Time format strings:
 
@@ -7693,7 +8012,7 @@ sk =
 
 {-| Date format strings:
 
-  - Short : d. MM. yy
+  - Short : d. M. yy
   - Medium : d. MMM y
   - Long : d. MMMM y
   - Full : EEEE, d. MMMM y
@@ -7720,10 +8039,10 @@ sl =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 so : Locale
@@ -7740,10 +8059,10 @@ so =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 so_DJ : Locale
@@ -7760,10 +8079,10 @@ so_DJ =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 so_ET : Locale
@@ -7800,10 +8119,10 @@ so_KE =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a, z
-  - Full : h:mm:ss a, zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a, z
+  - Full : h:mm:ss a, zzzz
 
 -}
 sq : Locale
@@ -8340,10 +8659,10 @@ tr =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 tr_CY : Locale
@@ -8354,9 +8673,9 @@ tr_CY =
 {-| Date format strings:
 
   - Short : dd.MM.yy
-  - Medium : d MMM y 'р'.
-  - Long : d MMMM y 'р'.
-  - Full : EEEE, d MMMM y 'р'.
+  - Medium : d MMM y 'р'.
+  - Long : d MMMM y 'р'.
+  - Full : EEEE, d MMMM y 'р'.
 
 Time format strings:
 
@@ -8473,7 +8792,7 @@ uz_Latn =
 
 {-| Date format strings:
 
-  - Short : dd/MM/y
+  - Short : d/M/yy
   - Medium : d MMM, y
   - Long : d MMMM, y
   - Full : EEEE, d MMMM, y
@@ -8489,6 +8808,46 @@ Time format strings:
 vi : Locale
 vi =
     Generated.Vi.vi
+
+
+{-| Date format strings:
+
+  - Short : d/M/y
+  - Medium : d MM y
+  - Long : d MMM y
+  - Full : EEEE, d MMM y
+
+Time format strings:
+
+  - Short : H:m
+  - Medium : H:m:s
+  - Long : H:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
+yo : Locale
+yo =
+    Generated.Yo.yo
+
+
+{-| Date format strings:
+
+  - Short : d/M/y
+  - Medium : d MM y
+  - Long : d MMM y
+  - Full : EEEE, d MMM y
+
+Time format strings:
+
+  - Short : H:m
+  - Medium : H:m:s
+  - Long : H:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
+yo_BJ : Locale
+yo_BJ =
+    Generated.Yo.yo_BJ
 
 
 {-| Date format strings:
@@ -8509,6 +8868,26 @@ Time format strings:
 yue : Locale
 yue =
     Generated.Yue.yue
+
+
+{-| Date format strings:
+
+  - Short : y/M/d
+  - Medium : y年M月d日
+  - Long : y年M月d日
+  - Full : y年M月d日EEEE
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : z HH:mm:ss
+  - Full : zzzz HH:mm:ss
+
+-}
+yue_Hans : Locale
+yue_Hans =
+    Generated.Yue.yue_Hans
 
 
 {-| Date format strings:

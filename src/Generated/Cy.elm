@@ -257,8 +257,8 @@ cy =
             , dateTimePatterns =
                 { short = "{1} {0}"
                 , medium = "{1} {0}"
-                , long = "{1} 'am' {0}"
-                , full = "{1} 'am' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -269,24 +269,24 @@ cy =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "d, E" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "M/d/y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )

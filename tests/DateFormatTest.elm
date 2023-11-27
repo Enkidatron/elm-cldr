@@ -170,7 +170,7 @@ ruMedium =
         \_ ->
             Expect.equal
                 (format (WithLength Medium) ru testDate)
-                "1 июн. 2000 г."
+                "1 июн. 2000\u{202F}г."
 
 
 ruLong : Test
@@ -179,7 +179,7 @@ ruLong =
         \_ ->
             Expect.equal
                 (format (WithLength Long) ru testDate)
-                "1 июня 2000 г."
+                "1 июня 2000\u{202F}г."
 
 
 ruFull : Test
@@ -188,7 +188,7 @@ ruFull =
         \_ ->
             Expect.equal
                 (format (WithLength Full) ru testDate)
-                "четверг, 1 июня 2000 г."
+                "четверг, 1 июня 2000\u{202F}г."
 
 
 ruOpts_EyMd : Test
@@ -206,7 +206,7 @@ ruOpts_EyMd =
             in
             Expect.equal
                 (format (WithOptions options) ru testDate)
-                "четверг, 1 июня 2000 г."
+                "четверг, 1 июня 2000\u{202F}г."
 
 
 ruOpts_yMd : Test
@@ -223,7 +223,7 @@ ruOpts_yMd =
             in
             Expect.equal
                 (format (WithOptions options) ru testDate)
-                "1 июня 2000 г."
+                "1 июня 2000\u{202F}г."
 
 
 ruOpts_yM : Test
@@ -239,7 +239,7 @@ ruOpts_yM =
             in
             Expect.equal
                 (format (WithOptions options) ru testDate)
-                "июнь 2000 г."
+                "июнь 2000\u{202F}г."
 
 
 ruOpts_Md : Test

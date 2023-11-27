@@ -39,10 +39,10 @@ dayPeriods =
 
 Time format strings:
 
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a, z
-  - Full : h:mm:ss a, zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a, z
+  - Full : h:mm:ss a, zzzz
 
 -}
 sq : Internal.Locale.Locale
@@ -195,13 +195,13 @@ sq =
                 }
             , weekdayFormatNames =
                 { abbreviated =
-                    { sun = "Die"
-                    , mon = "Hën"
-                    , tue = "Mar"
-                    , wed = "Mër"
-                    , thu = "Enj"
-                    , fri = "Pre"
-                    , sat = "Sht"
+                    { sun = "die"
+                    , mon = "hën"
+                    , tue = "mar"
+                    , wed = "mër"
+                    , thu = "enj"
+                    , fri = "pre"
+                    , sat = "sht"
                     }
                 , wide =
                     { sun = "e diel"
@@ -257,16 +257,16 @@ sq =
                 , narrow = { bc = "p.K.", ad = "mb.K." }
                 }
             , timePatterns =
-                { short = "h:mm a"
-                , medium = "h:mm:ss a"
-                , long = "h:mm:ss a, z"
-                , full = "h:mm:ss a, zzzz"
+                { short = "h:mm\u{202F}a"
+                , medium = "h:mm:ss\u{202F}a"
+                , long = "h:mm:ss\u{202F}a, z"
+                , full = "h:mm:ss\u{202F}a, zzzz"
                 }
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'në' {0}"
-                , full = "{1} 'në' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -277,24 +277,24 @@ sq =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d.M.y GGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a, v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a, v" )
                 , ( "Hmsv", "HH:mm:ss, v" )
-                , ( "hmv", "h:mm a, v" )
+                , ( "hmv", "h:mm\u{202F}a, v" )
                 , ( "Hmv", "HH:mm, v" )
                 , ( "M", "L" )
                 , ( "Md", "d.M" )
@@ -496,13 +496,13 @@ sq_MK =
                 }
             , weekdayFormatNames =
                 { abbreviated =
-                    { sun = "Die"
-                    , mon = "Hën"
-                    , tue = "Mar"
-                    , wed = "Mër"
-                    , thu = "Enj"
-                    , fri = "Pre"
-                    , sat = "Sht"
+                    { sun = "die"
+                    , mon = "hën"
+                    , tue = "mar"
+                    , wed = "mër"
+                    , thu = "enj"
+                    , fri = "pre"
+                    , sat = "sht"
                     }
                 , wide =
                     { sun = "e diel"
@@ -566,8 +566,8 @@ sq_MK =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'në' {0}"
-                , full = "{1} 'në' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -578,24 +578,24 @@ sq_MK =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d.M.y GGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a, v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a, v" )
                 , ( "Hmsv", "HH:mm:ss, v" )
-                , ( "hmv", "h:mm a, v" )
+                , ( "hmv", "h:mm\u{202F}a, v" )
                 , ( "Hmv", "HH:mm, v" )
                 , ( "M", "L" )
                 , ( "Md", "d.M" )
@@ -797,13 +797,13 @@ sq_XK =
                 }
             , weekdayFormatNames =
                 { abbreviated =
-                    { sun = "Die"
-                    , mon = "Hën"
-                    , tue = "Mar"
-                    , wed = "Mër"
-                    , thu = "Enj"
-                    , fri = "Pre"
-                    , sat = "Sht"
+                    { sun = "die"
+                    , mon = "hën"
+                    , tue = "mar"
+                    , wed = "mër"
+                    , thu = "enj"
+                    , fri = "pre"
+                    , sat = "sht"
                     }
                 , wide =
                     { sun = "e diel"
@@ -867,8 +867,8 @@ sq_XK =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'në' {0}"
-                , full = "{1} 'në' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -879,24 +879,24 @@ sq_XK =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d.M.y GGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a, v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a, v" )
                 , ( "Hmsv", "HH:mm:ss, v" )
-                , ( "hmv", "h:mm a, v" )
+                , ( "hmv", "h:mm\u{202F}a, v" )
                 , ( "Hmv", "HH:mm, v" )
                 , ( "M", "L" )
                 , ( "Md", "d.M" )

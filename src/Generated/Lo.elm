@@ -298,7 +298,7 @@ lo =
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
                 , ( "MMMEd", "E d MMM" )
-                , ( "MMMMd", "MMMM d" )
+                , ( "MMMMd", "d MMMM" )
                 , ( "MMMMW-count-other", "ອາທິດທີ່ W ຂອງເດືອນ M" )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y" )

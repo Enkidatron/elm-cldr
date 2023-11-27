@@ -73,12 +73,12 @@ bn =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "দুপুর" )
+                            [ ( "afternoon1", "দুপুরবেলায়" )
                             , ( "afternoon2", "বিকাল" )
-                            , ( "evening1", "সন্ধ্যা" )
-                            , ( "morning1", "ভোর" )
-                            , ( "morning2", "সকাল" )
-                            , ( "night1", "রাত্রিতে" )
+                            , ( "evening1", "সন্ধ্যাবেলায়" )
+                            , ( "morning1", "ভোরবেলায়" )
+                            , ( "morning2", "সকালবেলায়" )
+                            , ( "night1", "রাত্রিবেলায়" )
                             ]
                     }
                 , narrow =
@@ -106,15 +106,15 @@ bn =
                     { jan = "জানু"
                     , feb = "ফেব"
                     , mar = "মার্চ"
-                    , apr = "এপ্রিল"
+                    , apr = "এপ্রি"
                     , may = "মে"
                     , jun = "জুন"
-                    , jul = "জুলাই"
-                    , aug = "আগস্ট"
-                    , sep = "সেপ্টেম্বর"
-                    , oct = "অক্টোবর"
-                    , nov = "নভেম্বর"
-                    , dec = "ডিসেম্বর"
+                    , jul = "জুল"
+                    , aug = "আগ"
+                    , sep = "সেপ"
+                    , oct = "অক্টো"
+                    , nov = "নভে"
+                    , dec = "ডিসে"
                     }
                 , wide =
                     { jan = "জানুয়ারী"
@@ -147,8 +147,8 @@ bn =
                 }
             , monthStandaloneNames =
                 { abbreviated =
-                    { jan = "জানুয়ারী"
-                    , feb = "ফেব্রুয়ারী"
+                    { jan = "জানু"
+                    , feb = "ফেব"
                     , mar = "মার্চ"
                     , apr = "এপ্রিল"
                     , may = "মে"
@@ -278,7 +278,7 @@ bn =
                 , ( "Ehms", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "GGGGG dd-MM-y" )
+                , ( "GyMd", "dd-MM-y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM, y G" )
                 , ( "GyMMMEd", "E, d MMM, y G" )
@@ -372,12 +372,12 @@ bn_IN =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "দুপুর" )
+                            [ ( "afternoon1", "দুপুরবেলায়" )
                             , ( "afternoon2", "বিকাল" )
-                            , ( "evening1", "সন্ধ্যা" )
-                            , ( "morning1", "ভোর" )
-                            , ( "morning2", "সকাল" )
-                            , ( "night1", "রাত্রিতে" )
+                            , ( "evening1", "সন্ধ্যাবেলায়" )
+                            , ( "morning1", "ভোরবেলায়" )
+                            , ( "morning2", "সকালবেলায়" )
+                            , ( "night1", "রাত্রি" )
                             ]
                     }
                 , narrow =
@@ -405,15 +405,15 @@ bn_IN =
                     { jan = "জানু"
                     , feb = "ফেব"
                     , mar = "মার্চ"
-                    , apr = "এপ্রিল"
+                    , apr = "এপ্রি"
                     , may = "মে"
                     , jun = "জুন"
-                    , jul = "জুলাই"
-                    , aug = "আগস্ট"
-                    , sep = "সেপ্টেম্বর"
-                    , oct = "অক্টোবর"
-                    , nov = "নভেম্বর"
-                    , dec = "ডিসেম্বর"
+                    , jul = "জুল"
+                    , aug = "আগ"
+                    , sep = "সেপ্টেঃ"
+                    , oct = "অক্টোঃ"
+                    , nov = "নভেঃ"
+                    , dec = "ডিসেঃ"
                     }
                 , wide =
                     { jan = "জানুয়ারী"
@@ -436,7 +436,7 @@ bn_IN =
                     , apr = "এ"
                     , may = "মে"
                     , jun = "জুন"
-                    , jul = "জু"
+                    , jul = "জুল"
                     , aug = "আ"
                     , sep = "সে"
                     , oct = "অ"
@@ -446,18 +446,18 @@ bn_IN =
                 }
             , monthStandaloneNames =
                 { abbreviated =
-                    { jan = "জানুয়ারী"
-                    , feb = "ফেব্রুয়ারী"
+                    { jan = "জানু"
+                    , feb = "ফেব"
                     , mar = "মার্চ"
                     , apr = "এপ্রিল"
                     , may = "মে"
                     , jun = "জুন"
                     , jul = "জুলাই"
                     , aug = "আগস্ট"
-                    , sep = "সেপ্টেম্বর"
-                    , oct = "অক্টোবর"
-                    , nov = "নভেম্বর"
-                    , dec = "ডিসেম্বর"
+                    , sep = "সেপ্টেঃ"
+                    , oct = "অক্টোঃ"
+                    , nov = "নভেঃ"
+                    , dec = "ডিসেঃ"
                     }
                 , wide =
                     { jan = "জানুয়ারী"
@@ -480,7 +480,7 @@ bn_IN =
                     , apr = "এ"
                     , may = "মে"
                     , jun = "জুন"
-                    , jul = "জু"
+                    , jul = "জুল"
                     , aug = "আ"
                     , sep = "সে"
                     , oct = "অ"
@@ -547,9 +547,9 @@ bn_IN =
                     }
                 }
             , eraNames =
-                { abbreviated = { bc = "খ্রিস্টপূর্ব", ad = "খৃষ্টাব্দ" }
-                , wide = { bc = "খ্রিস্টপূর্ব", ad = "খ্রীষ্টাব্দ" }
-                , narrow = { bc = "খ্রিস্টপূর্ব", ad = "খৃষ্টাব্দ" }
+                { abbreviated = { bc = "খ্রিঃপূঃ", ad = "খ্রিঃ" }
+                , wide = { bc = "খ্রিঃপূঃ", ad = "খ্রিষ্টাব্দ" }
+                , narrow = { bc = "খ্রিঃপূঃ", ad = "খ্রিঃ" }
                 }
             , timePatterns =
                 { short = "h:mm a"
@@ -577,7 +577,7 @@ bn_IN =
                 , ( "Ehms", "E h:mm:ss a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
-                , ( "GyMd", "GGGGG dd-MM-y" )
+                , ( "GyMd", "dd-MM-y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM, y G" )
                 , ( "GyMMMEd", "E, d MMM, y G" )
@@ -600,8 +600,8 @@ bn_IN =
                 , ( "MMMEd", "E d MMM" )
                 , ( "MMMMd", "d MMMM" )
                 , ( "MMMMEd", "E d MMMM" )
-                , ( "MMMMW-count-one", "MMMM এর Wয় সপ্তাহ" )
-                , ( "MMMMW-count-other", "MMMM এর Wয় সপ্তাহ" )
+                , ( "MMMMW-count-one", "MMMM এর W নম্বর সপ্তাহ" )
+                , ( "MMMMW-count-other", "MMMM এর W নম্বর সপ্তাহ" )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y" )
                 , ( "yM", "M/y" )

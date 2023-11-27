@@ -82,7 +82,7 @@ lt =
                             ]
                     }
                 , narrow =
-                    { am = "pr.\u{00A0}p."
+                    { am = "pr.\u{202F}p."
                     , pm = "pop."
                     , dayPeriods =
                         Dict.fromList
@@ -273,27 +273,27 @@ lt =
                 , ( "EBhm", "h:mm B, E" )
                 , ( "EBhms", "h:mm:ss B, E" )
                 , ( "Ed", "d, E" )
-                , ( "Ehm", "hh:mm a, E" )
+                , ( "Ehm", "hh:mm\u{202F}a, E" )
                 , ( "EHm", "HH:mm, E" )
-                , ( "Ehms", "hh:mm:ss a, E" )
+                , ( "Ehms", "hh:mm:ss\u{202F}a, E" )
                 , ( "EHms", "HH:mm:ss, E" )
                 , ( "Gy", "y 'm'. G" )
-                , ( "GyMd", "GGGGG y-MM-dd" )
+                , ( "GyMd", "y-MM-dd G" )
                 , ( "GyMMM", "y-MM G" )
                 , ( "GyMMMd", "y-MM-dd G" )
                 , ( "GyMMMEd", "y-MM-dd G, E" )
                 , ( "GyMMMM", "y 'm'. G, LLLL" )
                 , ( "GyMMMMd", "y 'm'. G MMMM d 'd'." )
                 , ( "GyMMMMEd", "y 'm'. G MMMM d 'd'., E" )
-                , ( "h", "hh a" )
+                , ( "h", "hh\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "hh:mm a" )
+                , ( "hm", "hh:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "hh:mm:ss a" )
+                , ( "hms", "hh:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "hh:mm:ss a; v" )
+                , ( "hmsv", "hh:mm:ss\u{202F}a; v" )
                 , ( "Hmsv", "HH:mm:ss; v" )
-                , ( "hmv", "hh:mm a; v" )
+                , ( "hmv", "hh:mm\u{202F}a; v" )
                 , ( "Hmv", "HH:mm; v" )
                 , ( "M", "MM" )
                 , ( "Md", "MM-d" )

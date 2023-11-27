@@ -147,32 +147,32 @@ gl =
                 }
             , monthStandaloneNames =
                 { abbreviated =
-                    { jan = "Xan."
-                    , feb = "Feb."
-                    , mar = "Mar."
-                    , apr = "Abr."
-                    , may = "Maio"
-                    , jun = "Xuño"
-                    , jul = "Xul."
-                    , aug = "Ago."
-                    , sep = "Set."
-                    , oct = "Out."
-                    , nov = "Nov."
-                    , dec = "Dec."
+                    { jan = "xan."
+                    , feb = "feb."
+                    , mar = "mar."
+                    , apr = "abr."
+                    , may = "maio"
+                    , jun = "xuño"
+                    , jul = "xul."
+                    , aug = "ago."
+                    , sep = "set."
+                    , oct = "out."
+                    , nov = "nov."
+                    , dec = "dec."
                     }
                 , wide =
-                    { jan = "Xaneiro"
-                    , feb = "Febreiro"
-                    , mar = "Marzo"
-                    , apr = "Abril"
-                    , may = "Maio"
-                    , jun = "Xuño"
-                    , jul = "Xullo"
-                    , aug = "Agosto"
-                    , sep = "Setembro"
-                    , oct = "Outubro"
-                    , nov = "Novembro"
-                    , dec = "Decembro"
+                    { jan = "xaneiro"
+                    , feb = "febreiro"
+                    , mar = "marzo"
+                    , apr = "abril"
+                    , may = "maio"
+                    , jun = "xuño"
+                    , jul = "xullo"
+                    , aug = "agosto"
+                    , sep = "setembro"
+                    , oct = "outubro"
+                    , nov = "novembro"
+                    , dec = "decembro"
                     }
                 , narrow =
                     { jan = "X"
@@ -220,22 +220,22 @@ gl =
                 }
             , weekdayStandaloneNames =
                 { abbreviated =
-                    { sun = "Dom."
-                    , mon = "Luns"
-                    , tue = "Mar."
-                    , wed = "Mér."
-                    , thu = "Xov."
-                    , fri = "Ven."
-                    , sat = "Sáb."
+                    { sun = "dom."
+                    , mon = "luns"
+                    , tue = "mar."
+                    , wed = "mér."
+                    , thu = "xov."
+                    , fri = "ven."
+                    , sat = "sáb."
                     }
                 , wide =
-                    { sun = "Domingo"
-                    , mon = "Luns"
-                    , tue = "Martes"
-                    , wed = "Mércores"
-                    , thu = "Xoves"
-                    , fri = "Venres"
-                    , sat = "Sábado"
+                    { sun = "domingo"
+                    , mon = "luns"
+                    , tue = "martes"
+                    , wed = "mércores"
+                    , thu = "xoves"
+                    , fri = "venres"
+                    , sat = "sábado"
                     }
                 , narrow =
                     { sun = "D"
@@ -259,10 +259,10 @@ gl =
                 , full = "HH:mm:ss zzzz"
                 }
             , dateTimePatterns =
-                { short = "{0}, {1}"
-                , medium = "{0}, {1}"
-                , long = "{0} 'do' {1}"
-                , full = "{0} 'do' {1}"
+                { short = "{1}, {0}"
+                , medium = "{1}, {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -273,24 +273,24 @@ gl =
                 , ( "EBhm", "E, h:mm B" )
                 , ( "EBhms", "E, h:mm:ss B" )
                 , ( "Ed", "E d" )
-                , ( "Ehm", "E, h:mm a" )
+                , ( "Ehm", "E, h:mm\u{202F}a" )
                 , ( "EHm", "E, HH:mm" )
-                , ( "Ehms", "E, h:mm:ss a" )
+                , ( "Ehms", "E, h:mm:ss\u{202F}a" )
                 , ( "EHms", "E, HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d/M/y GGGGG" )
                 , ( "GyMMM", "MMM 'de' y G" )
                 , ( "GyMMMd", "d 'de' MMM 'de' y G" )
                 , ( "GyMMMEd", "E, d 'de' MMM 'de' y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d/M" )

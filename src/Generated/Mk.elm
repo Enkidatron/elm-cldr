@@ -71,8 +71,8 @@ mk =
                             ]
                     }
                 , wide =
-                    { am = "претпладне"
-                    , pm = "попладне"
+                    { am = "претпл."
+                    , pm = "попл."
                     , dayPeriods =
                         Dict.fromList
                             [ ( "afternoon1", "попладне" )
@@ -80,7 +80,7 @@ mk =
                             , ( "midnight", "полноќ" )
                             , ( "morning1", "наутро" )
                             , ( "morning2", "претпладне" )
-                            , ( "night1", "по полноќ" )
+                            , ( "night1", "ноќе" )
                             , ( "noon", "напладне" )
                             ]
                     }
@@ -90,9 +90,9 @@ mk =
                     , dayPeriods =
                         Dict.fromList
                             [ ( "afternoon1", "попл." )
-                            , ( "evening1", "веч." )
+                            , ( "evening1", "навечер" )
                             , ( "midnight", "полн." )
-                            , ( "morning1", "утро" )
+                            , ( "morning1", "наутро" )
                             , ( "morning2", "претпл." )
                             , ( "night1", "ноќе" )
                             , ( "noon", "напл." )
@@ -115,9 +115,9 @@ mk =
                     , jun = "јун."
                     , jul = "јул."
                     , aug = "авг."
-                    , sep = "септ."
+                    , sep = "сеп."
                     , oct = "окт."
-                    , nov = "ноем."
+                    , nov = "ное."
                     , dec = "дек."
                     }
                 , wide =
@@ -159,9 +159,9 @@ mk =
                     , jun = "јун."
                     , jul = "јул."
                     , aug = "авг."
-                    , sep = "септ."
+                    , sep = "сеп."
                     , oct = "окт."
-                    , nov = "ноем."
+                    , nov = "ное."
                     , dec = "дек."
                     }
                 , wide =
@@ -263,10 +263,10 @@ mk =
                 , full = "HH:mm:ss zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, 'во' {0}"
-                , medium = "{1}, 'во' {0}"
-                , long = "{1}, 'во' {0}"
-                , full = "{1}, 'во' {0}"
+                { short = "{1}, {0}"
+                , medium = "{1}, {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -276,25 +276,25 @@ mk =
                 , ( "E", "ccc" )
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
-                , ( "Ed", "d E" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ed", "E, d" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "d.M.y GGGGG" )
                 , ( "GyMMM", "MMM y G" )
                 , ( "GyMMMd", "d MMM y G" )
                 , ( "GyMMMEd", "E, d MMM y G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
                 , ( "Md", "d.M" )
@@ -312,12 +312,12 @@ mk =
                 , ( "yM", "M.y" )
                 , ( "yMd", "d.M.y" )
                 , ( "yMEd", "E, d.M.y" )
-                , ( "yMMM", "MMM y 'г'." )
-                , ( "yMMMd", "d MMM y 'г'." )
-                , ( "yMMMEd", "E, d MMM y 'г'." )
-                , ( "yMMMM", "MMMM y 'г'." )
-                , ( "yQQQ", "QQQ y 'г'." )
-                , ( "yQQQQ", "QQQQ y 'г'." )
+                , ( "yMMM", "MMM y\u{202F}'г'." )
+                , ( "yMMMd", "d MMM y\u{202F}'г'." )
+                , ( "yMMMEd", "E, d MMM y\u{202F}'г'." )
+                , ( "yMMMM", "MMMM y\u{202F}'г'." )
+                , ( "yQQQ", "QQQ y\u{202F}'г'." )
+                , ( "yQQQQ", "QQQQ y\u{202F}'г'." )
                 , ( "yw-count-one", "w. 'седмица' 'од' Y" )
                 , ( "yw-count-other", "w. 'седмица' 'од' Y" )
                 ]

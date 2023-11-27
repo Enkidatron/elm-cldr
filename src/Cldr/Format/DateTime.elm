@@ -77,7 +77,7 @@ full =
     import Cldr.Locale exposing (en)
 
     format short en Time.utc (Time.millisToPosix 959829796738)
-    --> "6/1/00, 3:23 AM"
+    --> "6/1/00, 3:23 AM"
 
 -}
 format : FormatType -> Locale -> Time.Zone -> Posix -> String

@@ -273,28 +273,28 @@ sr =
                 , ( "EBhm", "E hh:mm B" )
                 , ( "EBhms", "E hh:mm:ss B" )
                 , ( "Ed", "E d." )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y. G" )
                 , ( "GyMd", "d.MM.y. GGGGG" )
                 , ( "GyMMM", "MMM y. G" )
                 , ( "GyMMMd", "d. MMM y. G" )
                 , ( "GyMMMEd", "E, d. MMM y. G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d.M." )
-                , ( "MEd", "E, d.M." )
+                , ( "Md", "d. M." )
+                , ( "MEd", "E, d. M." )
                 , ( "MMdd", "dd.MM." )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d. MMM" )
@@ -307,9 +307,9 @@ sr =
                 , ( "MMMMW-count-other", "W. 'седмица' 'у' MMMM." )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y." )
-                , ( "yM", "M.y." )
-                , ( "yMd", "d.M.y." )
-                , ( "yMEd", "E, d.M.y." )
+                , ( "yM", "M. y." )
+                , ( "yMd", "d. M. y." )
+                , ( "yMEd", "E, d. M. y." )
                 , ( "yMM", "MM.y." )
                 , ( "yMMdd", "dd.MM.y." )
                 , ( "yMMM", "MMM y." )
@@ -576,28 +576,28 @@ sr_Cyrl =
                 , ( "EBhm", "E hh:mm B" )
                 , ( "EBhms", "E hh:mm:ss B" )
                 , ( "Ed", "E d." )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y. G" )
                 , ( "GyMd", "d.MM.y. GGGGG" )
                 , ( "GyMMM", "MMM y. G" )
                 , ( "GyMMMd", "d. MMM y. G" )
                 , ( "GyMMMEd", "E, d. MMM y. G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d.M." )
-                , ( "MEd", "E, d.M." )
+                , ( "Md", "d. M." )
+                , ( "MEd", "E, d. M." )
                 , ( "MMdd", "dd.MM." )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d. MMM" )
@@ -610,9 +610,9 @@ sr_Cyrl =
                 , ( "MMMMW-count-other", "W. 'седмица' 'у' MMMM." )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y." )
-                , ( "yM", "M.y." )
-                , ( "yMd", "d.M.y." )
-                , ( "yMEd", "E, d.M.y." )
+                , ( "yM", "M. y." )
+                , ( "yMd", "d. M. y." )
+                , ( "yMEd", "E, d. M. y." )
                 , ( "yMM", "MM.y." )
                 , ( "yMMdd", "dd.MM.y." )
                 , ( "yMMM", "MMM y." )
@@ -662,14 +662,14 @@ sr_Cyrl_BA =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "прије подне"
-                    , pm = "по подне"
+                    { am = "прије\u{202F}подне"
+                    , pm = "по\u{202F}подне"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "по под." )
-                            , ( "evening1", "вече" )
+                            [ ( "afternoon1", "по подне" )
+                            , ( "evening1", "увече" )
                             , ( "midnight", "поноћ" )
-                            , ( "morning1", "јутро" )
+                            , ( "morning1", "ујутро" )
                             , ( "night1", "ноћу" )
                             , ( "noon", "подне" )
                             ]
@@ -688,15 +688,15 @@ sr_Cyrl_BA =
                             ]
                     }
                 , narrow =
-                    { am = "AM"
-                    , pm = "PM"
+                    { am = "прије\u{202F}подне"
+                    , pm = "по\u{202F}подне"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "по под." )
-                            , ( "evening1", "вече" )
+                            [ ( "afternoon1", "по подне" )
+                            , ( "evening1", "увече" )
                             , ( "midnight", "поноћ" )
-                            , ( "morning1", "јутро" )
-                            , ( "night1", "ноћ" )
+                            , ( "morning1", "ујутро" )
+                            , ( "night1", "ноћу" )
                             , ( "noon", "подне" )
                             ]
                     }
@@ -800,7 +800,7 @@ sr_Cyrl_BA =
                     { sun = "нед"
                     , mon = "пон"
                     , tue = "уто"
-                    , wed = "сре"
+                    , wed = "сри"
                     , thu = "чет"
                     , fri = "пет"
                     , sat = "суб"
@@ -879,28 +879,28 @@ sr_Cyrl_BA =
                 , ( "EBhm", "E hh:mm B" )
                 , ( "EBhms", "E hh:mm:ss B" )
                 , ( "Ed", "E d." )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y. G" )
                 , ( "GyMd", "d.MM.y. GGGGG" )
                 , ( "GyMMM", "MMM y. G" )
                 , ( "GyMMMd", "d. MMM y. G" )
                 , ( "GyMMMEd", "E, d. MMM y. G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d.M." )
-                , ( "MEd", "E, d.M." )
+                , ( "Md", "d. M." )
+                , ( "MEd", "E, d. M." )
                 , ( "MMdd", "dd.MM." )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d. MMM" )
@@ -913,9 +913,9 @@ sr_Cyrl_BA =
                 , ( "MMMMW-count-other", "W. 'седмица' 'у' MMMM." )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y." )
-                , ( "yM", "M.y." )
-                , ( "yMd", "d.M.y." )
-                , ( "yMEd", "E, d.M.y." )
+                , ( "yM", "M. y." )
+                , ( "yMd", "d. M. y." )
+                , ( "yMEd", "E, d. M. y." )
                 , ( "yMM", "MM.y." )
                 , ( "yMMdd", "dd.MM.y." )
                 , ( "yMMM", "MMM y." )
@@ -965,8 +965,8 @@ sr_Cyrl_ME =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "прије подне"
-                    , pm = "по подне"
+                    { am = "прије\u{202F}подне"
+                    , pm = "по\u{202F}подне"
                     , dayPeriods =
                         Dict.fromList
                             [ ( "afternoon1", "по под." )
@@ -982,17 +982,17 @@ sr_Cyrl_ME =
                     , pm = "по подне"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "по подне" )
-                            , ( "evening1", "увече" )
+                            [ ( "afternoon1", "по под." )
+                            , ( "evening1", "вече" )
                             , ( "midnight", "поноћ" )
-                            , ( "morning1", "ујутро" )
+                            , ( "morning1", "јутро" )
                             , ( "night1", "ноћу" )
                             , ( "noon", "подне" )
                             ]
                     }
                 , narrow =
-                    { am = "AM"
-                    , pm = "PM"
+                    { am = "прије\u{202F}подне"
+                    , pm = "по\u{202F}подне"
                     , dayPeriods =
                         Dict.fromList
                             [ ( "afternoon1", "по под." )
@@ -1182,28 +1182,28 @@ sr_Cyrl_ME =
                 , ( "EBhm", "E hh:mm B" )
                 , ( "EBhms", "E hh:mm:ss B" )
                 , ( "Ed", "E d." )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y. G" )
                 , ( "GyMd", "d.MM.y. GGGGG" )
                 , ( "GyMMM", "MMM y. G" )
                 , ( "GyMMMd", "d. MMM y. G" )
                 , ( "GyMMMEd", "E, d. MMM y. G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d.M." )
-                , ( "MEd", "E, d.M." )
+                , ( "Md", "d. M." )
+                , ( "MEd", "E, d. M." )
                 , ( "MMdd", "dd.MM." )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d. MMM" )
@@ -1216,9 +1216,9 @@ sr_Cyrl_ME =
                 , ( "MMMMW-count-other", "W. 'сједмица' 'у' MMMM" )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y." )
-                , ( "yM", "M.y." )
-                , ( "yMd", "d.M.y." )
-                , ( "yMEd", "E, d.M.y." )
+                , ( "yM", "M. y." )
+                , ( "yMd", "d. M. y." )
+                , ( "yMEd", "E, d. M. y." )
                 , ( "yMM", "MM.y." )
                 , ( "yMMdd", "dd.MM.y." )
                 , ( "yMMM", "MMM y." )
@@ -1285,10 +1285,10 @@ sr_Cyrl_XK =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "по подне" )
+                            [ ( "afternoon1", "по под." )
                             , ( "evening1", "увече" )
                             , ( "midnight", "поноћ" )
-                            , ( "morning1", "ујутро" )
+                            , ( "morning1", "јутро" )
                             , ( "night1", "ноћу" )
                             , ( "noon", "подне" )
                             ]
@@ -1485,28 +1485,28 @@ sr_Cyrl_XK =
                 , ( "EBhm", "E hh:mm B" )
                 , ( "EBhms", "E hh:mm:ss B" )
                 , ( "Ed", "E d." )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y. G" )
                 , ( "GyMd", "d.MM.y. GGGGG" )
                 , ( "GyMMM", "MMM y. G" )
                 , ( "GyMMMd", "d. MMM y. G" )
                 , ( "GyMMMEd", "E, d. MMM y. G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d.M." )
-                , ( "MEd", "E, d.M." )
+                , ( "Md", "d. M." )
+                , ( "MEd", "E, d. M." )
                 , ( "MMdd", "dd.MM." )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d. MMM" )
@@ -1519,9 +1519,9 @@ sr_Cyrl_XK =
                 , ( "MMMMW-count-other", "W. 'седмица' 'у' MMMM." )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y." )
-                , ( "yM", "M.y." )
-                , ( "yMd", "d.M.y." )
-                , ( "yMEd", "E, d.M.y." )
+                , ( "yM", "M. y." )
+                , ( "yMd", "d. M. y." )
+                , ( "yMEd", "E, d. M. y." )
                 , ( "yMM", "MM.y." )
                 , ( "yMMdd", "dd.MM.y." )
                 , ( "yMMM", "MMM y." )
@@ -1788,28 +1788,28 @@ sr_Latn =
                 , ( "EBhm", "E hh:mm B" )
                 , ( "EBhms", "E hh:mm:ss B" )
                 , ( "Ed", "E d." )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y. G" )
                 , ( "GyMd", "d.MM.y. GGGGG" )
                 , ( "GyMMM", "MMM y. G" )
                 , ( "GyMMMd", "d. MMM y. G" )
                 , ( "GyMMMEd", "E, d. MMM y. G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d.M." )
-                , ( "MEd", "E, d.M." )
+                , ( "Md", "d. M." )
+                , ( "MEd", "E, d. M." )
                 , ( "MMdd", "dd.MM." )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d. MMM" )
@@ -1822,9 +1822,9 @@ sr_Latn =
                 , ( "MMMMW-count-other", "W. 'sedmica' 'u' MMMM." )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y." )
-                , ( "yM", "M.y." )
-                , ( "yMd", "d.M.y." )
-                , ( "yMEd", "E, d.M.y." )
+                , ( "yM", "M. y." )
+                , ( "yMd", "d. M. y." )
+                , ( "yMEd", "E, d. M. y." )
                 , ( "yMM", "MM.y." )
                 , ( "yMMdd", "dd.MM.y." )
                 , ( "yMMM", "MMM y." )
@@ -1874,14 +1874,14 @@ sr_Latn_BA =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "prije podne"
-                    , pm = "po podne"
+                    { am = "prije\u{202F}podne"
+                    , pm = "po\u{202F}podne"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "po pod." )
-                            , ( "evening1", "veče" )
+                            [ ( "afternoon1", "po podne" )
+                            , ( "evening1", "uveče" )
                             , ( "midnight", "ponoć" )
-                            , ( "morning1", "jutro" )
+                            , ( "morning1", "ujutro" )
                             , ( "night1", "noću" )
                             , ( "noon", "podne" )
                             ]
@@ -1900,15 +1900,15 @@ sr_Latn_BA =
                             ]
                     }
                 , narrow =
-                    { am = "AM"
-                    , pm = "PM"
+                    { am = "prije\u{202F}podne"
+                    , pm = "po\u{202F}podne"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "po pod." )
-                            , ( "evening1", "veče" )
+                            [ ( "afternoon1", "po podne" )
+                            , ( "evening1", "uveče" )
                             , ( "midnight", "ponoć" )
-                            , ( "morning1", "jutro" )
-                            , ( "night1", "noć" )
+                            , ( "morning1", "ujutro" )
+                            , ( "night1", "noću" )
                             , ( "noon", "podne" )
                             ]
                     }
@@ -2012,7 +2012,7 @@ sr_Latn_BA =
                     { sun = "ned"
                     , mon = "pon"
                     , tue = "uto"
-                    , wed = "sre"
+                    , wed = "sri"
                     , thu = "čet"
                     , fri = "pet"
                     , sat = "sub"
@@ -2091,28 +2091,28 @@ sr_Latn_BA =
                 , ( "EBhm", "E hh:mm B" )
                 , ( "EBhms", "E hh:mm:ss B" )
                 , ( "Ed", "E d." )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y. G" )
                 , ( "GyMd", "d.MM.y. GGGGG" )
                 , ( "GyMMM", "MMM y. G" )
                 , ( "GyMMMd", "d. MMM y. G" )
                 , ( "GyMMMEd", "E, d. MMM y. G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d.M." )
-                , ( "MEd", "E, d.M." )
+                , ( "Md", "d. M." )
+                , ( "MEd", "E, d. M." )
                 , ( "MMdd", "dd.MM." )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d. MMM" )
@@ -2125,9 +2125,9 @@ sr_Latn_BA =
                 , ( "MMMMW-count-other", "W. 'sedmica' 'u' MMMM." )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y." )
-                , ( "yM", "M.y." )
-                , ( "yMd", "d.M.y." )
-                , ( "yMEd", "E, d.M.y." )
+                , ( "yM", "M. y." )
+                , ( "yMd", "d. M. y." )
+                , ( "yMEd", "E, d. M. y." )
                 , ( "yMM", "MM.y." )
                 , ( "yMMdd", "dd.MM.y." )
                 , ( "yMMM", "MMM y." )
@@ -2177,8 +2177,8 @@ sr_Latn_ME =
             , variant = Nothing
             , periodNames =
                 { abbreviated =
-                    { am = "prije podne"
-                    , pm = "po podne"
+                    { am = "prije\u{202F}podne"
+                    , pm = "po\u{202F}podne"
                     , dayPeriods =
                         Dict.fromList
                             [ ( "afternoon1", "po pod." )
@@ -2194,17 +2194,17 @@ sr_Latn_ME =
                     , pm = "po podne"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "po podne" )
-                            , ( "evening1", "uveče" )
+                            [ ( "afternoon1", "po pod." )
+                            , ( "evening1", "veče" )
                             , ( "midnight", "ponoć" )
-                            , ( "morning1", "ujutro" )
+                            , ( "morning1", "jutro" )
                             , ( "night1", "noću" )
                             , ( "noon", "podne" )
                             ]
                     }
                 , narrow =
-                    { am = "AM"
-                    , pm = "PM"
+                    { am = "prije\u{202F}podne"
+                    , pm = "po\u{202F}podne"
                     , dayPeriods =
                         Dict.fromList
                             [ ( "afternoon1", "po pod." )
@@ -2394,28 +2394,28 @@ sr_Latn_ME =
                 , ( "EBhm", "E hh:mm B" )
                 , ( "EBhms", "E hh:mm:ss B" )
                 , ( "Ed", "E d." )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y. G" )
                 , ( "GyMd", "d.MM.y. GGGGG" )
                 , ( "GyMMM", "MMM y. G" )
                 , ( "GyMMMd", "d. MMM y. G" )
                 , ( "GyMMMEd", "E, d. MMM y. G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d.M." )
-                , ( "MEd", "E, d.M." )
+                , ( "Md", "d. M." )
+                , ( "MEd", "E, d. M." )
                 , ( "MMdd", "dd.MM." )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d. MMM" )
@@ -2428,9 +2428,9 @@ sr_Latn_ME =
                 , ( "MMMMW-count-other", "W. 'sjedmica' 'u' MMMM" )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y." )
-                , ( "yM", "M.y." )
-                , ( "yMd", "d.M.y." )
-                , ( "yMEd", "E, d.M.y." )
+                , ( "yM", "M. y." )
+                , ( "yMd", "d. M. y." )
+                , ( "yMEd", "E, d. M. y." )
                 , ( "yMM", "MM.y." )
                 , ( "yMMdd", "dd.MM.y." )
                 , ( "yMMM", "MMM y." )
@@ -2497,10 +2497,10 @@ sr_Latn_XK =
                     , pm = "PM"
                     , dayPeriods =
                         Dict.fromList
-                            [ ( "afternoon1", "po podne" )
+                            [ ( "afternoon1", "po pod." )
                             , ( "evening1", "uveče" )
                             , ( "midnight", "ponoć" )
-                            , ( "morning1", "ujutro" )
+                            , ( "morning1", "jutro" )
                             , ( "night1", "noću" )
                             , ( "noon", "podne" )
                             ]
@@ -2697,28 +2697,28 @@ sr_Latn_XK =
                 , ( "EBhm", "E hh:mm B" )
                 , ( "EBhms", "E hh:mm:ss B" )
                 , ( "Ed", "E d." )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y. G" )
                 , ( "GyMd", "d.MM.y. GGGGG" )
                 , ( "GyMMM", "MMM y. G" )
                 , ( "GyMMMd", "d. MMM y. G" )
                 , ( "GyMMMEd", "E, d. MMM y. G" )
-                , ( "h", "h a" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d.M." )
-                , ( "MEd", "E, d.M." )
+                , ( "Md", "d. M." )
+                , ( "MEd", "E, d. M." )
                 , ( "MMdd", "dd.MM." )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d. MMM" )
@@ -2731,9 +2731,9 @@ sr_Latn_XK =
                 , ( "MMMMW-count-other", "W. 'sedmica' 'u' MMMM." )
                 , ( "ms", "mm:ss" )
                 , ( "y", "y." )
-                , ( "yM", "M.y." )
-                , ( "yMd", "d.M.y." )
-                , ( "yMEd", "E, d.M.y." )
+                , ( "yM", "M. y." )
+                , ( "yMd", "d. M. y." )
+                , ( "yMEd", "E, d. M. y." )
                 , ( "yMM", "MM.y." )
                 , ( "yMMdd", "dd.MM.y." )
                 , ( "yMMM", "MMM y." )

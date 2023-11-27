@@ -32,9 +32,9 @@ dayPeriods =
 {-| Date format strings:
 
   - Short : dd.MM.yy
-  - Medium : d MMM y 'р'.
-  - Long : d MMMM y 'р'.
-  - Full : EEEE, d MMMM y 'р'.
+  - Medium : d MMM y 'р'.
+  - Long : d MMMM y 'р'.
+  - Full : EEEE, d MMMM y 'р'.
 
 Time format strings:
 
@@ -65,7 +65,7 @@ uk =
                             , ( "midnight", "опівночі" )
                             , ( "morning1", "ранку" )
                             , ( "night1", "ночі" )
-                            , ( "noon", "пополудні" )
+                            , ( "noon", "опівдні" )
                             ]
                     }
                 , wide =
@@ -78,7 +78,7 @@ uk =
                             , ( "midnight", "опівночі" )
                             , ( "morning1", "ранку" )
                             , ( "night1", "ночі" )
-                            , ( "noon", "пополудні" )
+                            , ( "noon", "опівдні" )
                             ]
                     }
                 , narrow =
@@ -88,18 +88,18 @@ uk =
                         Dict.fromList
                             [ ( "afternoon1", "дня" )
                             , ( "evening1", "вечора" )
-                            , ( "midnight", "північ" )
+                            , ( "midnight", "ночі" )
                             , ( "morning1", "ранку" )
                             , ( "night1", "ночі" )
-                            , ( "noon", "п" )
+                            , ( "noon", "дня" )
                             ]
                     }
                 }
             , datePatterns =
                 { short = "dd.MM.yy"
-                , medium = "d MMM y 'р'."
-                , long = "d MMMM y 'р'."
-                , full = "EEEE, d MMMM y 'р'."
+                , medium = "d MMM y\u{202F}'р'."
+                , long = "d MMMM y\u{202F}'р'."
+                , full = "EEEE, d MMMM y\u{202F}'р'."
                 }
             , monthFormatNames =
                 { abbreviated =
@@ -147,18 +147,18 @@ uk =
                 }
             , monthStandaloneNames =
                 { abbreviated =
-                    { jan = "січ"
-                    , feb = "лют"
-                    , mar = "бер"
-                    , apr = "кві"
-                    , may = "тра"
-                    , jun = "чер"
-                    , jul = "лип"
-                    , aug = "сер"
-                    , sep = "вер"
-                    , oct = "жов"
-                    , nov = "лис"
-                    , dec = "гру"
+                    { jan = "січ."
+                    , feb = "лют."
+                    , mar = "бер."
+                    , apr = "квіт."
+                    , may = "трав."
+                    , jun = "черв."
+                    , jul = "лип."
+                    , aug = "серп."
+                    , sep = "вер."
+                    , oct = "жовт."
+                    , nov = "лист."
+                    , dec = "груд."
                     }
                 , wide =
                     { jan = "січень"
@@ -200,13 +200,13 @@ uk =
                     , sat = "сб"
                     }
                 , wide =
-                    { sun = "неділя"
+                    { sun = "неділю"
                     , mon = "понеділок"
                     , tue = "вівторок"
-                    , wed = "середа"
+                    , wed = "середу"
                     , thu = "четвер"
-                    , fri = "пʼятниця"
-                    , sat = "субота"
+                    , fri = "пʼятницю"
+                    , sat = "суботу"
                     }
                 , narrow =
                     { sun = "Н"
@@ -261,8 +261,8 @@ uk =
             , dateTimePatterns =
                 { short = "{1}, {0}"
                 , medium = "{1}, {0}"
-                , long = "{1} 'о' {0}"
-                , full = "{1} 'о' {0}"
+                , long = "{1}, {0}"
+                , full = "{1}, {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -273,24 +273,24 @@ uk =
                 , ( "EBhm", "E h:mm B" )
                 , ( "EBhms", "E h:mm:ss B" )
                 , ( "Ed", "E, d" )
-                , ( "Ehm", "E h:mm a" )
+                , ( "Ehm", "E h:mm\u{202F}a" )
                 , ( "EHm", "E HH:mm" )
-                , ( "Ehms", "E h:mm:ss a" )
+                , ( "Ehms", "E h:mm:ss\u{202F}a" )
                 , ( "EHms", "E HH:mm:ss" )
                 , ( "Gy", "y G" )
                 , ( "GyMd", "dd-MM-y GGGGG" )
-                , ( "GyMMM", "LLL y 'р'. G" )
-                , ( "GyMMMd", "d MMM y 'р'. G" )
-                , ( "GyMMMEd", "E, d MMM y 'р'. G" )
-                , ( "h", "h a" )
+                , ( "GyMMM", "LLL y\u{202F}'р'. G" )
+                , ( "GyMMMd", "d MMM y\u{202F}'р'. G" )
+                , ( "GyMMMEd", "E, d MMM y\u{202F}'р'. G" )
+                , ( "h", "h\u{202F}a" )
                 , ( "H", "HH" )
-                , ( "hm", "h:mm a" )
+                , ( "hm", "h:mm\u{202F}a" )
                 , ( "Hm", "HH:mm" )
-                , ( "hms", "h:mm:ss a" )
+                , ( "hms", "h:mm:ss\u{202F}a" )
                 , ( "Hms", "HH:mm:ss" )
-                , ( "hmsv", "h:mm:ss a v" )
+                , ( "hmsv", "h:mm:ss\u{202F}a v" )
                 , ( "Hmsv", "HH:mm:ss v" )
-                , ( "hmv", "h:mm a v" )
+                , ( "hmv", "h:mm\u{202F}a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "LL" )
                 , ( "Md", "dd.MM" )
@@ -309,12 +309,12 @@ uk =
                 , ( "yM", "MM.y" )
                 , ( "yMd", "dd.MM.y" )
                 , ( "yMEd", "E, dd.MM.y" )
-                , ( "yMMM", "LLL y 'р'." )
-                , ( "yMMMd", "d MMM y 'р'." )
-                , ( "yMMMEd", "E, d MMM y 'р'." )
-                , ( "yMMMM", "LLLL y 'р'." )
+                , ( "yMMM", "LLL y\u{202F}'р'." )
+                , ( "yMMMd", "d MMM y\u{202F}'р'." )
+                , ( "yMMMEd", "E, d MMM y\u{202F}'р'." )
+                , ( "yMMMM", "LLLL y\u{202F}'р'." )
                 , ( "yQQQ", "QQQ y" )
-                , ( "yQQQQ", "QQQQ y 'р'." )
+                , ( "yQQQQ", "QQQQ y\u{202F}'р'." )
                 , ( "yw-count-one", "w-'й' 'тиж'. Y 'р'." )
                 , ( "yw-count-few", "w-'й' 'тиж'. Y 'р'." )
                 , ( "yw-count-many", "w-'й' 'тиж'. Y 'р'." )

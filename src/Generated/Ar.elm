@@ -263,10 +263,10 @@ ar =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -297,8 +297,8 @@ ar =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -315,7 +315,7 @@ ar =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -573,10 +573,10 @@ ar_AE =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -607,8 +607,8 @@ ar_AE =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -625,7 +625,7 @@ ar_AE =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -883,10 +883,10 @@ ar_BH =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -917,8 +917,8 @@ ar_BH =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -935,7 +935,7 @@ ar_BH =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -1193,10 +1193,10 @@ ar_DJ =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -1227,8 +1227,8 @@ ar_DJ =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -1245,7 +1245,7 @@ ar_DJ =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -1503,10 +1503,10 @@ ar_DZ =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -1537,8 +1537,8 @@ ar_DZ =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -1555,7 +1555,7 @@ ar_DZ =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -1813,10 +1813,10 @@ ar_EG =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -1847,8 +1847,8 @@ ar_EG =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -1865,7 +1865,7 @@ ar_EG =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -2123,10 +2123,10 @@ ar_EH =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -2157,8 +2157,8 @@ ar_EH =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -2175,7 +2175,7 @@ ar_EH =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -2433,10 +2433,10 @@ ar_ER =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -2467,8 +2467,8 @@ ar_ER =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -2485,7 +2485,7 @@ ar_ER =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -2743,10 +2743,10 @@ ar_IL =
                 , full = "H:mm:ss zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -2777,8 +2777,8 @@ ar_IL =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -2795,7 +2795,7 @@ ar_IL =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -3053,10 +3053,10 @@ ar_IQ =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -3087,8 +3087,8 @@ ar_IQ =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -3105,7 +3105,7 @@ ar_IQ =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -3363,10 +3363,10 @@ ar_JO =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -3397,8 +3397,8 @@ ar_JO =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -3415,7 +3415,7 @@ ar_JO =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -3673,10 +3673,10 @@ ar_KM =
                 , full = "HH:mm:ss zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -3707,8 +3707,8 @@ ar_KM =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -3725,7 +3725,7 @@ ar_KM =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -3983,10 +3983,10 @@ ar_KW =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -4017,8 +4017,8 @@ ar_KW =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -4035,7 +4035,7 @@ ar_KW =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -4293,10 +4293,10 @@ ar_LB =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -4327,8 +4327,8 @@ ar_LB =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -4345,7 +4345,7 @@ ar_LB =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -4603,10 +4603,10 @@ ar_LY =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -4637,8 +4637,8 @@ ar_LY =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -4655,7 +4655,7 @@ ar_LY =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -4913,10 +4913,10 @@ ar_MA =
                 , full = "HH:mm:ss zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -4947,8 +4947,8 @@ ar_MA =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -4965,7 +4965,7 @@ ar_MA =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -5223,10 +5223,10 @@ ar_MR =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -5257,8 +5257,8 @@ ar_MR =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -5275,7 +5275,7 @@ ar_MR =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -5533,10 +5533,10 @@ ar_OM =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -5567,8 +5567,8 @@ ar_OM =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -5585,7 +5585,7 @@ ar_OM =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -5843,10 +5843,10 @@ ar_PS =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -5877,8 +5877,8 @@ ar_PS =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -5895,7 +5895,7 @@ ar_PS =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -6153,10 +6153,10 @@ ar_QA =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -6187,8 +6187,8 @@ ar_QA =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -6205,7 +6205,7 @@ ar_QA =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -6463,10 +6463,10 @@ ar_SA =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -6497,8 +6497,8 @@ ar_SA =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -6515,7 +6515,7 @@ ar_SA =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -6773,10 +6773,10 @@ ar_SD =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -6807,8 +6807,8 @@ ar_SD =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -6825,7 +6825,7 @@ ar_SD =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -7083,10 +7083,10 @@ ar_SO =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -7117,8 +7117,8 @@ ar_SO =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -7135,7 +7135,7 @@ ar_SO =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -7393,10 +7393,10 @@ ar_SS =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -7427,8 +7427,8 @@ ar_SS =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -7445,7 +7445,7 @@ ar_SS =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -7703,10 +7703,10 @@ ar_SY =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -7737,8 +7737,8 @@ ar_SY =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -7755,7 +7755,7 @@ ar_SY =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -8013,10 +8013,10 @@ ar_TD =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -8047,8 +8047,8 @@ ar_TD =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -8065,7 +8065,7 @@ ar_TD =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -8323,10 +8323,10 @@ ar_TN =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -8357,8 +8357,8 @@ ar_TN =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -8375,7 +8375,7 @@ ar_TN =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
@@ -8633,10 +8633,10 @@ ar_YE =
                 , full = "h:mm:ss a zzzz"
                 }
             , dateTimePatterns =
-                { short = "{1}, {0}"
-                , medium = "{1}, {0}"
-                , long = "{1} في {0}"
-                , full = "{1} في {0}"
+                { short = "{1}، {0}"
+                , medium = "{1}، {0}"
+                , long = "{1}، {0}"
+                , full = "{1}، {0}"
                 }
             , availableFormats =
                 [ ( "Bh", "h B" )
@@ -8667,8 +8667,8 @@ ar_YE =
                 , ( "hmv", "h:mm a v" )
                 , ( "Hmv", "HH:mm v" )
                 , ( "M", "L" )
-                , ( "Md", "d/\u{200F}M" )
-                , ( "MEd", "E، d/\u{200F}M" )
+                , ( "Md", "d\u{200F}/M" )
+                , ( "MEd", "E، d\u{200F}/M" )
                 , ( "MMdd", "dd\u{200F}/MM" )
                 , ( "MMM", "LLL" )
                 , ( "MMMd", "d MMM" )
@@ -8685,7 +8685,7 @@ ar_YE =
                 , ( "y", "y" )
                 , ( "yM", "M\u{200F}/y" )
                 , ( "yMd", "d\u{200F}/M\u{200F}/y" )
-                , ( "yMEd", "E، d/\u{200F}M/\u{200F}y" )
+                , ( "yMEd", "E، d\u{200F}/M\u{200F}/y" )
                 , ( "yMM", "MM\u{200F}/y" )
                 , ( "yMMM", "MMM y" )
                 , ( "yMMMd", "d MMM y" )
