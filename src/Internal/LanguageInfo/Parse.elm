@@ -1,6 +1,7 @@
 module Internal.LanguageInfo.Parse exposing (parse, parser)
 
 import Dict exposing (Dict)
+import FormatNumber.Locales
 import Internal.LanguageInfo exposing (Compact, LanguageInfo)
 import Internal.Structures exposing (EraNames, MonthNames, Pattern3, Patterns, PeriodNames, WeekdayNames)
 import Parser exposing ((|.), (|=), Parser)
@@ -36,6 +37,10 @@ parser =
         |= patternsParser (pipeDelimitedString |. pipe)
         |= listOfPairOfStringParser
         |= patternsParser (pipeDelimitedString |. pipe)
+        |= formatNumberLocaleParser
+        |= formatNumberLocaleParser
+        |= formatNumberLocaleParser
+        |= listOfPairOfStringParser
         |. Parser.end
 
 
@@ -199,3 +204,65 @@ eraNamesParser =
         |. pipe
         |= pipeDelimitedString
         |. pipe
+
+
+formatNumberLocaleParser : Parser FormatNumber.Locales.Locale
+formatNumberLocaleParser =
+    Parser.succeed FormatNumber.Locales.Locale
+        |= formatNumberDecimalsParser
+        |= formatNumberSystemParser
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+
+
+formatNumberDecimalsParser : Parser FormatNumber.Locales.Decimals
+formatNumberDecimalsParser =
+    Parser.chompIf (\char -> List.member char [ 'N', 'X', 'E' ])
+        |> Parser.getChompedString
+        |> Parser.andThen
+            (\tag ->
+                case tag of
+                    "N" ->
+                        Parser.map FormatNumber.Locales.Min Parser.int
+
+                    "X" ->
+                        Parser.map FormatNumber.Locales.Max Parser.int
+
+                    "E" ->
+                        Parser.map FormatNumber.Locales.Exact Parser.int
+
+                    other ->
+                        Parser.problem ("Error while parsing a FormatNumber.Locales.Decimals, found: " ++ other)
+            )
+
+
+formatNumberSystemParser : Parser FormatNumber.Locales.System
+formatNumberSystemParser =
+    Parser.chompIf (\char -> List.member char [ 'W', 'I' ])
+        |> Parser.getChompedString
+        |> Parser.andThen
+            (\tag ->
+                case tag of
+                    "W" ->
+                        Parser.succeed FormatNumber.Locales.Western
+
+                    "I" ->
+                        Parser.succeed FormatNumber.Locales.Indian
+
+                    other ->
+                        Parser.problem ("Error while parsing a FormatNumber.Locales.System, found: " ++ other)
+            )

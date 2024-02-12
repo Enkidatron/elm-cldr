@@ -37,6 +37,10 @@ parseInfo dayPeriods info =
         |> Maybe.map ((|>) (toLanguageId info))
         |> Maybe.Extra.andMap (availableFormatList info)
         |> Maybe.Extra.andMap (twelveHourByDefault info)
+        |> Maybe.map ((|>) info.decimalNumberFormat)
+        |> Maybe.map ((|>) info.currencyNumberFormat)
+        |> Maybe.map ((|>) info.percentNumberFormat)
+        |> Maybe.map ((|>) (Dict.fromList info.currencySymbols))
         |> Maybe.map Internal.Locale.Locale
 
 

@@ -1,6 +1,7 @@
 module Internal.LanguageInfo exposing (..)
 
 import Dict exposing (Dict)
+import FormatNumber.Locales
 import Internal.DayPeriodRule exposing (DayPeriodRule)
 import Internal.Structures exposing (EraNames, MonthNames, Pattern3, Patterns, PeriodNames, WeekdayNames)
 
@@ -25,6 +26,10 @@ type alias LanguageInfo =
     , dateTimePatterns : Patterns String
     , availableFormats : List ( String, String )
     , timeSkeletons : Patterns String
+    , decimalNumberFormat : FormatNumber.Locales.Locale
+    , currencyNumberFormat : FormatNumber.Locales.Locale
+    , percentNumberFormat : FormatNumber.Locales.Locale
+    , currencySymbols : List ( String, String )
     }
 
 
@@ -44,6 +49,10 @@ type alias Compact =
     , dateTimePatterns : Patterns String
     , availableFormats : List ( String, String )
     , timeSkeletons : Patterns String
+    , decimalNumberFormat : FormatNumber.Locales.Locale
+    , currencyNumberFormat : FormatNumber.Locales.Locale
+    , percentNumberFormat : FormatNumber.Locales.Locale
+    , currencySymbols : List ( String, String )
     }
 
 
@@ -74,6 +83,10 @@ compact info =
     , dateTimePatterns = info.dateTimePatterns
     , availableFormats = info.availableFormats
     , timeSkeletons = info.timeSkeletons
+    , decimalNumberFormat = info.decimalNumberFormat
+    , currencyNumberFormat = info.currencyNumberFormat
+    , percentNumberFormat = info.percentNumberFormat
+    , currencySymbols = info.currencySymbols
     }
 
 
@@ -94,4 +107,8 @@ expand info =
     , dateTimePatterns = info.dateTimePatterns
     , availableFormats = info.availableFormats
     , timeSkeletons = info.timeSkeletons
+    , decimalNumberFormat = info.decimalNumberFormat
+    , currencyNumberFormat = info.currencyNumberFormat
+    , percentNumberFormat = info.percentNumberFormat
+    , currencySymbols = info.currencySymbols
     }

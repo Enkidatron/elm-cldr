@@ -1,6 +1,7 @@
 module Internal.LanguageInfo.Encode exposing (encode)
 
 import Dict
+import FormatNumber.Locales
 import Internal.LanguageInfo exposing (Compact)
 import Internal.Structures exposing (EraNames, MonthNames, Pattern3, Patterns, PeriodNames, WeekdayNames)
 
@@ -27,6 +28,10 @@ encode info =
         , encodePatterns pipeEndedString info.dateTimePatterns
         , encodeListOfPairsOfString info.availableFormats
         , encodePatterns pipeEndedString info.timeSkeletons
+        , encodeNumberFormat info.decimalNumberFormat
+        , encodeNumberFormat info.currencyNumberFormat
+        , encodeNumberFormat info.percentNumberFormat
+        , encodeListOfPairsOfString info.currencySymbols
         ]
 
 
@@ -122,3 +127,35 @@ encodeEraNames eras =
     ]
         |> List.map pipeEndedString
         |> String.concat
+
+
+encodeNumberFormat : FormatNumber.Locales.Locale -> String
+encodeNumberFormat locale =
+    String.concat
+        [ case locale.decimals of
+            FormatNumber.Locales.Min min ->
+                "N" ++ String.fromInt min
+
+            FormatNumber.Locales.Max max ->
+                "X" ++ String.fromInt max
+
+            FormatNumber.Locales.Exact exact ->
+                "E" ++ String.fromInt exact
+        , case locale.system of
+            FormatNumber.Locales.Western ->
+                "W"
+
+            FormatNumber.Locales.Indian ->
+                "I"
+        , String.join "|"
+            [ locale.thousandSeparator
+            , locale.decimalSeparator
+            , locale.negativePrefix
+            , locale.negativeSuffix
+            , locale.positivePrefix
+            , locale.positiveSuffix
+            , locale.zeroPrefix
+            , locale.zeroSuffix
+            ]
+        , "|"
+        ]

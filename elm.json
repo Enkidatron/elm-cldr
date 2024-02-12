@@ -14,6 +14,7 @@
     ],
     "elm-version": "0.19.0 <= v < 0.20.0",
     "dependencies": {
+        "cuducos/elm-format-number": "9.0.1 <= v < 10.0.0",
         "elm/core": "1.0.5 <= v < 2.0.0",
         "elm/parser": "1.1.0 <= v < 2.0.0",
         "elm/time": "1.0.0 <= v < 2.0.0",

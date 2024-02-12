@@ -20,7 +20,8 @@ module Internal.Locale exposing
 
 import Cldr.Format.Length exposing (Length(..))
 import Cldr.Format.Options exposing (DateOptions, DateTimeOptions)
-import Dict
+import Dict exposing (Dict)
+import FormatNumber.Locales
 import Internal.DayPeriodRule exposing (DayPeriodRule)
 import Internal.FormatSymbols as Sym
 import Internal.Options exposing (TimeOptions)
@@ -49,6 +50,10 @@ type alias Internal =
     , languageId : LanguageId
     , availableFormats : List AvailableFormat
     , hour12ByDefault : Bool
+    , decimalNumberFormat : FormatNumber.Locales.Locale
+    , currencyNumberFormat : FormatNumber.Locales.Locale
+    , percentNumberFormat : FormatNumber.Locales.Locale
+    , currencySymbols : Dict String String
     }
 
 
@@ -610,4 +615,8 @@ empty =
         , availableFormats =
             []
         , hour12ByDefault = False
+        , decimalNumberFormat = FormatNumber.Locales.base
+        , currencyNumberFormat = FormatNumber.Locales.base
+        , percentNumberFormat = FormatNumber.Locales.base
+        , currencySymbols = Dict.empty
         }
