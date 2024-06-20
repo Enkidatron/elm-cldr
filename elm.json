@@ -3,12 +3,13 @@
     "name": "enkidatron/elm-cldr",
     "summary": "Locale based date and time formatting",
     "license": "BSD-3-Clause",
-    "version": "2.2.0",
+    "version": "2.3.0",
     "exposed-modules": [
         "Cldr.Locale",
         "Cldr.Format.Date",
         "Cldr.Format.DateTime",
         "Cldr.Format.Length",
+        "Cldr.Format.Number",
         "Cldr.Format.Options",
         "Cldr.Format.OptionsBuilder"
     ],
