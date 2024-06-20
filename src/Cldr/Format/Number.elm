@@ -25,6 +25,9 @@ import Internal.Locale exposing (Locale(..))
 
 
 {-| Numbers can be formatted as decimals, currency, or percentages.
+
+A `CurrencyCode` is just a `String`.
+
 -}
 type FormatType
     = Decimal
