@@ -1,5 +1,5 @@
 module Cldr.Format.Number exposing
-    ( format
+    ( format, round
     , FormatType(..)
     )
 
@@ -8,7 +8,7 @@ module Cldr.Format.Number exposing
 
 # Number Formatting
 
-@docs format
+@docs format, round
 
 
 ## Format Type
@@ -58,6 +58,34 @@ format formatType (Locale internal) number =
 
         Percent ->
             FormatNumber.format internal.percentNumberFormat (number * 100)
+
+
+{-| Rounds and formats a `Float` using the specified `Locale`.
+
+    import Cldr.Format.Number as Number
+    import Cldr.Locale exposing (en)
+    import FormatNumber.Locales exposing (Decimals(..))
+
+    Number.round (Exact 1) Decimal en 123456789
+    --> "123,456,789.0"
+
+-}
+round : FormatNumber.Locales.Decimals -> FormatType -> Locale -> Float -> String
+round decimalRounding formatType (Locale internal) number =
+    case formatType of
+        Decimal ->
+            FormatNumber.format (applyRounding decimalRounding internal.decimalNumberFormat) number
+
+        Currency code ->
+            FormatNumber.format (applyRounding decimalRounding (applyCurrencyCode code internal)) number
+
+        Percent ->
+            FormatNumber.format (applyRounding decimalRounding internal.percentNumberFormat) (number * 100)
+
+
+applyRounding : FormatNumber.Locales.Decimals -> FormatNumber.Locales.Locale -> FormatNumber.Locales.Locale
+applyRounding decimalRounding formatLocale =
+    { formatLocale | decimals = decimalRounding }
 
 
 applyCurrencyCode :
