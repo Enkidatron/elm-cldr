@@ -5,5 +5,7 @@ repl-temp-*
 # example generated file
 example/build/*.js
 example/build/*.js.gz
+# generated tests
+tests/VerifyExamples/
 # macOS
 .DS_Store

@@ -1,8 +1,8 @@
 {
-  "root": "../src",
   "tests": [
     "Cldr.Format.Date",
     "Cldr.Format.DateTime",
+    "Cldr.Format.Number",
     "Cldr.Locale"
   ]
 }
