@@ -199,7 +199,7 @@ enOpts_EyMdhms =
             in
             Expect.equal
                 (format (WithOptions options) en Time.utc testDateTime)
-                "Thursday, June 1, 2000, 3:23:16 AM"
+                "Thursday, June 1, 2000, 3:23:16\u{202F}AM"
 
 
 enOpts_EyMd : Test
@@ -283,7 +283,7 @@ enOpts_hms =
             in
             Expect.equal
                 (format (WithOptions options) en Time.utc testDateTime)
-                "3:23:16 AM"
+                "3:23:16\u{202F}AM"
 
 
 enOpts_hm : Test
@@ -299,7 +299,7 @@ enOpts_hm =
             in
             Expect.equal
                 (format (WithOptions options) en Time.utc testDateTime)
-                "3:23 AM"
+                "3:23\u{202F}AM"
 
 
 ruShortDate : Test

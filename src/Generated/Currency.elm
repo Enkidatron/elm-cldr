@@ -1,7 +1,5 @@
 module Generated.Currency exposing (..)
 
-{-| -}
-
 import Dict
 import FormatNumber.Locales
 

@@ -5,8 +5,11 @@ module Cldr.Locale exposing
     , toUnicode
     , af, af_NA
     , am
-    , ar, ar_AE, ar_BH, ar_DJ, ar_DZ, ar_EG, ar_EH, ar_ER, ar_IL, ar_IQ, ar_JO, ar_KM, ar_KW, ar_LB, ar_LY, ar_MA
-    , ar_MR, ar_OM, ar_PS, ar_QA, ar_SA, ar_SD, ar_SO, ar_SS, ar_SY, ar_TD, ar_TN, ar_YE
+    , ar, ar_AE, ar_BH, ar_DJ, ar_DZ, ar_EG
+    , ar_EH, ar_ER, ar_IL, ar_IQ, ar_JO, ar_KM
+    , ar_KW, ar_LB, ar_LY, ar_MA, ar_MR, ar_OM
+    , ar_PS, ar_QA, ar_SA, ar_SD, ar_SO, ar_SS
+    , ar_SY, ar_TD, ar_TN, ar_YE
     , locale_as
     , az, az_Latn
     , be, be_TARASK
@@ -18,35 +21,58 @@ module Cldr.Locale exposing
     , cs
     , cy
     , da, da_GL
-    , de, de_AT, de_BE, de_CH, de_IT, de_LI, de_LU
+    , de, de_AT, de_BE, de_CH, de_IT, de_LI
+    , de_LU
     , dsb
     , el, el_CY, el_POLYTON
-    , en, en_001, en_150, en_AE, en_AG, en_AI, en_AS, en_AT, en_AU, en_BB, en_BE, en_BI, en_BM, en_BS, en_BW, en_BZ
-    , en_CA, en_CC, en_CH, en_CK, en_CM, en_CX, en_CY, en_DE, en_DG, en_DK, en_DM, en_ER, en_FI, en_FJ, en_FK, en_FM
-    , en_GB, en_GD, en_GG, en_GH, en_GI, en_GM, en_GU, en_GY, en_HK, en_ID, en_IE, en_IL, en_IM, en_IN, en_IO, en_JE
-    , en_JM, en_KE, en_KI, en_KN, en_KY, en_LC, en_LR, en_LS, en_MG, en_MH, en_MO, en_MP, en_MS, en_MT, en_MU, en_MV
-    , en_MW, en_MY, en_NA, en_NF, en_NG, en_NL, en_NR, en_NU, en_NZ, en_PG, en_PH, en_PK, en_PN, en_PR, en_PW, en_RW
-    , en_SB, en_SC, en_SD, en_SE, en_SG, en_SH, en_SI, en_SL, en_SS, en_SX, en_SZ, en_TC, en_TK, en_TO, en_TT, en_TV
-    , en_TZ, en_UG, en_UM, en_VC, en_VG, en_VI, en_VU, en_WS, en_ZA, en_ZM, en_ZW, en_Latn
-    , es, es_419, es_AR, es_BO, es_BR, es_BZ, es_CL, es_CO, es_CR, es_CU, es_DO, es_EA, es_EC, es_GQ, es_GT, es_HN
-    , es_IC, es_MX, es_NI, es_PA, es_PE, es_PH, es_PR, es_PY, es_SV, es_US, es_UY, es_VE
+    , en, en_001, en_150, en_AE, en_AG, en_AI
+    , en_AS, en_AT, en_AU, en_BB, en_BE, en_BI
+    , en_BM, en_BS, en_BW, en_BZ, en_CA, en_CC
+    , en_CH, en_CK, en_CM, en_CX, en_CY, en_CZ
+    , en_DE, en_DG, en_DK, en_DM, en_ER, en_ES
+    , en_FI, en_FJ, en_FK, en_FM, en_FR, en_GB
+    , en_GD, en_GG, en_GH, en_GI, en_GM, en_GS
+    , en_GU, en_GY, en_HK, en_HU, en_ID, en_IE
+    , en_IL, en_IM, en_IN, en_IO, en_IT, en_JE
+    , en_JM, en_KE, en_KI, en_KN, en_KY, en_LC
+    , en_LR, en_LS, en_MG, en_MH, en_MO, en_MP
+    , en_MS, en_MT, en_MU, en_MV, en_MW, en_MY
+    , en_NA, en_NF, en_NG, en_NL, en_NO, en_NR
+    , en_NU, en_NZ, en_PG, en_PH, en_PK, en_PL
+    , en_PN, en_PR, en_PT, en_PW, en_RO, en_RW
+    , en_SB, en_SC, en_SD, en_SE, en_SG, en_SH
+    , en_SI, en_SK, en_SL, en_SS, en_SX, en_SZ
+    , en_TC, en_TK, en_TO, en_TT, en_TV, en_TZ
+    , en_UG, en_UM, en_VC, en_VG, en_VI, en_VU
+    , en_WS, en_ZA, en_ZM, en_ZW
+    , es, es_419, es_AR, es_BO, es_BR, es_BZ
+    , es_CL, es_CO, es_CR, es_CU, es_DO, es_EA
+    , es_EC, es_GQ, es_GT, es_HN, es_IC, es_MX
+    , es_NI, es_PA, es_PE, es_PH, es_PR, es_PY
+    , es_SV, es_US, es_UY, es_VE
     , et
     , eu
     , fa, fa_AF
     , fi
     , fil
-    , fr, fr_BE, fr_BF, fr_BI, fr_BJ, fr_BL, fr_CA, fr_CD, fr_CF, fr_CG, fr_CH, fr_CI, fr_CM, fr_DJ, fr_DZ, fr_GA
-    , fr_GF, fr_GN, fr_GP, fr_GQ, fr_HT, fr_KM, fr_LU, fr_MA, fr_MC, fr_MF, fr_MG, fr_ML, fr_MQ, fr_MR, fr_MU, fr_NC
-    , fr_NE, fr_PF, fr_PM, fr_RE, fr_RW, fr_SC, fr_SN, fr_SY, fr_TD, fr_TG, fr_TN, fr_VU, fr_WF, fr_YT
+    , fr, fr_BE, fr_BF, fr_BI, fr_BJ, fr_BL
+    , fr_CA, fr_CD, fr_CF, fr_CG, fr_CH, fr_CI
+    , fr_CM, fr_DJ, fr_DZ, fr_GA, fr_GF, fr_GN
+    , fr_GP, fr_GQ, fr_HT, fr_KM, fr_LU, fr_MA
+    , fr_MC, fr_MF, fr_MG, fr_ML, fr_MQ, fr_MR
+    , fr_MU, fr_NC, fr_NE, fr_PF, fr_PM, fr_RE
+    , fr_RW, fr_SC, fr_SN, fr_SY, fr_TD, fr_TG
+    , fr_TN, fr_VU, fr_WF, fr_YT
     , ga, ga_GB
     , gd
     , gl
     , gu
     , ha, ha_GH, ha_NE
     , he
-    , hi
+    , hi, hi_Latn
     , hr, hr_BA
     , hsb
+    , ht
     , hu
     , hy
     , id
@@ -56,11 +82,11 @@ module Cldr.Locale exposing
     , ja
     , jv
     , ka
-    , kk
+    , kk, kk_Cyrl, kk_KZ
     , km
     , kn
     , ko, ko_CN, ko_KP
-    , kok
+    , kok, kok_Deva
     , ky
     , lo
     , lt
@@ -73,14 +99,17 @@ module Cldr.Locale exposing
     , my
     , nb, nb_SJ
     , ne, ne_IN
-    , nl, nl_AW, nl_BE, nl_BQ, nl_CW, nl_SR, nl_SX
+    , nl, nl_AW, nl_BE, nl_BQ, nl_CW, nl_SR
+    , nl_SX
     , nn
     , no
     , or
     , pa, pa_Guru
+    , pcm
     , pl
     , ps, ps_PK
-    , pt, pt_AO, pt_CH, pt_CV, pt_GQ, pt_GW, pt_LU, pt_MO, pt_MZ, pt_PT, pt_ST, pt_TL
+    , pt, pt_AO, pt_CH, pt_CV, pt_GQ, pt_GW
+    , pt_LU, pt_MO, pt_MZ, pt_PT, pt_ST, pt_TL
     , ro, ro_MD
     , ru, ru_BY, ru_KG, ru_KZ, ru_MD, ru_UA
     , sd, sd_Arab
@@ -89,12 +118,14 @@ module Cldr.Locale exposing
     , sl
     , so, so_DJ, so_ET, so_KE
     , sq, sq_MK, sq_XK
-    , sr, sr_Cyrl, sr_Cyrl_BA, sr_Cyrl_ME, sr_Cyrl_XK, sr_Latn, sr_Latn_BA, sr_Latn_ME, sr_Latn_XK
+    , sr, sr_Cyrl, sr_Cyrl_BA, sr_Cyrl_ME, sr_Cyrl_XK, sr_Latn
+    , sr_Latn_BA, sr_Latn_ME, sr_Latn_XK
     , sv, sv_AX, sv_FI
     , sw, sw_CD, sw_KE, sw_UG
     , ta, ta_LK, ta_MY, ta_SG
     , te
     , th
+    , ti, ti_ER
     , tk
     , tr, tr_CY
     , uk
@@ -103,8 +134,9 @@ module Cldr.Locale exposing
     , uz, uz_Latn
     , vi
     , yo, yo_BJ
-    , yue, yue_Hans, yue_Hant
-    , zh, zh_Hans, zh_Hans_HK, zh_Hans_MO, zh_Hans_SG, zh_Hant, zh_Hant_HK, zh_Hant_MO
+    , yue, yue_Hans, yue_Hant, yue_Hant_CN, yue_Hant_MO
+    , zh, zh_Hans, zh_Hans_HK, zh_Hans_MO, zh_Hans_MY, zh_Hans_SG
+    , zh_Hant, zh_Hant_HK, zh_Hant_MO, zh_Hant_MY
     , zu
     )
 
@@ -143,9 +175,11 @@ module Cldr.Locale exposing
 
 ### Ar
 
-@docs ar, ar_AE, ar_BH, ar_DJ, ar_DZ, ar_EG, ar_EH, ar_ER, ar_IL, ar_IQ, ar_JO, ar_KM, ar_KW, ar_LB, ar_LY, ar_MA
-
-@docs ar_MR, ar_OM, ar_PS, ar_QA, ar_SA, ar_SD, ar_SO, ar_SS, ar_SY, ar_TD, ar_TN, ar_YE
+@docs ar, ar_AE, ar_BH, ar_DJ, ar_DZ, ar_EG
+@docs ar_EH, ar_ER, ar_IL, ar_IQ, ar_JO, ar_KM
+@docs ar_KW, ar_LB, ar_LY, ar_MA, ar_MR, ar_OM
+@docs ar_PS, ar_QA, ar_SA, ar_SD, ar_SO, ar_SS
+@docs ar_SY, ar_TD, ar_TN, ar_YE
 
 
 ### As
@@ -205,7 +239,8 @@ module Cldr.Locale exposing
 
 ### De
 
-@docs de, de_AT, de_BE, de_CH, de_IT, de_LI, de_LU
+@docs de, de_AT, de_BE, de_CH, de_IT, de_LI
+@docs de_LU
 
 
 ### Dsb
@@ -220,26 +255,35 @@ module Cldr.Locale exposing
 
 ### En
 
-@docs en, en_001, en_150, en_AE, en_AG, en_AI, en_AS, en_AT, en_AU, en_BB, en_BE, en_BI, en_BM, en_BS, en_BW, en_BZ
-
-@docs en_CA, en_CC, en_CH, en_CK, en_CM, en_CX, en_CY, en_DE, en_DG, en_DK, en_DM, en_ER, en_FI, en_FJ, en_FK, en_FM
-
-@docs en_GB, en_GD, en_GG, en_GH, en_GI, en_GM, en_GU, en_GY, en_HK, en_ID, en_IE, en_IL, en_IM, en_IN, en_IO, en_JE
-
-@docs en_JM, en_KE, en_KI, en_KN, en_KY, en_LC, en_LR, en_LS, en_MG, en_MH, en_MO, en_MP, en_MS, en_MT, en_MU, en_MV
-
-@docs en_MW, en_MY, en_NA, en_NF, en_NG, en_NL, en_NR, en_NU, en_NZ, en_PG, en_PH, en_PK, en_PN, en_PR, en_PW, en_RW
-
-@docs en_SB, en_SC, en_SD, en_SE, en_SG, en_SH, en_SI, en_SL, en_SS, en_SX, en_SZ, en_TC, en_TK, en_TO, en_TT, en_TV
-
-@docs en_TZ, en_UG, en_UM, en_VC, en_VG, en_VI, en_VU, en_WS, en_ZA, en_ZM, en_ZW, en_Latn
+@docs en, en_001, en_150, en_AE, en_AG, en_AI
+@docs en_AS, en_AT, en_AU, en_BB, en_BE, en_BI
+@docs en_BM, en_BS, en_BW, en_BZ, en_CA, en_CC
+@docs en_CH, en_CK, en_CM, en_CX, en_CY, en_CZ
+@docs en_DE, en_DG, en_DK, en_DM, en_ER, en_ES
+@docs en_FI, en_FJ, en_FK, en_FM, en_FR, en_GB
+@docs en_GD, en_GG, en_GH, en_GI, en_GM, en_GS
+@docs en_GU, en_GY, en_HK, en_HU, en_ID, en_IE
+@docs en_IL, en_IM, en_IN, en_IO, en_IT, en_JE
+@docs en_JM, en_KE, en_KI, en_KN, en_KY, en_LC
+@docs en_LR, en_LS, en_MG, en_MH, en_MO, en_MP
+@docs en_MS, en_MT, en_MU, en_MV, en_MW, en_MY
+@docs en_NA, en_NF, en_NG, en_NL, en_NO, en_NR
+@docs en_NU, en_NZ, en_PG, en_PH, en_PK, en_PL
+@docs en_PN, en_PR, en_PT, en_PW, en_RO, en_RW
+@docs en_SB, en_SC, en_SD, en_SE, en_SG, en_SH
+@docs en_SI, en_SK, en_SL, en_SS, en_SX, en_SZ
+@docs en_TC, en_TK, en_TO, en_TT, en_TV, en_TZ
+@docs en_UG, en_UM, en_VC, en_VG, en_VI, en_VU
+@docs en_WS, en_ZA, en_ZM, en_ZW
 
 
 ### Es
 
-@docs es, es_419, es_AR, es_BO, es_BR, es_BZ, es_CL, es_CO, es_CR, es_CU, es_DO, es_EA, es_EC, es_GQ, es_GT, es_HN
-
-@docs es_IC, es_MX, es_NI, es_PA, es_PE, es_PH, es_PR, es_PY, es_SV, es_US, es_UY, es_VE
+@docs es, es_419, es_AR, es_BO, es_BR, es_BZ
+@docs es_CL, es_CO, es_CR, es_CU, es_DO, es_EA
+@docs es_EC, es_GQ, es_GT, es_HN, es_IC, es_MX
+@docs es_NI, es_PA, es_PE, es_PH, es_PR, es_PY
+@docs es_SV, es_US, es_UY, es_VE
 
 
 ### Et
@@ -269,11 +313,14 @@ module Cldr.Locale exposing
 
 ### Fr
 
-@docs fr, fr_BE, fr_BF, fr_BI, fr_BJ, fr_BL, fr_CA, fr_CD, fr_CF, fr_CG, fr_CH, fr_CI, fr_CM, fr_DJ, fr_DZ, fr_GA
-
-@docs fr_GF, fr_GN, fr_GP, fr_GQ, fr_HT, fr_KM, fr_LU, fr_MA, fr_MC, fr_MF, fr_MG, fr_ML, fr_MQ, fr_MR, fr_MU, fr_NC
-
-@docs fr_NE, fr_PF, fr_PM, fr_RE, fr_RW, fr_SC, fr_SN, fr_SY, fr_TD, fr_TG, fr_TN, fr_VU, fr_WF, fr_YT
+@docs fr, fr_BE, fr_BF, fr_BI, fr_BJ, fr_BL
+@docs fr_CA, fr_CD, fr_CF, fr_CG, fr_CH, fr_CI
+@docs fr_CM, fr_DJ, fr_DZ, fr_GA, fr_GF, fr_GN
+@docs fr_GP, fr_GQ, fr_HT, fr_KM, fr_LU, fr_MA
+@docs fr_MC, fr_MF, fr_MG, fr_ML, fr_MQ, fr_MR
+@docs fr_MU, fr_NC, fr_NE, fr_PF, fr_PM, fr_RE
+@docs fr_RW, fr_SC, fr_SN, fr_SY, fr_TD, fr_TG
+@docs fr_TN, fr_VU, fr_WF, fr_YT
 
 
 ### Ga
@@ -308,7 +355,7 @@ module Cldr.Locale exposing
 
 ### Hi
 
-@docs hi
+@docs hi, hi_Latn
 
 
 ### Hr
@@ -319,6 +366,11 @@ module Cldr.Locale exposing
 ### Hsb
 
 @docs hsb
+
+
+### Ht
+
+@docs ht
 
 
 ### Hu
@@ -368,7 +420,7 @@ module Cldr.Locale exposing
 
 ### Kk
 
-@docs kk
+@docs kk, kk_Cyrl, kk_KZ
 
 
 ### Km
@@ -388,7 +440,7 @@ module Cldr.Locale exposing
 
 ### Kok
 
-@docs kok
+@docs kok, kok_Deva
 
 
 ### Ky
@@ -453,7 +505,8 @@ module Cldr.Locale exposing
 
 ### Nl
 
-@docs nl, nl_AW, nl_BE, nl_BQ, nl_CW, nl_SR, nl_SX
+@docs nl, nl_AW, nl_BE, nl_BQ, nl_CW, nl_SR
+@docs nl_SX
 
 
 ### Nn
@@ -476,6 +529,11 @@ module Cldr.Locale exposing
 @docs pa, pa_Guru
 
 
+### Pcm
+
+@docs pcm
+
+
 ### Pl
 
 @docs pl
@@ -488,7 +546,8 @@ module Cldr.Locale exposing
 
 ### Pt
 
-@docs pt, pt_AO, pt_CH, pt_CV, pt_GQ, pt_GW, pt_LU, pt_MO, pt_MZ, pt_PT, pt_ST, pt_TL
+@docs pt, pt_AO, pt_CH, pt_CV, pt_GQ, pt_GW
+@docs pt_LU, pt_MO, pt_MZ, pt_PT, pt_ST, pt_TL
 
 
 ### Ro
@@ -533,7 +592,8 @@ module Cldr.Locale exposing
 
 ### Sr
 
-@docs sr, sr_Cyrl, sr_Cyrl_BA, sr_Cyrl_ME, sr_Cyrl_XK, sr_Latn, sr_Latn_BA, sr_Latn_ME, sr_Latn_XK
+@docs sr, sr_Cyrl, sr_Cyrl_BA, sr_Cyrl_ME, sr_Cyrl_XK, sr_Latn
+@docs sr_Latn_BA, sr_Latn_ME, sr_Latn_XK
 
 
 ### Sv
@@ -559,6 +619,11 @@ module Cldr.Locale exposing
 ### Th
 
 @docs th
+
+
+### Ti
+
+@docs ti, ti_ER
 
 
 ### Tk
@@ -603,12 +668,13 @@ module Cldr.Locale exposing
 
 ### Yue
 
-@docs yue, yue_Hans, yue_Hant
+@docs yue, yue_Hans, yue_Hant, yue_Hant_CN, yue_Hant_MO
 
 
 ### Zh
 
-@docs zh, zh_Hans, zh_Hans_HK, zh_Hans_MO, zh_Hans_SG, zh_Hant, zh_Hant_HK, zh_Hant_MO
+@docs zh, zh_Hans, zh_Hans_HK, zh_Hans_MO, zh_Hans_MY, zh_Hans_SG
+@docs zh_Hant, zh_Hant_HK, zh_Hant_MO, zh_Hant_MY
 
 
 ### Zu
@@ -651,6 +717,7 @@ import Generated.He
 import Generated.Hi
 import Generated.Hr
 import Generated.Hsb
+import Generated.Ht
 import Generated.Hu
 import Generated.Hy
 import Generated.Id
@@ -682,6 +749,7 @@ import Generated.Nn
 import Generated.No
 import Generated.Or
 import Generated.Pa
+import Generated.Pcm
 import Generated.Pl
 import Generated.Ps
 import Generated.Pt
@@ -700,6 +768,7 @@ import Generated.Sw
 import Generated.Ta
 import Generated.Te
 import Generated.Th
+import Generated.Ti
 import Generated.Tk
 import Generated.Tr
 import Generated.Uk
@@ -722,17 +791,6 @@ type alias Locale =
     Internal.Locale.Locale
 
 
-{-| Get the [Unicode](https://unicode.org/reports/tr35/#Identifiers) representation of a locale.
-
-    toUnicode en_GB
-    --> "en-GB"
-
--}
-toUnicode : Locale -> String
-toUnicode locale =
-    Internal.Locale.toUnicode locale
-
-
 {-| Parse a `Locale` from a Unicode or BCP47 identifier.
 
     fromString basicLocales "en"
@@ -742,10 +800,13 @@ toUnicode locale =
     --> Just en_GB
 
 -}
-fromString : List Locale -> String -> Maybe Locale
+fromString : List Internal.Locale.Locale -> String -> Maybe Internal.Locale.Locale
 fromString candidateLocales localeString =
     Internal.Locale.languageIdFromString localeString
-        |> Maybe.andThen (Internal.Locale.matchNearestLocale candidateLocales)
+        |> Maybe.andThen
+            (Internal.Locale.matchNearestLocale
+                candidateLocales
+            )
 
 
 {-| A list of every locale listed in the JSON version of the CLDR.
@@ -837,30 +898,36 @@ allLocales =
     , en_CM
     , en_CX
     , en_CY
+    , en_CZ
     , en_DE
     , en_DG
     , en_DK
     , en_DM
     , en_ER
+    , en_ES
     , en_FI
     , en_FJ
     , en_FK
     , en_FM
+    , en_FR
     , en_GB
     , en_GD
     , en_GG
     , en_GH
     , en_GI
     , en_GM
+    , en_GS
     , en_GU
     , en_GY
     , en_HK
+    , en_HU
     , en_ID
     , en_IE
     , en_IL
     , en_IM
     , en_IN
     , en_IO
+    , en_IT
     , en_JE
     , en_JM
     , en_KE
@@ -884,15 +951,19 @@ allLocales =
     , en_NF
     , en_NG
     , en_NL
+    , en_NO
     , en_NR
     , en_NU
     , en_NZ
     , en_PG
     , en_PH
     , en_PK
+    , en_PL
     , en_PN
     , en_PR
+    , en_PT
     , en_PW
+    , en_RO
     , en_RW
     , en_SB
     , en_SC
@@ -901,6 +972,7 @@ allLocales =
     , en_SG
     , en_SH
     , en_SI
+    , en_SK
     , en_SL
     , en_SS
     , en_SX
@@ -921,7 +993,6 @@ allLocales =
     , en_ZA
     , en_ZM
     , en_ZW
-    , en_Latn
     , es
     , es_419
     , es_AR
@@ -1012,9 +1083,11 @@ allLocales =
     , ha_NE
     , he
     , hi
+    , hi_Latn
     , hr
     , hr_BA
     , hsb
+    , ht
     , hu
     , hy
     , id
@@ -1028,12 +1101,15 @@ allLocales =
     , jv
     , ka
     , kk
+    , kk_Cyrl
+    , kk_KZ
     , km
     , kn
     , ko
     , ko_CN
     , ko_KP
     , kok
+    , kok_Deva
     , ky
     , lo
     , lt
@@ -1063,6 +1139,7 @@ allLocales =
     , or
     , pa
     , pa_Guru
+    , pcm
     , pl
     , ps
     , ps_PK
@@ -1120,6 +1197,8 @@ allLocales =
     , ta_SG
     , te
     , th
+    , ti
+    , ti_ER
     , tk
     , tr
     , tr_CY
@@ -1135,14 +1214,18 @@ allLocales =
     , yue
     , yue_Hans
     , yue_Hant
+    , yue_Hant_CN
+    , yue_Hant_MO
     , zh
     , zh_Hans
     , zh_Hans_HK
     , zh_Hans_MO
+    , zh_Hans_MY
     , zh_Hans_SG
     , zh_Hant
     , zh_Hant_HK
     , zh_Hant_MO
+    , zh_Hant_MY
     , zu
     ]
 
@@ -1188,6 +1271,7 @@ basicLocales =
     , hi
     , hr
     , hsb
+    , ht
     , hu
     , hy
     , id
@@ -1219,6 +1303,7 @@ basicLocales =
     , no
     , or
     , pa
+    , pcm
     , pl
     , ps
     , pt
@@ -1236,6 +1321,7 @@ basicLocales =
     , ta
     , te
     , th
+    , ti
     , tk
     , tr
     , uk
@@ -1248,6 +1334,17 @@ basicLocales =
     , zh
     , zu
     ]
+
+
+{-| Get the [Unicode](https://unicode.org/reports/tr35/#Identifiers) representation of a locale.
+
+    toUnicode en_GB
+    --> "en-GB"
+
+-}
+toUnicode : Internal.Locale.Locale -> String
+toUnicode locale =
+    Internal.Locale.toUnicode locale
 
 
 {-| Date format strings:
@@ -1295,7 +1392,7 @@ af_NA =
   - Short : dd/MM/y
   - Medium : d MMM y
   - Long : d MMMM y
-  - Full : y MMMM d, EEEE
+  - Full : EEEE d MMMM y
 
 Time format strings:
 
@@ -2655,7 +2752,7 @@ en_AT =
   - Short : d/M/yy
   - Medium : d MMM y
   - Long : d MMMM y
-  - Full : EEEE d MMMM y
+  - Full : EEEE, d MMMM y
 
 Time format strings:
 
@@ -2965,6 +3062,26 @@ Time format strings:
   - Full : HH:mm:ss zzzz
 
 -}
+en_CZ : Locale
+en_CZ =
+    Generated.En.en_CZ
+
+
+{-| Date format strings:
+
+  - Short : dd/MM/y
+  - Medium : d MMM y
+  - Long : d MMMM y
+  - Full : EEEE, d MMMM y
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : HH:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
 en_DE : Locale
 en_DE =
     Generated.En.en_DE
@@ -3059,6 +3176,26 @@ en_ER =
 
 Time format strings:
 
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : HH:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
+en_ES : Locale
+en_ES =
+    Generated.En.en_ES
+
+
+{-| Date format strings:
+
+  - Short : dd/MM/y
+  - Medium : d MMM y
+  - Long : d MMMM y
+  - Full : EEEE, d MMMM y
+
+Time format strings:
+
   - Short : H.mm
   - Medium : H.mm.ss
   - Long : H.mm.ss z
@@ -3135,7 +3272,27 @@ en_FM =
   - Short : dd/MM/y
   - Medium : d MMM y
   - Long : d MMMM y
-  - Full : EEEE d MMMM y
+  - Full : EEEE, d MMMM y
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : HH:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
+en_FR : Locale
+en_FR =
+    Generated.En.en_FR
+
+
+{-| Date format strings:
+
+  - Short : dd/MM/y
+  - Medium : d MMM y
+  - Long : d MMMM y
+  - Full : EEEE, d MMMM y
 
 Time format strings:
 
@@ -3252,6 +3409,26 @@ en_GM =
 
 {-| Date format strings:
 
+  - Short : dd/MM/y
+  - Medium : d MMM y
+  - Long : d MMMM y
+  - Full : EEEE, d MMMM y
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : HH:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
+en_GS : Locale
+en_GS =
+    Generated.En.en_GS
+
+
+{-| Date format strings:
+
   - Short : M/d/yy
   - Medium : MMM d, y
   - Long : MMMM d, y
@@ -3308,6 +3485,26 @@ Time format strings:
 en_HK : Locale
 en_HK =
     Generated.En.en_HK
+
+
+{-| Date format strings:
+
+  - Short : dd/MM/y
+  - Medium : d MMM y
+  - Long : d MMMM y
+  - Full : EEEE, d MMMM y
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : HH:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
+en_HU : Locale
+en_HU =
+    Generated.En.en_HU
 
 
 {-| Date format strings:
@@ -3395,7 +3592,7 @@ en_IM =
   - Short : dd/MM/yy
   - Medium : d MMM y
   - Long : d MMMM y
-  - Full : EEEE d MMMM, y
+  - Full : EEEE, d MMMM y
 
 Time format strings:
 
@@ -3428,6 +3625,26 @@ Time format strings:
 en_IO : Locale
 en_IO =
     Generated.En.en_IO
+
+
+{-| Date format strings:
+
+  - Short : dd/MM/y
+  - Medium : d MMM y
+  - Long : d MMMM y
+  - Full : EEEE, d MMMM y
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : HH:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
+en_IT : Locale
+en_IT =
+    Generated.En.en_IT
 
 
 {-| Date format strings:
@@ -3905,6 +4122,26 @@ Time format strings:
   - Full : HH:mm:ss zzzz
 
 -}
+en_NO : Locale
+en_NO =
+    Generated.En.en_NO
+
+
+{-| Date format strings:
+
+  - Short : dd/MM/y
+  - Medium : d MMM y
+  - Long : d MMMM y
+  - Full : EEEE, d MMMM y
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : HH:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
 en_NR : Locale
 en_NR =
     Generated.En.en_NR
@@ -4025,6 +4262,26 @@ Time format strings:
   - Full : HH:mm:ss zzzz
 
 -}
+en_PL : Locale
+en_PL =
+    Generated.En.en_PL
+
+
+{-| Date format strings:
+
+  - Short : dd/MM/y
+  - Medium : d MMM y
+  - Long : d MMMM y
+  - Full : EEEE, d MMMM y
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : HH:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
 en_PN : Locale
 en_PN =
     Generated.En.en_PN
@@ -4059,6 +4316,26 @@ en_PR =
 
 Time format strings:
 
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : HH:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
+en_PT : Locale
+en_PT =
+    Generated.En.en_PT
+
+
+{-| Date format strings:
+
+  - Short : dd/MM/y
+  - Medium : d MMM y
+  - Long : d MMMM y
+  - Full : EEEE, d MMMM y
+
+Time format strings:
+
   - Short : h:mm a
   - Medium : h:mm:ss a
   - Long : h:mm:ss a z
@@ -4068,6 +4345,26 @@ Time format strings:
 en_PW : Locale
 en_PW =
     Generated.En.en_PW
+
+
+{-| Date format strings:
+
+  - Short : dd/MM/y
+  - Medium : d MMM y
+  - Long : d MMMM y
+  - Full : EEEE, d MMMM y
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : HH:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
+en_RO : Locale
+en_RO =
+    Generated.En.en_RO
 
 
 {-| Date format strings:
@@ -4228,6 +4525,26 @@ Time format strings:
 en_SI : Locale
 en_SI =
     Generated.En.en_SI
+
+
+{-| Date format strings:
+
+  - Short : dd/MM/y
+  - Medium : d MMM y
+  - Long : d MMMM y
+  - Full : EEEE, d MMMM y
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : HH:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
+en_SK : Locale
+en_SK =
+    Generated.En.en_SK
 
 
 {-| Date format strings:
@@ -4628,26 +4945,6 @@ Time format strings:
 en_ZW : Locale
 en_ZW =
     Generated.En.en_ZW
-
-
-{-| Date format strings:
-
-  - Short : dd/MM/y
-  - Medium : dd MMM, y
-  - Long : d MMMM, y
-  - Full : EEEE d MMMM, y
-
-Time format strings:
-
-  - Short : h:mm a
-  - Medium : h:mm:ss a
-  - Long : h:mm:ss a z
-  - Full : h:mm:ss a zzzz
-
--}
-en_Latn : Locale
-en_Latn =
-    Generated.En.en_Latn
 
 
 {-| Date format strings:
@@ -6293,7 +6590,7 @@ ga_GB =
 {-| Date format strings:
 
   - Short : dd/MM/y
-  - Medium : d MMM y
+  - Medium : d'mh' MMM y
   - Long : d'mh' MMMM y
   - Full : EEEE, d'mh' MMMM y
 
@@ -6452,6 +6749,26 @@ hi =
 
 {-| Date format strings:
 
+  - Short : dd/MM/y
+  - Medium : dd MMM, y
+  - Long : d MMMM, y
+  - Full : EEEE, d MMMM y
+
+Time format strings:
+
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
+
+-}
+hi_Latn : Locale
+hi_Latn =
+    Generated.Hi.hi_Latn
+
+
+{-| Date format strings:
+
   - Short : dd. MM. y.
   - Medium : d. MMM y.
   - Long : d. MMMM y.
@@ -6508,6 +6825,26 @@ Time format strings:
 hsb : Locale
 hsb =
     Generated.Hsb.hsb
+
+
+{-| Date format strings:
+
+  - Short : dd/MM/y
+  - Medium : d MMM y
+  - Long : d MMMM y
+  - Full : EEEE d MMMM y
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : HH:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
+ht : Locale
+ht =
+    Generated.Ht.ht
 
 
 {-| Date format strings:
@@ -6772,6 +7109,46 @@ kk =
 
 {-| Date format strings:
 
+  - Short : dd.MM.yy
+  - Medium : y 'ж'. dd MMM
+  - Long : y 'ж'. d MMMM
+  - Full : y 'ж'. d MMMM, EEEE
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : HH:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
+kk_Cyrl : Locale
+kk_Cyrl =
+    Generated.Kk.kk_Cyrl
+
+
+{-| Date format strings:
+
+  - Short : dd.MM.yy
+  - Medium : y 'ж'. dd MMM
+  - Long : y 'ж'. d MMMM
+  - Full : y 'ж'. d MMMM, EEEE
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : HH:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
+kk_KZ : Locale
+kk_KZ =
+    Generated.Kk.kk_KZ
+
+
+{-| Date format strings:
+
   - Short : d/M/yy
   - Medium : d MMM y
   - Long : d MMMM y
@@ -6892,6 +7269,26 @@ kok =
 
 {-| Date format strings:
 
+  - Short : d-M-yy
+  - Medium : d-MMM-y
+  - Long : d MMMM y
+  - Full : EEEE d MMMM y
+
+Time format strings:
+
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
+
+-}
+kok_Deva : Locale
+kok_Deva =
+    Generated.Kok.kok_Deva
+
+
+{-| Date format strings:
+
   - Short : d/M/yy
   - Medium : y-'ж'., d-MMM
   - Long : y-'ж'., d-MMMM
@@ -6915,7 +7312,7 @@ ky =
   - Short : d/M/y
   - Medium : d MMM y
   - Long : d MMMM y
-  - Full : EEEE ທີ d MMMM G y
+  - Full : EEEE, d MMMM y
 
 Time format strings:
 
@@ -6973,9 +7370,9 @@ lv =
 {-| Date format strings:
 
   - Short : d.M.yy
-  - Medium : d.M.y
-  - Long : d MMMM y
-  - Full : EEEE, d MMMM y
+  - Medium : d.M.y 'г'.
+  - Long : d MMMM y 'г'.
+  - Full : EEEE, d MMMM y 'г'.
 
 Time format strings:
 
@@ -7133,9 +7530,9 @@ ms_SG =
 {-| Date format strings:
 
   - Short : d/M/yy
-  - Medium : y၊ MMM d
-  - Long : y၊ MMMM d
-  - Full : y၊ MMMM d၊ EEEE
+  - Medium : y MMM d
+  - Long : y MMMM d
+  - Full : y MMMM d EEEE
 
 Time format strings:
 
@@ -7468,6 +7865,26 @@ Time format strings:
 pa_Guru : Locale
 pa_Guru =
     Generated.Pa.pa_Guru
+
+
+{-| Date format strings:
+
+  - Short : dd/MM/y
+  - Medium : d MMM y
+  - Long : d MMMM y
+  - Full : EEEE, d MMMM y
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : H:mm:ss z
+  - Full : HH:mm:ss zzzz
+
+-}
+pcm : Locale
+pcm =
+    Generated.Pcm.pcm
 
 
 {-| Date format strings:
@@ -8172,7 +8589,7 @@ sq_XK =
 
 {-| Date format strings:
 
-  - Short : d.M.yy.
+  - Short : d. M. y.
   - Medium : d. M. y.
   - Long : d. MMMM y.
   - Full : EEEE, d. MMMM y.
@@ -8192,7 +8609,7 @@ sr =
 
 {-| Date format strings:
 
-  - Short : d.M.yy.
+  - Short : d. M. y.
   - Medium : d. M. y.
   - Long : d. MMMM y.
   - Full : EEEE, d. MMMM y.
@@ -8212,7 +8629,7 @@ sr_Cyrl =
 
 {-| Date format strings:
 
-  - Short : d.M.yy.
+  - Short : d. M. y.
   - Medium : d. M. y.
   - Long : d. MMMM y.
   - Full : EEEE, d. MMMM y.
@@ -8232,7 +8649,7 @@ sr_Cyrl_BA =
 
 {-| Date format strings:
 
-  - Short : d.M.yy.
+  - Short : d. M. y.
   - Medium : d. M. y.
   - Long : d. MMMM y.
   - Full : EEEE, d. MMMM y.
@@ -8252,7 +8669,7 @@ sr_Cyrl_ME =
 
 {-| Date format strings:
 
-  - Short : d.M.yy.
+  - Short : d. M. y.
   - Medium : d. M. y.
   - Long : d. MMMM y.
   - Full : EEEE, d. MMMM y.
@@ -8272,7 +8689,7 @@ sr_Cyrl_XK =
 
 {-| Date format strings:
 
-  - Short : d.M.yy.
+  - Short : d. M. y.
   - Medium : d. M. y.
   - Long : d. MMMM y.
   - Full : EEEE, d. MMMM y.
@@ -8292,7 +8709,7 @@ sr_Latn =
 
 {-| Date format strings:
 
-  - Short : d.M.yy.
+  - Short : d. M. y.
   - Medium : d. M. y.
   - Long : d. MMMM y.
   - Full : EEEE, d. MMMM y.
@@ -8312,7 +8729,7 @@ sr_Latn_BA =
 
 {-| Date format strings:
 
-  - Short : d.M.yy.
+  - Short : d. M. y.
   - Medium : d. M. y.
   - Long : d. MMMM y.
   - Full : EEEE, d. MMMM y.
@@ -8332,7 +8749,7 @@ sr_Latn_ME =
 
 {-| Date format strings:
 
-  - Short : d.M.yy.
+  - Short : d. M. y.
   - Medium : d. M. y.
   - Long : d. MMMM y.
   - Full : EEEE, d. MMMM y.
@@ -8499,10 +8916,10 @@ sw_UG =
 
 Time format strings:
 
-  - Short : a h:mm
-  - Medium : a h:mm:ss
-  - Long : a h:mm:ss z
-  - Full : a h:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 ta : Locale
@@ -8539,10 +8956,10 @@ ta_LK =
 
 Time format strings:
 
-  - Short : a h:mm
-  - Medium : a h:mm:ss
-  - Long : a h:mm:ss z
-  - Full : a h:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 ta_MY : Locale
@@ -8559,10 +8976,10 @@ ta_MY =
 
 Time format strings:
 
-  - Short : a h:mm
-  - Medium : a h:mm:ss
-  - Long : a h:mm:ss z
-  - Full : a h:mm:ss zzzz
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
 
 -}
 ta_SG : Locale
@@ -8608,6 +9025,46 @@ Time format strings:
 th : Locale
 th =
     Generated.Th.th
+
+
+{-| Date format strings:
+
+  - Short : M/d/yy
+  - Medium : MMM d, y
+  - Long : MMMM d, y
+  - Full : EEEE፣ d MMMM y
+
+Time format strings:
+
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
+
+-}
+ti : Locale
+ti =
+    Generated.Ti.ti
+
+
+{-| Date format strings:
+
+  - Short : M/d/yy
+  - Medium : MMM d, y
+  - Long : MMMM d, y
+  - Full : EEEE፣ d MMMM y
+
+Time format strings:
+
+  - Short : h:mm a
+  - Medium : h:mm:ss a
+  - Long : h:mm:ss a z
+  - Full : h:mm:ss a zzzz
+
+-}
+ti_ER : Locale
+ti_ER =
+    Generated.Ti.ti_ER
 
 
 {-| Date format strings:
@@ -8915,6 +9372,46 @@ yue_Hant =
   - Short : y/M/d
   - Medium : y年M月d日
   - Long : y年M月d日
+  - Full : y年M月d日 EEEE
+
+Time format strings:
+
+  - Short : HH:mm
+  - Medium : HH:mm:ss
+  - Long : HH:mm:ss [z]
+  - Full : HH:mm:ss [zzzz]
+
+-}
+yue_Hant_CN : Locale
+yue_Hant_CN =
+    Generated.Yue.yue_Hant_CN
+
+
+{-| Date format strings:
+
+  - Short : y/M/d
+  - Medium : y年M月d日
+  - Long : y年M月d日
+  - Full : y年M月d日 EEEE
+
+Time format strings:
+
+  - Short : ah:mm
+  - Medium : ah:mm:ss
+  - Long : ah:mm:ss [z]
+  - Full : ah:mm:ss [zzzz]
+
+-}
+yue_Hant_MO : Locale
+yue_Hant_MO =
+    Generated.Yue.yue_Hant_MO
+
+
+{-| Date format strings:
+
+  - Short : y/M/d
+  - Medium : y年M月d日
+  - Long : y年M月d日
   - Full : y年M月d日EEEE
 
 Time format strings:
@@ -8988,6 +9485,26 @@ Time format strings:
 zh_Hans_MO : Locale
 zh_Hans_MO =
     Generated.Zh.zh_Hans_MO
+
+
+{-| Date format strings:
+
+  - Short : y/M/d
+  - Medium : y年M月d日
+  - Long : y年M月d日
+  - Full : y年M月d日EEEE
+
+Time format strings:
+
+  - Short : ah:mm
+  - Medium : ah:mm:ss
+  - Long : z ah:mm:ss
+  - Full : zzzz ah:mm:ss
+
+-}
+zh_Hans_MY : Locale
+zh_Hans_MY =
+    Generated.Zh.zh_Hans_MY
 
 
 {-| Date format strings:
@@ -9068,6 +9585,26 @@ Time format strings:
 zh_Hant_MO : Locale
 zh_Hant_MO =
     Generated.Zh.zh_Hant_MO
+
+
+{-| Date format strings:
+
+  - Short : y/M/d
+  - Medium : y年M月d日
+  - Long : y年M月d日
+  - Full : y年M月d日 EEEE
+
+Time format strings:
+
+  - Short : ah:mm
+  - Medium : ah:mm:ss
+  - Long : z ah:mm:ss
+  - Full : zzzz ah:mm:ss
+
+-}
+zh_Hant_MY : Locale
+zh_Hant_MY =
+    Generated.Zh.zh_Hant_MY
 
 
 {-| Date format strings:
