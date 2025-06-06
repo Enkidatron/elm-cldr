@@ -1,6 +1,6 @@
 # elm-cldr
 
-This Elm packages provides locale-aware formatting of [`Date`][datePackage]s and [`time`][timePackage]s. Formats for each locale are taken from the [Unicode CLDR Project][cldr]. It is intended to be accessible to developers who are familiar with the JS `Intl` API. 
+This Elm packages provides locale-aware formatting of [`Date`][datePackage]s and [`time`][timePackage]s. Formats for each locale are taken from the [Unicode CLDR Project][cldr]. It is intended to be accessible to developers who are familiar with the JS `Intl` API.
 
 [datePackage]: https://package.elm-lang.org/packages/justinmimbs/date/latest/Date
 [timePackage]: https://package.elm-lang.org/packages/elm/time/latest
@@ -26,7 +26,7 @@ elm install enkidatron/elm-cldr
 
 ## Examples
 
-See `examples` directory for full examples. 
+See `examples` directory for full examples.
 
 ### Use a dynamic Locale
 ```elm
@@ -40,7 +40,7 @@ localeStringFromFlags : String
 localeStringFromFlags = "ru"
 
 locale : Maybe Locale
-locale = 
+locale =
     Cldr.Locale.fromString
         Cldr.Locale.allLocales
         localeStringFromFlags
@@ -49,8 +49,8 @@ date : Date
 date = Date.fromCalendarDate 2022 Time.Jan 10
 
 formatted : String
-formatted = 
-    Cldr.Format.Date.format 
+formatted =
+    Cldr.Format.Date.format
         (Cldr.Format.Date.WithLength Short)
         (Maybe.withDefault root locale)
         date
@@ -62,5 +62,6 @@ The `Cldr.Locale` file is automatically generated from the CLDR JSON. In order t
 
 ## CLDR Version History
 
+- 3.0.0: release-47
 - 2.1.0: release-41
 - 1.0.0: release-40
