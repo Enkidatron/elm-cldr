@@ -207,6 +207,7 @@ timeMatchScore : TimeOptionsPlus a -> TimeOptionsPlus a -> Int
 timeMatchScore requested candidate =
     List.sum
         [ score rankText requested.period candidate.period
+        , score rankText requested.dayPeriod candidate.dayPeriod
         , score rankNumber requested.hour candidate.hour
         , score rankNumber requested.minute candidate.minute
         , score rankNumber requested.second candidate.second
