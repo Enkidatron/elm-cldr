@@ -1,5 +1,6 @@
 module GenerateCldr exposing (run)
 
+import AliasTask
 import BackendTask exposing (BackendTask)
 import CurrencyTask
 import DownloadCldr
@@ -15,6 +16,7 @@ run =
             , DownloadCldr.downloadAndExtractCldr
             , CurrencyTask.task
             , LanguageTask.task
+            , AliasTask.task
             , Script.log "Finished generating new CLDR files. Cleaning up..."
             , Script.log "Creating test cases for verifiable examples..."
             , Script.exec "elm-verify-examples" []

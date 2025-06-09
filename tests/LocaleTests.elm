@@ -13,6 +13,7 @@ suite =
         , enGBRoundtrip
         , ruToUnicode
         , ruRoundtrip
+        , inAliasRoundtrip
         , allLocalesParseCorrectly
         ]
 
@@ -63,6 +64,18 @@ ruRoundtrip : Test
 ruRoundtrip =
     localeRoundtrip "ru locale roundtrip"
         "ru"
+
+
+inAliasRoundtrip : Test
+inAliasRoundtrip =
+    test "'in' should alias to 'id'" <|
+        \_ ->
+            Expect.equal
+                ("in"
+                    |> Cldr.Locale.fromString Cldr.Locale.allLocales
+                    |> Maybe.map Cldr.Locale.toUnicode
+                )
+                (Just "id")
 
 
 allLocalesParseCorrectly : Test

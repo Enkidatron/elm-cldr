@@ -51,3 +51,13 @@ generatedFilenameForLanguage language =
 generatedFilenameForMainLocale : String
 generatedFilenameForMainLocale =
     "./src/Cldr/Locale.elm"
+
+
+aliasFilePath : String
+aliasFilePath =
+    "cldr-json-" ++ cldrVersion ++ "/cldr-json/cldr-core/supplemental/aliases.json"
+
+
+aliasFilePathOut : String
+aliasFilePathOut =
+    "./src/Generated/Alias.elm"

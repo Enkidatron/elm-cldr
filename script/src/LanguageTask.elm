@@ -25,6 +25,7 @@ import Json.Encode as JE
 import LanguageInfo.Extra exposing (snakeIdentifier)
 import List.Extra
 import Pages.Script as Script
+import Script.Extra exposing (withMessage)
 import String.Extra
 
 
@@ -41,12 +42,6 @@ type alias AllInfo =
 
 type alias LanguageBundle =
     ( String, List LanguageInfo )
-
-
-withMessage : String -> BackendTask FatalError a -> BackendTask FatalError a
-withMessage message nextTask =
-    Script.log message
-        |> Script.doThen nextTask
 
 
 getAllInfo : BackendTask FatalError AllInfo

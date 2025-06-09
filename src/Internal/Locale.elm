@@ -22,6 +22,7 @@ import Cldr.Format.Length exposing (Length(..))
 import Cldr.Format.Options exposing (DateOptions, DateTimeOptions)
 import Dict exposing (Dict)
 import FormatNumber.Locales
+import Generated.Alias
 import Internal.DayPeriodRule exposing (DayPeriodRule)
 import Internal.FormatSymbols as Sym
 import Internal.Options exposing (TimeOptions)
@@ -258,10 +259,57 @@ normalize langId =
             Root
 
         Lang langTag maybeScript maybeRegion maybeVariant ->
-            Lang (Tagged.map String.toLower langTag)
-                (Maybe.map (Tagged.map String.Extra.toTitleCase) maybeScript)
-                (Maybe.map (Tagged.map String.toUpper) maybeRegion)
-                (Maybe.map (Tagged.map String.toUpper) maybeVariant)
+            Lang (normalizeLang langTag)
+                (Maybe.map normalizeScript maybeScript)
+                (Maybe.map normalizeRegion maybeRegion)
+                (Maybe.map normalizeVariant maybeVariant)
+
+
+normalizeLang : LangSubtag -> LangSubtag
+normalizeLang =
+    let
+        helper inner =
+            String.toLower inner
+                |> checkAlias Generated.Alias.lang
+    in
+    Tagged.map helper
+
+
+normalizeScript : ScriptSubtag -> ScriptSubtag
+normalizeScript =
+    let
+        helper inner =
+            String.Extra.toTitleCase inner
+                |> checkAlias Generated.Alias.script
+    in
+    Tagged.map helper
+
+
+normalizeRegion : RegionSubtag -> RegionSubtag
+normalizeRegion =
+    let
+        helper inner =
+            String.toUpper inner
+                |> checkAlias Generated.Alias.region
+    in
+    Tagged.map helper
+
+
+normalizeVariant : VariantSubtag -> VariantSubtag
+normalizeVariant =
+    let
+        helper inner =
+            String.toUpper inner
+                |> checkAlias Generated.Alias.variant
+    in
+    Tagged.map helper
+
+
+checkAlias : Dict String String -> String -> String
+checkAlias aliasDict key =
+    aliasDict
+        |> Dict.get key
+        |> Maybe.withDefault key
 
 
 matchNearestLocale : List Locale -> LanguageId -> Maybe Locale
