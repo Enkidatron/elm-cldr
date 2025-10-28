@@ -11,6 +11,7 @@ import Internal.DayPeriodRule
 import Internal.LanguageInfo
 import Internal.Locale
 import Internal.Parse
+import Internal.PluralRule
 
 
 dayPeriods : Dict.Dict String (List Internal.DayPeriodRule.DayPeriodRule)
@@ -26,6 +27,28 @@ dayPeriods =
             ]
           )
         ]
+
+
+pluralRules : Internal.PluralRule.PluralRulesInfo
+pluralRules =
+    { one =
+        Just
+            (Internal.PluralRule.Or
+                (Internal.PluralRule.And
+                    { variable = Internal.PluralRule.N
+                    , modBy = Nothing
+                    , operator = Internal.PluralRule.Equals
+                    , target = ( Internal.PluralRule.Exactly 1, [] )
+                    }
+                    []
+                )
+                []
+            )
+    , two = Nothing
+    , zero = Nothing
+    , few = Nothing
+    , many = Nothing
+    }
 
 
 {-| Date format strings:
@@ -49,5 +72,6 @@ mn =
         Internal.Locale.empty
         (Internal.Parse.parse
             dayPeriods
-            "mn||||ү.ө.|ү.х.|8|afternoon1|өдөр|am|ү.ө.|evening1|орой|midnight|шөнө дунд|morning1|өглөө|night1|шөнө|noon|үд дунд|pm|ү.х.|ү.ө.|ү.х.|8|afternoon1|өдөр|am|ү.ө.|evening1|орой|midnight|шөнө дунд|morning1|өглөө|night1|шөнө|noon|үд дунд|pm|ү.х.|ү.ө.|ү.х.|8|afternoon1|өдөр|am|ү.ө.|evening1|орой|midnight|шөнө дунд|morning1|өглөө|night1|шөнө|noon|үд дунд|pm|ү.х.|y.MM.dd|y\u{202F}'оны' MMM'ын' d|y\u{202F}'оны' MMMM'ын' d|y\u{202F}'оны' MMMM'ын' d, EEEE 'гараг'|1-р сар|2-р сар|3-р сар|4-р сар|5-р сар|6-р сар|7-р сар|8-р сар|9-р сар|10-р сар|11-р сар|12-р сар|нэгдүгээр сар|хоёрдугаар сар|гуравдугаар сар|дөрөвдүгээр сар|тавдугаар сар|зургаадугаар сар|долоодугаар сар|наймдугаар сар|есдүгээр сар|аравдугаар сар|арван нэгдүгээр сар|арван хоёрдугаар сар|I|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII|1|1-р сар|2-р сар|3-р сар|4-р сар|5-р сар|6-р сар|7-р сар|8-р сар|9-р сар|10-р сар|11-р сар|12-р сар|Нэгдүгээр сар|Хоёрдугаар сар|Гуравдугаар сар|Дөрөвдүгээр сар|Тавдугаар сар|Зургаадугаар сар|Долоодугаар сар|Наймдугаар сар|Есдүгээр сар|Аравдугаар сар|Арван нэгдүгээр сар|Арван хоёрдугаар сар|I|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII|Ня|Да|Мя|Лх|Пү|Ба|Бя|ням|даваа|мягмар|лхагва|пүрэв|баасан|бямба|Ня|Да|Мя|Лх|Пү|Ба|Бя|1|Ня|Да|Мя|Лх|Пү|Ба|Бя|Ням|Даваа|Мягмар|Лхагва|Пүрэв|Баасан|Бямба|Ня|Да|Мя|Лх|Пү|Ба|Бя|МЭӨ|МЭ|манай эриний өмнөх|манай эриний|МЭӨ|МЭ|HH:mm|HH:mm:ss|HH:mm:ss (z)|HH:mm:ss (zzzz)|{1} {0}|{1} {0}|{1} {0}|{1} {0}|49|Bh|B h 'ц'|Bhm|B h:mm|Bhms|B h:mm:ss|d|d|E|ccc|EBhm|E. B h:mm|EBhms|E. B h:mm:ss|Ed|dd. E|Ehm|E. h:mm\u{202F}a|EHm|E. HH:mm|Ehms|E. h:mm:ss\u{202F}a|EHms|E. HH:mm:ss|Gy|G y|GyMd|GGGGG y-MM-dd|GyMMM|G y\u{202F}'оны' MMM|GyMMMd|G y\u{202F}'оны' MMM'ын' d|GyMMMEd|G y\u{202F}'оны' MMM'ын' d. E|h|h 'ц' a|H|HH 'ц'|hm|h:mm\u{202F}a|Hm|HH:mm|hms|h:mm:ss\u{202F}a|Hms|HH:mm:ss|hmsv|h:mm:ss\u{202F}a (v)|Hmsv|HH:mm:ss (v)|hmv|h:mm\u{202F}a (v)|Hmv|HH:mm (v)|M|LLLLL|Md|MMMMM/dd|MEd|MMMMM/dd. E|MMM|LLL|MMMd|MMM'ын' d|MMMEd|MMM'ын' d. E|MMMMd|MMMM'ын' d|MMMMW-count-one|MMMM'ын' W-'р' 'долоо' 'хоног'|MMMMW-count-other|MMMM'ын' W-'р' 'долоо' 'хоног'|ms|mm:ss|y|y|yM|y MMMMM|yMd|y.MM.dd|yMEd|y.MM.dd. E|yMMM|y\u{202F}'оны' MMM|yMMMd|y\u{202F}'оны' MMM'ын' d|yMMMEd|y\u{202F}'оны' MMM'ын' d. E|yMMMM|y\u{202F}'оны' MMMM|yQQQ|y\u{202F}'оны' QQQ|yQQQQ|y\u{202F}'оны' QQQQ|yw-count-one|Y 'оны' w-'р' 'долоо' 'хоног'|yw-count-other|Y 'оны' w-'р' 'долоо' 'хоног'|HHmm|HHmmss|HHmmssz|HHmmsszzzz|X3W,|.|-||||||E2W,|.|-¤\u{00A0}||¤\u{00A0}||¤\u{00A0}||E0W,|.|-|%||%||%|107|AFN|؋|AMD|֏|AOA|Kz|ARS|$|AUD|A$|AZN|₼|BAM|KM|BBD|$|BDT|৳|BMD|$|BND|$|BOB|Bs|BRL|R$|BSD|$|BWP|P|BYN|р.|BZD|$|CAD|CA$|CLP|$|CNY|CN¥|COP|$|CRC|₡|CUC|$|CUP|$|CZK|Kč|DKK|kr|DOP|$|EGP|E£|ESP|₧|EUR|€|FJD|$|FKP|£|GBP|£|GEL|₾|GHS|GH₵|GIP|£|GNF|FG|GTQ|Q|GYD|$|HKD|HK$|HNL|L|HRK|kn|HUF|Ft|IDR|Rp|ILS|₪|INR|₹|ISK|kr|JMD|$|JPY|JP¥|KGS|\u{20C0}|KHR|៛|KMF|CF|KPW|₩|KRW|₩|KYD|$|KZT|₸|LAK|₭|LBP|L£|LKR|Rs|LRD|$|LTL|Lt|LVL|Ls|MGA|Ar|MMK|K|MNT|₮|MUR|Rs|MXN|MX$|MYR|RM|NAD|$|NGN|₦|NIO|C$|NOK|kr|NPR|Rs|NZD|NZ$|PHP|PHP|PKR|Rs|PLN|zł|PYG|₲|RON|lei|RUB|₽|RWF|RF|SBD|$|SEK|кр|SGD|$|SHP|£|SRD|$|SSP|£|STN|Db|SYP|£|THB|฿|TOP|T$|TRY|₺|TTD|$|TWD|NT$|UAH|₴|USD|$|UYU|$|VEF|Bs|VND|₫|XAF|FCFA|XCD|EC$|XCG|Cg.|XOF|F\u{202F}CFA|XPF|CFPF|XXX|¤|ZAR|R|ZMW|ZK|"
+            pluralRules
+            "mn||||ү.ө.|ү.х.|8|afternoon1|өдөр|am|ү.ө.|evening1|орой|midnight|шөнө дунд|morning1|өглөө|night1|шөнө|noon|үд дунд|pm|ү.х.|ү.ө.|ү.х.|8|afternoon1|өдөр|am|ү.ө.|evening1|орой|midnight|шөнө дунд|morning1|өглөө|night1|шөнө|noon|үд дунд|pm|ү.х.|ү.ө.|ү.х.|8|afternoon1|өдөр|am|ү.ө.|evening1|орой|midnight|шөнө дунд|morning1|өглөө|night1|шөнө|noon|үд дунд|pm|ү.х.|y.MM.dd|y\u{202F}'оны' MMM'ын' d|y\u{202F}'оны' MMMM'ын' d|y\u{202F}'оны' MMMM'ын' d, EEEE 'гараг'|1-р сар|2-р сар|3-р сар|4-р сар|5-р сар|6-р сар|7-р сар|8-р сар|9-р сар|10-р сар|11-р сар|12-р сар|нэгдүгээр сар|хоёрдугаар сар|гуравдугаар сар|дөрөвдүгээр сар|тавдугаар сар|зургаадугаар сар|долоодугаар сар|наймдугаар сар|есдүгээр сар|аравдугаар сар|арван нэгдүгээр сар|арван хоёрдугаар сар|I|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII|1|1-р сар|2-р сар|3-р сар|4-р сар|5-р сар|6-р сар|7-р сар|8-р сар|9-р сар|10-р сар|11-р сар|12-р сар|Нэгдүгээр сар|Хоёрдугаар сар|Гуравдугаар сар|Дөрөвдүгээр сар|Тавдугаар сар|Зургаадугаар сар|Долоодугаар сар|Наймдугаар сар|Есдүгээр сар|Аравдугаар сар|Арван нэгдүгээр сар|Арван хоёрдугаар сар|I|II|III|IV|V|VI|VII|VIII|IX|X|XI|XII|Ня|Да|Мя|Лх|Пү|Ба|Бя|ням|даваа|мягмар|лхагва|пүрэв|баасан|бямба|Ня|Да|Мя|Лх|Пү|Ба|Бя|1|Ня|Да|Мя|Лх|Пү|Ба|Бя|Ням|Даваа|Мягмар|Лхагва|Пүрэв|Баасан|Бямба|Ня|Да|Мя|Лх|Пү|Ба|Бя|МЭӨ|МЭ|манай эриний өмнөх|манай эриний|МЭӨ|МЭ|HH:mm|HH:mm:ss|HH:mm:ss (z)|HH:mm:ss (zzzz)|{1} {0}|{1} {0}|{1} {0}|{1} {0}|49|Bh|B h 'ц'|Bhm|B h:mm|Bhms|B h:mm:ss|d|d|E|ccc|EBhm|E. B h:mm|EBhms|E. B h:mm:ss|Ed|dd. E|Ehm|E. h:mm\u{202F}a|EHm|E. HH:mm|Ehms|E. h:mm:ss\u{202F}a|EHms|E. HH:mm:ss|Gy|G y|GyMd|GGGGG y-MM-dd|GyMMM|G y\u{202F}'оны' MMM|GyMMMd|G y\u{202F}'оны' MMM'ын' d|GyMMMEd|G y\u{202F}'оны' MMM'ын' d. E|h|h 'ц' a|H|HH 'ц'|hm|h:mm\u{202F}a|Hm|HH:mm|hms|h:mm:ss\u{202F}a|Hms|HH:mm:ss|hmsv|h:mm:ss\u{202F}a (v)|Hmsv|HH:mm:ss (v)|hmv|h:mm\u{202F}a (v)|Hmv|HH:mm (v)|M|LLLLL|Md|MMMMM/dd|MEd|MMMMM/dd. E|MMM|LLL|MMMd|MMM'ын' d|MMMEd|MMM'ын' d. E|MMMMd|MMMM'ын' d|MMMMW-count-one|MMMM'ын' W-'р' 'долоо' 'хоног'|MMMMW-count-other|MMMM'ын' W-'р' 'долоо' 'хоног'|ms|mm:ss|y|y|yM|y MMMMM|yMd|y.MM.dd|yMEd|y.MM.dd. E|yMMM|y\u{202F}'оны' MMM|yMMMd|y\u{202F}'оны' MMM'ын' d|yMMMEd|y\u{202F}'оны' MMM'ын' d. E|yMMMM|y\u{202F}'оны' MMMM|yQQQ|y\u{202F}'оны' QQQ|yQQQQ|y\u{202F}'оны' QQQQ|yw-count-one|Y 'оны' w-'р' 'долоо' 'хоног'|yw-count-other|Y 'оны' w-'р' 'долоо' 'хоног'|HHmm|HHmmss|HHmmssz|HHmmsszzzz|X3W,|.|-||||||E2W,|.|-¤\u{00A0}||¤\u{00A0}||¤\u{00A0}||E0W,|.|-|%||%||%|107|AFN|؋|AMD|֏|AOA|Kz|ARS|$|AUD|A$|AZN|₼|BAM|KM|BBD|$|BDT|৳|BMD|$|BND|$|BOB|Bs|BRL|R$|BSD|$|BWP|P|BYN|р.|BZD|$|CAD|CA$|CLP|$|CNY|CN¥|COP|$|CRC|₡|CUC|$|CUP|$|CZK|Kč|DKK|kr|DOP|$|EGP|E£|ESP|₧|EUR|€|FJD|$|FKP|£|GBP|£|GEL|₾|GHS|GH₵|GIP|£|GNF|FG|GTQ|Q|GYD|$|HKD|HK$|HNL|L|HRK|kn|HUF|Ft|IDR|Rp|ILS|₪|INR|₹|ISK|kr|JMD|$|JPY|JP¥|KGS|⃀|KHR|៛|KMF|CF|KPW|₩|KRW|₩|KYD|$|KZT|₸|LAK|₭|LBP|L£|LKR|Rs|LRD|$|LTL|Lt|LVL|Ls|MGA|Ar|MMK|K|MNT|₮|MUR|Rs|MXN|MX$|MYR|RM|NAD|$|NGN|₦|NIO|C$|NOK|kr|NPR|Rs|NZD|NZ$|PHP|PHP|PKR|Rs|PLN|zł|PYG|₲|RON|lei|RUB|₽|RWF|RF|SBD|$|SEK|кр|SGD|$|SHP|£|SRD|$|SSP|£|STN|Db|SYP|£|THB|฿|TOP|T$|TRY|₺|TTD|$|TWD|NT$|UAH|₴|USD|$|UYU|$|VEF|Bs|VND|₫|XAF|FCFA|XCD|EC$|XCG|Cg.|XOF|F\u{202F}CFA|XPF|CFPF|XXX|¤|ZAR|R|ZMW|ZK|{0} жил|1|{0} жил|0||0||0||0|||{0} сар|1|{0} сар|0||0||0||0|||{0} д.х|1|{0} д.х|0||0||0||0|||{0} хоног|1|{0} хоног|0||0||0||0|||{0} цаг|1|{0} цаг|0||0||0||0|||{0} мин|1|{0} мин|0||0||0||0|||{0} сек|1|{0} сек|0||0||0||0|||{0} мс|1|{0} мс|0||0||0||0|||{0} жил|1|{0} жил|0||0||0||0|||{0} сар|1|{0} сар|0||0||0||0|||{0} долоо хоног|1|{0} долоо хоног|0||0||0||0|||{0} хоног|1|{0} хоног|0||0||0||0|||{0} цаг|1|{0} цаг|0||0||0||0|||{0} минут|1|{0} минут|0||0||0||0|||{0} секунд|1|{0} секунд|0||0||0||0|||{0} миллисекунд|1|{0} миллисекунд|0||0||0||0|||{0}ж|1|{0}ж|0||0||0||0|||{0}с|1|{0}с|0||0||0||0|||{0} д.х|1|{0} д.х|0||0||0||0|||{0} хоног|1|{0} хоног|0||0||0||0|||{0} ц|1|{0} ц|0||0||0||0|||{0} мин|1|{0} мин|0||0||0||0|||{0} сек|1|{0} сек|0||0||0||0|||{0} мс|1|{0} мс|0||0||0||0|||{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|"
         )

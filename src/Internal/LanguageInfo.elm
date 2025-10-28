@@ -3,7 +3,7 @@ module Internal.LanguageInfo exposing (..)
 import Dict exposing (Dict)
 import FormatNumber.Locales
 import Internal.DayPeriodRule exposing (DayPeriodRule)
-import Internal.Structures exposing (EraNames, MonthNames, Pattern3, Patterns, PeriodNames, WeekdayNames)
+import Internal.Structures exposing (DurationUnits, EraNames, ListPatternsUnit, MonthNames, Pattern3, Patterns, PeriodNames, WeekdayNames)
 
 
 type alias DayPeriodsInfo =
@@ -30,6 +30,8 @@ type alias LanguageInfo =
     , currencyNumberFormat : FormatNumber.Locales.Locale
     , percentNumberFormat : FormatNumber.Locales.Locale
     , currencySymbols : List ( String, String )
+    , durationUnits : Pattern3 (DurationUnits String)
+    , listPatternsUnit : Pattern3 ListPatternsUnit
     }
 
 
@@ -53,6 +55,8 @@ type alias Compact =
     , currencyNumberFormat : FormatNumber.Locales.Locale
     , percentNumberFormat : FormatNumber.Locales.Locale
     , currencySymbols : List ( String, String )
+    , durationUnits : Pattern3 (DurationUnits String)
+    , listPatternsUnit : Pattern3 ListPatternsUnit
     }
 
 
@@ -87,6 +91,8 @@ compact info =
     , currencyNumberFormat = info.currencyNumberFormat
     , percentNumberFormat = info.percentNumberFormat
     , currencySymbols = info.currencySymbols
+    , durationUnits = info.durationUnits
+    , listPatternsUnit = info.listPatternsUnit
     }
 
 
@@ -111,4 +117,6 @@ expand info =
     , currencyNumberFormat = info.currencyNumberFormat
     , percentNumberFormat = info.percentNumberFormat
     , currencySymbols = info.currencySymbols
+    , durationUnits = info.durationUnits
+    , listPatternsUnit = info.listPatternsUnit
     }

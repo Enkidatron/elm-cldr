@@ -8,21 +8,22 @@ import Internal.LanguageInfo exposing (DayPeriodsInfo, LanguageInfo)
 import Internal.LanguageInfo.Parse
 import Internal.Locale exposing (DateTimeToken(..))
 import Internal.Options
-import Internal.Structures exposing (Patterns)
+import Internal.PluralRule exposing (PluralRule, PluralRulesInfo)
+import Internal.Structures exposing (DurationUnits, Pattern3, Patterns, mapPattern3)
 import Maybe.Extra
 import Parser exposing ((|.), (|=), Parser)
 import Set exposing (Set)
 import Tagged exposing (Tagged(..))
 
 
-parse : DayPeriodsInfo -> String -> Maybe Internal.Locale.Locale
-parse dayPeriods text =
+parse : DayPeriodsInfo -> PluralRulesInfo -> String -> Maybe Internal.Locale.Locale
+parse dayPeriods plurals text =
     Internal.LanguageInfo.Parse.parse text
-        |> Maybe.andThen (parseInfo dayPeriods)
+        |> Maybe.andThen (parseInfo dayPeriods plurals)
 
 
-parseInfo : DayPeriodsInfo -> LanguageInfo -> Maybe Internal.Locale.Locale
-parseInfo dayPeriods info =
+parseInfo : DayPeriodsInfo -> PluralRulesInfo -> LanguageInfo -> Maybe Internal.Locale.Locale
+parseInfo dayPeriods plurals info =
     Just Internal.Locale.Internal
         |> Maybe.map ((|>) info.monthFormatNames)
         |> Maybe.map ((|>) info.monthStandaloneNames)
@@ -41,6 +42,8 @@ parseInfo dayPeriods info =
         |> Maybe.map ((|>) info.currencyNumberFormat)
         |> Maybe.map ((|>) info.percentNumberFormat)
         |> Maybe.map ((|>) (Dict.fromList info.currencySymbols))
+        |> Maybe.map ((|>) (durationRules plurals info.durationUnits))
+        |> Maybe.map ((|>) info.listPatternsUnit)
         |> Maybe.map Internal.Locale.Locale
 
 
@@ -109,6 +112,32 @@ availableFormatList info =
         |> List.filter (Tuple.first >> isSupportedKey)
         |> List.map parseAvailableFormat
         |> Maybe.Extra.combine
+
+
+durationRules : PluralRulesInfo -> Pattern3 (DurationUnits String) -> Pattern3 (DurationUnits ( PluralRule, String ))
+durationRules plurals =
+    let
+        mergeDuration stringDurations =
+            { other = stringDurations.other
+            , one = Maybe.map2 Tuple.pair plurals.one stringDurations.one
+            , two = Maybe.map2 Tuple.pair plurals.two stringDurations.two
+            , zero = Maybe.map2 Tuple.pair plurals.zero stringDurations.zero
+            , few = Maybe.map2 Tuple.pair plurals.few stringDurations.few
+            , many = Maybe.map2 Tuple.pair plurals.many stringDurations.many
+            }
+    in
+    mapPattern3
+        (\durations ->
+            { years = mergeDuration durations.years
+            , months = mergeDuration durations.months
+            , weeks = mergeDuration durations.weeks
+            , days = mergeDuration durations.days
+            , hours = mergeDuration durations.hours
+            , minutes = mergeDuration durations.minutes
+            , seconds = mergeDuration durations.seconds
+            , milliseconds = mergeDuration durations.milliseconds
+            }
+        )
 
 
 

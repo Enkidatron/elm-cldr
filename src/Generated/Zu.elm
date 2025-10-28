@@ -11,6 +11,7 @@ import Internal.DayPeriodRule
 import Internal.LanguageInfo
 import Internal.Locale
 import Internal.Parse
+import Internal.PluralRule
 
 
 dayPeriods : Dict.Dict String (List Internal.DayPeriodRule.DayPeriodRule)
@@ -25,6 +26,35 @@ dayPeriods =
             ]
           )
         ]
+
+
+pluralRules : Internal.PluralRule.PluralRulesInfo
+pluralRules =
+    { one =
+        Just
+            (Internal.PluralRule.Or
+                (Internal.PluralRule.And
+                    { variable = Internal.PluralRule.I
+                    , modBy = Nothing
+                    , operator = Internal.PluralRule.Equals
+                    , target = ( Internal.PluralRule.Exactly 0, [] )
+                    }
+                    []
+                )
+                [ Internal.PluralRule.And
+                    { variable = Internal.PluralRule.N
+                    , modBy = Nothing
+                    , operator = Internal.PluralRule.Equals
+                    , target = ( Internal.PluralRule.Exactly 1, [] )
+                    }
+                    []
+                ]
+            )
+    , two = Nothing
+    , zero = Nothing
+    , few = Nothing
+    , many = Nothing
+    }
 
 
 {-| Date format strings:
@@ -48,5 +78,6 @@ zu =
         Internal.Locale.empty
         (Internal.Parse.parse
             dayPeriods
-            "zu||||AM|PM|7|afternoon1|emini|am|AM|evening1|ntambama|morning1|entathakusa|morning2|ekuseni|night1|ebusuku|pm|PM|AM|PM|7|afternoon1|emini|am|AM|evening1|ntambama|morning1|entathakusa|morning2|ekuseni|night1|ebusuku|pm|PM|a|p|7|afternoon1|emini|am|a|evening1|ntambama|morning1|entathakusa|morning2|ekuseni|night1|ebusuku|pm|p|M/d/yy|MMM d, y|MMMM d, y|EEEE, MMMM d, y|Jan|Feb|Mas|Eph|Mey|Jun|Jul|Aga|Sep|Okt|Nov|Dis|Januwari|Februwari|Mashi|Ephreli|Meyi|Juni|Julayi|Agasti|Septhemba|Okthoba|Novemba|Disemba|J|F|M|E|M|J|J|A|S|O|N|D|1|Jan|Feb|Mas|Eph|Mey|Jun|Jul|Aga|Sep|Okt|Nov|Dis|Januwari|Februwari|Mashi|Ephreli|Meyi|Juni|Julayi|Agasti|Septhemba|Okthoba|Novemba|Disemba|J|F|M|A|M|J|J|A|S|O|N|D|Son|Mso|Bil|Tha|Sin|Hla|Mgq|ISonto|UMsombuluko|ULwesibili|ULwesithathu|ULwesine|ULwesihlanu|UMgqibelo|S|M|B|T|S|H|M|0|BC|AD|BC|AD|BC|AD|HH:mm|HH:mm:ss|HH:mm:ss z|HH:mm:ss zzzz|{1} {0}|{1} {0}|{1} {0}|{1} {0}|47|Bh|h B|Bhm|h:mm B|Bhms|h:mm:ss B|d|d|E|ccc|EBhm|E h:mm B|EBhms|E h:mm:ss B|Ed|d E|Ehm|E h:mm\u{202F}a|EHm|E HH:mm|Ehms|E h:mm:ss\u{202F}a|EHms|E HH:mm:ss|Gy|G y|GyMd|M/d/y GGGGG|GyMMM|G y MMM|GyMMMd|G y MMM d|GyMMMEd|G y MMM d, E|h|h\u{202F}a|H|HH|hm|h:mm\u{202F}a|Hm|HH:mm|hms|h:mm:ss\u{202F}a|Hms|HH:mm:ss|hmsv|h:mm:ss\u{202F}a v|Hmsv|HH:mm:ss v|hmv|h:mm\u{202F}a v|Hmv|HH:mm v|M|L|Md|MM-dd|MEd|MM-dd, E|MMM|LLL|MMMd|MMM d|MMMEd|E, MMM d|MMMMd|MMMM d|MMMMW-count-other|'week' W 'of' MMMM|ms|mm:ss|y|y|yM|y-MM|yMd|y-MM-dd|yMEd|y-MM-dd, E|yMMM|MMM y|yMMMd|MMM d, y|yMMMEd|E, MMM d, y|yMMMM|MMMM y|yQQQ|QQQ y|yQQQQ|QQQQ y|yw-count-other|'week' w 'of' Y|HHmm|HHmmss|HHmmssz|HHmmsszzzz|X3W,|.|-||||||E2W,|.|-¤||¤||¤||E0W,|.|-|%||%||%|107|AFN|؋|AMD|֏|AOA|Kz|ARS|$|AUD|A$|AZN|₼|BAM|KM|BBD|$|BDT|৳|BMD|$|BND|$|BOB|Bs|BRL|R$|BSD|$|BWP|P|BYN|P.|BZD|$|CAD|CA$|CLP|$|CNY|CN¥|COP|$|CRC|₡|CUC|$|CUP|$|CZK|Kč|DKK|Kr|DOP|$|EGP|E£|ESP|₧|EUR|€|FJD|$|FKP|£|GBP|£|GEL|₾|GHS|GH₵|GIP|£|GNF|FG|GTQ|Q|GYD|$|HKD|HK$|HNL|L|HRK|Kn|HUF|Ft|IDR|Rp|ILS|₪|INR|₹|ISK|Kr|JMD|$|JPY|JP¥|KGS|\u{20C0}|KHR|៛|KMF|CF|KPW|₩|KRW|₩|KYD|$|KZT|₸|LAK|₭|LBP|L£|LKR|Rs|LRD|$|LTL|Lt|LVL|Ls|MGA|Ar|MMK|K|MNT|₮|MUR|Rs|MXN|MX$|MYR|RM|NAD|$|NGN|₦|NIO|C$|NOK|Kr|NPR|Rs|NZD|NZ$|PHP|PHP|PKR|Rs|PLN|Zł|PYG|₲|RON|lei|RUB|₽|RWF|RF|SBD|$|SEK|Kr|SGD|$|SHP|£|SRD|$|SSP|£|STN|Db|SYP|£|THB|฿|TOP|T$|TRY|₺|TTD|$|TWD|NT$|UAH|₴|USD|$|UYU|$|VEF|Bs|VND|₫|XAF|FCFA|XCD|EC$|XCG|Cg.|XOF|F\u{202F}CFA|XPF|CFPF|XXX|¤|ZAR|R|ZMW|ZK|"
+            pluralRules
+            "zu||||AM|PM|7|afternoon1|emini|am|AM|evening1|ntambama|morning1|entathakusa|morning2|ekuseni|night1|ebusuku|pm|PM|AM|PM|7|afternoon1|emini|am|AM|evening1|ntambama|morning1|entathakusa|morning2|ekuseni|night1|ebusuku|pm|PM|a|p|7|afternoon1|emini|am|a|evening1|ntambama|morning1|entathakusa|morning2|ekuseni|night1|ebusuku|pm|p|M/d/yy|MMM d, y|MMMM d, y|EEEE, MMMM d, y|Jan|Feb|Mas|Eph|Mey|Jun|Jul|Aga|Sep|Okt|Nov|Dis|Januwari|Februwari|Mashi|Ephreli|Meyi|Juni|Julayi|Agasti|Septhemba|Okthoba|Novemba|Disemba|J|F|M|E|M|J|J|A|S|O|N|D|1|Jan|Feb|Mas|Eph|Mey|Jun|Jul|Aga|Sep|Okt|Nov|Dis|Januwari|Februwari|Mashi|Ephreli|Meyi|Juni|Julayi|Agasti|Septhemba|Okthoba|Novemba|Disemba|J|F|M|A|M|J|J|A|S|O|N|D|Son|Mso|Bil|Tha|Sin|Hla|Mgq|ISonto|UMsombuluko|ULwesibili|ULwesithathu|ULwesine|ULwesihlanu|UMgqibelo|S|M|B|T|S|H|M|0|BC|AD|BC|AD|BC|AD|HH:mm|HH:mm:ss|HH:mm:ss z|HH:mm:ss zzzz|{1} {0}|{1} {0}|{1} {0}|{1} {0}|47|Bh|h B|Bhm|h:mm B|Bhms|h:mm:ss B|d|d|E|ccc|EBhm|E h:mm B|EBhms|E h:mm:ss B|Ed|d E|Ehm|E h:mm\u{202F}a|EHm|E HH:mm|Ehms|E h:mm:ss\u{202F}a|EHms|E HH:mm:ss|Gy|G y|GyMd|M/d/y GGGGG|GyMMM|G y MMM|GyMMMd|G y MMM d|GyMMMEd|G y MMM d, E|h|h\u{202F}a|H|HH|hm|h:mm\u{202F}a|Hm|HH:mm|hms|h:mm:ss\u{202F}a|Hms|HH:mm:ss|hmsv|h:mm:ss\u{202F}a v|Hmsv|HH:mm:ss v|hmv|h:mm\u{202F}a v|Hmv|HH:mm v|M|L|Md|MM-dd|MEd|MM-dd, E|MMM|LLL|MMMd|MMM d|MMMEd|E, MMM d|MMMMd|MMMM d|MMMMW-count-other|'week' W 'of' MMMM|ms|mm:ss|y|y|yM|y-MM|yMd|y-MM-dd|yMEd|y-MM-dd, E|yMMM|MMM y|yMMMd|MMM d, y|yMMMEd|E, MMM d, y|yMMMM|MMMM y|yQQQ|QQQ y|yQQQQ|QQQQ y|yw-count-other|'week' w 'of' Y|HHmm|HHmmss|HHmmssz|HHmmsszzzz|X3W,|.|-||||||E2W,|.|-¤||¤||¤||E0W,|.|-|%||%||%|107|AFN|؋|AMD|֏|AOA|Kz|ARS|$|AUD|A$|AZN|₼|BAM|KM|BBD|$|BDT|৳|BMD|$|BND|$|BOB|Bs|BRL|R$|BSD|$|BWP|P|BYN|P.|BZD|$|CAD|CA$|CLP|$|CNY|CN¥|COP|$|CRC|₡|CUC|$|CUP|$|CZK|Kč|DKK|Kr|DOP|$|EGP|E£|ESP|₧|EUR|€|FJD|$|FKP|£|GBP|£|GEL|₾|GHS|GH₵|GIP|£|GNF|FG|GTQ|Q|GYD|$|HKD|HK$|HNL|L|HRK|Kn|HUF|Ft|IDR|Rp|ILS|₪|INR|₹|ISK|Kr|JMD|$|JPY|JP¥|KGS|⃀|KHR|៛|KMF|CF|KPW|₩|KRW|₩|KYD|$|KZT|₸|LAK|₭|LBP|L£|LKR|Rs|LRD|$|LTL|Lt|LVL|Ls|MGA|Ar|MMK|K|MNT|₮|MUR|Rs|MXN|MX$|MYR|RM|NAD|$|NGN|₦|NIO|C$|NOK|Kr|NPR|Rs|NZD|NZ$|PHP|PHP|PKR|Rs|PLN|Zł|PYG|₲|RON|lei|RUB|₽|RWF|RF|SBD|$|SEK|Kr|SGD|$|SHP|£|SRD|$|SSP|£|STN|Db|SYP|£|THB|฿|TOP|T$|TRY|₺|TTD|$|TWD|NT$|UAH|₴|USD|$|UYU|$|VEF|Bs|VND|₫|XAF|FCFA|XCD|EC$|XCG|Cg.|XOF|F\u{202F}CFA|XPF|CFPF|XXX|¤|ZAR|R|ZMW|ZK|{0} y|0||0||0||0||0|||{0} izinyanga|1|{0} nyanga|0||0||0||0|||{0} amaviki|1|{0} viki|0||0||0||0|||{0} izinsuku|1|{0} usuku|0||0||0||0|||{0} hr|1|{0} hora|0||0||0||0|||{0} iminithi|1|{0} iminithi|0||0||0||0|||{0} sec|1|{0} sekhondi|0||0||0||0|||{0} ms|0||0||0||0||0|||{0} y|0||0||0||0||0|||{0} izinyanga|1|{0} inyanga|0||0||0||0|||{0} amaviki|1|{0} iviki|0||0||0||0|||{0} izinsuku|1|{0} usuku|0||0||0||0|||{0} amahora|1|{0} ihora|0||0||0||0|||{0} amaminithi|1|{0} iminithi|0||0||0||0|||{0} amasekhondi|1|{0} isekhondi|0||0||0||0|||{0} ms|0||0||0||0||0|||{0} y|0||0||0||0||0|||{0} m|1|{0} m|0||0||0||0|||{0} w|1|{0} w|0||0||0||0|||{0} suku|1|{0}|0||0||0||0|||{0} hora|1|{0} hora|0||0||0||0|||{0} umzuzu|1|{0} umzuzu|0||0||0||0|||{0} s|1|{0} s|0||0||0||0|||{0} ms|0||0||0||0||0|||{0}, {1}|{0}, {1}|{0}, {1}|{0}, {1}|{0}, {1}|{0}, {1}|{0}, {1}|{0}, {1}|{0}, {1}|{0}, {1}|{0} {1}|{0}, {1}|"
         )

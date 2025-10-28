@@ -11,6 +11,7 @@ import Internal.DayPeriodRule
 import Internal.LanguageInfo
 import Internal.Locale
 import Internal.Parse
+import Internal.PluralRule
 
 
 dayPeriods : Dict.Dict String (List Internal.DayPeriodRule.DayPeriodRule)
@@ -27,6 +28,62 @@ dayPeriods =
             ]
           )
         ]
+
+
+pluralRules : Internal.PluralRule.PluralRulesInfo
+pluralRules =
+    { one =
+        Just
+            (Internal.PluralRule.Or
+                (Internal.PluralRule.And
+                    { variable = Internal.PluralRule.I
+                    , modBy = Nothing
+                    , operator = Internal.PluralRule.Equals
+                    , target = ( Internal.PluralRule.Exactly 1, [] )
+                    }
+                    [ { variable = Internal.PluralRule.V
+                      , modBy = Nothing
+                      , operator = Internal.PluralRule.Equals
+                      , target = ( Internal.PluralRule.Exactly 0, [] )
+                      }
+                    ]
+                )
+                [ Internal.PluralRule.And
+                    { variable = Internal.PluralRule.I
+                    , modBy = Nothing
+                    , operator = Internal.PluralRule.Equals
+                    , target = ( Internal.PluralRule.Exactly 0, [] )
+                    }
+                    [ { variable = Internal.PluralRule.V
+                      , modBy = Nothing
+                      , operator = Internal.PluralRule.NotEquals
+                      , target = ( Internal.PluralRule.Exactly 0, [] )
+                      }
+                    ]
+                ]
+            )
+    , two =
+        Just
+            (Internal.PluralRule.Or
+                (Internal.PluralRule.And
+                    { variable = Internal.PluralRule.I
+                    , modBy = Nothing
+                    , operator = Internal.PluralRule.Equals
+                    , target = ( Internal.PluralRule.Exactly 2, [] )
+                    }
+                    [ { variable = Internal.PluralRule.V
+                      , modBy = Nothing
+                      , operator = Internal.PluralRule.Equals
+                      , target = ( Internal.PluralRule.Exactly 0, [] )
+                      }
+                    ]
+                )
+                []
+            )
+    , zero = Nothing
+    , few = Nothing
+    , many = Nothing
+    }
 
 
 {-| Date format strings:
@@ -50,5 +107,6 @@ he =
         Internal.Locale.empty
         (Internal.Parse.parse
             dayPeriods
-            "he||||AM|PM|9|afternoon1|צהריים|afternoon2|אחר הצהריים|am|AM|evening1|ערב|midnight|חצות|morning1|בוקר|night1|לילה|night2|לפנות בוקר|pm|PM|AM|PM|9|afternoon1|בצהריים|afternoon2|אחר הצהריים|am|AM|evening1|בערב|midnight|חצות|morning1|בבוקר|night1|בלילה|night2|לפנות בוקר|pm|PM|AM|PM|9|afternoon1|בצהריים|afternoon2|אחה״צ|am|AM|evening1|בערב|midnight|חצות|morning1|בבוקר|night1|בלילה|night2|לפנות בוקר|pm|PM|d.M.y|d בMMM y|d בMMMM y|EEEE, d בMMMM y|ינו׳|פבר׳|מרץ|אפר׳|מאי|יוני|יולי|אוג׳|ספט׳|אוק׳|נוב׳|דצמ׳|ינואר|פברואר|מרץ|אפריל|מאי|יוני|יולי|אוגוסט|ספטמבר|אוקטובר|נובמבר|דצמבר|1|2|3|4|5|6|7|8|9|10|11|12|0|יום א׳|יום ב׳|יום ג׳|יום ד׳|יום ה׳|יום ו׳|שבת|יום ראשון|יום שני|יום שלישי|יום רביעי|יום חמישי|יום שישי|יום שבת|א׳|ב׳|ג׳|ד׳|ה׳|ו׳|ש׳|0|לפנה״ס|לספירה|לפני הספירה|לספירה|לפני|אחריי|H:mm|H:mm:ss|H:mm:ss z|H:mm:ss zzzz|{1}, {0}|{1}, {0}|{1}, {0}|{1}, {0}|52|Bh|h B|Bhm|h:mm B|Bhms|h:mm:ss B|d|d|E|ccc|EBhm|E h:mm B|EBhms|E h:mm:ss B|Ed|E ה-d|Ehm|E h:mm a|EHm|E H:mm|Ehms|E h:mm:ss a|EHms|E H:mm:ss|Gy|y G|GyMd|d/M/y G|GyMMM|MMM y G|GyMMMd|d בMMM y G|GyMMMEd|E, d בMMM y G|h|\u{200F}h a|H|H|hm|h:mm a|Hm|H:mm|hms|h:mm:ss a|Hms|H:mm:ss|hmsv|h:mm:ss a v|Hmsv|HH:mm:ss v|hmv|h:mm a v|Hmv|HH:mm v|M|L|Md|d.M|MEd|E, d.M|MMM|LLL|MMMd|d בMMM|MMMEd|E, d בMMM|MMMMd|d בMMMM|MMMMW-count-one|שבוע W בMMMM|MMMMW-count-two|שבוע W בMMMM|MMMMW-count-other|שבוע W בMMMM|ms|mm:ss|y|y|yM|M.y|yMd|d.M.y|yMEd|E, d.M.y|yMM|M.y|yMMM|MMM y|yMMMd|d בMMM y|yMMMEd|E, d בMMM y|yMMMM|MMMM y|yQQQ|QQQ y|yQQQQ|QQQQ y|yw-count-one|שבוע w בשנת Y|yw-count-two|שבוע w בשנת Y|yw-count-other|שבוע w בשנת Y|Hmm|Hmmss|Hmmssz|Hmmsszzzz|X3W,|.|\u{200E}-||||||E2W,|.|\u{200F}-|\u{00A0}\u{200F}¤|\u{200F}|\u{00A0}\u{200F}¤|\u{200F}|\u{00A0}\u{200F}¤|E0W,|.|\u{200E}-|%||%||%|108|AFN|؋|AMD|֏|AOA|Kz|ARS|$|AUD|A$|AZN|₼|BAM|KM|BBD|$|BDT|৳|BMD|$|BND|$|BOB|Bs|BRL|R$|BSD|$|BWP|P|BYN|р|BZD|$|CAD|CA$|CLP|$|CNY|\u{200E}CN¥\u{200E}|COP|$|CRC|₡|CUC|$|CUP|$|CZK|Kč|DKK|kr|DOP|$|EGP|E£|ESP|₧|EUR|€|FJD|$|FKP|£|GBP|£|GEL|₾|GHS|GH₵|GIP|£|GNF|FG|GTQ|Q|GYD|$|HKD|HK$|HNL|L|HRK|kn|HUF|Ft|IDR|Rp|ILP|ל״י|ILS|₪|INR|₹|ISK|kr|JMD|$|JPY|¥|KGS|\u{20C0}|KHR|៛|KMF|CF|KPW|₩|KRW|₩|KYD|$|KZT|₸|LAK|₭|LBP|L£|LKR|Rs|LRD|$|LTL|Lt|LVL|Ls|MGA|Ar|MMK|K|MNT|₮|MUR|Rs|MXN|MX$|MYR|RM|NAD|$|NGN|₦|NIO|C$|NOK|kr|NPR|Rs|NZD|NZ$|PHP|PHP|PKR|Rs|PLN|zł|PYG|₲|RON|lei|RUB|₽|RWF|RF|SBD|$|SEK|kr|SGD|$|SHP|£|SRD|$|SSP|£|STN|Db|SYP|£|THB|฿|TOP|T$|TRY|₺|TTD|$|TWD|NT$|UAH|₴|USD|$|UYU|$|VEF|Bs|VND|₫|XAF|FCFA|XCD|EC$|XCG|Cg.|XOF|F\u{202F}CFA|XPF|CFPF|XXX|¤|ZAR|R|ZMW|ZK|"
+            pluralRules
+            "he||||AM|PM|9|afternoon1|צהריים|afternoon2|אחר הצהריים|am|AM|evening1|ערב|midnight|חצות|morning1|בוקר|night1|לילה|night2|לפנות בוקר|pm|PM|AM|PM|9|afternoon1|בצהריים|afternoon2|אחר הצהריים|am|AM|evening1|בערב|midnight|חצות|morning1|בבוקר|night1|בלילה|night2|לפנות בוקר|pm|PM|AM|PM|9|afternoon1|בצהריים|afternoon2|אחה״צ|am|AM|evening1|בערב|midnight|חצות|morning1|בבוקר|night1|בלילה|night2|לפנות בוקר|pm|PM|d.M.y|d בMMM y|d בMMMM y|EEEE, d בMMMM y|ינו׳|פבר׳|מרץ|אפר׳|מאי|יוני|יולי|אוג׳|ספט׳|אוק׳|נוב׳|דצמ׳|ינואר|פברואר|מרץ|אפריל|מאי|יוני|יולי|אוגוסט|ספטמבר|אוקטובר|נובמבר|דצמבר|1|2|3|4|5|6|7|8|9|10|11|12|0|יום א׳|יום ב׳|יום ג׳|יום ד׳|יום ה׳|יום ו׳|שבת|יום ראשון|יום שני|יום שלישי|יום רביעי|יום חמישי|יום שישי|יום שבת|א׳|ב׳|ג׳|ד׳|ה׳|ו׳|ש׳|0|לפנה״ס|לספירה|לפני הספירה|לספירה|לפני|אחריי|H:mm|H:mm:ss|H:mm:ss z|H:mm:ss zzzz|{1}, {0}|{1}, {0}|{1}, {0}|{1}, {0}|52|Bh|h B|Bhm|h:mm B|Bhms|h:mm:ss B|d|d|E|ccc|EBhm|E h:mm B|EBhms|E h:mm:ss B|Ed|E ה-d|Ehm|E h:mm a|EHm|E H:mm|Ehms|E h:mm:ss a|EHms|E H:mm:ss|Gy|y G|GyMd|d/M/y G|GyMMM|MMM y G|GyMMMd|d בMMM y G|GyMMMEd|E, d בMMM y G|h|\u{200F}h a|H|H|hm|h:mm a|Hm|H:mm|hms|h:mm:ss a|Hms|H:mm:ss|hmsv|h:mm:ss a v|Hmsv|HH:mm:ss v|hmv|h:mm a v|Hmv|HH:mm v|M|L|Md|d.M|MEd|E, d.M|MMM|LLL|MMMd|d בMMM|MMMEd|E, d בMMM|MMMMd|d בMMMM|MMMMW-count-one|שבוע W בMMMM|MMMMW-count-two|שבוע W בMMMM|MMMMW-count-other|שבוע W בMMMM|ms|mm:ss|y|y|yM|M.y|yMd|d.M.y|yMEd|E, d.M.y|yMM|M.y|yMMM|MMM y|yMMMd|d בMMM y|yMMMEd|E, d בMMM y|yMMMM|MMMM y|yQQQ|QQQ y|yQQQQ|QQQQ y|yw-count-one|שבוע w בשנת Y|yw-count-two|שבוע w בשנת Y|yw-count-other|שבוע w בשנת Y|Hmm|Hmmss|Hmmssz|Hmmsszzzz|X3W,|.|\u{200E}-||||||E2W,|.|\u{200F}-|\u{00A0}\u{200F}¤|\u{200F}|\u{00A0}\u{200F}¤|\u{200F}|\u{00A0}\u{200F}¤|E0W,|.|\u{200E}-|%||%||%|108|AFN|؋|AMD|֏|AOA|Kz|ARS|$|AUD|A$|AZN|₼|BAM|KM|BBD|$|BDT|৳|BMD|$|BND|$|BOB|Bs|BRL|R$|BSD|$|BWP|P|BYN|р|BZD|$|CAD|CA$|CLP|$|CNY|\u{200E}CN¥\u{200E}|COP|$|CRC|₡|CUC|$|CUP|$|CZK|Kč|DKK|kr|DOP|$|EGP|E£|ESP|₧|EUR|€|FJD|$|FKP|£|GBP|£|GEL|₾|GHS|GH₵|GIP|£|GNF|FG|GTQ|Q|GYD|$|HKD|HK$|HNL|L|HRK|kn|HUF|Ft|IDR|Rp|ILP|ל״י|ILS|₪|INR|₹|ISK|kr|JMD|$|JPY|¥|KGS|⃀|KHR|៛|KMF|CF|KPW|₩|KRW|₩|KYD|$|KZT|₸|LAK|₭|LBP|L£|LKR|Rs|LRD|$|LTL|Lt|LVL|Ls|MGA|Ar|MMK|K|MNT|₮|MUR|Rs|MXN|MX$|MYR|RM|NAD|$|NGN|₦|NIO|C$|NOK|kr|NPR|Rs|NZD|NZ$|PHP|PHP|PKR|Rs|PLN|zł|PYG|₲|RON|lei|RUB|₽|RWF|RF|SBD|$|SEK|kr|SGD|$|SHP|£|SRD|$|SSP|£|STN|Db|SYP|£|THB|฿|TOP|T$|TRY|₺|TTD|$|TWD|NT$|UAH|₴|USD|$|UYU|$|VEF|Bs|VND|₫|XAF|FCFA|XCD|EC$|XCG|Cg.|XOF|F\u{202F}CFA|XPF|CFPF|XXX|¤|ZAR|R|ZMW|ZK|{0} שנים|1|{0} שנה|1|{0} שנים|0||0||0|||{0} ח׳|1|{0} ח׳|1|{0} ח׳|0||0||0|||{0} שבועות|1|{0} שבוע|1|שבועיים|0||0||0|||{0} ימ׳|1|{0} יום|1|יומיים|0||0||0|||{0} שע׳|1|{0} שעה|1|שעתיים|0||0||0|||{0} דק׳|1|{0} דק׳|1|{0} דק׳|0||0||0|||{0} שנ׳|1|{0} שנ׳|1|{0} שנ׳|0||0||0|||{0} ms|0||0||0||0||0|||{0} שנים|1|{0} שנה|1|{0} שנים|0||0||0|||{0} חודשים|1|{0} חודש|1|חודשיים|0||0||1|{0} חודשים||{0} שבועות|1|{0} שבוע|1|שבועיים|0||0||0|||{0} ימים|1|{0} יום|1|יומיים|0||0||1|{0} יום||{0} שעות|1|{0} שעה|1|שעתיים|0||0||1|{0} שעות||{0} דקות|1|{0} דקה|1|שתי דקות|0||0||1|{0} דקות||{0} שניות|1|{0} שניה|1|שתי שניות|0||0||1|{0} שניות||{0} אלפיות שנייה|1|{0} אלפית שנייה|1|{0} אלפיות שנייה|0||0||1|{0} אלפיות שנייה||{0} ש′|1|{0} ש′|1|{0} ש′|0||0||1|{0} ש′||{0} ח׳|1|{0} ח׳|1|{0} ח׳|0||0||0|||{0} ש′|1|{0} ש′|1|{0} ש′|0||0||1|{0} ש′||{0} י׳|1|{0} י׳|1|{0} י׳|0||0||1|{0} י׳||{0} שע׳|1|{0} שע׳|1|{0} שע׳|0||0||0|||{0} דק׳|1|{0} דק׳|1|{0} דק׳|0||0||0|||{0} שנ׳|1|{0} שנ׳|1|{0} שנ׳|0||0||0|||{0} ms|0||0||0||0||0|||{0}, {1}|{0}, {1}|{0}, {1}|{0}, {1}|{0}, {1}|{0}, {1}|{0} ו-{1}|{0}, {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|"
         )

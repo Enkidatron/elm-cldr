@@ -3,7 +3,7 @@ module Internal.LanguageInfo.Encode exposing (encode)
 import Dict
 import FormatNumber.Locales
 import Internal.LanguageInfo exposing (Compact)
-import Internal.Structures exposing (EraNames, MonthNames, Pattern3, Patterns, PeriodNames, WeekdayNames)
+import Internal.Structures exposing (DurationUnits, EraNames, ListPatternsUnit, MonthNames, Pattern3, Patterns, PeriodNames, Plural, WeekdayNames)
 
 
 encode : Compact -> String
@@ -32,6 +32,8 @@ encode info =
         , encodeNumberFormat info.currencyNumberFormat
         , encodeNumberFormat info.percentNumberFormat
         , encodeListOfPairsOfString info.currencySymbols
+        , encodePattern3 encodeDurationUnitNames info.durationUnits
+        , encodePattern3 encodeListPatternsUnit info.listPatternsUnit
         ]
 
 
@@ -157,5 +159,59 @@ encodeNumberFormat locale =
             , locale.zeroPrefix
             , locale.zeroSuffix
             ]
+        , "|"
+        ]
+
+
+encodeDurationUnitNames : DurationUnits String -> String
+encodeDurationUnitNames durations =
+    String.concat
+        [ encodePluralString durations.years
+        , "|"
+        , encodePluralString durations.months
+        , "|"
+        , encodePluralString durations.weeks
+        , "|"
+        , encodePluralString durations.days
+        , "|"
+        , encodePluralString durations.hours
+        , "|"
+        , encodePluralString durations.minutes
+        , "|"
+        , encodePluralString durations.seconds
+        , "|"
+        , encodePluralString durations.milliseconds
+        , "|"
+        ]
+
+
+encodePluralString : Plural String -> String
+encodePluralString plural =
+    String.concat
+        [ plural.other
+        , "|"
+        , encodeMaybe identity plural.one
+        , "|"
+        , encodeMaybe identity plural.two
+        , "|"
+        , encodeMaybe identity plural.zero
+        , "|"
+        , encodeMaybe identity plural.few
+        , "|"
+        , encodeMaybe identity plural.many
+        , "|"
+        ]
+
+
+encodeListPatternsUnit : ListPatternsUnit -> String
+encodeListPatternsUnit listPatterns =
+    String.concat
+        [ listPatterns.start
+        , "|"
+        , listPatterns.middle
+        , "|"
+        , listPatterns.end
+        , "|"
+        , listPatterns.two
         , "|"
         ]

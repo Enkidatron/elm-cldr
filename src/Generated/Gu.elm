@@ -11,6 +11,7 @@ import Internal.DayPeriodRule
 import Internal.LanguageInfo
 import Internal.Locale
 import Internal.Parse
+import Internal.PluralRule
 
 
 dayPeriods : Dict.Dict String (List Internal.DayPeriodRule.DayPeriodRule)
@@ -25,6 +26,35 @@ dayPeriods =
             ]
           )
         ]
+
+
+pluralRules : Internal.PluralRule.PluralRulesInfo
+pluralRules =
+    { one =
+        Just
+            (Internal.PluralRule.Or
+                (Internal.PluralRule.And
+                    { variable = Internal.PluralRule.I
+                    , modBy = Nothing
+                    , operator = Internal.PluralRule.Equals
+                    , target = ( Internal.PluralRule.Exactly 0, [] )
+                    }
+                    []
+                )
+                [ Internal.PluralRule.And
+                    { variable = Internal.PluralRule.N
+                    , modBy = Nothing
+                    , operator = Internal.PluralRule.Equals
+                    , target = ( Internal.PluralRule.Exactly 1, [] )
+                    }
+                    []
+                ]
+            )
+    , two = Nothing
+    , zero = Nothing
+    , few = Nothing
+    , many = Nothing
+    }
 
 
 {-| Date format strings:
@@ -48,5 +78,6 @@ gu =
         Internal.Locale.empty
         (Internal.Parse.parse
             dayPeriods
-            "gu||||AM|PM|7|afternoon1|બપોરે|am|AM|evening1|સાંજે|midnight|મધ્યરાત્રિ|morning1|સવારે|night1|રાત્રે|pm|PM|AM|PM|7|afternoon1|બપોરે|am|AM|evening1|સાંજે|midnight|મધ્યરાત્રિ|morning1|સવારે|night1|રાત્રે|pm|PM|AM|PM|7|afternoon1|બપોરે|am|AM|evening1|સાંજે|midnight|મ.રાત્રિ|morning1|સવારે|night1|રાત્રે|pm|PM|d/M/yy|d MMM, y|d MMMM, y|EEEE, d MMMM, y|જાન્યુ|ફેબ્રુ|માર્ચ|એપ્રિલ|મે|જૂન|જુલાઈ|ઑગસ્ટ|સપ્ટે|ઑક્ટો|નવે|ડિસે|જાન્યુઆરી|ફેબ્રુઆરી|માર્ચ|એપ્રિલ|મે|જૂન|જુલાઈ|ઑગસ્ટ|સપ્ટેમ્બર|ઑક્ટોબર|નવેમ્બર|ડિસેમ્બર|જા|ફે|મા|એ|મે|જૂ|જુ|ઑ|સ|ઑ|ન|ડિ|0|રવિ|સોમ|મંગળ|બુધ|ગુરુ|શુક્ર|શનિ|રવિવાર|સોમવાર|મંગળવાર|બુધવાર|ગુરુવાર|શુક્રવાર|શનિવાર|ર|સો|મં|બુ|ગુ|શુ|શ|0|ઈ.સ.પૂર્વે|ઈ.સ.|ઈસવીસન પૂર્વે|ઇસવીસન|ઇ સ પુ|ઇસ|hh:mm a|hh:mm:ss a|hh:mm:ss a z|hh:mm:ss a zzzz|{1} {0}|{1} {0}|{1} {0}|{1} {0}|51|Bh|h B|Bhm|h:mm B|Bhms|h:mm:ss B|d|d|E|ccc|EBhm|E h:mm B|EBhms|E h:mm:ss B|Ed|E d|Ehm|E h:mm a|EHm|E HH:mm|Ehms|E h:mm:ss a|EHms|E HH:mm:ss|Gy|G y|GyMd|GGGGG y-MM-dd|GyMMM|MMM, G y|GyMMMd|d MMM, G y|GyMMMEd|E, d MMM, G y|h|h\u{202F}a|H|HH|hm|h:mm a|Hm|HH:mm|hms|h:mm:ss a|Hms|HH:mm:ss|hmsv|h:mm:ss a v|Hmsv|HH:mm:ss v|hmv|h:mm a v|Hmv|HH:mm v|M|L|Md|d/M|MEd|E, d/M|MMdd|dd-MM|MMM|LLL|MMMd|d MMM|MMMEd|E, d MMM|MMMMd|d MMMM|MMMMW-count-one|MMMMના W અઠવાડિયા|MMMMW-count-other|MMMMના W અઠવાડિયા|ms|mm:ss|y|y|yM|M/y|yMd|d/M/y|yMEd|E, d/M/y|yMM|MM-y|yMMM|MMM y|yMMMd|d MMM, y|yMMMEd|E, d MMM, y|yMMMM|MMMM y|yQQQ|y QQQ|yQQQQ|y QQQQ|yw-count-one|Y ના w અઠવાડિયા|yw-count-other|Y ના w અઠવાડિયા|ahhmm|ahhmmss|ahhmmssz|ahhmmsszzzz|X3I,|.|-||||||E2I,|.|-¤||¤||¤||E0I,|.|-|%||%||%|107|AFN|؋|AMD|֏|AOA|Kz|ARS|$|AUD|A$|AZN|₼|BAM|KM|BBD|$|BDT|৳|BMD|$|BND|$|BOB|Bs|BRL|R$|BSD|$|BWP|P|BYN|р.|BZD|$|CAD|CA$|CLP|$|CNY|CN¥|COP|$|CRC|₡|CUC|$|CUP|$|CZK|Kč|DKK|kr|DOP|$|EGP|E£|ESP|₧|EUR|€|FJD|$|FKP|£|GBP|£|GEL|₾|GHS|GH₵|GIP|£|GNF|FG|GTQ|Q|GYD|$|HKD|HK$|HNL|L|HRK|kn|HUF|Ft|IDR|Rp|ILS|₪|INR|₹|ISK|kr|JMD|$|JPY|JP¥|KGS|\u{20C0}|KHR|៛|KMF|CF|KPW|₩|KRW|₩|KYD|$|KZT|₸|LAK|₭|LBP|L£|LKR|Rs|LRD|$|LTL|Lt|LVL|Ls|MGA|Ar|MMK|K|MNT|₮|MUR|રૂ.|MXN|MX$|MYR|RM|NAD|$|NGN|₦|NIO|C$|NOK|kr|NPR|Rs|NZD|NZ$|PHP|PHP|PKR|Rs|PLN|zł|PYG|₲|RON|lei|RUB|₽|RWF|RF|SBD|$|SEK|kr|SGD|$|SHP|£|SRD|$|SSP|£|STN|Db|SYP|£|THB|฿|TOP|T$|TRY|₺|TTD|$|TWD|NT$|UAH|₴|USD|US$|UYU|$|VEF|Bs|VND|₫|XAF|FCFA|XCD|EC$|XCG|Cg.|XOF|F\u{202F}CFA|XPF|CFPF|XXX|¤|ZAR|R|ZMW|ZK|"
+            pluralRules
+            "gu||||AM|PM|7|afternoon1|બપોરે|am|AM|evening1|સાંજે|midnight|મધ્યરાત્રિ|morning1|સવારે|night1|રાત્રે|pm|PM|AM|PM|7|afternoon1|બપોરે|am|AM|evening1|સાંજે|midnight|મધ્યરાત્રિ|morning1|સવારે|night1|રાત્રે|pm|PM|AM|PM|7|afternoon1|બપોરે|am|AM|evening1|સાંજે|midnight|મ.રાત્રિ|morning1|સવારે|night1|રાત્રે|pm|PM|d/M/yy|d MMM, y|d MMMM, y|EEEE, d MMMM, y|જાન્યુ|ફેબ્રુ|માર્ચ|એપ્રિલ|મે|જૂન|જુલાઈ|ઑગસ્ટ|સપ્ટે|ઑક્ટો|નવે|ડિસે|જાન્યુઆરી|ફેબ્રુઆરી|માર્ચ|એપ્રિલ|મે|જૂન|જુલાઈ|ઑગસ્ટ|સપ્ટેમ્બર|ઑક્ટોબર|નવેમ્બર|ડિસેમ્બર|જા|ફે|મા|એ|મે|જૂ|જુ|ઑ|સ|ઑ|ન|ડિ|0|રવિ|સોમ|મંગળ|બુધ|ગુરુ|શુક્ર|શનિ|રવિવાર|સોમવાર|મંગળવાર|બુધવાર|ગુરુવાર|શુક્રવાર|શનિવાર|ર|સો|મં|બુ|ગુ|શુ|શ|0|ઈ.સ.પૂર્વે|ઈ.સ.|ઈસવીસન પૂર્વે|ઇસવીસન|ઇ સ પુ|ઇસ|hh:mm a|hh:mm:ss a|hh:mm:ss a z|hh:mm:ss a zzzz|{1} {0}|{1} {0}|{1} {0}|{1} {0}|51|Bh|h B|Bhm|h:mm B|Bhms|h:mm:ss B|d|d|E|ccc|EBhm|E h:mm B|EBhms|E h:mm:ss B|Ed|E d|Ehm|E h:mm a|EHm|E HH:mm|Ehms|E h:mm:ss a|EHms|E HH:mm:ss|Gy|G y|GyMd|GGGGG y-MM-dd|GyMMM|MMM, G y|GyMMMd|d MMM, G y|GyMMMEd|E, d MMM, G y|h|h\u{202F}a|H|HH|hm|h:mm a|Hm|HH:mm|hms|h:mm:ss a|Hms|HH:mm:ss|hmsv|h:mm:ss a v|Hmsv|HH:mm:ss v|hmv|h:mm a v|Hmv|HH:mm v|M|L|Md|d/M|MEd|E, d/M|MMdd|dd-MM|MMM|LLL|MMMd|d MMM|MMMEd|E, d MMM|MMMMd|d MMMM|MMMMW-count-one|MMMMના W અઠવાડિયા|MMMMW-count-other|MMMMના W અઠવાડિયા|ms|mm:ss|y|y|yM|M/y|yMd|d/M/y|yMEd|E, d/M/y|yMM|MM-y|yMMM|MMM y|yMMMd|d MMM, y|yMMMEd|E, d MMM, y|yMMMM|MMMM y|yQQQ|y QQQ|yQQQQ|y QQQQ|yw-count-one|Y ના w અઠવાડિયા|yw-count-other|Y ના w અઠવાડિયા|ahhmm|ahhmmss|ahhmmssz|ahhmmsszzzz|X3I,|.|-||||||E2I,|.|-¤||¤||¤||E0I,|.|-|%||%||%|107|AFN|؋|AMD|֏|AOA|Kz|ARS|$|AUD|A$|AZN|₼|BAM|KM|BBD|$|BDT|৳|BMD|$|BND|$|BOB|Bs|BRL|R$|BSD|$|BWP|P|BYN|р.|BZD|$|CAD|CA$|CLP|$|CNY|CN¥|COP|$|CRC|₡|CUC|$|CUP|$|CZK|Kč|DKK|kr|DOP|$|EGP|E£|ESP|₧|EUR|€|FJD|$|FKP|£|GBP|£|GEL|₾|GHS|GH₵|GIP|£|GNF|FG|GTQ|Q|GYD|$|HKD|HK$|HNL|L|HRK|kn|HUF|Ft|IDR|Rp|ILS|₪|INR|₹|ISK|kr|JMD|$|JPY|JP¥|KGS|⃀|KHR|៛|KMF|CF|KPW|₩|KRW|₩|KYD|$|KZT|₸|LAK|₭|LBP|L£|LKR|Rs|LRD|$|LTL|Lt|LVL|Ls|MGA|Ar|MMK|K|MNT|₮|MUR|રૂ.|MXN|MX$|MYR|RM|NAD|$|NGN|₦|NIO|C$|NOK|kr|NPR|Rs|NZD|NZ$|PHP|PHP|PKR|Rs|PLN|zł|PYG|₲|RON|lei|RUB|₽|RWF|RF|SBD|$|SEK|kr|SGD|$|SHP|£|SRD|$|SSP|£|STN|Db|SYP|£|THB|฿|TOP|T$|TRY|₺|TTD|$|TWD|NT$|UAH|₴|USD|US$|UYU|$|VEF|Bs|VND|₫|XAF|FCFA|XCD|EC$|XCG|Cg.|XOF|F\u{202F}CFA|XPF|CFPF|XXX|¤|ZAR|R|ZMW|ZK|{0} વર્ષ|1|{0} વર્ષ|0||0||0||0|||{0} મહિના|1|{0} મહિનો|0||0||0||0|||{0} અઠ.|1|{0} અઠ.|0||0||0||0|||{0} દિવસ|1|{0} દિવસ|0||0||0||0|||{0} કલાક|1|{0} કલાક|0||0||0||0|||{0} મિનિટ|1|{0} મિનિટ|0||0||0||0|||{0} સેકંડ|1|{0} સેકંડ|0||0||0||0|||{0} મિસે|1|{0} મિસે|0||0||0||0|||{0} વર્ષ|1|{0} વર્ષ|0||0||0||0|||{0} મહિના|1|{0} મહિનો|0||0||0||0|||{0} અઠવાડિયા|1|{0} અઠવાડિયું|0||0||0||0|||{0} દિવસ|1|{0} દિવસ|0||0||0||0|||{0} કલાક|1|{0} કલાક|0||0||0||0|||{0} મિનિટ|1|{0} મિનિટ|0||0||0||0|||{0} સેકંડ|1|{0} સેકંડ|0||0||0||0|||{0} મિલિસેકન્ડ|1|{0} મિલિસેકન્ડ|0||0||0||0|||{0} વ|1|{0} વ|0||0||0||0|||{0} મ|1|{0} મ|0||0||0||0|||{0} અઠ.|1|{0} અઠ.|0||0||0||0|||{0} દિ|1|{0} દિ|0||0||0||0|||{0} ક|1|{0} ક|0||0||0||0|||{0} મિ|1|{0} મિ|0||0||0||0|||{0} સે|1|{0} સે|0||0||0||0|||{0} મિસે|1|{0} મિસે|0||0||0||0|||{0}, {1}|{0}, {1}|{0}, {1}|{0}, {1}|{0}, {1}|{0}, {1}|{0}, {1}|{0} અને {1}|{0}, {1}|{0}, {1}|{0}, {1}|{0}, {1}|"
         )

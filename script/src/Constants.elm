@@ -43,6 +43,21 @@ currencyFilePathForLanguage language =
     "cldr-json-" ++ cldrVersion ++ "/cldr-json/cldr-numbers-full/main/" ++ language ++ "/currencies.json"
 
 
+unitsFilePathForLanguage : String -> String
+unitsFilePathForLanguage language =
+    "cldr-json-" ++ cldrVersion ++ "/cldr-json/cldr-units-full/main/" ++ language ++ "/units.json"
+
+
+listPatternsFilePathForLanguage : String -> String
+listPatternsFilePathForLanguage language =
+    "cldr-json-" ++ cldrVersion ++ "/cldr-json/cldr-misc-full/main/" ++ language ++ "/listPatterns.json"
+
+
+pluralFilePath : String
+pluralFilePath =
+    "cldr-json-" ++ cldrVersion ++ "/cldr-json/cldr-core/supplemental/plurals.json"
+
+
 generatedFilenameForLanguage : String -> String
 generatedFilenameForLanguage language =
     "./src/Generated/" ++ String.Extra.toTitleCase language ++ ".elm"

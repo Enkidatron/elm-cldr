@@ -1,8 +1,9 @@
 module LanguageInfo.Extra exposing (decoder, fullFormatParser, skewerCase, snakeIdentifier)
 
+import Dict exposing (Dict)
 import FormatNumber.Locales
 import Internal.LanguageInfo exposing (LanguageInfo)
-import Internal.Structures exposing (EraNames, MonthNames, Pattern3, Patterns, PeriodNames, WeekdayNames)
+import Internal.Structures exposing (DurationUnits, EraNames, ListPatternsUnit, MonthNames, Pattern3, Patterns, PeriodNames, Plural, WeekdayNames)
 import Json.Decode as JD exposing (Decoder)
 import Json.Decode.Extra as JDExtra
 import Json.Decode.Pipeline as JDPipe
@@ -16,6 +17,7 @@ decoder langCode =
     gregorianDecoder langCode
         |> JD.andThen (numbersDecoder langCode)
         |> JD.andThen (currenciesDecoder langCode)
+        |> JD.andThen (durationsDecoder langCode)
 
 
 gregorianDecoder :
@@ -26,6 +28,8 @@ gregorianDecoder :
              -> FormatNumber.Locales.Locale
              -> FormatNumber.Locales.Locale
              -> List ( String, String )
+             -> Pattern3 (DurationUnits String)
+             -> Pattern3 ListPatternsUnit
              -> LanguageInfo
             )
 gregorianDecoder langCode =
@@ -73,6 +77,19 @@ currenciesDecoder langCode decodedSoFar =
         (JD.succeed decodedSoFar
             |> JDPipe.custom currencySymbolsDecoder
         )
+
+
+durationsDecoder : String -> (Pattern3 (DurationUnits String) -> Pattern3 ListPatternsUnit -> b) -> Decoder b
+durationsDecoder langCode decodedSoFar =
+    JD.succeed decodedSoFar
+        |> JDPipe.custom
+            (JD.at [ "units", "main", langCode, "units" ]
+                durationUnitNamesPattern3Decoder
+            )
+        |> JDPipe.custom
+            (JD.at [ "listPatterns", "main", langCode, "listPatterns" ]
+                listPatternsUnitPattern3Decoder
+            )
 
 
 periodNamesDecoder : Decoder (Pattern3 PeriodNames)
@@ -409,4 +426,57 @@ currencySymbolsDecoder =
                         Maybe.map (Tuple.pair key) maybeSymbol
                     )
                 )
+        )
+
+
+durationUnitNamesPattern3Decoder : Decoder (Pattern3 (DurationUnits String))
+durationUnitNamesPattern3Decoder =
+    JD.map3 Pattern3
+        (durationUnitNamesDecoder "short")
+        (durationUnitNamesDecoder "long")
+        (durationUnitNamesDecoder "narrow")
+
+
+durationUnitNamesDecoder : String -> Decoder (DurationUnits String)
+durationUnitNamesDecoder lengthName =
+    JD.field lengthName
+        (JD.succeed DurationUnits
+            |> JDPipe.required "duration-year" (pluralStringDecoder "unitPattern-count-")
+            |> JDPipe.required "duration-month" (pluralStringDecoder "unitPattern-count-")
+            |> JDPipe.required "duration-week" (pluralStringDecoder "unitPattern-count-")
+            |> JDPipe.required "duration-day" (pluralStringDecoder "unitPattern-count-")
+            |> JDPipe.required "duration-hour" (pluralStringDecoder "unitPattern-count-")
+            |> JDPipe.required "duration-minute" (pluralStringDecoder "unitPattern-count-")
+            |> JDPipe.required "duration-second" (pluralStringDecoder "unitPattern-count-")
+            |> JDPipe.required "duration-millisecond" (pluralStringDecoder "unitPattern-count-")
+        )
+
+
+pluralStringDecoder : String -> Decoder (Plural String)
+pluralStringDecoder prefix =
+    JD.map6 Plural
+        (JD.field (prefix ++ "other") JD.string)
+        (JDExtra.optionalField (prefix ++ "one") JD.string)
+        (JDExtra.optionalField (prefix ++ "two") JD.string)
+        (JDExtra.optionalField (prefix ++ "zero") JD.string)
+        (JDExtra.optionalField (prefix ++ "few") JD.string)
+        (JDExtra.optionalField (prefix ++ "many") JD.string)
+
+
+listPatternsUnitPattern3Decoder : Decoder (Pattern3 ListPatternsUnit)
+listPatternsUnitPattern3Decoder =
+    JD.map3 Pattern3
+        (listPatternsUnitDecoder "listPattern-type-unit-short")
+        (listPatternsUnitDecoder "listPattern-type-unit")
+        (listPatternsUnitDecoder "listPattern-type-unit-narrow")
+
+
+listPatternsUnitDecoder : String -> Decoder ListPatternsUnit
+listPatternsUnitDecoder lengthName =
+    JD.field lengthName
+        (JD.succeed ListPatternsUnit
+            |> JDPipe.required "start" JD.string
+            |> JDPipe.required "middle" JD.string
+            |> JDPipe.required "end" JD.string
+            |> JDPipe.required "2" JD.string
         )

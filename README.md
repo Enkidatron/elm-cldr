@@ -1,6 +1,6 @@
 # elm-cldr
 
-This Elm packages provides locale-aware formatting of [`Date`][datePackage]s and [`time`][timePackage]s. Formats for each locale are taken from the [Unicode CLDR Project][cldr]. It is intended to be accessible to developers who are familiar with the JS `Intl` API.
+This Elm packages provides locale-aware formatting of [`Date`][datePackage]s, [`time`][timePackage]s, numbers, and durations. Formats for each locale are taken from the [Unicode CLDR Project][cldr]. It is intended to be accessible to developers who are familiar with the JS `Intl` API.
 
 [datePackage]: https://package.elm-lang.org/packages/justinmimbs/date/latest/Date
 [timePackage]: https://package.elm-lang.org/packages/elm/time/latest
@@ -18,11 +18,15 @@ elm install enkidatron/elm-cldr
 - Or choose a hardcoded date, such as [`en`][en]
 - Format a `Date` from [`justinmimbs/date`][datePackage]: [`Format.Date.format`][dateFormat]
 - Format a `Posix` from [`elm/time`][timePackage]: [`Format.DateTime.format`][dateTimeFormat]
+- Format a `Float`: [`Format.Number.format`][numberFormat]
+- Format a duration: [`Format.Duration.format`][durationFormat]
 
 [fromString]: Cldr-Locale#fromString
 [en]: Cldr-Locale#en
 [dateFormat]: Cldr-Format-Date#format
 [dateTimeFormat]: Cldr-Format-DateTime#format
+[numberFormat]: Cldr-Format-Number#format
+[durationFormat]: Cldr-Format-Duration#format
 
 ## Examples
 
@@ -37,7 +41,7 @@ import Date exposing (Date)
 import Time
 
 localeStringFromFlags : String
-localeStringFromFlags = "ru"
+localeStringFromFlags = "uk"
 
 locale : Maybe Locale
 locale =
@@ -58,7 +62,7 @@ formatted =
 
 ## Contributing
 
-The `Cldr.Locale` file is automatically generated from the CLDR JSON. In order to keep this library repo clean, the code for that generation can be found at [enkidatron/elm-cldr-generator](https://github.com/enkidatron/elm-cldr-generator)
+The `Cldr.Locale` file is automatically generated from the CLDR JSON. This is done by an `elm-pages` script in this repo named `GenerateCldr`. The multi-stage work of converting the CLDR JSON repository into this library is done by the various scripts and helper files in the `scripts` directory. Theoretically, updating the CLDR version is as easy as updating the `cldrVersion` constant in the `Constants.elm` file, but I am sure that each new CLDR version will introduce some new fresh edge case that this library doesn't handle properly yet.
 
 ## CLDR Version History
 

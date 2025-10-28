@@ -3,7 +3,7 @@ module Internal.LanguageInfo.Parse exposing (parse, parser)
 import Dict exposing (Dict)
 import FormatNumber.Locales
 import Internal.LanguageInfo exposing (Compact, LanguageInfo)
-import Internal.Structures exposing (EraNames, MonthNames, Pattern3, Patterns, PeriodNames, WeekdayNames)
+import Internal.Structures exposing (DurationUnits, EraNames, ListPatternsUnit, MonthNames, Pattern3, Patterns, PeriodNames, Plural, WeekdayNames)
 import Parser exposing ((|.), (|=), Parser)
 import String.Extra
 
@@ -41,6 +41,8 @@ parser =
         |= formatNumberLocaleParser
         |= formatNumberLocaleParser
         |= listOfPairOfStringParser
+        |= pattern3Parser durationUnitNamesParser
+        |= pattern3Parser listPatternsUnitParser
         |. Parser.end
 
 
@@ -266,3 +268,54 @@ formatNumberSystemParser =
                     other ->
                         Parser.problem ("Error while parsing a FormatNumber.Locales.System, found: " ++ other)
             )
+
+
+durationUnitNamesParser : Parser (DurationUnits String)
+durationUnitNamesParser =
+    Parser.succeed DurationUnits
+        |= pluralStringParser
+        |. pipe
+        |= pluralStringParser
+        |. pipe
+        |= pluralStringParser
+        |. pipe
+        |= pluralStringParser
+        |. pipe
+        |= pluralStringParser
+        |. pipe
+        |= pluralStringParser
+        |. pipe
+        |= pluralStringParser
+        |. pipe
+        |= pluralStringParser
+        |. pipe
+
+
+pluralStringParser : Parser (Plural String)
+pluralStringParser =
+    Parser.succeed Plural
+        |= pipeDelimitedString
+        |. pipe
+        |= maybeParser pipeDelimitedString
+        |. pipe
+        |= maybeParser pipeDelimitedString
+        |. pipe
+        |= maybeParser pipeDelimitedString
+        |. pipe
+        |= maybeParser pipeDelimitedString
+        |. pipe
+        |= maybeParser pipeDelimitedString
+        |. pipe
+
+
+listPatternsUnitParser : Parser ListPatternsUnit
+listPatternsUnitParser =
+    Parser.succeed ListPatternsUnit
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe
+        |= pipeDelimitedString
+        |. pipe

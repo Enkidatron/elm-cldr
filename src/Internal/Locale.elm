@@ -26,6 +26,7 @@ import Generated.Alias
 import Internal.DayPeriodRule exposing (DayPeriodRule)
 import Internal.FormatSymbols as Sym
 import Internal.Options exposing (TimeOptions)
+import Internal.PluralRule exposing (PluralRule)
 import Internal.Structures exposing (..)
 import Parser exposing ((|.), (|=), Parser)
 import String.Extra
@@ -55,6 +56,8 @@ type alias Internal =
     , currencyNumberFormat : FormatNumber.Locales.Locale
     , percentNumberFormat : FormatNumber.Locales.Locale
     , currencySymbols : Dict String String
+    , durationUnits : Pattern3 (DurationUnits ( PluralRule, String ))
+    , listPatternsUnit : Pattern3 ListPatternsUnit
     }
 
 
@@ -667,4 +670,41 @@ empty =
         , currencyNumberFormat = FormatNumber.Locales.base
         , percentNumberFormat = FormatNumber.Locales.base
         , currencySymbols = Dict.empty
+        , durationUnits =
+            { abbreviated =
+                { years = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                , months = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                , weeks = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                , days = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                , hours = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                , minutes = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                , seconds = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                , milliseconds = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                }
+            , wide =
+                { years = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                , months = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                , weeks = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                , days = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                , hours = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                , minutes = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                , seconds = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                , milliseconds = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                }
+            , narrow =
+                { years = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                , months = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                , weeks = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                , days = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                , hours = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                , minutes = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                , seconds = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                , milliseconds = { other = "", one = Nothing, two = Nothing, zero = Nothing, few = Nothing, many = Nothing }
+                }
+            }
+        , listPatternsUnit =
+            { abbreviated = { start = "", middle = "", end = "", two = "" }
+            , wide = { start = "", middle = "", end = "", two = "" }
+            , narrow = { start = "", middle = "", end = "", two = "" }
+            }
         }

@@ -14,17 +14,20 @@ import Gen.Dict
 import Gen.Internal.DayPeriodRule
 import Gen.Internal.Locale
 import Gen.Internal.Parse
+import Gen.Internal.PluralRule
 import Gen.Internal.Structures
 import Gen.Maybe
 import Internal.DayPeriodRule exposing (DayPeriodRule)
 import Internal.LanguageInfo exposing (LanguageInfo)
 import Internal.LanguageInfo.Encode
+import Internal.PluralRule exposing (PluralRulesInfo)
 import Internal.Structures exposing (EraNames, MonthNames, Pattern3, Patterns, PeriodNames, WeekdayNames)
 import Json.Decode as JD exposing (Decoder)
 import Json.Encode as JE
 import LanguageInfo.Extra exposing (snakeIdentifier)
 import List.Extra
 import Pages.Script as Script
+import PluralRulesInfo exposing (AllPluralRules)
 import Script.Extra exposing (withMessage)
 import String.Extra
 
@@ -36,6 +39,7 @@ task =
 
 type alias AllInfo =
     { dayPeriodsInfo : DayPeriodsInfo
+    , pluralRules : AllPluralRules
     , languageBundles : List LanguageBundle
     }
 
@@ -46,8 +50,9 @@ type alias LanguageBundle =
 
 getAllInfo : BackendTask FatalError AllInfo
 getAllInfo =
-    BackendTask.map2 AllInfo
+    BackendTask.map3 AllInfo
         getDayPeriodsInfo
+        getPluralRules
         getLanguageBundles
 
 
@@ -56,6 +61,13 @@ getDayPeriodsInfo =
     BackendTask.File.jsonFile DayPeriodsInfo.decoder dayPeriodsFilePath
         |> BackendTask.allowFatal
         |> withMessage "Loading day periods info"
+
+
+getPluralRules : BackendTask FatalError AllPluralRules
+getPluralRules =
+    BackendTask.File.jsonFile PluralRulesInfo.decoder pluralFilePath
+        |> BackendTask.allowFatal
+        |> withMessage "Loading plural rules info"
 
 
 getLanguageBundles : BackendTask FatalError (List LanguageBundle)
@@ -83,17 +95,21 @@ modernFilesDecoder =
 getLanguageInfo : String -> BackendTask FatalError LanguageInfo
 getLanguageInfo name =
     let
-        combineJson gregorian number currency =
+        combineJson gregorian number currency units listPatterns =
             JE.object
                 [ ( "gregorian", gregorian )
                 , ( "numbers", number )
                 , ( "currencies", currency )
+                , ( "units", units )
+                , ( "listPatterns", listPatterns )
                 ]
     in
-    BackendTask.map3 combineJson
+    BackendTask.map5 combineJson
         (BackendTask.File.jsonFile JD.value (gregorianFilePathForLanguage name) |> BackendTask.allowFatal)
         (BackendTask.File.jsonFile JD.value (numberFilePathForLanguage name) |> BackendTask.allowFatal)
         (BackendTask.File.jsonFile JD.value (currencyFilePathForLanguage name) |> BackendTask.allowFatal)
+        (BackendTask.File.jsonFile JD.value (unitsFilePathForLanguage name) |> BackendTask.allowFatal)
+        (BackendTask.File.jsonFile JD.value (listPatternsFilePathForLanguage name) |> BackendTask.allowFatal)
         |> BackendTask.andThen (makeLanguageInfo name)
         |> withMessage ("Loading language info for " ++ name)
 
@@ -119,16 +135,16 @@ writeAllFiles info =
 
 writeLanguageBundles : AllInfo -> BackendTask FatalError ()
 writeLanguageBundles info =
-    List.map (writeLanguageBundle info.dayPeriodsInfo) info.languageBundles
+    List.map (writeLanguageBundle info.dayPeriodsInfo info.pluralRules) info.languageBundles
         |> BackendTask.doEach
         |> withMessage "Writing language bundles"
 
 
-writeLanguageBundle : DayPeriodsInfo -> LanguageBundle -> BackendTask FatalError ()
-writeLanguageBundle dayPeriods ( name, languageInfos ) =
+writeLanguageBundle : DayPeriodsInfo -> AllPluralRules -> LanguageBundle -> BackendTask FatalError ()
+writeLanguageBundle dayPeriods allPluralRules ( name, languageInfos ) =
     Script.writeFile
         { path = generatedFilenameForLanguage name
-        , body = languageFile name dayPeriods languageInfos
+        , body = languageFile name dayPeriods allPluralRules languageInfos
         }
         |> BackendTask.allowFatal
         |> withMessage ("Writing language bundle for " ++ name)
@@ -149,13 +165,13 @@ writeMainLocaleFile bundles =
 -- Locale Files
 
 
-languageFile : String -> DayPeriodsInfo -> List LanguageInfo -> String
-languageFile lang dayPeriods infos =
+languageFile : String -> DayPeriodsInfo -> AllPluralRules -> List LanguageInfo -> String
+languageFile lang dayPeriods allPluralRules infos =
     Elm.fileWith [ "Generated", String.Extra.toTitleCase lang ]
         { docs = ""
         , aliases = []
         }
-        (dayPeriodRuleDeclaration lang dayPeriods :: List.map localeFileDeclaration infos)
+        (dayPeriodRuleDeclaration lang dayPeriods :: pluralRulesDeclaration lang allPluralRules :: List.map localeFileDeclaration infos)
         |> .contents
 
 
@@ -165,6 +181,7 @@ localeFileDeclaration info =
         Gen.Internal.Locale.empty
         (Gen.Internal.Parse.parse
             (Elm.val "dayPeriods")
+            (Elm.val "pluralRules")
             (Internal.LanguageInfo.Encode.encode (Internal.LanguageInfo.compact info))
         )
         |> Elm.withType Gen.Internal.Locale.annotation_.locale
@@ -315,6 +332,26 @@ maybeExpr toExpr maybeItem =
 
         Nothing ->
             Gen.Maybe.make_.nothing
+
+
+pluralRulesDeclaration : String -> AllPluralRules -> Elm.Declaration
+pluralRulesDeclaration lang allPlurals =
+    let
+        simpleLang =
+            String.split "-" lang |> List.head |> Maybe.withDefault ""
+
+        maybePlurals =
+            Dict.get simpleLang allPlurals
+    in
+    Elm.record
+        [ ( "one", Maybe.andThen .one maybePlurals |> Maybe.map PluralRulesInfo.expression |> Elm.maybe )
+        , ( "two", Maybe.andThen .two maybePlurals |> Maybe.map PluralRulesInfo.expression |> Elm.maybe )
+        , ( "zero", Maybe.andThen .zero maybePlurals |> Maybe.map PluralRulesInfo.expression |> Elm.maybe )
+        , ( "few", Maybe.andThen .few maybePlurals |> Maybe.map PluralRulesInfo.expression |> Elm.maybe )
+        , ( "many", Maybe.andThen .many maybePlurals |> Maybe.map PluralRulesInfo.expression |> Elm.maybe )
+        ]
+        |> Elm.withType Gen.Internal.PluralRule.annotation_.pluralRulesInfo
+        |> Elm.declaration "pluralRules"
 
 
 

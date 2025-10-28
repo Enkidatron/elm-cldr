@@ -9,7 +9,8 @@
       "src/Internal/Locale.elm",
       "src/Internal/Parse.elm",
       "src/Internal/DayPeriodRule.elm",
-      "src/Internal/Structures.elm"
+      "src/Internal/Structures.elm",
+      "src/Internal/PluralRule.elm"
     ]
   }
 }

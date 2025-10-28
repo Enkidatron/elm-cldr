@@ -11,11 +11,82 @@ import Internal.DayPeriodRule
 import Internal.LanguageInfo
 import Internal.Locale
 import Internal.Parse
+import Internal.PluralRule
 
 
 dayPeriods : Dict.Dict String (List Internal.DayPeriodRule.DayPeriodRule)
 dayPeriods =
     Dict.fromList []
+
+
+pluralRules : Internal.PluralRule.PluralRulesInfo
+pluralRules =
+    { one =
+        Just
+            (Internal.PluralRule.Or
+                (Internal.PluralRule.And
+                    { variable = Internal.PluralRule.N
+                    , modBy = Just 10
+                    , operator = Internal.PluralRule.Equals
+                    , target = ( Internal.PluralRule.Exactly 1, [] )
+                    }
+                    [ { variable = Internal.PluralRule.N
+                      , modBy = Just 100
+                      , operator = Internal.PluralRule.NotEquals
+                      , target = ( Internal.PluralRule.Exactly 11, [] )
+                      }
+                    ]
+                )
+                []
+            )
+    , two = Nothing
+    , zero = Nothing
+    , few =
+        Just
+            (Internal.PluralRule.Or
+                (Internal.PluralRule.And
+                    { variable = Internal.PluralRule.N
+                    , modBy = Just 10
+                    , operator = Internal.PluralRule.Equals
+                    , target = ( Internal.PluralRule.Range 2 4, [] )
+                    }
+                    [ { variable = Internal.PluralRule.N
+                      , modBy = Just 100
+                      , operator = Internal.PluralRule.NotEquals
+                      , target = ( Internal.PluralRule.Range 12 14, [] )
+                      }
+                    ]
+                )
+                []
+            )
+    , many =
+        Just
+            (Internal.PluralRule.Or
+                (Internal.PluralRule.And
+                    { variable = Internal.PluralRule.N
+                    , modBy = Just 10
+                    , operator = Internal.PluralRule.Equals
+                    , target = ( Internal.PluralRule.Exactly 0, [] )
+                    }
+                    []
+                )
+                [ Internal.PluralRule.And
+                    { variable = Internal.PluralRule.N
+                    , modBy = Just 10
+                    , operator = Internal.PluralRule.Equals
+                    , target = ( Internal.PluralRule.Range 5 9, [] )
+                    }
+                    []
+                , Internal.PluralRule.And
+                    { variable = Internal.PluralRule.N
+                    , modBy = Just 100
+                    , operator = Internal.PluralRule.Equals
+                    , target = ( Internal.PluralRule.Range 11 14, [] )
+                    }
+                    []
+                ]
+            )
+    }
 
 
 {-| Date format strings:
@@ -39,7 +110,8 @@ be =
         Internal.Locale.empty
         (Internal.Parse.parse
             dayPeriods
-            "be||||AM|PM|2|am|AM|pm|PM|AM|PM|2|am|AM|pm|PM|am|pm|2|am|am|pm|pm|d.MM.yy|d MMM y\u{202F}'г'.|d MMMM y\u{202F}'г'.|EEEE, d MMMM y\u{202F}'г'.|сту|лют|сак|кра|мая|чэр|ліп|жні|вер|кас|ліс|сне|студзеня|лютага|сакавіка|красавіка|мая|чэрвеня|ліпеня|жніўня|верасня|кастрычніка|лістапада|снежня|с|л|с|к|м|ч|л|ж|в|к|л|с|1|сту|лют|сак|кра|май|чэр|ліп|жні|вер|кас|ліс|сне|студзень|люты|сакавік|красавік|май|чэрвень|ліпень|жнівень|верасень|кастрычнік|лістапад|снежань|с|л|с|к|м|ч|л|ж|в|к|л|с|нд|пн|аў|ср|чц|пт|сб|нядзеля|панядзелак|аўторак|серада|чацвер|пятніца|субота|н|п|а|с|ч|п|с|0|да н.э.|н.э.|да нараджэння Хрыстова|ад нараджэння Хрыстова|да н.э.|н.э.|HH:mm|HH:mm:ss|HH:mm:ss z|HH:mm:ss, zzzz|{1}, {0}|{1}, {0}|{1}, {0}|{1}, {0}|54|Bh|h B|Bhm|h:mm B|Bhms|h:mm:ss B|d|d|E|ccc|EBhm|E h:mm B|EBhms|E h:mm:ss B|Ed|d, E|Ehm|E h:mm\u{202F}a|EHm|E HH:mm|Ehms|E h:mm:ss\u{202F}a|EHms|E HH:mm:ss|Gy|y\u{202F}'г'. G|GyMd|dd.MM.y GGGGG|GyMMM|LLL y\u{202F}'г'. G|GyMMMd|d MMM y\u{202F}'г'. G|GyMMMEd|E, d MMM y\u{202F}'г'. G|h|hh\u{202F}a|H|HH|hm|h:mm\u{202F}a|Hm|HH:mm|hms|h:mm:ss\u{202F}a|Hms|HH:mm:ss|hmsv|h:mm:ss\u{202F}a v|Hmsv|HH:mm:ss v|hmv|h:mm\u{202F}a v|Hmv|HH:mm v|M|L|Md|d.M|MEd|E, d.M|MMM|LLL|MMMd|d MMM|MMMEd|E, d MMM|MMMMd|d MMMM|MMMMEd|E, d MMMM|MMMMW-count-one|W 'тыдзень' MMMM|MMMMW-count-few|W 'тыдзень' MMMM|MMMMW-count-many|W 'тыдзень' MMMM|MMMMW-count-other|W 'тыдзень' MMMM|ms|mm.ss|y|y|yM|M.y|yMd|d.M.y|yMEd|E, d.M.y|yMMM|LLL y|yMMMd|d MMM y|yMMMEd|E, d MMM y|yMMMM|LLLL y|yQQQ|QQQ y|yQQQQ|QQQQ y|yw-count-one|w 'тыдзень' Y|yw-count-few|w 'тыдзень' Y|yw-count-many|w 'тыдзень' Y|yw-count-other|w 'тыдзень' Y|HHmm|HHmmss|HHmmssz|HHmmsszzzz|X3W\u{00A0}|,|-||||||E2W\u{00A0}|,|-|\u{00A0}¤||\u{00A0}¤||\u{00A0}¤|E0W\u{00A0}|,|-|\u{00A0}%||\u{00A0}%||\u{00A0}%|107|AFN|؋|AMD|֏|AOA|Kz|ARS|$|AUD|A$|AZN|₼|BAM|KM|BBD|Bds$|BDT|৳|BMD|BD$|BND|$|BOB|Bs|BRL|BRL|BSD|B$|BWP|P|BYN|Br|BZD|BZ$|CAD|CAD|CLP|$|CNY|CN¥|COP|$|CRC|₡|CUC|CUC$|CUP|$MN|CZK|Kč|DKK|kr|DOP|RD$|EGP|E£|ESP|₧|EUR|€|FJD|FJ$|FKP|FK£|GBP|£|GEL|₾|GHS|GH₵|GIP|£|GNF|FG|GTQ|Q|GYD|G$|HKD|HK$|HNL|L|HRK|kn|HUF|Ft|IDR|Rp|ILS|₪|INR|₹|ISK|Íkr|JMD|J$|JPY|¥|KGS|\u{20C0}|KHR|៛|KMF|CF|KPW|₩|KRW|₩|KYD|CI$|KZT|₸|LAK|₭|LBP|L£|LKR|Rs|LRD|L$|LTL|Lt|LVL|Ls|MGA|Ar|MMK|K|MNT|₮|MUR|Rs|MXN|MX$|MYR|RM|NAD|N$|NGN|₦|NIO|C$|NOK|kr|NPR|Rs|NZD|NZD|PHP|PHP|PKR|Rs|PLN|zł|PYG|₲|RON|lei|RUB|₽|RWF|RF|SBD|SI$|SEK|kr|SGD|S$|SHP|£|SRD|$|SSP|£|STN|Db|SYP|£|THB|฿|TOP|T$|TRY|₺|TTD|TT$|TWD|NT$|UAH|₴|USD|$|UYU|$U|VEF|Bs|VND|₫|XAF|FCFA|XCD|EC$|XCG|Cg.|XOF|F\u{202F}CFA|XPF|CFPF|XXX|¤|ZAR|R|ZMW|ZK|"
+            pluralRules
+            "be||||AM|PM|2|am|AM|pm|PM|AM|PM|2|am|AM|pm|PM|am|pm|2|am|am|pm|pm|d.MM.yy|d MMM y\u{202F}'г'.|d MMMM y\u{202F}'г'.|EEEE, d MMMM y\u{202F}'г'.|сту|лют|сак|кра|мая|чэр|ліп|жні|вер|кас|ліс|сне|студзеня|лютага|сакавіка|красавіка|мая|чэрвеня|ліпеня|жніўня|верасня|кастрычніка|лістапада|снежня|с|л|с|к|м|ч|л|ж|в|к|л|с|1|сту|лют|сак|кра|май|чэр|ліп|жні|вер|кас|ліс|сне|студзень|люты|сакавік|красавік|май|чэрвень|ліпень|жнівень|верасень|кастрычнік|лістапад|снежань|с|л|с|к|м|ч|л|ж|в|к|л|с|нд|пн|аў|ср|чц|пт|сб|нядзеля|панядзелак|аўторак|серада|чацвер|пятніца|субота|н|п|а|с|ч|п|с|0|да н.э.|н.э.|да нараджэння Хрыстова|ад нараджэння Хрыстова|да н.э.|н.э.|HH:mm|HH:mm:ss|HH:mm:ss z|HH:mm:ss, zzzz|{1}, {0}|{1}, {0}|{1}, {0}|{1}, {0}|54|Bh|h B|Bhm|h:mm B|Bhms|h:mm:ss B|d|d|E|ccc|EBhm|E h:mm B|EBhms|E h:mm:ss B|Ed|d, E|Ehm|E h:mm\u{202F}a|EHm|E HH:mm|Ehms|E h:mm:ss\u{202F}a|EHms|E HH:mm:ss|Gy|y\u{202F}'г'. G|GyMd|dd.MM.y GGGGG|GyMMM|LLL y\u{202F}'г'. G|GyMMMd|d MMM y\u{202F}'г'. G|GyMMMEd|E, d MMM y\u{202F}'г'. G|h|hh\u{202F}a|H|HH|hm|h:mm\u{202F}a|Hm|HH:mm|hms|h:mm:ss\u{202F}a|Hms|HH:mm:ss|hmsv|h:mm:ss\u{202F}a v|Hmsv|HH:mm:ss v|hmv|h:mm\u{202F}a v|Hmv|HH:mm v|M|L|Md|d.M|MEd|E, d.M|MMM|LLL|MMMd|d MMM|MMMEd|E, d MMM|MMMMd|d MMMM|MMMMEd|E, d MMMM|MMMMW-count-one|W 'тыдзень' MMMM|MMMMW-count-few|W 'тыдзень' MMMM|MMMMW-count-many|W 'тыдзень' MMMM|MMMMW-count-other|W 'тыдзень' MMMM|ms|mm.ss|y|y|yM|M.y|yMd|d.M.y|yMEd|E, d.M.y|yMMM|LLL y|yMMMd|d MMM y|yMMMEd|E, d MMM y|yMMMM|LLLL y|yQQQ|QQQ y|yQQQQ|QQQQ y|yw-count-one|w 'тыдзень' Y|yw-count-few|w 'тыдзень' Y|yw-count-many|w 'тыдзень' Y|yw-count-other|w 'тыдзень' Y|HHmm|HHmmss|HHmmssz|HHmmsszzzz|X3W\u{00A0}|,|-||||||E2W\u{00A0}|,|-|\u{00A0}¤||\u{00A0}¤||\u{00A0}¤|E0W\u{00A0}|,|-|\u{00A0}%||\u{00A0}%||\u{00A0}%|107|AFN|؋|AMD|֏|AOA|Kz|ARS|$|AUD|A$|AZN|₼|BAM|KM|BBD|Bds$|BDT|৳|BMD|BD$|BND|$|BOB|Bs|BRL|BRL|BSD|B$|BWP|P|BYN|Br|BZD|BZ$|CAD|CAD|CLP|$|CNY|CN¥|COP|$|CRC|₡|CUC|CUC$|CUP|$MN|CZK|Kč|DKK|kr|DOP|RD$|EGP|E£|ESP|₧|EUR|€|FJD|FJ$|FKP|FK£|GBP|£|GEL|₾|GHS|GH₵|GIP|£|GNF|FG|GTQ|Q|GYD|G$|HKD|HK$|HNL|L|HRK|kn|HUF|Ft|IDR|Rp|ILS|₪|INR|₹|ISK|Íkr|JMD|J$|JPY|¥|KGS|⃀|KHR|៛|KMF|CF|KPW|₩|KRW|₩|KYD|CI$|KZT|₸|LAK|₭|LBP|L£|LKR|Rs|LRD|L$|LTL|Lt|LVL|Ls|MGA|Ar|MMK|K|MNT|₮|MUR|Rs|MXN|MX$|MYR|RM|NAD|N$|NGN|₦|NIO|C$|NOK|kr|NPR|Rs|NZD|NZD|PHP|PHP|PKR|Rs|PLN|zł|PYG|₲|RON|lei|RUB|₽|RWF|RF|SBD|SI$|SEK|kr|SGD|S$|SHP|£|SRD|$|SSP|£|STN|Db|SYP|£|THB|฿|TOP|T$|TRY|₺|TTD|TT$|TWD|NT$|UAH|₴|USD|$|UYU|$U|VEF|Bs|VND|₫|XAF|FCFA|XCD|EC$|XCG|Cg.|XOF|F\u{202F}CFA|XPF|CFPF|XXX|¤|ZAR|R|ZMW|ZK|{0} г.|1|{0} г.|0||0||1|{0} г.|1|{0} г.||{0} мес.|1|{0} мес.|0||0||1|{0} мес.|1|{0} мес.||{0} тыдз|1|{0} тыдз|0||0||1|{0} тыдз|1|{0} тыдз||{0} сут|1|{0} сут|0||0||1|{0} сут|1|{0} сут||{0} гадз|1|{0} гадз|0||0||1|{0} гадз|1|{0} гадз||{0} хв|1|{0} хв|0||0||1|{0} хв|1|{0} хв||{0} с|1|{0} с|0||0||1|{0} с|1|{0} с||{0} мс|1|{0} мс|0||0||1|{0} мс|1|{0} мс||{0} года|1|{0} год|0||0||1|{0} гады|1|{0} гадоў||{0} месяца|1|{0} месяц|0||0||1|{0} месяца|1|{0} месяцаў||{0} тыдня|1|{0} тыдзень|0||0||1|{0} тыдні|1|{0} тыдняў||{0} сутак|1|{0} суткі|0||0||1|{0} сутак|1|{0} сутак||{0} гадзіны|1|{0} гадзіна|0||0||1|{0} гадзіны|1|{0} гадзін||{0} хвіліны|1|{0} хвіліна|0||0||1|{0} хвіліны|1|{0} хвілін||{0} секунды|1|{0} секунда|0||0||1|{0} секунды|1|{0} секунд||{0} мілісекунды|1|{0} мілісекунда|0||0||1|{0} мілісекунды|1|{0} мілісекунд||{0} г.|1|{0} г.|0||0||1|{0} г.|1|{0} г.||{0} мес.|1|{0} мес.|0||0||1|{0} мес.|1|{0} мес.||{0} тыдз|1|{0} тыдз|0||0||1|{0} тыдз|1|{0} тыдз||{0} сут|1|{0} сут|0||0||1|{0} сут|1|{0} сут||{0} гадз|1|{0} гадз|0||0||1|{0} гадз|1|{0} гадз||{0} хв|1|{0} хв|0||0||1|{0} хв|1|{0} хв||{0} с|1|{0} с|0||0||1|{0} с|1|{0} с||{0} мс|1|{0} мс|0||0||1|{0} мс|1|{0} мс||{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|"
         )
 
 
@@ -64,5 +136,6 @@ be_TARASK =
         Internal.Locale.empty
         (Internal.Parse.parse
             dayPeriods
-            "be|||TARASK|AM|PM|2|am|AM|pm|PM|AM|PM|2|am|AM|pm|PM|am|pm|2|am|am|pm|pm|d.MM.yy|d MMM y\u{202F}'г'.|d MMMM y\u{202F}'г'.|EEEE, d MMMM y\u{202F}'г'.|сту|лют|сак|кра|мая|чэр|ліп|жні|вер|кас|ліс|сне|студзеня|лютага|сакавіка|красавіка|мая|чэрвеня|ліпеня|жніўня|верасня|кастрычніка|лістапада|снежня|с|л|с|к|м|ч|л|ж|в|к|л|с|1|сту|лют|сак|кра|май|чэр|ліп|жні|вер|кас|ліс|сне|студзень|люты|сакавік|красавік|май|чэрвень|ліпень|жнівень|верасень|кастрычнік|лістапад|снежань|с|л|с|к|м|ч|л|ж|в|к|л|с|нд|пн|аў|ср|чц|пт|сб|нядзеля|панядзелак|аўторак|серада|чацвер|пятніца|субота|н|п|а|с|ч|п|с|0|да н.э.|н.э.|да нараджэння Хрыстова|ад нараджэння Хрыстова|да н.э.|н.э.|HH:mm|HH:mm:ss|HH:mm:ss z|HH:mm:ss, zzzz|{1}, {0}|{1}, {0}|{1}, {0}|{1}, {0}|54|Bh|h B|Bhm|h:mm B|Bhms|h:mm:ss B|d|d|E|ccc|EBhm|E h:mm B|EBhms|E h:mm:ss B|Ed|d, E|Ehm|E h:mm\u{202F}a|EHm|E HH:mm|Ehms|E h:mm:ss\u{202F}a|EHms|E HH:mm:ss|Gy|y\u{202F}'г'. G|GyMd|dd.MM.y GGGGG|GyMMM|LLL y\u{202F}'г'. G|GyMMMd|d MMM y\u{202F}'г'. G|GyMMMEd|E, d MMM y\u{202F}'г'. G|h|hh\u{202F}a|H|HH|hm|h:mm\u{202F}a|Hm|HH:mm|hms|h:mm:ss\u{202F}a|Hms|HH:mm:ss|hmsv|h:mm:ss\u{202F}a v|Hmsv|HH:mm:ss v|hmv|h:mm\u{202F}a v|Hmv|HH:mm v|M|L|Md|d.M|MEd|E, d.M|MMM|LLL|MMMd|d MMM|MMMEd|E, d MMM|MMMMd|d MMMM|MMMMEd|E, d MMMM|MMMMW-count-one|W 'тыдзень' MMMM|MMMMW-count-few|W 'тыдзень' MMMM|MMMMW-count-many|W 'тыдзень' MMMM|MMMMW-count-other|W 'тыдзень' MMMM|ms|mm.ss|y|y|yM|M.y|yMd|d.M.y|yMEd|E, d.M.y|yMMM|LLL y|yMMMd|d MMM y|yMMMEd|E, d MMM y|yMMMM|LLLL y|yQQQ|QQQ y|yQQQQ|QQQQ y|yw-count-one|w 'тыдзень' Y|yw-count-few|w 'тыдзень' Y|yw-count-many|w 'тыдзень' Y|yw-count-other|w 'тыдзень' Y|HHmm|HHmmss|HHmmssz|HHmmsszzzz|X3W\u{00A0}|,|-||||||E2W\u{00A0}|,|-|\u{00A0}¤||\u{00A0}¤||\u{00A0}¤|E0W\u{00A0}|,|-|\u{00A0}%||\u{00A0}%||\u{00A0}%|107|AFN|؋|AMD|֏|AOA|Kz|ARS|$|AUD|A$|AZN|₼|BAM|KM|BBD|Bds$|BDT|৳|BMD|BD$|BND|$|BOB|Bs|BRL|BRL|BSD|B$|BWP|P|BYN|Br|BZD|BZ$|CAD|CAD|CLP|$|CNY|CN¥|COP|$|CRC|₡|CUC|CUC$|CUP|$MN|CZK|Kč|DKK|kr|DOP|RD$|EGP|E£|ESP|₧|EUR|€|FJD|FJ$|FKP|FK£|GBP|£|GEL|₾|GHS|GH₵|GIP|£|GNF|FG|GTQ|Q|GYD|G$|HKD|HK$|HNL|L|HRK|kn|HUF|Ft|IDR|Rp|ILS|₪|INR|₹|ISK|Íkr|JMD|J$|JPY|¥|KGS|\u{20C0}|KHR|៛|KMF|CF|KPW|₩|KRW|₩|KYD|CI$|KZT|₸|LAK|₭|LBP|L£|LKR|Rs|LRD|L$|LTL|Lt|LVL|Ls|MGA|Ar|MMK|K|MNT|₮|MUR|Rs|MXN|MX$|MYR|RM|NAD|N$|NGN|₦|NIO|C$|NOK|kr|NPR|Rs|NZD|NZD|PHP|PHP|PKR|Rs|PLN|zł|PYG|₲|RON|lei|RUB|₽|RWF|RF|SBD|SI$|SEK|kr|SGD|S$|SHP|£|SRD|$|SSP|£|STN|Db|SYP|£|THB|฿|TOP|T$|TRY|₺|TTD|TT$|TWD|NT$|UAH|₴|USD|$|UYU|$U|VEF|Bs|VND|₫|XAF|FCFA|XCD|EC$|XCG|Cg.|XOF|F\u{202F}CFA|XPF|CFPF|XXX|¤|ZAR|R|ZMW|ZK|"
+            pluralRules
+            "be|||TARASK|AM|PM|2|am|AM|pm|PM|AM|PM|2|am|AM|pm|PM|am|pm|2|am|am|pm|pm|d.MM.yy|d MMM y\u{202F}'г'.|d MMMM y\u{202F}'г'.|EEEE, d MMMM y\u{202F}'г'.|сту|лют|сак|кра|мая|чэр|ліп|жні|вер|кас|ліс|сне|студзеня|лютага|сакавіка|красавіка|мая|чэрвеня|ліпеня|жніўня|верасня|кастрычніка|лістапада|снежня|с|л|с|к|м|ч|л|ж|в|к|л|с|1|сту|лют|сак|кра|май|чэр|ліп|жні|вер|кас|ліс|сне|студзень|люты|сакавік|красавік|май|чэрвень|ліпень|жнівень|верасень|кастрычнік|лістапад|снежань|с|л|с|к|м|ч|л|ж|в|к|л|с|нд|пн|аў|ср|чц|пт|сб|нядзеля|панядзелак|аўторак|серада|чацвер|пятніца|субота|н|п|а|с|ч|п|с|0|да н.э.|н.э.|да нараджэння Хрыстова|ад нараджэння Хрыстова|да н.э.|н.э.|HH:mm|HH:mm:ss|HH:mm:ss z|HH:mm:ss, zzzz|{1}, {0}|{1}, {0}|{1}, {0}|{1}, {0}|54|Bh|h B|Bhm|h:mm B|Bhms|h:mm:ss B|d|d|E|ccc|EBhm|E h:mm B|EBhms|E h:mm:ss B|Ed|d, E|Ehm|E h:mm\u{202F}a|EHm|E HH:mm|Ehms|E h:mm:ss\u{202F}a|EHms|E HH:mm:ss|Gy|y\u{202F}'г'. G|GyMd|dd.MM.y GGGGG|GyMMM|LLL y\u{202F}'г'. G|GyMMMd|d MMM y\u{202F}'г'. G|GyMMMEd|E, d MMM y\u{202F}'г'. G|h|hh\u{202F}a|H|HH|hm|h:mm\u{202F}a|Hm|HH:mm|hms|h:mm:ss\u{202F}a|Hms|HH:mm:ss|hmsv|h:mm:ss\u{202F}a v|Hmsv|HH:mm:ss v|hmv|h:mm\u{202F}a v|Hmv|HH:mm v|M|L|Md|d.M|MEd|E, d.M|MMM|LLL|MMMd|d MMM|MMMEd|E, d MMM|MMMMd|d MMMM|MMMMEd|E, d MMMM|MMMMW-count-one|W 'тыдзень' MMMM|MMMMW-count-few|W 'тыдзень' MMMM|MMMMW-count-many|W 'тыдзень' MMMM|MMMMW-count-other|W 'тыдзень' MMMM|ms|mm.ss|y|y|yM|M.y|yMd|d.M.y|yMEd|E, d.M.y|yMMM|LLL y|yMMMd|d MMM y|yMMMEd|E, d MMM y|yMMMM|LLLL y|yQQQ|QQQ y|yQQQQ|QQQQ y|yw-count-one|w 'тыдзень' Y|yw-count-few|w 'тыдзень' Y|yw-count-many|w 'тыдзень' Y|yw-count-other|w 'тыдзень' Y|HHmm|HHmmss|HHmmssz|HHmmsszzzz|X3W\u{00A0}|,|-||||||E2W\u{00A0}|,|-|\u{00A0}¤||\u{00A0}¤||\u{00A0}¤|E0W\u{00A0}|,|-|\u{00A0}%||\u{00A0}%||\u{00A0}%|107|AFN|؋|AMD|֏|AOA|Kz|ARS|$|AUD|A$|AZN|₼|BAM|KM|BBD|Bds$|BDT|৳|BMD|BD$|BND|$|BOB|Bs|BRL|BRL|BSD|B$|BWP|P|BYN|Br|BZD|BZ$|CAD|CAD|CLP|$|CNY|CN¥|COP|$|CRC|₡|CUC|CUC$|CUP|$MN|CZK|Kč|DKK|kr|DOP|RD$|EGP|E£|ESP|₧|EUR|€|FJD|FJ$|FKP|FK£|GBP|£|GEL|₾|GHS|GH₵|GIP|£|GNF|FG|GTQ|Q|GYD|G$|HKD|HK$|HNL|L|HRK|kn|HUF|Ft|IDR|Rp|ILS|₪|INR|₹|ISK|Íkr|JMD|J$|JPY|¥|KGS|⃀|KHR|៛|KMF|CF|KPW|₩|KRW|₩|KYD|CI$|KZT|₸|LAK|₭|LBP|L£|LKR|Rs|LRD|L$|LTL|Lt|LVL|Ls|MGA|Ar|MMK|K|MNT|₮|MUR|Rs|MXN|MX$|MYR|RM|NAD|N$|NGN|₦|NIO|C$|NOK|kr|NPR|Rs|NZD|NZD|PHP|PHP|PKR|Rs|PLN|zł|PYG|₲|RON|lei|RUB|₽|RWF|RF|SBD|SI$|SEK|kr|SGD|S$|SHP|£|SRD|$|SSP|£|STN|Db|SYP|£|THB|฿|TOP|T$|TRY|₺|TTD|TT$|TWD|NT$|UAH|₴|USD|$|UYU|$U|VEF|Bs|VND|₫|XAF|FCFA|XCD|EC$|XCG|Cg.|XOF|F\u{202F}CFA|XPF|CFPF|XXX|¤|ZAR|R|ZMW|ZK|{0} г.|1|{0} г.|0||0||1|{0} г.|1|{0} г.||{0} мес.|1|{0} мес.|0||0||1|{0} мес.|1|{0} мес.||{0} тыдз|1|{0} тыдз|0||0||1|{0} тыдз|1|{0} тыдз||{0} сут|1|{0} сут|0||0||1|{0} сут|1|{0} сут||{0} гадз|1|{0} гадз|0||0||1|{0} гадз|1|{0} гадз||{0} хв|1|{0} хв|0||0||1|{0} хв|1|{0} хв||{0} с|1|{0} с|0||0||1|{0} с|1|{0} с||{0} мс|1|{0} мс|0||0||1|{0} мс|1|{0} мс||{0} года|1|{0} год|0||0||1|{0} гады|1|{0} гадоў||{0} месяца|1|{0} месяц|0||0||1|{0} месяца|1|{0} месяцаў||{0} тыдня|1|{0} тыдзень|0||0||1|{0} тыдні|1|{0} тыдняў||{0} сутак|1|{0} суткі|0||0||1|{0} сутак|1|{0} сутак||{0} гадзіны|1|{0} гадзіна|0||0||1|{0} гадзіны|1|{0} гадзін||{0} хвіліны|1|{0} хвіліна|0||0||1|{0} хвіліны|1|{0} хвілін||{0} секунды|1|{0} секунда|0||0||1|{0} секунды|1|{0} секунд||{0} мілісекунды|1|{0} мілісекунда|0||0||1|{0} мілісекунды|1|{0} мілісекунд||{0} г.|1|{0} г.|0||0||1|{0} г.|1|{0} г.||{0} мес.|1|{0} мес.|0||0||1|{0} мес.|1|{0} мес.||{0} тыдз|1|{0} тыдз|0||0||1|{0} тыдз|1|{0} тыдз||{0} сут|1|{0} сут|0||0||1|{0} сут|1|{0} сут||{0} гадз|1|{0} гадз|0||0||1|{0} гадз|1|{0} гадз||{0} хв|1|{0} хв|0||0||1|{0} хв|1|{0} хв||{0} с|1|{0} с|0||0||1|{0} с|1|{0} с||{0} мс|1|{0} мс|0||0||1|{0} мс|1|{0} мс||{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|"
         )

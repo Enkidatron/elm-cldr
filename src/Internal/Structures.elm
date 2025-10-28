@@ -1,9 +1,12 @@
 module Internal.Structures exposing
-    ( EraNames
+    ( DurationUnits
+    , EraNames
+    , ListPatternsUnit
     , MonthNames
     , Pattern3
     , Patterns
     , PeriodNames
+    , Plural
     , WeekdayNames
     , getPattern
     , getPattern3
@@ -114,4 +117,34 @@ type alias PeriodNames =
 type alias EraNames =
     { bc : String
     , ad : String
+    }
+
+
+type alias DurationUnits a =
+    { years : Plural a
+    , months : Plural a
+    , weeks : Plural a
+    , days : Plural a
+    , hours : Plural a
+    , minutes : Plural a
+    , seconds : Plural a
+    , milliseconds : Plural a
+    }
+
+
+type alias Plural a =
+    { other : String
+    , one : Maybe a
+    , two : Maybe a
+    , zero : Maybe a
+    , few : Maybe a
+    , many : Maybe a
+    }
+
+
+type alias ListPatternsUnit =
+    { start : String
+    , middle : String
+    , end : String
+    , two : String
     }

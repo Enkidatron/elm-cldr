@@ -11,6 +11,7 @@ import Internal.DayPeriodRule
 import Internal.LanguageInfo
 import Internal.Locale
 import Internal.Parse
+import Internal.PluralRule
 
 
 dayPeriods : Dict.Dict String (List Internal.DayPeriodRule.DayPeriodRule)
@@ -27,6 +28,62 @@ dayPeriods =
             ]
           )
         ]
+
+
+pluralRules : Internal.PluralRule.PluralRulesInfo
+pluralRules =
+    { one =
+        Just
+            (Internal.PluralRule.Or
+                (Internal.PluralRule.And
+                    { variable = Internal.PluralRule.I
+                    , modBy = Nothing
+                    , operator = Internal.PluralRule.Equals
+                    , target = ( Internal.PluralRule.Exactly 1, [] )
+                    }
+                    [ { variable = Internal.PluralRule.V
+                      , modBy = Nothing
+                      , operator = Internal.PluralRule.Equals
+                      , target = ( Internal.PluralRule.Exactly 0, [] )
+                      }
+                    ]
+                )
+                []
+            )
+    , two = Nothing
+    , zero = Nothing
+    , few =
+        Just
+            (Internal.PluralRule.Or
+                (Internal.PluralRule.And
+                    { variable = Internal.PluralRule.I
+                    , modBy = Nothing
+                    , operator = Internal.PluralRule.Equals
+                    , target = ( Internal.PluralRule.Range 2 4, [] )
+                    }
+                    [ { variable = Internal.PluralRule.V
+                      , modBy = Nothing
+                      , operator = Internal.PluralRule.Equals
+                      , target = ( Internal.PluralRule.Exactly 0, [] )
+                      }
+                    ]
+                )
+                []
+            )
+    , many =
+        Just
+            (Internal.PluralRule.Or
+                (Internal.PluralRule.And
+                    { variable = Internal.PluralRule.V
+                    , modBy = Nothing
+                    , operator = Internal.PluralRule.NotEquals
+                    , target = ( Internal.PluralRule.Exactly 0, [] )
+                    }
+                    []
+                )
+                []
+            )
+    }
 
 
 {-| Date format strings:
@@ -50,5 +107,6 @@ cs =
         Internal.Locale.empty
         (Internal.Parse.parse
             dayPeriods
-            "cs||||dop.|odp.|9|afternoon1|odp.|am|dop.|evening1|več.|midnight|půln.|morning1|r.|morning2|dop.|night1|v n.|noon|pol.|pm|odp.|dop.|odp.|9|afternoon1|odpoledne|am|dop.|evening1|večer|midnight|půlnoc|morning1|ráno|morning2|dopoledne|night1|v noci|noon|poledne|pm|odp.|dop.|odp.|9|afternoon1|o.|am|dop.|evening1|v.|midnight|půl.|morning1|r.|morning2|d.|night1|n.|noon|pol.|pm|odp.|dd.MM.yy|d. M. y|d. MMMM y|EEEE d. MMMM y|led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro|ledna|února|března|dubna|května|června|července|srpna|září|října|listopadu|prosince|1|2|3|4|5|6|7|8|9|10|11|12|1|led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro|leden|únor|březen|duben|květen|červen|červenec|srpen|září|říjen|listopad|prosinec|1|2|3|4|5|6|7|8|9|10|11|12|ne|po|út|st|čt|pá|so|neděle|pondělí|úterý|středa|čtvrtek|pátek|sobota|N|P|Ú|S|Č|P|S|0|př. n. l.|n. l.|před naším letopočtem|našeho letopočtu|př.n.l.|n.l.|H:mm|H:mm:ss|H:mm:ss z|H:mm:ss, zzzz|{1} {0}|{1} {0}|{1} {0}|{1} {0}|62|Bh|h B|Bhm|h:mm B|Bhms|h:mm:ss B|d|d.|E|ccc|EBhm|E h:mm B|EBhms|E h:mm:ss B|Ed|E d.|Ehm|E h:mm\u{202F}a|EHm|E H:mm|Ehms|E h:mm:ss\u{202F}a|EHms|E H:mm:ss|Gy|y G|GyMd|d. M. y GGGGG|GyMMM|LLLL y G|GyMMMd|d. M. y G|GyMMMEd|E d. M. y G|GyMMMMd|d. MMMM y G|GyMMMMEd|E d. MMMM y G|h|h\u{202F}a|H|H|hm|h:mm\u{202F}a|Hm|H:mm|hms|h:mm:ss\u{202F}a|Hms|H:mm:ss|hmsv|h:mm:ss\u{202F}a v|Hmsv|H:mm:ss v|hmsvvvv|h:mm:ss\u{202F}a, vvvv|Hmsvvvv|H:mm:ss, vvvv|hmv|h:mm\u{202F}a v|Hmv|H:mm v|hmvvvv|h:mm\u{202F}a, vvvv|Hmvvvv|H:mm, vvvv|M|L|Md|d. M.|MEd|E d. M.|MMM|LLL|MMMd|d. M.|MMMEd|E d. M.|MMMMd|d. MMMM|MMMMEd|E d. MMMM|MMMMW-count-one|W. 'týden' MMMM|MMMMW-count-few|W. 'týden' MMMM|MMMMW-count-many|W. 'týden' MMMM|MMMMW-count-other|W. 'týden' MMMM|ms|mm:ss|y|y|yM|M/y|yMd|d. M. y|yMEd|E d. M. y|yMMM|LLLL y|yMMMd|d. M. y|yMMMEd|E d. M. y|yMMMM|LLLL y|yMMMMd|d. MMMM y|yMMMMEd|E d. MMMM y|yQQQ|QQQ y|yQQQQ|QQQQ y|yw-count-one|w. 'týden' 'roku' Y|yw-count-few|w. 'týden' 'roku' Y|yw-count-many|w. 'týden' 'roku' Y|yw-count-other|w. 'týden' 'roku' Y|Hmm|Hmmss|Hmmssz|Hmmsszzzz|X3W\u{00A0}|,|-||||||E2W\u{00A0}|,|-|\u{00A0}¤||\u{00A0}¤||\u{00A0}¤|E0W\u{00A0}|,|-|\u{00A0}%||\u{00A0}%||\u{00A0}%|110|AFN|؋|AMD|֏|AOA|Kz|ARS|$|AUD|AU$|AZN|₼|BAM|KM|BBD|$|BDT|৳|BMD|$|BND|$|BOB|Bs|BRL|R$|BSD|$|BWP|P|BYN|р.|BZD|$|CAD|CA$|CLP|$|CNY|CN¥|COP|$|CRC|₡|CSK|Kčs|CUC|$|CUP|$|CZK|Kč|DKK|kr|DOP|$|EGP|E£|ESP|₧|EUR|€|FJD|$|FKP|£|GBP|£|GEL|₾|GHS|GH₵|GIP|£|GNF|FG|GTQ|Q|GYD|$|HKD|HK$|HNL|L|HRK|kn|HUF|Ft|IDR|Rp|ILS|ILS|INR|INR|ISK|kr|JMD|$|JPY|JP¥|KGS|\u{20C0}|KHR|៛|KMF|CF|KPW|₩|KRW|₩|KYD|$|KZT|₸|LAK|₭|LBP|L£|LKR|Rs|LRD|$|LTL|Lt|LVL|Ls|MGA|Ar|MMK|K|MNT|₮|MUR|Rs|MXN|MX$|MYR|RM|NAD|$|NGN|₦|NIO|C$|NOK|kr|NPR|Rs|NZD|NZ$|PHP|PHP|PKR|Rs|PLN|zł|PYG|₲|RON|L|RUB|₽|RUR|р.|RWF|RF|SBD|$|SEK|kr|SGD|$|SHP|£|SRD|$|SSP|£|STN|Db|SYP|£|THB|฿|TOP|T$|TRY|₺|TTD|$|TWD|NT$|UAH|₴|USD|US$|UYU|$|VEF|Bs|VND|VND|XAF|FCFA|XCD|EC$|XCG|Cg.|XEU|ECU|XOF|F\u{202F}CFA|XPF|CFPF|XXX|XXX|ZAR|R|ZMW|ZK|"
+            pluralRules
+            "cs||||dop.|odp.|9|afternoon1|odp.|am|dop.|evening1|več.|midnight|půln.|morning1|r.|morning2|dop.|night1|v n.|noon|pol.|pm|odp.|dop.|odp.|9|afternoon1|odpoledne|am|dop.|evening1|večer|midnight|půlnoc|morning1|ráno|morning2|dopoledne|night1|v noci|noon|poledne|pm|odp.|dop.|odp.|9|afternoon1|o.|am|dop.|evening1|v.|midnight|půl.|morning1|r.|morning2|d.|night1|n.|noon|pol.|pm|odp.|dd.MM.yy|d. M. y|d. MMMM y|EEEE d. MMMM y|led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro|ledna|února|března|dubna|května|června|července|srpna|září|října|listopadu|prosince|1|2|3|4|5|6|7|8|9|10|11|12|1|led|úno|bře|dub|kvě|čvn|čvc|srp|zář|říj|lis|pro|leden|únor|březen|duben|květen|červen|červenec|srpen|září|říjen|listopad|prosinec|1|2|3|4|5|6|7|8|9|10|11|12|ne|po|út|st|čt|pá|so|neděle|pondělí|úterý|středa|čtvrtek|pátek|sobota|N|P|Ú|S|Č|P|S|0|př. n. l.|n. l.|před naším letopočtem|našeho letopočtu|př.n.l.|n.l.|H:mm|H:mm:ss|H:mm:ss z|H:mm:ss, zzzz|{1} {0}|{1} {0}|{1} {0}|{1} {0}|62|Bh|h B|Bhm|h:mm B|Bhms|h:mm:ss B|d|d.|E|ccc|EBhm|E h:mm B|EBhms|E h:mm:ss B|Ed|E d.|Ehm|E h:mm\u{202F}a|EHm|E H:mm|Ehms|E h:mm:ss\u{202F}a|EHms|E H:mm:ss|Gy|y G|GyMd|d. M. y GGGGG|GyMMM|LLLL y G|GyMMMd|d. M. y G|GyMMMEd|E d. M. y G|GyMMMMd|d. MMMM y G|GyMMMMEd|E d. MMMM y G|h|h\u{202F}a|H|H|hm|h:mm\u{202F}a|Hm|H:mm|hms|h:mm:ss\u{202F}a|Hms|H:mm:ss|hmsv|h:mm:ss\u{202F}a v|Hmsv|H:mm:ss v|hmsvvvv|h:mm:ss\u{202F}a, vvvv|Hmsvvvv|H:mm:ss, vvvv|hmv|h:mm\u{202F}a v|Hmv|H:mm v|hmvvvv|h:mm\u{202F}a, vvvv|Hmvvvv|H:mm, vvvv|M|L|Md|d. M.|MEd|E d. M.|MMM|LLL|MMMd|d. M.|MMMEd|E d. M.|MMMMd|d. MMMM|MMMMEd|E d. MMMM|MMMMW-count-one|W. 'týden' MMMM|MMMMW-count-few|W. 'týden' MMMM|MMMMW-count-many|W. 'týden' MMMM|MMMMW-count-other|W. 'týden' MMMM|ms|mm:ss|y|y|yM|M/y|yMd|d. M. y|yMEd|E d. M. y|yMMM|LLLL y|yMMMd|d. M. y|yMMMEd|E d. M. y|yMMMM|LLLL y|yMMMMd|d. MMMM y|yMMMMEd|E d. MMMM y|yQQQ|QQQ y|yQQQQ|QQQQ y|yw-count-one|w. 'týden' 'roku' Y|yw-count-few|w. 'týden' 'roku' Y|yw-count-many|w. 'týden' 'roku' Y|yw-count-other|w. 'týden' 'roku' Y|Hmm|Hmmss|Hmmssz|Hmmsszzzz|X3W\u{00A0}|,|-||||||E2W\u{00A0}|,|-|\u{00A0}¤||\u{00A0}¤||\u{00A0}¤|E0W\u{00A0}|,|-|\u{00A0}%||\u{00A0}%||\u{00A0}%|110|AFN|؋|AMD|֏|AOA|Kz|ARS|$|AUD|AU$|AZN|₼|BAM|KM|BBD|$|BDT|৳|BMD|$|BND|$|BOB|Bs|BRL|R$|BSD|$|BWP|P|BYN|р.|BZD|$|CAD|CA$|CLP|$|CNY|CN¥|COP|$|CRC|₡|CSK|Kčs|CUC|$|CUP|$|CZK|Kč|DKK|kr|DOP|$|EGP|E£|ESP|₧|EUR|€|FJD|$|FKP|£|GBP|£|GEL|₾|GHS|GH₵|GIP|£|GNF|FG|GTQ|Q|GYD|$|HKD|HK$|HNL|L|HRK|kn|HUF|Ft|IDR|Rp|ILS|ILS|INR|INR|ISK|kr|JMD|$|JPY|JP¥|KGS|⃀|KHR|៛|KMF|CF|KPW|₩|KRW|₩|KYD|$|KZT|₸|LAK|₭|LBP|L£|LKR|Rs|LRD|$|LTL|Lt|LVL|Ls|MGA|Ar|MMK|K|MNT|₮|MUR|Rs|MXN|MX$|MYR|RM|NAD|$|NGN|₦|NIO|C$|NOK|kr|NPR|Rs|NZD|NZ$|PHP|PHP|PKR|Rs|PLN|zł|PYG|₲|RON|L|RUB|₽|RUR|р.|RWF|RF|SBD|$|SEK|kr|SGD|$|SHP|£|SRD|$|SSP|£|STN|Db|SYP|£|THB|฿|TOP|T$|TRY|₺|TTD|$|TWD|NT$|UAH|₴|USD|US$|UYU|$|VEF|Bs|VND|VND|XAF|FCFA|XCD|EC$|XCG|Cg.|XEU|ECU|XOF|F\u{202F}CFA|XPF|CFPF|XXX|XXX|ZAR|R|ZMW|ZK|{0} let|1|{0} rok|0||0||1|{0} roky|1|{0} roku||{0} měs.|1|{0} měs.|0||0||1|{0} měs.|1|{0} měs.||{0} týd.|1|{0} týd.|0||0||1|{0} týd.|1|{0} týd.||{0} dnů|1|{0} den|0||0||1|{0} dny|1|{0} dne||{0} h|0||0||0||0||0|||{0} min|0||0||0||0||0|||{0} s|0||0||0||0||0|||{0} ms|0||0||0||0||0|||{0} let|1|{0} rok|0||0||1|{0} roky|1|{0} roku||{0} měsíců|1|{0} měsíc|0||0||1|{0} měsíce|1|{0} měsíce||{0} týdnů|1|{0} týden|0||0||1|{0} týdny|1|{0} týdne||{0} dnů|1|{0} den|0||0||1|{0} dny|1|{0} dne||{0} hodin|1|{0} hodina|0||0||1|{0} hodiny|1|{0} hodiny||{0} minut|1|{0} minuta|0||0||1|{0} minuty|1|{0} minuty||{0} sekund|1|{0} sekunda|0||0||1|{0} sekundy|1|{0} sekundy||{0} milisekund|1|{0} milisekunda|0||0||1|{0} milisekundy|1|{0} milisekundy||{0} l.|1|{0} r.|0||0||1|{0} r.|1|{0} r.||{0} m.|1|{0} m.|0||0||1|{0} m.|1|{0} m.||{0} t.|1|{0} t.|0||0||1|{0} t.|1|{0} t.||{0} d.|1|{0} d.|0||0||1|{0} d.|1|{0} d.||{0} h|0||0||0||0||0|||{0} m|1|{0} m|0||0||1|{0} m|1|{0} m||{0} s|0||0||0||0||0|||{0} ms|0||0||0||0||0|||{0}, {1}|{0}, {1}|{0} a\u{00A0}{1}|{0}, {1}|{0}, {1}|{0}, {1}|{0} a\u{00A0}{1}|{0} a\u{00A0}{1}|{0} {1}|{0} {1}|{0} {1}|{0} {1}|"
         )

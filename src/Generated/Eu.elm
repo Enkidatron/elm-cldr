@@ -11,6 +11,7 @@ import Internal.DayPeriodRule
 import Internal.LanguageInfo
 import Internal.Locale
 import Internal.Parse
+import Internal.PluralRule
 
 
 dayPeriods : Dict.Dict String (List Internal.DayPeriodRule.DayPeriodRule)
@@ -27,6 +28,28 @@ dayPeriods =
             ]
           )
         ]
+
+
+pluralRules : Internal.PluralRule.PluralRulesInfo
+pluralRules =
+    { one =
+        Just
+            (Internal.PluralRule.Or
+                (Internal.PluralRule.And
+                    { variable = Internal.PluralRule.N
+                    , modBy = Nothing
+                    , operator = Internal.PluralRule.Equals
+                    , target = ( Internal.PluralRule.Exactly 1, [] )
+                    }
+                    []
+                )
+                []
+            )
+    , two = Nothing
+    , zero = Nothing
+    , few = Nothing
+    , many = Nothing
+    }
 
 
 {-| Date format strings:
@@ -50,5 +73,6 @@ eu =
         Internal.Locale.empty
         (Internal.Parse.parse
             dayPeriods
-            "eu||||AM|PM|9|afternoon1|eguerd.|afternoon2|arrats.|am|AM|evening1|iluntz.|midnight|gauerdia|morning1|goizald.|morning2|goizeko|night1|gaueko|pm|PM|AM|PM|9|afternoon1|eguerdiko|afternoon2|arratsaldeko|am|AM|evening1|iluntzeko|midnight|gauerdia|morning1|goizaldeko|morning2|goizeko|night1|gaueko|pm|PM|g|a|9|afternoon1|eguerd.|afternoon2|arrats.|am|g|evening1|iluntz.|midnight|gauerd.|morning1|goizald.|morning2|goizeko|night1|gaueko|pm|a|yy/M/d|y('e')'ko' MMM d('a')|y('e')'ko' MMMM'ren' d('a')|y('e')'ko' MMMM'ren' d('a'), EEEE|urt.|ots.|mar.|api.|mai.|eka.|uzt.|abu.|ira.|urr.|aza.|abe.|urtarrila|otsaila|martxoa|apirila|maiatza|ekaina|uztaila|abuztua|iraila|urria|azaroa|abendua|U|O|M|A|M|E|U|A|I|U|A|A|0|ig.|al.|ar.|az.|og.|or.|lr.|igandea|astelehena|asteartea|asteazkena|osteguna|ostirala|larunbata|I|A|A|A|O|O|L|0|K.a.|K.o.|Kristo aurretik|Kristo ondoren|a|o|HH:mm|HH:mm:ss|HH:mm:ss (z)|HH:mm:ss (zzzz)|{1} ({0})|{1} ({0})|{1} ({0})|{1} ({0})|51|Bh|B h|Bhm|B h:mm|Bhms|B h:mm:ss|d|d|E|ccc|EBhm|E B h:mm|EBhms|E B h:mm:ss|Ed|d, E|Ehm|E h:mm\u{202F}a|EHm|E HH:mm|Ehms|E h:mm:ss\u{202F}a|EHms|E HH:mm:ss|Gy|G y|GyMd|GGGGG y-MM-dd|GyMMM|G y. 'urteko' MMM|GyMMMd|G y. 'urteko' MMM d('a')|GyMMMEd|G y. 'urteko' MMM d('a'), E|h|h\u{202F}a|H|HH|hm|h:mm\u{202F}a|Hm|HH:mm|hms|h:mm:ss\u{202F}a|Hms|HH:mm:ss|hmsv|h:mm:ss\u{202F}a v|Hmsv|HH:mm:ss v|hmv|h:mm\u{202F}a v|Hmv|HH:mm v|M|L|Md|M/d|MEd|M/d, E|MMM|LLL|MMMd|MMM d('a')|MMMEd|MMM d('a'), E|MMMMd|MMMM'ren' d('a')|MMMMW-count-one|MMMM'ren' W. 'astea'|MMMMW-count-other|MMMM'ren' W. 'astea'|ms|mm:ss|y|y|yM|y/M|yMd|y/M/d|yMEd|y/M/d, E|yMMM|y MMM|yMMMd|y MMM d('a')|yMMMEd|y MMM d('a'), E|yMMMM|y('e')'ko' MMMM|yMMMMd|y('e')'ko' MMMM'ren' d('a')|yMMMMEd|y('e')'ko' MMMM'ren' d('a'), E|yQQQ|y('e')'ko' QQQ|yQQQQ|y('e')'ko' QQQQ|yw-count-one|Y. 'urteko' w. 'astea'|yw-count-other|Y. 'urteko' w. 'astea'|HHmm|HHmmss|HHmmssz|HHmmsszzzz|X3W.|,|−||||||E2W.|,|−|\u{00A0}¤||\u{00A0}¤||\u{00A0}¤|E0W.|,|−%\u{00A0}||%\u{00A0}||%\u{00A0}||107|AFN|؋|AMD|֏|AOA|Kz|ARS|$|AUD|A$|AZN|₼|BAM|KM|BBD|$|BDT|৳|BMD|$|BND|$|BOB|Bs|BRL|R$|BSD|$|BWP|P|BYN|р.|BZD|$|CAD|CA$|CLP|$|CNY|CN¥|COP|$|CRC|₡|CUC|$|CUP|$|CZK|Kč|DKK|kr|DOP|$|EGP|E£|ESP|₧|EUR|€|FJD|$|FKP|£|GBP|£|GEL|₾|GHS|GH₵|GIP|£|GNF|FG|GTQ|Q|GYD|$|HKD|HK$|HNL|L|HRK|kn|HUF|Ft|IDR|Rp|ILS|₪|INR|₹|ISK|kr|JMD|$|JPY|JP¥|KGS|\u{20C0}|KHR|៛|KMF|CF|KPW|₩|KRW|₩|KYD|$|KZT|₸|LAK|₭|LBP|L£|LKR|Rs|LRD|$|LTL|Lt|LVL|Ls|MGA|Ar|MMK|K|MNT|₮|MUR|Rs|MXN|MX$|MYR|RM|NAD|$|NGN|₦|NIO|C$|NOK|kr|NPR|Rs|NZD|NZ$|PHP|PHP|PKR|Rs|PLN|zł|PYG|₲|RON|lei|RUB|₽|RWF|RF|SBD|$|SEK|kr|SGD|$|SHP|£|SRD|$|SSP|£|STN|Db|SYP|£|THB|฿|TOP|T$|TRY|₺|TTD|$|TWD|NT$|UAH|₴|USD|US$|UYU|$|VEF|Bs|VND|₫|XAF|FCFA|XCD|EC$|XCG|Cg.|XOF|F\u{202F}CFA|XPF|CFPF|XXX|¤|ZAR|R|ZMW|ZK|"
+            pluralRules
+            "eu||||AM|PM|9|afternoon1|eguerd.|afternoon2|arrats.|am|AM|evening1|iluntz.|midnight|gauerdia|morning1|goizald.|morning2|goizeko|night1|gaueko|pm|PM|AM|PM|9|afternoon1|eguerdiko|afternoon2|arratsaldeko|am|AM|evening1|iluntzeko|midnight|gauerdia|morning1|goizaldeko|morning2|goizeko|night1|gaueko|pm|PM|g|a|9|afternoon1|eguerd.|afternoon2|arrats.|am|g|evening1|iluntz.|midnight|gauerd.|morning1|goizald.|morning2|goizeko|night1|gaueko|pm|a|yy/M/d|y('e')'ko' MMM d('a')|y('e')'ko' MMMM'ren' d('a')|y('e')'ko' MMMM'ren' d('a'), EEEE|urt.|ots.|mar.|api.|mai.|eka.|uzt.|abu.|ira.|urr.|aza.|abe.|urtarrila|otsaila|martxoa|apirila|maiatza|ekaina|uztaila|abuztua|iraila|urria|azaroa|abendua|U|O|M|A|M|E|U|A|I|U|A|A|0|ig.|al.|ar.|az.|og.|or.|lr.|igandea|astelehena|asteartea|asteazkena|osteguna|ostirala|larunbata|I|A|A|A|O|O|L|0|K.a.|K.o.|Kristo aurretik|Kristo ondoren|a|o|HH:mm|HH:mm:ss|HH:mm:ss (z)|HH:mm:ss (zzzz)|{1} ({0})|{1} ({0})|{1} ({0})|{1} ({0})|51|Bh|B h|Bhm|B h:mm|Bhms|B h:mm:ss|d|d|E|ccc|EBhm|E B h:mm|EBhms|E B h:mm:ss|Ed|d, E|Ehm|E h:mm\u{202F}a|EHm|E HH:mm|Ehms|E h:mm:ss\u{202F}a|EHms|E HH:mm:ss|Gy|G y|GyMd|GGGGG y-MM-dd|GyMMM|G y. 'urteko' MMM|GyMMMd|G y. 'urteko' MMM d('a')|GyMMMEd|G y. 'urteko' MMM d('a'), E|h|h\u{202F}a|H|HH|hm|h:mm\u{202F}a|Hm|HH:mm|hms|h:mm:ss\u{202F}a|Hms|HH:mm:ss|hmsv|h:mm:ss\u{202F}a v|Hmsv|HH:mm:ss v|hmv|h:mm\u{202F}a v|Hmv|HH:mm v|M|L|Md|M/d|MEd|M/d, E|MMM|LLL|MMMd|MMM d('a')|MMMEd|MMM d('a'), E|MMMMd|MMMM'ren' d('a')|MMMMW-count-one|MMMM'ren' W. 'astea'|MMMMW-count-other|MMMM'ren' W. 'astea'|ms|mm:ss|y|y|yM|y/M|yMd|y/M/d|yMEd|y/M/d, E|yMMM|y MMM|yMMMd|y MMM d('a')|yMMMEd|y MMM d('a'), E|yMMMM|y('e')'ko' MMMM|yMMMMd|y('e')'ko' MMMM'ren' d('a')|yMMMMEd|y('e')'ko' MMMM'ren' d('a'), E|yQQQ|y('e')'ko' QQQ|yQQQQ|y('e')'ko' QQQQ|yw-count-one|Y. 'urteko' w. 'astea'|yw-count-other|Y. 'urteko' w. 'astea'|HHmm|HHmmss|HHmmssz|HHmmsszzzz|X3W.|,|−||||||E2W.|,|−|\u{00A0}¤||\u{00A0}¤||\u{00A0}¤|E0W.|,|−%\u{00A0}||%\u{00A0}||%\u{00A0}||107|AFN|؋|AMD|֏|AOA|Kz|ARS|$|AUD|A$|AZN|₼|BAM|KM|BBD|$|BDT|৳|BMD|$|BND|$|BOB|Bs|BRL|R$|BSD|$|BWP|P|BYN|р.|BZD|$|CAD|CA$|CLP|$|CNY|CN¥|COP|$|CRC|₡|CUC|$|CUP|$|CZK|Kč|DKK|kr|DOP|$|EGP|E£|ESP|₧|EUR|€|FJD|$|FKP|£|GBP|£|GEL|₾|GHS|GH₵|GIP|£|GNF|FG|GTQ|Q|GYD|$|HKD|HK$|HNL|L|HRK|kn|HUF|Ft|IDR|Rp|ILS|₪|INR|₹|ISK|kr|JMD|$|JPY|JP¥|KGS|⃀|KHR|៛|KMF|CF|KPW|₩|KRW|₩|KYD|$|KZT|₸|LAK|₭|LBP|L£|LKR|Rs|LRD|$|LTL|Lt|LVL|Ls|MGA|Ar|MMK|K|MNT|₮|MUR|Rs|MXN|MX$|MYR|RM|NAD|$|NGN|₦|NIO|C$|NOK|kr|NPR|Rs|NZD|NZ$|PHP|PHP|PKR|Rs|PLN|zł|PYG|₲|RON|lei|RUB|₽|RWF|RF|SBD|$|SEK|kr|SGD|$|SHP|£|SRD|$|SSP|£|STN|Db|SYP|£|THB|฿|TOP|T$|TRY|₺|TTD|$|TWD|NT$|UAH|₴|USD|US$|UYU|$|VEF|Bs|VND|₫|XAF|FCFA|XCD|EC$|XCG|Cg.|XOF|F\u{202F}CFA|XPF|CFPF|XXX|¤|ZAR|R|ZMW|ZK|{0} urte|1|{0} urte|0||0||0||0|||{0} hilabete|1|{0} hilabete|0||0||0||0|||{0} aste|1|{0} aste|0||0||0||0|||{0} egun|1|{0} egun|0||0||0||0|||{0} h|0||0||0||0||0|||{0} min|0||0||0||0||0|||{0} s|0||0||0||0||0|||{0} ms|0||0||0||0||0|||{0} urte|1|{0} urte|0||0||0||0|||{0} hilabete|1|{0} hilabete|0||0||0||0|||{0} aste|1|{0} aste|0||0||0||0|||{0} egun|1|{0} egun|0||0||0||0|||{0} ordu|1|{0} ordu|0||0||0||0|||{0} minutu|1|{0} minutu|0||0||0||0|||{0} segundo|1|{0} segundo|0||0||0||0|||{0} milisegundo|1|{0} milisegundo|0||0||0||0|||{0} u.|1|{0} u.|0||0||0||0|||{0} hil|1|{0} hil|0||0||0||0|||{0} aste|1|{0} aste|0||0||0||0|||{0} e.|1|{0} e.|0||0||0||0|||{0} h|0||0||0||0||0|||{0} min|0||0||0||0||0|||{0} s|0||0||0||0||0|||{0} ms|0||0||0||0||0|||{0}, {1}|{0}, {1}|{0} eta {1}|{0} eta {1}|{0}, {1}|{0}, {1}|{0} eta {1}|{0} eta {1}|{0}, {1}|{0}, {1}|{0} eta {1}|{0} eta {1}|"
         )
