@@ -176,15 +176,12 @@ applyPattern pattern first second =
 -- Advanced formatting
 
 
-{-|
-
-    These are the different options for which units to display when formatting a duration.
-    Standard only displays units that have a non-zero value.
-    TrimLargest starts from the largest (years) and removes units until it finds a non-zero value or there is only one value left.
-    TrimSmallest starts from the smallest (milliseconds) and removes units until it finds a non-zero value or there is only one value left.
-    TrimLargestAndSmallest does TrimLargest and then TrimSmallest.
-    IncludeUnitsIfZero includes all units that are not zero, and also all units marked as True in the UnitsToDisplay record.
-
+{-| These are the different options for which units to display when formatting a duration.
+Standard only displays units that have a non-zero value.
+TrimLargest starts from the largest (years) and removes units until it finds a non-zero value or there is only one value left.
+TrimSmallest starts from the smallest (milliseconds) and removes units until it finds a non-zero value or there is only one value left.
+TrimLargestAndSmallest does TrimLargest and then TrimSmallest.
+IncludeUnitsIfZero includes all units that are not zero, and also all units marked as True in the UnitsToDisplay record.
 -}
 type UnitDisplayOptions
     = Standard
@@ -194,10 +191,7 @@ type UnitDisplayOptions
     | IncludeUnitsIfZero UnitsToDisplay
 
 
-{-|
-
-    If you want to display specific units in your duration
-
+{-| If you want to display specific units in your duration
 -}
 type alias UnitsToDisplay =
     { years : Bool
