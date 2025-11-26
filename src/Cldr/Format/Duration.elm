@@ -1,11 +1,18 @@
-module Cldr.Format.Duration exposing (Duration, Length(..), format, zero)
+module Cldr.Format.Duration exposing
+    ( Duration, zero
+    , Length(..), format
+    , UnitDisplayOptions(..), UnitsToDisplay, formatWithOptions
+    )
 
 {-|
 
 
 # Duration Formatting
 
-@docs Duration, Length, format, zero
+@docs Duration, zero
+@docs Length, format
+
+@docs UnitDisplayOptions, UnitsToDisplay, formatWithOptions
 
 -}
 
@@ -66,12 +73,8 @@ zero =
 
 -}
 format : Length -> Locale -> Duration -> String
-format length (Locale locale) duration =
-    duration
-        |> toList length locale
-        |> removeZeroes
-        |> toUnitText locale
-        |> joinListOfText length locale
+format =
+    formatWithOptions Standard
 
 
 toList : Length -> Internal.Locale.Internal -> Duration -> List ( Int, Structs.Plural ( PluralRule, String ) )
@@ -102,11 +105,6 @@ lengthToSymWidth length =
 
         Narrow ->
             Sym.Narrow
-
-
-removeZeroes : List ( Int, a ) -> List ( Int, a )
-removeZeroes =
-    List.filter (Tuple.first >> (/=) 0)
 
 
 toUnitText : Internal.Locale.Internal -> List ( Int, Structs.Plural ( PluralRule, String ) ) -> List String
@@ -172,3 +170,116 @@ applyPattern pattern first second =
     pattern
         |> String.replace "{0}" first
         |> String.replace "{1}" second
+
+
+
+-- Advanced formatting
+
+
+{-|
+
+    These are the different options for which units to display when formatting a duration.
+    Standard only displays units that have a non-zero value.
+    TrimLargest starts from the largest (years) and removes units until it finds a non-zero value or there is only one value left.
+    TrimSmallest starts from the smallest (milliseconds) and removes units until it finds a non-zero value or there is only one value left.
+    TrimLargestAndSmallest does TrimLargest and then TrimSmallest.
+    IncludeUnitsIfZero includes all units that are not zero, and also all units marked as True in the UnitsToDisplay record.
+
+-}
+type UnitDisplayOptions
+    = Standard
+    | TrimLargest
+    | TrimSmallest
+    | TrimLargestAndSmallest
+    | IncludeUnitsIfZero UnitsToDisplay
+
+
+{-|
+
+    If you want to display specific units in your duration
+
+-}
+type alias UnitsToDisplay =
+    { years : Bool
+    , months : Bool
+    , weeks : Bool
+    , days : Bool
+    , hours : Bool
+    , minutes : Bool
+    , seconds : Bool
+    , milliseconds : Bool
+    }
+
+
+{-| Formats a `Duration` using the specified `UnitDisplayOptions`, `Length`, and `Locale`
+
+    import Cldr.Locale exposing (en)
+
+    formatWithOptions Standard Long en { zero | hours = 1, minutes = 30}
+    --> "1 hour, 30 minutes"
+    formatWithOptions TrimLargest Long en { zero | hours = 1, minutes = 30}
+    --> "1 hour, 30 minutes, 0 seconds, 0 milliseconds"
+    formatWithOptions TrimLargestAndSmallest Long en zero
+    --> "0 milliseconds"
+
+-}
+formatWithOptions : UnitDisplayOptions -> Length -> Locale -> Duration -> String
+formatWithOptions options length (Locale locale) duration =
+    duration
+        |> toList length locale
+        |> trimUnits options
+        |> toUnitText locale
+        |> joinListOfText length locale
+
+
+trimUnits : UnitDisplayOptions -> List ( Int, a ) -> List ( Int, a )
+trimUnits options =
+    case options of
+        Standard ->
+            removeZeroes
+
+        TrimLargest ->
+            trimLargest
+
+        TrimSmallest ->
+            trimSmallest
+
+        TrimLargestAndSmallest ->
+            trimLargest >> trimSmallest
+
+        IncludeUnitsIfZero unitsToDisplay ->
+            includeUnits unitsToDisplay
+
+
+removeZeroes : List ( Int, a ) -> List ( Int, a )
+removeZeroes =
+    List.filter (Tuple.first >> (/=) 0)
+
+
+trimLargest : List ( Int, a ) -> List ( Int, a )
+trimLargest items =
+    case items of
+        [] ->
+            []
+
+        item :: [] ->
+            [ item ]
+
+        ( 0, _ ) :: rest ->
+            trimLargest rest
+
+        _ ->
+            items
+
+
+trimSmallest : List ( Int, a ) -> List ( Int, a )
+trimSmallest =
+    List.reverse >> trimLargest >> List.reverse
+
+
+includeUnits : UnitsToDisplay -> List ( Int, a ) -> List ( Int, a )
+includeUnits units items =
+    [ units.years, units.months, units.weeks, units.days, units.hours, units.minutes, units.seconds, units.milliseconds ]
+        |> List.map2 Tuple.pair items
+        |> List.filter (\( ( number, _ ), keepIfZero ) -> keepIfZero || number /= 0)
+        |> List.map Tuple.first

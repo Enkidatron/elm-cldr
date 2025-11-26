@@ -3,6 +3,7 @@
     "Cldr.Format.Date",
     "Cldr.Format.DateTime",
     "Cldr.Format.Number",
+    "Cldr.Format.Duration",
     "Cldr.Locale"
   ]
 }
